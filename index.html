@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfectos Prometidos</title>
-
+  
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="pp-logo-circle-512.png" type="image/png">
@@ -50,6 +50,8 @@
     }
 
     .card{
+      position: relative;
+      z-index: 10;
       background:var(--card);
       border-radius:var(--radius);
       padding:40px 36px 34px;
@@ -149,8 +151,95 @@
     }
 
     .feature{
-      background:#fff;
+      background:
       border-radius:18px;
       padding:20px;
       box-shadow:0 10px 28px rgba(0,0,0,.14);
-      font-size:15px
+      font-size:15px;
+    }
+
+    .feature b{
+      display:block;
+      margin-bottom:6px;
+      font-size:16px;
+    }
+
+    .soon{
+      text-align:center;
+      margin-top:22px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    footer{
+      text-align:center;
+      margin-top:14px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    @media(max-width:600px){
+      h1{font-size:34px}
+      .card{padding:32px 22px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+
+      <div class="badges">
+        <div class="badge">💍 Bodas</div>
+        <div class="badge">🤍 Parejas</div>
+        <!-- Aquí puedes dejar solo estos dos badges para simplificar, como mencionamos -->
+      </div>
+
+      <div class="logo">
+        <img src="pp-logo-circle-512.png" alt="Perfectos Prometidos">
+      </div>
+
+      <h1>Perfectos Prometidos</h1>
+
+      <p class="lead">
+        Estamos construyendo un espacio para parejas que quieren amar con intención, belleza y compromiso. Romanticismo real, herramientas prácticas y una mirada artística del “sí”.
+      </p>
+
+      <div class="actions">
+        <a href="mailto:ac@perfectosprometidos.com" class="btn primary">
+          Conversemos sobre vuestra historia
+        </a>
+        <a href="#proximamente" class="btn secondary">
+          Descubrir Perfectos Prometidos
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="features" id="proximamente">
+        <div class="feature">
+          <b>📘 Blog</b>
+          Ideas, conversaciones y recursos para prometidos.
+        </div>
+
+        <div class="feature">
+          <b>🤝 Sesiones</b>
+          Acompañamiento para parejas y preparación consciente.
+        </div>
+
+        <div class="feature">
+          <b>🕯 Ritual & detalle</b>
+          Contenido creativo para una historia bonita.
+        </div>
+      </div>
+
+      <div class="soon">Muy pronto 💕</div>
+
+    </div>
+
+    <footer>
+      © Perfectos Prometidos · <a href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>
+    </footer>
+  </div>
+</body>
+</html>
