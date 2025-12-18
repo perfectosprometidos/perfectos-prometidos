@@ -1,245 +1,130 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfectos Prometidos</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="pp-logo-circle-512.png" type="image/png">
-
-  <!-- Tipografías elegantes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#ffffff;
-      --card:rgba(255,255,255,.88);
-      --text:#0f0f0f;
-      --muted:rgba(15,15,15,.7);
-      --accent:#c7a24c;      /* dorado */
-      --accent2:#6b7d5a;     /* verde oliva */
-      --line:rgba(15,15,15,.12);
-      --shadow:0 28px 60px rgba(0,0,0,.22);
-      --radius:24px;
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px 16px;
-
-      background:
-        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-        url("portadaweb.png") center/cover no-repeat;
-    }
-
-    .wrap{
-      width:100%;
-      max-width:1100px;
-    }
-
-    .card{
-      position: relative;
-      z-index: 10;
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:40px 36px 34px;
-      box-shadow:var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-
-    /* Badges */
-    .badges{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-bottom:18px;
-    }
-
-    .badge{
-      font-size:13px;
-      padding:6px 12px;
-      background:#fff;
-      border-radius:999px;
-      box-shadow:0 6px 16px rgba(0,0,0,.12);
-      white-space:nowrap;
-    }
-
-    /* Logo */
-    .logo{
-      display:flex;
-      justify-content:center;
-      margin:8px auto 18px;
-    }
-
-    .logo img{
-      max-width:140px;
-      width:100%;
-      height:auto;
-      display:block;
-      filter:drop-shadow(0 10px 30px rgba(0,0,0,.25));
-    }
-
-    h1{
-      font-family:"Playfair Display",serif;
-      font-size:42px;
-      margin:12px 0 12px;
-      text-align:center;
-    }
-
-    .lead{
-      font-size:17px;
-      line-height:1.6;
-      color:var(--muted);
-      max-width:760px;
-      margin:0 auto 28px;
-      text-align:center;
-    }
-
-    .actions{
-      display:flex;
-      gap:14px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-bottom:28px;
-    }
-
-    .btn{
-      padding:14px 26px;
-      border-radius:999px;
-      border:none;
-      font-weight:600;
-      font-size:15px;
-      cursor:pointer;
-      text-decoration:none;
-      display:inline-block;
-    }
-
-    .btn.primary{
-      background:var(--accent);
-      color:#fff;
-    }
-
-    .btn.secondary{
-      background:#fff;
-      color:#000;
-      border:1px solid var(--line);
-    }
-
-    .divider{
-      height:1px;
-      background:var(--line);
-      margin:26px 0;
-    }
-
-    .features{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:18px;
-    }
-
-    .feature{
-      background:
-      border-radius:18px;
-      padding:20px;
-      box-shadow:0 10px 28px rgba(0,0,0,.14);
-      font-size:15px;
-    }
-
-    .feature b{
-      display:block;
-      margin-bottom:6px;
-      font-size:16px;
-    }
-
-    .soon{
-      text-align:center;
-      margin-top:22px;
-      font-size:14px;
-      color:var(--muted);
-    }
-
-    footer{
-      text-align:center;
-      margin-top:14px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    @media(max-width:600px){
-      h1{font-size:34px}
-      .card{padding:32px 22px}
-    }
-  </style>
-</head>
-
 <body>
-  <div class="wrap">
-    <div class="card">
 
-      <div class="badges">
-        <div class="badge">💍 Bodas</div>
-        <div class="badge">🤍 Parejas</div>
-        <!-- Aquí puedes dejar solo estos dos badges para simplificar, como mencionamos -->
-      </div>
-
-      <div class="logo">
-        <img src="pp-logo-circle-512.png" alt="Perfectos Prometidos">
-      </div>
-
-      <h1>Perfectos Prometidos</h1>
-
-      <p class="lead">
-        Estamos construyendo un espacio para parejas que quieren amar con intención, belleza y compromiso. Romanticismo real, herramientas prácticas y una mirada artística del “sí”.
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bodas que se sienten antes de celebrarse.</h1>
+      <p>
+        Diseño y organización de bodas creadas con calma, belleza y significado.<br>
+        Domingos sin prisas.
       </p>
+      <p>
+        Porque cuando todo se hace con intención,<br>
+        no hace falta demostrar nada.
+      </p>
+      <a href="mailto:ac@perfectosprometidos.com" class="cta">
+        Conversemos con calma
+      </a>
+    </div>
+  </section>
 
-      <div class="actions">
-        <a href="mailto:ac@perfectosprometidos.com" class="btn primary">
-          Conversemos sobre vuestra historia
-        </a>
-        <a href="#proximamente" class="btn secondary">
-          Descubrir Perfectos Prometidos
-        </a>
-      </div>
+  <!-- MANIFIESTO -->
+  <section class="manifesto">
+    <p>
+      En Perfectos Prometidos creemos que una boda<br>
+      no se organiza, se construye con intención.
+    </p>
 
-      <div class="divider"></div>
+    <p>
+      Creemos en la calma frente a la prisa,<br>
+      en la belleza que no necesita explicarse,<br>
+      y en los detalles que solo se perciben cuando se vive despacio.
+    </p>
 
-      <div class="features" id="proximamente">
-        <div class="feature">
-          <b>📘 Blog</b>
-          Ideas, conversaciones y recursos para prometidos.
-        </div>
+    <p>
+      Diseñamos bodas para quienes entienden<br>
+      que lo verdaderamente importante<br>
+      no es el día, sino lo que permanece después.
+    </p>
+  </section>
 
-        <div class="feature">
-          <b>🤝 Sesiones</b>
-          Acompañamiento para parejas y preparación consciente.
-        </div>
+  <!-- PILARES -->
+  <section class="pillars">
 
-        <div class="feature">
-          <b>🕯 Ritual & detalle</b>
-          Contenido creativo para una historia bonita.
-        </div>
-      </div>
-
-      <div class="soon">Muy pronto 💕</div>
-
+    <div class="pillar">
+      <h3>La calma</h3>
+      <p>
+        Creemos que una boda no debería vivirse con prisa.
+        Cada decisión se toma desde la pausa, el criterio
+        y el respeto por los tiempos de cada historia.
+      </p>
+      <p>
+        La calma no es lentitud.<br>
+        Es precisión.
+      </p>
     </div>
 
-    <footer>
-      © Perfectos Prometidos · <a href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>
-    </footer>
-  </div>
+    <div class="pillar">
+      <h3>El lugar</h3>
+      <p>
+        No todos los espacios sirven para cualquier historia.
+        Elegimos lugares con alma, capaces de acompañar
+        la emoción sin imponerse.
+      </p>
+      <p>
+        El lugar no se elige por estética.<br>
+        Se elige por lo que hace sentir.
+      </p>
+    </div>
+
+    <div class="pillar">
+      <h3>La emoción</h3>
+      <p>
+        No buscamos el impacto inmediato,
+        sino aquello que se recuerda con los años.
+      </p>
+      <p>
+        Los gestos pequeños, la belleza silenciosa
+        y la emoción que aparece cuando todo encaja
+        son lo que permanece cuando el día termina.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- INVITACIÓN -->
+  <section class="invitation">
+    <h2>Tal vez sea vuestro momento.</h2>
+
+    <p>
+      Perfectos Prometidos no es para todo el mundo.
+      Es para quienes entienden que una boda
+      no es un evento que se consume,
+      sino una experiencia que se construye con tiempo,
+      criterio y sensibilidad.
+    </p>
+
+    <p>
+      Para quienes valoran la belleza serena,
+      los procesos cuidados
+      y las decisiones tomadas sin ruido.
+    </p>
+
+    <p>
+      Si al leer esto sentís que algo encaja,
+      quizá no sea casualidad.
+    </p>
+
+    <p>
+      <a href="mailto:ac@perfectosprometidos.com" class="cta">
+        Conversemos con calma
+      </a>
+    </p>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="closing">
+    <p>Las bodas pasan.</p>
+    <p>Lo que se crea con intención, permanece.</p>
+    <p>
+      <a href="mailto:ac@perfectosprometidos.com">
+        ac@perfectosprometidos.com
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© Perfectos Prometidos</p>
+  </footer>
+
 </body>
-</html>
