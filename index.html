@@ -1,130 +1,411 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfectos Prometidos</title>
+  <meta name="description" content="Perfectos Prometidos — Bodas que se sienten antes de celebrarse. Diseño y organización con calma, belleza y significado." />
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --ink:#111;
+      --paper:rgba(255,255,255,.92);
+      --paper2:rgba(255,255,255,.86);
+      --line:rgba(17,17,17,.12);
+      --gold:#c8a96a;
+      --muted:rgba(17,17,17,.72);
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:var(--serif);
+      background:#0a0a0a;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 64px 20px;
+      position:relative;
+      background:
+        linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.72) 55%, rgba(10,10,10,.88) 100%),
+        url('portada.png');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(80% 60% at 50% 35%, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 55%),
+        radial-gradient(60% 50% at 50% 90%, rgba(200,169,106,.10) 0%, rgba(200,169,106,0) 60%);
+      pointer-events:none;
+    }
+
+    .card{
+      width:min(980px, 100%);
+      position:relative;
+      z-index:2;
+      background: linear-gradient(180deg, var(--paper) 0%, var(--paper2) 100%);
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 26px;
+      padding: 44px 46px;
+      box-shadow:
+        0 24px 80px rgba(0,0,0,.55),
+        0 1px 0 rgba(255,255,255,.15) inset;
+      backdrop-filter: blur(6px);
+    }
+
+    .topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:18px;
+      font-family:var(--sans);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color: rgba(17,17,17,.65);
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,17,.14);
+      background: rgba(255,255,255,.65);
+      box-shadow: 0 10px 30px rgba(0,0,0,.10);
+      white-space:nowrap;
+    }
+
+    .dot{
+      width:8px; height:8px;
+      border-radius:999px;
+      background: var(--gold);
+      box-shadow: 0 0 0 3px rgba(200,169,106,.18);
+    }
+
+    h1{
+      margin: 0 0 14px;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.06;
+      letter-spacing:-.02em;
+    }
+
+    .lead{
+      margin:0 0 18px;
+      font-size: clamp(16px, 1.35vw, 19px);
+      line-height:1.55;
+      color: var(--muted);
+      font-family:var(--sans);
+      max-width: 62ch;
+    }
+
+    .micro{
+      margin:0 0 26px;
+      font-family:var(--serif);
+      font-size: 16px;
+      line-height:1.55;
+      color: rgba(17,17,17,.78);
+      max-width: 60ch;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top: 8px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      text-decoration:none;
+      font-family:var(--sans);
+      font-weight:600;
+      letter-spacing:.02em;
+      border:1px solid rgba(17,17,17,.16);
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+    .cta.primary{
+      background: #111;
+      color: #fff;
+      border-color: rgba(255,255,255,.22);
+      box-shadow: 0 18px 38px rgba(0,0,0,.22);
+    }
+    .cta.primary:hover{ transform: translateY(-1px); box-shadow: 0 22px 46px rgba(0,0,0,.26); }
+
+    .cta.secondary{
+      background: rgba(255,255,255,.75);
+      color:#111;
+    }
+    .cta.secondary:hover{ transform: translateY(-1px); }
+
+    /* SECTIONS */
+    main{
+      background: #0b0b0b;
+      padding: 70px 20px 90px;
+    }
+
+    .wrap{
+      width:min(980px, 100%);
+      margin:0 auto;
+    }
+
+    .section{
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 22px;
+      padding: 42px 40px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      margin-top: 18px;
+    }
+
+    .section p{
+      margin: 0 0 16px;
+      color: rgba(17,17,17,.78);
+      line-height:1.7;
+      font-size: 16px;
+      font-family: var(--serif);
+    }
+
+    .section p:last-child{margin-bottom:0}
+
+    .section-title{
+      margin: 0 0 14px;
+      font-size: 22px;
+      letter-spacing:-.01em;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .pillar{
+      background: rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 20px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.08);
+    }
+    .pillar h3{
+      margin:0 0 10px;
+      font-size: 18px;
+      letter-spacing:-.01em;
+    }
+    .pillar p{
+      margin:0 0 12px;
+      font-family: var(--sans);
+      color: rgba(17,17,17,.74);
+      line-height:1.65;
+      font-size: 15px;
+    }
+    .pillar p:last-child{margin-bottom:0}
+
+    .closing{
+      text-align:center;
+      padding: 52px 22px;
+      background: rgba(255,255,255,.96);
+      border-radius: 22px;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      margin-top: 18px;
+    }
+    .closing p{
+      margin: 8px 0;
+      font-size: 16px;
+      color: rgba(17,17,17,.78);
+    }
+    .closing a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(17,17,17,.24);
+      padding-bottom:2px;
+      font-family: var(--sans);
+      font-weight:600;
+    }
+
+    footer{
+      text-align:center;
+      padding: 22px 0 0;
+      color: rgba(255,255,255,.55);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .card{ padding: 34px 22px; border-radius: 22px; }
+      .grid{ grid-template-columns: 1fr; }
+      .section{ padding: 34px 22px; }
+    }
+  </style>
+</head>
+
 <body>
 
-  <!-- HERO -->
+  <!-- HERO (imagen + tarjeta) -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="card">
+      <div class="topline">
+        <div>Perfectos Prometidos</div>
+        <div class="badge"><span class="dot"></span>Estamos construyendo</div>
+      </div>
+
       <h1>Bodas que se sienten antes de celebrarse.</h1>
-      <p>
+
+      <p class="lead">
         Diseño y organización de bodas creadas con calma, belleza y significado.<br>
         Domingos sin prisas.
       </p>
-      <p>
+
+      <p class="micro">
         Porque cuando todo se hace con intención,<br>
         no hace falta demostrar nada.
       </p>
-      <a href="mailto:ac@perfectosprometidos.com" class="cta">
-        Conversemos con calma
-      </a>
+
+      <div class="cta-row">
+        <a href="mailto:ac@perfectosprometidos.com" class="cta primary">Conversemos con calma</a>
+        <a href="#manifiesto" class="cta secondary">Descubrir la esencia</a>
+      </div>
     </div>
   </section>
 
-  <!-- MANIFIESTO -->
-  <section class="manifesto">
-    <p>
-      En Perfectos Prometidos creemos que una boda<br>
-      no se organiza, se construye con intención.
-    </p>
+  <main>
+    <div class="wrap">
 
-    <p>
-      Creemos en la calma frente a la prisa,<br>
-      en la belleza que no necesita explicarse,<br>
-      y en los detalles que solo se perciben cuando se vive despacio.
-    </p>
+      <!-- MANIFIESTO -->
+      <section class="section" id="manifiesto">
+        <h2 class="section-title">Manifiesto</h2>
 
-    <p>
-      Diseñamos bodas para quienes entienden<br>
-      que lo verdaderamente importante<br>
-      no es el día, sino lo que permanece después.
-    </p>
-  </section>
+        <p>
+          En Perfectos Prometidos creemos que una boda
+          no se organiza, se construye con intención.
+        </p>
 
-  <!-- PILARES -->
-  <section class="pillars">
+        <p>
+          Creemos en la calma frente a la prisa,
+          en la belleza que no necesita explicarse,
+          y en los detalles que solo se perciben cuando se vive despacio.
+        </p>
 
-    <div class="pillar">
-      <h3>La calma</h3>
-      <p>
-        Creemos que una boda no debería vivirse con prisa.
-        Cada decisión se toma desde la pausa, el criterio
-        y el respeto por los tiempos de cada historia.
-      </p>
-      <p>
-        La calma no es lentitud.<br>
-        Es precisión.
-      </p>
+        <p>
+          Diseñamos bodas para quienes entienden
+          que lo verdaderamente importante
+          no es el día, sino lo que permanece después.
+        </p>
+      </section>
+
+      <!-- PILARES -->
+      <section class="section" aria-label="Pilares">
+        <h2 class="section-title">Nuestros pilares</h2>
+
+        <div class="grid">
+          <div class="pillar">
+            <h3>La calma</h3>
+            <p>
+              Creemos que una boda no debería vivirse con prisa.
+              Cada decisión se toma desde la pausa, el criterio
+              y el respeto por los tiempos de cada historia.
+            </p>
+            <p>
+              La calma no es lentitud.<br>
+              Es precisión.
+            </p>
+          </div>
+
+          <div class="pillar">
+            <h3>El lugar</h3>
+            <p>
+              No todos los espacios sirven para cualquier historia.
+              Elegimos lugares con alma, capaces de acompañar
+              la emoción sin imponerse.
+            </p>
+            <p>
+              El lugar no se elige por estética.<br>
+              Se elige por lo que hace sentir.
+            </p>
+          </div>
+
+          <div class="pillar">
+            <h3>La emoción</h3>
+            <p>
+              No buscamos el impacto inmediato,
+              sino aquello que se recuerda con los años.
+            </p>
+            <p>
+              Los gestos pequeños, la belleza silenciosa
+              y la emoción que aparece cuando todo encaja
+              son lo que permanece cuando el día termina.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INVITACIÓN -->
+      <section class="section" aria-label="Invitación">
+        <h2 class="section-title">Tal vez sea vuestro momento.</h2>
+
+        <p>
+          Perfectos Prometidos no es para todo el mundo.
+          Es para quienes entienden que una boda
+          no es un evento que se consume,
+          sino una experiencia que se construye con tiempo,
+          criterio y sensibilidad.
+        </p>
+
+        <p>
+          Para quienes valoran la belleza serena,
+          los procesos cuidados
+          y las decisiones tomadas sin ruido.
+        </p>
+
+        <p>
+          Si al leer esto sentís que algo encaja,
+          quizá no sea casualidad.
+        </p>
+
+        <p style="margin-top:18px">
+          <a href="mailto:ac@perfectosprometidos.com" class="cta primary">Conversemos con calma</a>
+        </p>
+      </section>
+
+      <!-- CIERRE -->
+      <section class="closing" aria-label="Cierre">
+        <p>Las bodas pasan.</p>
+        <p>Lo que se crea con intención, permanece.</p>
+        <p>
+          <a href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>
+        </p>
+      </section>
+
+      <footer>
+        <p>© Perfectos Prometidos</p>
+      </footer>
+
     </div>
-
-    <div class="pillar">
-      <h3>El lugar</h3>
-      <p>
-        No todos los espacios sirven para cualquier historia.
-        Elegimos lugares con alma, capaces de acompañar
-        la emoción sin imponerse.
-      </p>
-      <p>
-        El lugar no se elige por estética.<br>
-        Se elige por lo que hace sentir.
-      </p>
-    </div>
-
-    <div class="pillar">
-      <h3>La emoción</h3>
-      <p>
-        No buscamos el impacto inmediato,
-        sino aquello que se recuerda con los años.
-      </p>
-      <p>
-        Los gestos pequeños, la belleza silenciosa
-        y la emoción que aparece cuando todo encaja
-        son lo que permanece cuando el día termina.
-      </p>
-    </div>
-
-  </section>
-
-  <!-- INVITACIÓN -->
-  <section class="invitation">
-    <h2>Tal vez sea vuestro momento.</h2>
-
-    <p>
-      Perfectos Prometidos no es para todo el mundo.
-      Es para quienes entienden que una boda
-      no es un evento que se consume,
-      sino una experiencia que se construye con tiempo,
-      criterio y sensibilidad.
-    </p>
-
-    <p>
-      Para quienes valoran la belleza serena,
-      los procesos cuidados
-      y las decisiones tomadas sin ruido.
-    </p>
-
-    <p>
-      Si al leer esto sentís que algo encaja,
-      quizá no sea casualidad.
-    </p>
-
-    <p>
-      <a href="mailto:ac@perfectosprometidos.com" class="cta">
-        Conversemos con calma
-      </a>
-    </p>
-  </section>
-
-  <!-- CIERRE -->
-  <section class="closing">
-    <p>Las bodas pasan.</p>
-    <p>Lo que se crea con intención, permanece.</p>
-    <p>
-      <a href="mailto:ac@perfectosprometidos.com">
-        ac@perfectosprometidos.com
-      </a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© Perfectos Prometidos</p>
-  </footer>
+  </main>
 
 </body>
+</html>
