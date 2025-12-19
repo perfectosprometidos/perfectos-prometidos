@@ -84,3 +84,16 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
 }
+/* OLIVA PREMIUM – CTA */
+.cta, .btn, a.cta, a.btn{
+  background: var(--olive);
+  color: #ffffff;
+  border: 1px solid rgba(107,122,85,.35);
+  box-shadow: 0 10px 30px rgba(17,17,17,.18);
+  letter-spacing: .2px;
+}
+
+.cta:hover, .btn:hover, a.cta:hover, a.btn:hover{
+  filter: brightness(.92);
+  transform: translateY(-1px);
+}
