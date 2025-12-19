@@ -97,3 +97,41 @@ body {
   filter: brightness(.92);
   transform: translateY(-1px);
 }
+/* ===============================
+   SECCIÓN EDITORIAL – CASA PP
+   =============================== */
+
+.editorial {
+  background: #f6f4ef; /* papel editorial */
+  padding: 7rem 1.5rem;
+}
+
+.editorial-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.editorial-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7a55; /* oliva premium */
+  margin-bottom: 1.5rem;
+}
+
+.editorial h2 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.editorial-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.4rem;
+  max-width: 640px;
+}
