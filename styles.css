@@ -1,3 +1,9 @@
+:root{
+  --olive:#6b7a55;
+  --ink:#111111;
+  --paper:#f6f4ef;
+  --line: rgba(107,122,85,.28);
+}
 * {
   box-sizing: border-box;
   margin: 0;
