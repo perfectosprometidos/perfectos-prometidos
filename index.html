@@ -4,239 +4,614 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Wedding Planner en Galicia | Perfectos Prometidos</title>
-  <meta name="description" content="Bodas editoriales en Galicia. Diseño, organización, coordinación y asesoramiento de imagen para bodas creadas con calma y significado." />
+  <title>Perfectos Prometidos · Wedding Planner de lujo en Galicia</title>
+  <meta name="description" content="Perfectos Prometidos · Bodas a medida en Galicia. Diseño editorial, calma y elegancia. Antonio Calzas, wedding planner." />
   <meta name="robots" content="index,follow" />
+
   <link rel="canonical" href="https://perfectosprometidos.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Perfectos Prometidos · Wedding Planner en Galicia" />
-  <meta property="og:description" content="Bodas editoriales en Galicia. Calma, belleza y significado. Domingos exclusivos." />
+  <meta property="og:title" content="Perfectos Prometidos · Wedding Planner de lujo en Galicia" />
+  <meta property="og:description" content="Bodas que se sienten antes de celebrarse. Diseño editorial, calma y elegancia. Antonio Calzas." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://perfectosprometidos.com/" />
-  <meta property="og:image" content="https://perfectosprometidos.com/assets/hero-pazo-16x9-1200.webp" />
+  <meta property="og:image" content="https://perfectosprometidos.com/assets/images/wedding%20planner%20lujo%20galicia%20perfectos%20prometidos.png" />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="preload" as="image" href="assets/hero-pazo-16x9-1600.webp" imagesrcset="
-    assets/hero-pazo-16x9-800.webp 800w,
-    assets/hero-pazo-16x9-1200.webp 1200w,
-    assets/hero-pazo-16x9-1600.webp 1600w" imagesizes="100vw" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- Schema.org (LocalBusiness) -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Perfectos Prometidos",
-    "description":"Wedding planner en Galicia. Bodas editoriales, domingos exclusivos y diseño con intención.",
-    "areaServed":"Galicia, España",
-    "email":"ac@perfectosprometidos.com",
-    "url":"https://perfectosprometidos.com/"
+    "@context": "https://schema.org",
+    "@type": "EventPlanner",
+    "name": "Perfectos Prometidos",
+    "url": "https://perfectosprometidos.com/",
+    "email": "ac@perfectosprometidos.com",
+    "areaServed": ["Galicia"],
+    "founder": {
+      "@type": "Person",
+      "name": "Antonio Calzas"
+    },
+    "sameAs": [
+      "https://www.instagram.com/perfectosprometidos/"
+    ]
   }
   </script>
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="wrap topbar__inner">
-      <a class="brand" href="#top" aria-label="Perfectos Prometidos">
-        <span class="brand__name">Perfectos Prometidos</span>
-      </a>
 
-      <nav class="nav" aria-label="Navegación">
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img
+          class="brand-mark"
+          src="assets/images/pp-logo-circle-512.png"
+          alt="Perfectos Prometidos"
+          width="44"
+          height="44"
+          loading="eager"
+        />
+        <div class="brand-text">
+          <span class="brand-name">Perfectos Prometidos</span>
+          <span class="brand-tag">Wedding planner · Galicia</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#esencia">Esencia</a>
         <a href="#servicios">Servicios</a>
-        <a href="#universo">Universo</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#metodo">Método</a>
+        <a href="#antonio">Antonio</a>
+        <a class="nav-cta" href="mailto:ac@perfectosprometidos.com">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero" aria-label="Portada">
-      <picture>
-        <source type="image/webp" srcset="
-          assets/hero-pazo-16x9-800.webp 800w,
-          assets/hero-pazo-16x9-1200.webp 1200w,
-          assets/hero-pazo-16x9-1600.webp 1600w" sizes="100vw" />
-        <img class="hero__img" src="assets/hero-pazo-16x9-1200.webp" alt="Boda editorial en un pazo histórico de Galicia al atardecer" fetchpriority="high" />
-      </picture>
+  <!-- HERO -->
+  <section class="hero" aria-label="Portada Perfectos Prometidos">
+    <div class="hero-media" role="img" aria-label="Wedding planner de lujo en Galicia, Perfectos Prometidos"></div>
 
-      <div class="wrap hero__content">
-        <div class="card glass">
-          <div class="card__top">
-            <p class="kicker">Wedding planner en Galicia</p>
-            <span class="pill"><span class="dot"></span>Estamos construyendo</span>
+    <div class="container hero-layer">
+      <div class="hero-card">
+        <div class="hero-pill">
+          <span class="dot"></span>
+          <span>Estamos construyendo</span>
+        </div>
+
+        <p class="eyebrow">Perfectos Prometidos</p>
+
+        <h1 class="h1">
+          Bodas que se sienten<br>
+          antes de celebrarse.
+        </h1>
+
+        <p class="lead">
+          Diseño y organización de bodas creadas con calma, belleza y significado.<br>
+          Para parejas que entienden que lo importante no es mostrar, sino sentir.
+        </p>
+
+        <p class="whisper">
+          Porque cuando todo se hace con intención,<br>
+          no hace falta demostrar nada.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:ac@perfectosprometidos.com">Conversemos con calma</a>
+          <a class="btn btn-ghost" href="#esencia">Descubrir la esencia</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESENCIA (antes “manifiesto”) -->
+  <section class="section" id="esencia">
+    <div class="container grid-2">
+      <div>
+        <h2 class="h2">Tal vez sea vuestro momento.</h2>
+
+        <div class="prose">
+          <p>
+            Perfectos Prometidos no es para todo el mundo. Es para quienes entienden que una boda no es un evento que se consume,
+            sino una experiencia que se construye con tiempo, criterio y sensibilidad.
+          </p>
+          <p>
+            Para quienes valoran la belleza serena, los procesos cuidados y las decisiones tomadas sin ruido.
+          </p>
+          <p>
+            Si al leer esto sentís que algo encaja, quizá no sea casualidad.
+          </p>
+        </div>
+      </div>
+
+      <figure class="image-card">
+        <img
+          src="assets/images/bodas%20elegantes%20galicia%20estilo%20editorial.png"
+          alt="Bodas elegantes en Galicia con estilo editorial y estética de lujo"
+          loading="lazy"
+        />
+        <figcaption>La elegancia auténtica se percibe antes de explicarse.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section section-soft" id="servicios">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Qué creamos.</h2>
+        <p class="subhead">Servicios a medida. Procesos cuidados. Resultados que se sienten.</p>
+      </div>
+
+      <div class="services">
+        <article class="service-card">
+          <img
+            src="assets/images/organizacion%20bodas%20a%20medida%20galicia.png"
+            alt="Organización integral de bodas a medida en Galicia"
+            loading="lazy"
+          />
+          <h3>Diseño y organización integral</h3>
+          <p>
+            Diseñamos y organizamos vuestra boda de principio a fin, cuidando cada decisión estética, logística y emocional
+            para que todo tenga sentido y fluya con naturalidad.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <img
+            src="assets/images/experiencia%20bodas%20exclusivas%20galicia.png"
+            alt="Experiencias de boda exclusivas en Galicia con un enfoque editorial"
+            loading="lazy"
+          />
+          <h3>Bodas a medida</h3>
+          <p>
+            Cada boda es única porque cada pareja lo es. Creamos celebraciones pensadas desde cero,
+            sin fórmulas repetidas ni soluciones estándar.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <img
+            src="assets/images/wedding%20planner%20lujo%20galicia%20perfectos%20prometidos.png"
+            alt="Wedding planner de lujo en Galicia: Perfectos Prometidos"
+            loading="lazy"
+          />
+          <h3>Experiencias con intención</h3>
+          <p>
+            Más allá del día de la boda, creamos una experiencia completa: ritmo, atmósfera, hospitalidad y emoción.
+            Lo que se recuerda por cómo se vivió.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <img
+            src="assets/images/bodas%20elegantes%20galicia%20estilo%20editorial.png"
+            alt="Asesoramiento de imagen para novios en bodas elegantes en Galicia"
+            loading="lazy"
+          />
+          <h3>Asesoramiento de imagen</h3>
+          <p>
+            Refinamos el look y la coherencia estética: novia y novio, paleta, tejidos y detalles.
+            Elegancia real, sin exceso, alineada con vuestra historia.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section class="section" id="metodo">
+    <div class="container grid-2">
+      <figure class="image-card">
+        <img
+          src="assets/images/organizacion%20bodas%20a%20medida%20galicia.png"
+          alt="Detalle de organización de boda: planificación, papelería y cuidado del detalle"
+          loading="lazy"
+        />
+        <figcaption>Procesos tranquilos. Decisiones elegantes. Resultados inevitables.</figcaption>
+      </figure>
+
+      <div>
+        <h2 class="h2">Nuestra manera de crear.</h2>
+
+        <div class="prose">
+          <p>Creemos en las bodas sin prisas. En los domingos largos. En los silencios que también hablan.</p>
+          <p>En la elegancia que no se explica, pero se percibe.</p>
+          <p>En la belleza que permanece cuando todo lo demás pasa.</p>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <span class="mini-k">01</span>
+            <p><strong>Claridad.</strong> Ordenamos lo importante y eliminamos lo que sobra.</p>
           </div>
-
-          <h1>Bodas que se sienten antes de celebrarse.</h1>
-
-          <p class="lead">
-            Diseño y organización de bodas creadas con calma, belleza y significado.<br/>
-            Domingos sin prisas.
-          </p>
-
-          <p class="sublead">
-            Galicia · Bodas editoriales · Domingos exclusivos
-          </p>
-
-          <div class="cta">
-            <a class="btn btn--primary" href="mailto:ac@perfectosprometidos.com">Conversemos con calma</a>
-            <a class="btn btn--ghost" href="#manera">Descubrir la esencia</a>
+          <div class="mini">
+            <span class="mini-k">02</span>
+            <p><strong>Dirección.</strong> Diseñamos una visión estética coherente.</p>
+          </div>
+          <div class="mini">
+            <span class="mini-k">03</span>
+            <p><strong>Calma.</strong> Coordinación impecable para vivir el día sin ruido.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- NUESTRA MANERA -->
-    <section id="manera" class="section">
-      <div class="wrap grid grid--2">
-        <div>
-          <h2>Nuestra manera de crear</h2>
-          <p class="prose">
-            No creemos en bodas que se exhiben, sino en bodas que se sienten.<br/>
-            Diseñamos experiencias con intención, cuidando cada decisión para que todo fluya con naturalidad, belleza y calma.<br/>
-            Porque cuando todo está en su lugar, no hace falta demostrar nada.
+        <a class="btn btn-primary" href="mailto:ac@perfectosprometidos.com">Solicitar conversación</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTONIO -->
+  <section class="section section-soft" id="antonio">
+    <div class="container grid-2">
+      <div>
+        <h2 class="h2">Antonio Calzas.</h2>
+
+        <div class="prose">
+          <p>
+            Soy Antonio Calzas, wedding planner y creador de Perfectos Prometidos.
+            Acompaño a parejas que buscan una boda auténtica, bien pensada y profundamente cuidada.
+          </p>
+          <p>
+            Mi trabajo no consiste en acumular ideas, sino en dar forma a lo esencial y eliminar todo lo que sobra.
+            Porque la verdadera elegancia siempre es una decisión consciente.
           </p>
         </div>
 
-        <figure class="media">
-          <picture>
-            <source type="image/webp" srcset="
-              assets/planner-action-4x5-800.webp 800w,
-              assets/planner-action-4x5-1200.webp 1200w" sizes="(min-width: 900px) 40vw, 90vw" />
-            <img src="assets/planner-action-4x5-800.webp" alt="Wedding planner en Galicia preparando una boda editorial con diseño elegante" loading="lazy" />
-          </picture>
-        </figure>
-      </div>
-    </section>
-
-    <!-- AUTOR -->
-    <section class="section section--soft" aria-label="Autoría">
-      <div class="wrap grid grid--2 grid--reverse">
-        <figure class="media">
-          <!-- Reemplaza esta imagen por tu retrato real (Antonio Calzas) manteniendo el mismo nombre de archivo -->
-          <picture>
-            <source type="image/webp" srcset="
-              assets/planner-action-1x1-800.webp 800w,
-              assets/planner-action-1x1-1200.webp 1200w" sizes="(min-width: 900px) 38vw, 90vw" />
-            <img src="assets/planner-action-1x1-800.webp" alt="Antonio Calzas, wedding planner y director creativo de Perfectos Prometidos en Galicia" loading="lazy" class="portrait" />
-          </picture>
-        </figure>
-
-        <div>
-          <h2>Detrás de Perfectos Prometidos</h2>
-          <p class="prose">
-            Perfectos Prometidos nace de una mirada personal hacia las bodas entendidas como experiencia, no como evento.
-            Al frente del proyecto se encuentra <strong>Antonio Calzas</strong>, wedding planner y director creativo, con una forma de trabajar basada en la calma, el orden y la intención.
-            Su papel no es ocupar el centro, sino sostener cada decisión con criterio, acompañar el proceso con discreción y cuidar cada detalle para que todo fluya con naturalidad.
-          </p>
+        <div class="contact-box">
+          <p class="contact-title">Contacto directo</p>
+          <a class="contact-link" href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>
         </div>
       </div>
-    </section>
 
-    <!-- SERVICIOS -->
-    <section id="servicios" class="section">
-      <div class="wrap">
-        <div class="section__head">
-          <h2>Servicios</h2>
-          <p class="muted">Selección, criterio y una presencia serena. Lo esencial, bien hecho.</p>
-        </div>
+      <figure class="image-card portrait">
+        <img
+          src="assets/images/antonio%20calzas%20wedding%20planner%20galicia.png"
+          alt="Antonio Calzas, wedding planner en Galicia, fundador de Perfectos Prometidos"
+          loading="lazy"
+        />
+        <figcaption>Dirección creativa · Coordinación · Calma</figcaption>
+      </figure>
+    </div>
+  </section>
 
-        <div class="cards">
-          <article class="service">
-            <h3>Diseño editorial de bodas</h3>
-            <p>Concebimos cada boda como una pieza editorial: narrativa estética coherente, elegante y atemporal.</p>
-          </article>
-
-          <article class="service">
-            <h3>Organización integral</h3>
-            <p>Gestión de proveedores, tiempos y decisiones para vivir el camino con serenidad y confianza.</p>
-          </article>
-
-          <article class="service">
-            <h3>Coordinación del día</h3>
-            <p>Supervisión discreta y firme para que todo fluya. Vosotros, solo presentes.</p>
-          </article>
-
-          <article class="service">
-            <h3>Domingos exclusivos</h3>
-            <p>Cuando el tiempo se expande: bodas que se viven sin prisa, con calma y profundidad.</p>
-          </article>
-
-          <article class="service">
-            <h3>Asesoramiento de imagen</h3>
-            <p>Armonía entre estilismo, espacio y concepto. Coherencia visual en cada detalle.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- UNIVERSO -->
-    <section id="universo" class="section section--soft">
-      <div class="wrap">
-        <div class="section__head">
-          <h2>Universo Perfectos Prometidos</h2>
-          <p class="prose">
-            Nos inspiran los lugares con historia, la belleza que no se impone y los gestos que solo se perciben cuando todo se hace sin prisa.
-            Arquitectura, luz, materia y emoción conviven en cada proyecto, creando una atmósfera que se siente más de lo que se explica.
-            No seguimos tendencias. Construimos un universo propio.
-          </p>
-        </div>
-
-        <div class="mosaic">
-          <figure class="mosaic__item"><img src="assets/universe-pazo-4x5-800.webp" srcset="assets/universe-pazo-4x5-800.webp 800w, assets/universe-pazo-4x5-1200.webp 1200w" sizes="(min-width: 900px) 28vw, 90vw" alt="Pazo histórico en Galicia con atmósfera editorial para boda elegante" loading="lazy"></figure>
-          <figure class="mosaic__item"><img src="assets/universe-garden-4x5-800.webp" srcset="assets/universe-garden-4x5-800.webp 800w, assets/universe-garden-4x5-1200.webp 1200w" sizes="(min-width: 900px) 28vw, 90vw" alt="Jardín gallego con luz suave y calma para boda editorial" loading="lazy"></figure>
-          <figure class="mosaic__item"><img src="assets/universe-table-4x5-800.webp" srcset="assets/universe-table-4x5-800.webp 800w, assets/universe-table-4x5-1200.webp 1200w" sizes="(min-width: 900px) 28vw, 90vw" alt="Mesa editorial de boda en Galicia con lino y flores neutras" loading="lazy"></figure>
-          <figure class="mosaic__item"><img src="assets/universe-planning-4x5-800.webp" srcset="assets/universe-planning-4x5-800.webp 800w, assets/universe-planning-4x5-1200.webp 1200w" sizes="(min-width: 900px) 28vw, 90vw" alt="Detalles de planificación de boda de tarde en Galicia" loading="lazy"></figure>
-          <figure class="mosaic__item"><img src="assets/universe-candles-4x5-800.webp" srcset="assets/universe-candles-4x5-800.webp 800w, assets/universe-candles-4x5-1200.webp 1200w" sizes="(min-width: 900px) 28vw, 90vw" alt="Iluminación con velas y piedra gallega en boda nocturna" loading="lazy"></figure>
-          <figure class="mosaic__item"><img src="assets/universe-path-4x5-800.webp" srcset="assets/universe-path-4x5-800.webp 800w, assets/universe-path-4x5-1200.webp 1200w" sizes="(min-width: 900px) 28vw, 90vw" alt="Camino de piedra hacia finca gallega en domingo sin prisas" loading="lazy"></figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- POR QUÉ -->
-    <section class="section">
-      <div class="wrap grid grid--2">
-        <div>
-          <h2>Por qué Perfectos Prometidos</h2>
-          <ul class="list">
-            <li>Bodas editoriales en pazos y fincas privadas.</li>
-            <li>Especialistas en domingos exclusivos.</li>
-            <li>Acompañamiento cercano, discreto y autoral.</li>
-            <li>Diseño con intención, no tendencias.</li>
-          </ul>
-        </div>
-
-        <div class="mosaic mosaic--mini">
-          <img src="assets/moment-dance-4x5-800.webp" srcset="assets/moment-dance-4x5-800.webp 800w, assets/moment-dance-4x5-1200.webp 1200w" sizes="(min-width: 900px) 20vw, 45vw" alt="Primer baile de boda en pazo gallego con iluminación ambiental" loading="lazy">
-          <img src="assets/moment-sparklers-4x5-800.webp" srcset="assets/moment-sparklers-4x5-800.webp 800w, assets/moment-sparklers-4x5-1200.webp 1200w" sizes="(min-width: 900px) 20vw, 45vw" alt="Salida de novios en boda nocturna en Galicia con bengalas" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="section section--cta">
-      <div class="wrap">
-        <div class="ctaCard">
-          <p class="ctaCard__quote">Si al leer esto sentís calma, quizá estemos hablando el mismo idioma.</p>
-          <div class="ctaCard__actions">
-            <a class="btn btn--primary" href="mailto:ac@perfectosprometidos.com">Conversemos con calma</a>
-            <a class="btn btn--ghost" href="mailto:ac@perfectosprometidos.com?subject=Perfectos%20Prometidos%20·%20Consulta">Escribir por email</a>
-          </div>
-          <p class="ctaCard__small">ac@perfectosprometidos.com</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- CIERRE -->
+  <section class="closing">
+    <div class="container closing-card">
+      <p class="closing-quote">Las bodas pasan.<br><span>Lo que se crea con intención, permanece.</span></p>
+      <a class="closing-link" href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <p class="footer__brand">Perfectos Prometidos</p>
-      <p class="footer__small">Perfectos Prometidos es una firma independiente de wedding planning en Galicia dirigida por Antonio Calzas.</p>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Perfectos Prometidos</p>
+      <p class="footer-mini">Wedding planner en Galicia · Bodas elegantes · Diseño editorial</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+:root{
+  --bg:#0b0b0b;
+  --card:#ffffff;
+  --muted:#b9b9b9;
+  --text:#111;
+  --line:rgba(255,255,255,.14);
+  --soft:#111111;
+  --shadow: 0 18px 60px rgba(0,0,0,.35);
+  --radius: 28px;
+  --serif: "Playfair Display", serif;
+  --sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:#eee;
+  font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+a{color:inherit;text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:0 18px}
+
+.topbar{
+  position:sticky;top:0;z-index:20;
+  background: rgba(11,11,11,.72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 0;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  border-radius:50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:var(--serif);font-size:16px;letter-spacing:.2px}
+.brand-tag{font-size:12px;color:var(--muted)}
+
+.nav{display:flex;align-items:center;gap:16px}
+.nav a{
+  font-size:13px;
+  color:#d8d8d8;
+  opacity:.9;
+  transition:opacity .2s ease;
+}
+.nav a:hover{opacity:1}
+.nav-cta{
+  padding:10px 14px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background: rgba(255,255,255,.06);
+}
+
+.hero{
+  position:relative;
+  min-height: 78vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.hero-media{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.50), rgba(0,0,0,.78)),
+    url("assets/images/wedding%20planner%20lujo%20galicia%20perfectos%20prometidos.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: saturate(0.95) contrast(1.05);
+}
+
+.hero-layer{position:relative;z-index:2;padding:54px 0}
+.hero-card{
+  width:min(820px, 100%);
+  background: rgba(255,255,255,.94);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 34px 34px 30px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.hero-pill{
+  display:inline-flex;align-items:center;gap:10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.06);
+  font-size: 12px;
+  color: rgba(0,0,0,.70);
+  margin-bottom: 12px;
+}
+.dot{
+  width:8px;height:8px;border-radius:50%;
+  background:#c9a86a;
+  box-shadow:0 0 0 4px rgba(201,168,106,.18);
+}
+
+.eyebrow{
+  margin: 0 0 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(0,0,0,.55);
+}
+
+.h1{
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.4vw, 64px);
+  line-height: 1.02;
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+.lead{
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  color: rgba(0,0,0,.70);
+}
+.whisper{
+  margin: 0 0 22px;
+  color: rgba(0,0,0,.65);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.btn{
+  display:inline-flex;
+  align-items:center;justify-content:center;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 14px;
+  border: 1px solid rgba(0,0,0,.12);
+  transition: transform .15s ease, background .15s ease, border .15s ease;
+}
+.btn:hover{transform: translateY(-1px)}
+.btn-primary{
+  background:#0f0f0f;
+  color:#fff;
+  border-color:#0f0f0f;
+}
+.btn-ghost{
+  background: rgba(255,255,255,.9);
+  color:#111;
+}
+
+.section{padding:74px 0}
+.section-soft{background: rgba(255,255,255,.04)}
+.section-head{margin-bottom:22px}
+.h2{
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1.12;
+  margin: 0 0 8px;
+}
+.subhead{
+  margin:0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.prose p{
+  margin: 0 0 14px;
+  color:#dedede;
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+.image-card{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 22px;
+  overflow:hidden;
+}
+.image-card img{
+  width:100%;
+  display:block;
+  height:auto;
+}
+.image-card figcaption{
+  padding: 12px 14px 14px;
+  color: rgba(255,255,255,.72);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.services{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.service-card{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 22px;
+  overflow:hidden;
+  padding-bottom: 14px;
+}
+.service-card img{
+  width:100%;
+  height: 170px;
+  object-fit: cover;
+  display:block;
+}
+.service-card h3{
+  margin: 12px 14px 6px;
+  font-family: var(--serif);
+  font-size: 18px;
+}
+.service-card p{
+  margin: 0 14px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.65;
+  font-size: 13.5px;
+}
+
+.mini-grid{
+  margin: 18px 0 18px;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.mini{
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+  border-radius: 18px;
+  padding: 12px 14px;
+}
+.mini-k{
+  display:inline-block;
+  font-size: 12px;
+  opacity: .7;
+  margin-bottom: 6px;
+}
+.mini p{margin:0;color:rgba(255,255,255,.82);line-height:1.6;font-size:13.5px}
+
+.contact-box{
+  margin-top: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  border-radius: 18px;
+  padding: 14px;
+}
+.contact-title{margin:0 0 6px;color:rgba(255,255,255,.72);font-size:13px}
+.contact-link{font-weight:500}
+
+.portrait img{object-fit:cover}
+
+.closing{padding: 40px 0 70px}
+.closing-card{
+  background: rgba(255,255,255,.92);
+  color:#111;
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  text-align:center;
+  box-shadow: var(--shadow);
+}
+.closing-quote{
+  margin:0 0 10px;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.35;
+}
+.closing-quote span{opacity:.85}
+.closing-link{
+  display:inline-block;
+  margin-top: 6px;
+  color:#111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 20px 0 26px;
+}
+.footer-inner{
+  display:flex;flex-direction:column;gap:6px;
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+}
+.footer-mini{margin:0}
+
+@media (max-width: 980px){
+  .services{grid-template-columns: repeat(2, 1fr)}
+  .grid-2{grid-template-columns: 1fr;gap:18px}
+  .nav{display:none}
+  .hero-card{padding: 28px 22px}
+}
+
+@media (max-width: 520px){
+  .services{grid-template-columns: 1fr}
+  .h2{font-size: 28px}
+}
