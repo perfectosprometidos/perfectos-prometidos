@@ -382,3 +382,6 @@ section + section {
   display: block;
   border-radius: 28px;
 }
+.editorial-image {
+    margin-bottom: 64px;
+}
