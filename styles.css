@@ -337,3 +337,15 @@ transform: translateY(36px);
   border-radius: 28px;
   box-shadow: var(--shadow);
 }
+.editorial-image{
+  max-width: 1100px;
+  margin: 120px auto 120px auto;
+  padding: 0 6vw;
+}
+
+.editorial-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+}
