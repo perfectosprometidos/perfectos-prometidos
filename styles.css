@@ -47,9 +47,10 @@ body{
 .hero-card{
   position: relative;
   z-index:2;
-  width: min(980px, 92vw);
-  margin: 0 auto;
-  top: 9vh;
+max-width: 520px;
+margin-left: 6vw;
+transform: translateY(48px);
+
 
   background: rgba(246,244,239,.92);
   backdrop-filter: blur(6px);
