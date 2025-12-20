@@ -349,3 +349,23 @@ transform: translateY(36px);
   display: block;
   border-radius: 28px;
 }
+/* --- AJUSTE EDITORIAL DE LUJO --- */
+
+.editorial-image {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.editorial-image img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;   /* lujo: no pantalla completa infinita */
+  margin: 0 auto 6rem auto;
+  height: auto;
+}
+
+/* Eliminar cualquier separador visual fantasma */
+section + section {
+  border: none;
+}
