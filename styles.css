@@ -369,3 +369,16 @@ transform: translateY(36px);
 section + section {
   border: none;
 }
+/* AJUSTE IMAGEN EDITORIAL – LUJO */
+.editorial-image {
+  max-width: 1100px;
+  margin: 80px auto 100px auto;
+  padding: 0 40px;
+}
+
+.editorial-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+}
