@@ -21,18 +21,21 @@ body{
   overflow: hidden;
   background: #111; /* por si carga lenta */
 }
+.hero{
+  overflow: hidden;
+}
 
 .hero-image{
-  position: absolute;
-  inset: 0;
+  line-height: 0;
 }
 
 .hero-image img{
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; /* elimina “raya” por comportamiento inline */
 }
+
 
 
 
@@ -307,6 +310,22 @@ transform: translateY(36px);
   display: block;
   width: min(1100px, 92vw);
   height: auto;
+  margin: 0 auto;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+/* Imagen editorial intermedia (lujo, no gigante) */
+.editorial-image{
+  background: var(--paper);
+  padding: 56px 0;
+}
+
+.editorial-image img{
+  display: block;
+  width: min(1100px, 92vw);
+  max-height: 520px;
+  height: auto;
+  object-fit: cover;
   margin: 0 auto;
   border-radius: 28px;
   box-shadow: var(--shadow);
