@@ -239,14 +239,7 @@ transform: translateY(36px);
         <figcaption>Organización</figcaption>
       </figure>
 
-      <figure class="world-item">
-        <img src="assets/images/wedding%20planner%20lujo%20galicia%20perfectos%20prometidos.png" alt="Wedding planner de lujo en Galicia Perfectos Prometidos" loading="lazy">
-        <figcaption>Dirección editorial</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-<!-- fin MUNDO -->
+     
 /* MUNDO — composición editorial premium */
 .world{
   padding: 110px 1.5rem 5.5rem;
