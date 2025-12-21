@@ -121,27 +121,25 @@ body{
   position: relative;
   min-height: 92vh;
   overflow: hidden;
-  background: var(--paper);
+  background: var(--paper); /* por si carga lenta */
   padding-top: 88px;
-  padding-bottom: 40px; /* AÑADIR */
 }
 
 
-/* la imagen debe llenar el hero */
+
 .hero-image{
-  position: absolute;
-  inset: 0;
   line-height: 0;
+  display: block;
 }
+
 
 .hero-image img{
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 35%;
-  display: block;
 }
-
 
 
 
@@ -165,18 +163,13 @@ body{
 
 
 /* tarjeta */
-/* tarjeta HERO — composición editorial lujo */
 .hero-card{
-  position: absolute;
-  z-index: 3;
+  position: relative;
+  z-index:2;
+max-width: 520px;
+margin-left: 6vw;
+transform: translateY(36px);
 
-  left: clamp(28px, 6vw, 72px);
-  bottom: clamp(34px, 7vh, 84px);
-  left: clamp(34px, 7vw, 92px);
- bottom: clamp(44px, 7vh, 108px);
-
-
-  max-width: 520px;
 
   background: rgba(246,244,239,.92);
   backdrop-filter: blur(6px);
@@ -225,9 +218,35 @@ body{
 }
 
 .hero-cta:hover{ opacity:.92; }
+<!-- MUNDO / INSPIRACIÓN -->
+<section class="world" id="mundo">
+  <div class="world-inner">
+    <span class="world-tag">MUNDO PERFECTOS PROMETIDOS</span>
+    <h2>Inspiración editorial, calma y excelencia.</h2>
+    <p class="contact-lead">
+      Nos inspira la estética serena de The Lane, el rigor visual de una portada y la emoción real de Galicia.
+      Pazos, fincas privadas y domingos sin prisa: una forma de vivir la belleza con intención.
+    </p>
 
+    <div class="world-grid">
+      <figure class="world-item">
+        <img src="assets/images/experiencia%20bodas%20exclusivas%20galicia.png" alt="Experiencia de bodas exclusivas en Galicia" loading="lazy">
+        <figcaption>Experiencia</figcaption>
+      </figure>
 
+      <figure class="world-item">
+        <img src="assets/images/organizacion%20bodas%20a%20medida%20galicia.png" alt="Organización de bodas a medida en Galicia" loading="lazy">
+        <figcaption>Organización</figcaption>
+      </figure>
 
+      <figure class="world-item">
+        <img src="assets/images/wedding%20planner%20lujo%20galicia%20perfectos%20prometidos.png" alt="Wedding planner de lujo en Galicia Perfectos Prometidos" loading="lazy">
+        <figcaption>Dirección editorial</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- fin MUNDO -->
 /* MUNDO — composición editorial premium */
 .world{
   padding: 110px 1.5rem 5.5rem;
@@ -240,6 +259,9 @@ body{
 
 .world-grid{
   display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+  margin-top:26px;
   grid-template-columns: 1.35fr .65fr;
   grid-template-areas:
     "a b"
@@ -250,8 +272,12 @@ body{
 
 .world-item{
   margin:0;
+  background: rgba(255,255,255,.55);
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:18px;
   border-radius: 18px;
   overflow:hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.04);
   border: 1px solid rgba(0,0,0,.08);
   background: rgba(255,255,255,.55);
   box-shadow: 0 18px 50px rgba(0,0,0,.06);
@@ -264,6 +290,8 @@ body{
 
 .world-item img{
   width:100%;
+  height:280px;
+  object-fit:cover;
   height:100%;
   min-height: 340px;
   object-fit: cover;
@@ -271,6 +299,16 @@ body{
   transform: scale(1.01);
   filter: contrast(1.02) saturate(1.02);
 }
+.world-item figcaption{
+  padding:14px 16px;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.8;
+}
+@media (max-width: 920px){
+  .world-grid{ grid-template-columns:1fr; }
+  .world-item img{ height:240px; }
 
 .world-item:nth-child(2) img,
 .world-item:nth-child(3) img{
