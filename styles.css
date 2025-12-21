@@ -51,6 +51,70 @@ body{
   color: rgba(17,17,17,.95);
 }
 
+/* TOPBAR / NAV — lujo */
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  background: rgba(251, 250, 247, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.topbar-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a{
+  color: rgba(17,17,17,.80);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav a:hover{
+  color: rgba(17,17,17,1);
+}
+
+.nav-cta{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background: #111;
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* para que el hero no quede debajo del menú fijo */
+.hero{
+  padding-top: 88px;
+}
 
 /* HERO */
 .hero{
