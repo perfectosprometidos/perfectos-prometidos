@@ -49,9 +49,12 @@ body{
 .editorial-image img {
   width: 100%;
   height: auto;
+  max-height: 520px;
+  object-fit: cover;
   display: block;
   border-radius: 28px;
 }
+
 
 
 /* tarjeta */
