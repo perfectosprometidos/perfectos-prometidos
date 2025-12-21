@@ -9,14 +9,16 @@
   <link rel="icon" href="favicon.ico" />
 </head>
 
-<body>
+<body id="top">
+
 <header class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="#top">Perfectos Prometidos</a>
 
     <nav class="nav">
       <a href="#servicios">Servicios</a>
-      <a href="#mundo">Mundo</a>
+     <a href="#quien-soy">Mundo</a>
+
       <a href="blog.html">Blog</a>
       <a class="nav-cta" href="#contacto">Contacto</a>
     </nav>
@@ -46,11 +48,53 @@
         no es mostrar, sino sentir.
       </p>
 
-      <a href="mailto:ac@perfectosprometidos.com" class="hero-cta">
-        Hablemos de vuestra boda
-      </a>
+    <a href="#contacto" class="hero-cta">
+  Hablemos de vuestra boda
+</a>
+
     </div>
   </section>
+ <!-- SERVICIOS -->
+<section class="services" id="servicios">
+  <div class="services-inner">
+    <span class="services-tag">SERVICIOS</span>
+    <h2>Una boda a medida, de principio a fin.</h2>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <h3>Planificación integral</h3>
+        <p>Diseño, organización y producción completa para bodas en pazos y fincas privadas.</p>
+        <ul>
+          <li>Selección de espacios y proveedores</li>
+          <li>Presupuesto, timing y coordinación</li>
+          <li>Dirección estética editorial</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>Dirección creativa</h3>
+        <p>Para parejas que buscan una estética impecable y una narrativa visual de revista.</p>
+        <ul>
+          <li>Concepto, paleta y materiales</li>
+          <li>Decoración y detalles</li>
+          <li>Guía de foto y vídeo (look &amp; feel)</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>Domingos exclusivos</h3>
+        <p>Celebraciones sin prisa: calma, luz y gastronomía en su mejor forma.</p>
+        <ul>
+          <li>Ritmo sereno y experiencia</li>
+          <li>Atmósfera emocional</li>
+          <li>Estilo editorial premium</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- fin SERVICIOS -->
+
   <!-- fin HERO -->
 
   <!-- QUIÉN SOY / MIRADA -->
@@ -111,6 +155,35 @@
       </p>
     </div>
   </section>
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="contact-inner">
+    <span class="contact-tag">CONTACTO</span>
+    <h2>Conversemos con calma.</h2>
+    <p class="contact-lead">
+      Cuéntanos vuestra fecha, la zona (Galicia / Madrid) y el tipo de celebración que imagináis.
+      Respuesta en 24–48h.
+    </p>
+
+    <form class="contact-form" action="mailto:ac@perfectosprometidos.com" method="post" enctype="text/plain">
+      <div class="contact-grid">
+        <input type="text" name="Nombre" placeholder="Nombre y apellidos" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <input type="text" name="Zona" placeholder="Galicia / Madrid (o destino)">
+        <input type="text" name="Fecha" placeholder="Fecha (aprox.)">
+      </div>
+
+      <textarea name="Mensaje" rows="5" placeholder="Contadnos vuestra idea (pazo, finca privada, domingo, etc.)"></textarea>
+
+      <button class="contact-btn" type="submit">Enviar</button>
+
+      <p class="contact-micro">
+        Si lo prefieres, escríbenos directamente: <a href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>
+      </p>
+    </form>
+  </div>
+</section>
+<!-- fin CONTACTO -->
 
 </body>
 </html>
