@@ -92,9 +92,9 @@ transform: translateY(36px);
 }
 
 .hero-manifesto{
-  margin: 0 0 26px 0;
+  margin: 0 0 12px 0;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.65;
   color: rgba(17,17,17,.75);
 }
 
