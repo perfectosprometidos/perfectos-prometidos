@@ -1,4 +1,6 @@
-body { outline: 6px solid red !important; }
+html {
+  background: red !important;
+}
 
 :root{
   --ink:#111;
