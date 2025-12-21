@@ -123,7 +123,9 @@ body{
   overflow: hidden;
   background: var(--paper);
   padding-top: 88px;
+  padding-bottom: 40px; /* AÑADIR */
 }
+
 
 /* la imagen debe llenar el hero */
 .hero-image{
@@ -168,8 +170,9 @@ body{
   position: absolute;
   z-index: 3;
 
-  left: clamp(28px, 6vw, 72px);
-  bottom: clamp(34px, 7vh, 84px);
+  left: clamp(34px, 7vw, 92px);
+ bottom: clamp(44px, 7vh, 108px);
+
 
   max-width: 520px;
 
