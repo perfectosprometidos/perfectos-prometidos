@@ -20,7 +20,9 @@ body{
   min-height: 92vh;
   overflow: hidden;
   background: var(--paper); /* por si carga lenta */
+  padding-top: 88px;
 }
+
 
 
 .hero-image{
