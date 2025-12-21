@@ -1,3 +1,5 @@
+body { outline: 6px solid red !important; }
+
 :root{
   --ink:#111;
   --paper:#f6f4ef;
