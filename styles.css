@@ -816,6 +816,111 @@ section + section {
     height: 320px;
   }
 }
+/* ===== Experiencia ===== */
+.experience-hero{
+  padding: 110px 0 34px;
+  background: #fbfaf7;
+}
+.experience-hero__inner{
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.experience-kicker{
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(0,0,0,.55);
+  margin: 0 0 10px;
+}
+.experience-hero h1{
+  font-size: clamp(34px, 4vw, 58px);
+  margin: 0 0 14px;
+}
+.experience-lead{
+  max-width: 62ch;
+  line-height: 1.75;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+}
+
+.experience-grid{
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+.experience-item{
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #eee;
+}
+.experience-item img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.experience-item--hero{
+  grid-column: 1 / -1;
+  height: 420px;
+}
+.experience-item:nth-child(2){
+  grid-column: 1 / 7;
+  height: 320px;
+}
+.experience-item:nth-child(3){
+  grid-column: 7 / -1;
+  height: 320px;
+}
+.experience-item:nth-child(4){
+  grid-column: 1 / 5;
+  height: 260px;
+}
+.experience-item:nth-child(5){
+  grid-column: 5 / 9;
+  height: 260px;
+}
+.experience-item:nth-child(6){
+  grid-column: 9 / -1;
+  height: 260px;
+}
+
+.experience-cta{
+  padding: 70px 0 90px;
+  background: #fbfaf7;
+}
+.experience-cta__inner{
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  border-radius: 22px;
+  padding: 34px;
+  background: rgba(0,0,0,.03);
+}
+.experience-cta__inner h2{
+  margin: 0 0 10px;
+}
+.experience-cta__inner p{
+  margin: 0 0 18px;
+  color: rgba(0,0,0,.65);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px){
+  .experience-item--hero{ height: 320px; }
+  .experience-item:nth-child(2),
+  .experience-item:nth-child(3){
+    grid-column: 1 / -1;
+    height: 260px;
+  }
+  .experience-item:nth-child(4),
+  .experience-item:nth-child(5),
+  .experience-item:nth-child(6){
+    grid-column: 1 / -1;
+    height: 240px;
+  }
+}
 
 
 
