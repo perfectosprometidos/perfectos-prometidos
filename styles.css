@@ -233,6 +233,15 @@ transform: translateY(36px);
   overflow:hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,.04);
 }
+.world-grid a.world-item{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+.world-grid a.world-item:hover{
+  text-decoration:none;
+}
+
 .world-item{
   display:block;
   text-decoration:none;
