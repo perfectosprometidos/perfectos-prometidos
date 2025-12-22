@@ -541,35 +541,117 @@ section + section {
   gap: 18px;
   margin-top: 26px;
 }
+/* Igualar altura de tarjetas para bloque editorial */
+.services-grid .service-card {
+  height: 100%;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+}
+.services-grid .service-card ul {
+  margin-top: auto;
+}
+/* Ajuste mobile: evitar alturas forzadas */
+@media (max-width: 640px) {
+  .services-grid .service-card {
+    min-height: auto;
+  }
+}
+/* Refinamiento: aire editorial por breakpoint */
+@media (min-width: 1200px) {
+  .services-grid {
+    gap: 22px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    gap: 14px;
+    margin-top: 18px;
+  }
+}
+/* Refinamiento: microtipografía premium */
+.services-grid .service-card h3 {
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.services-grid .service-card p {
+  line-height: 1.65;
+  color: rgba(0,0,0,.72);
+  margin: 0 0 14px;
+}
+
+.services-grid .service-card li {
+  line-height: 1.55;
+  color: rgba(0,0,0,.75);
+}
+/* Refinamiento: bullets discretos (editorial) */
+.services-grid .service-card ul {
+  list-style-position: outside;
+}
+
+.services-grid .service-card li::marker {
+  color: rgba(0,0,0,.35);
+}
+/* Refinamiento: tarjeta tipo papel (borde + sombra) */
+.services-grid .service-card {
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 10px 26px rgba(0,0,0,.05);
+}
+
+
 
 /* Tarjetas */
-.service-card {
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(0,0,0,.08);
+.service-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
   border-radius: 18px;
-  padding: 22px 22px 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.04);
+  padding: 28px 28px 26px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.05);
 }
 
-.service-card h3 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  letter-spacing: .01em;
+
+.service-card h3{
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
 }
 
-.service-card p {
-  margin: 0 0 14px;
-  line-height: 1.7;
-  opacity: .9;
-  font-size: 15px;
+
+.service-card p{
+  line-height: 1.65;
+  color: rgba(0,0,0,.72);
+  margin: 10px 0 16px;
 }
 
-.service-card ul {
-  margin: 0;
-  padding-left: 18px;
-  line-height: 1.8;
-  opacity: .9;
-  font-size: 14px;
+
+.service-card ul{
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-card li{
+  position: relative;
+  padding-left: 16px;
+  margin: 10px 0;
+  color: rgba(0,0,0,.75);
+  line-height: 1.55;
+}
+
+.service-card li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(0,0,0,.35);
 }
 
 /* CONTACTO premium */
