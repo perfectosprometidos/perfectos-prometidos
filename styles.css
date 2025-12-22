@@ -218,35 +218,7 @@ transform: translateY(36px);
 }
 
 .hero-cta:hover{ opacity:.92; }
-<!-- MUNDO / INSPIRACIÓN -->
-<section class="world" id="mundo">
-  <div class="world-inner">
-    <span class="world-tag">MUNDO PERFECTOS PROMETIDOS</span>
-    <h2>Inspiración editorial, calma y excelencia.</h2>
-    <p class="contact-lead">
-      Nos inspira la estética serena de The Lane, el rigor visual de una portada y la emoción real de Galicia.
-      Pazos, fincas privadas y domingos sin prisa: una forma de vivir la belleza con intención.
-    </p>
 
-    <div class="world-grid">
-      <figure class="world-item">
-        <img src="assets/images/experiencia%20bodas%20exclusivas%20galicia.png" alt="Experiencia de bodas exclusivas en Galicia" loading="lazy">
-        <figcaption>Experiencia</figcaption>
-      </figure>
-
-      <figure class="world-item">
-        <img src="assets/images/organizacion%20bodas%20a%20medida%20galicia.png" alt="Organización de bodas a medida en Galicia" loading="lazy">
-        <figcaption>Organización</figcaption>
-      </figure>
-
-      <figure class="world-item">
-        <img src="assets/images/wedding%20planner%20lujo%20galicia%20perfectos%20prometidos.png" alt="Wedding planner de lujo en Galicia Perfectos Prometidos" loading="lazy">
-        <figcaption>Dirección editorial</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-<!-- fin MUNDO -->
 .world-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
