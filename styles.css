@@ -548,6 +548,25 @@ section + section {
     margin-top: 30px;
   }
 }
+/* Mundo: introducción editorial */
+.world-intro {
+  max-width: 720px;
+  margin-bottom: 64px;
+}
+
+.world-intro .world-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.world-intro h2 {
+  margin-bottom: 22px;
+}
+
+.world-intro .contact-lead {
+  font-size: 1.05rem;
+}
+
 /* Ritmo editorial en títulos de servicios */
 .services-grid .service-card h3 {
   font-weight: 500;
