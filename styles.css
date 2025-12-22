@@ -557,12 +557,32 @@ section + section {
     min-height: auto;
   }
 }
+/* Hover editorial silencioso */
+.services-grid .service-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+@media (hover: hover) {
+  .services-grid .service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(0,0,0,.07);
+  }
+}
+
 /* Refinamiento: aire editorial por breakpoint */
 @media (min-width: 1200px) {
   .services-grid {
     gap: 22px;
     margin-top: 30px;
   }
+}
+/* Ritmo editorial en títulos de servicios */
+.services-grid .service-card h3 {
+  font-weight: 500;
+}
+/* Cierre editorial del bloque servicios */
+#servicios {
+  padding-bottom: 72px;
 }
 
 @media (max-width: 1024px) {
