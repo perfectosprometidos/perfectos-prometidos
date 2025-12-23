@@ -966,6 +966,31 @@ section + section {
 .world-card img {
   pointer-events: none;
 }
+/* EXPERIENCE – MICROTIPOGRAFÍA EDITORIAL */
+
+.experience-text {
+  margin-top: 4rem;
+}
+
+.experience-text-inner {
+  max-width: 880px;              /* anchura editorial */
+  margin: 0 auto;
+}
+
+.experience-text-inner h2 {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+}
+
+.experience-text-inner p {
+  font-size: 1.05rem;
+  line-height: 1.75;             /* clave para lujo */
+  letter-spacing: 0.01em;
+  margin-bottom: 1.6rem;
+  color: #2a2a2a;
+}
 
 
 
