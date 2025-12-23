@@ -944,6 +944,28 @@ section + section {
 .world-card figcaption {
   pointer-events: none;
 }
+/* Desktop fix: overlays bloqueando click en Mundo */
+.world-item { position: relative; }
+
+.world-card{
+  position: relative;
+  display: block;
+  height: 100%;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.world-card::before,
+.world-card::after,
+.world-item::before,
+.world-item::after {
+  pointer-events: none;
+}
+
+.world-card figcaption,
+.world-card img {
+  pointer-events: none;
+}
 
 
 
