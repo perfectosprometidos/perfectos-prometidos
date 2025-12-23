@@ -921,6 +921,29 @@ section + section {
     height: 240px;
   }
 }
+/* FIX: permitir click en tarjetas del bloque Mundo */
+.world-item { position: relative; }
+
+.world-card {
+  position: relative;
+  display: block;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Si hay overlays/pseudoelementos que cubren la tarjeta, que no bloqueen el click */
+.world-card::before,
+.world-card::after,
+.world-item::before,
+.world-item::after {
+  pointer-events: none;
+}
+
+/* Si el texto/figcaption está encima, que tampoco bloquee */
+.world-card figcaption {
+  pointer-events: none;
+}
 
 
 
