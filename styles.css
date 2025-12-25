@@ -1067,6 +1067,24 @@ section + section {
   background:#111;
   color:#fff;
 }
+/* Micro-mensaje editorial en header (hover) */
+.topbar::after{
+  content: "Más inspiración";
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(17,17,17,0.65);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.topbar:hover::after{
+  opacity: 1;
+}
 
 
 
