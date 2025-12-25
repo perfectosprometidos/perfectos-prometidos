@@ -1051,6 +1051,22 @@ section + section {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
+/* Header: estado al hacer scroll */
+.topbar{
+  transition: background 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;
+}
+
+.topbar.is-scrolled{
+  background: rgba(248,246,242,0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(17,17,17,0.08);
+}
+
+/* En modo scrolled, asegura contraste del CTA */
+.topbar.is-scrolled .nav-cta{
+  background:#111;
+  color:#fff;
+}
 
 
 
