@@ -991,6 +991,53 @@ section + section {
   margin-bottom: 1.6rem;
   color: #2a2a2a;
 }
+/* ===============================
+   HEADER GLOBAL (TOPBAR)
+   =============================== */
+
+.topbar{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:transparent;
+}
+
+.topbar-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.topbar .brand{
+  text-decoration:none;
+  letter-spacing:.12em;
+  font-size:14px;
+  color:#111;
+}
+
+.topbar .nav a{
+  margin-left:28px;
+  text-decoration:none;
+  font-size:14px;
+  color:#111;
+}
+
+.topbar .nav-cta{
+  background:#111;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:20px;
+}
+
+/* Evita que el hero “se coma” el header */
+.hero{
+  padding-top:140px;
+}
 
 
 
