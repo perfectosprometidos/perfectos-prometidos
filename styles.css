@@ -1038,6 +1038,13 @@ section + section {
 .hero{
   padding-top:140px;
 }
+/* Hero de páginas interiores (Experiencia, etc.) */
+.hero-experience,
+.hero-experiencia,
+.experience-hero,
+.experiencia-hero{
+  padding-top:140px;
+}
 
 
 
