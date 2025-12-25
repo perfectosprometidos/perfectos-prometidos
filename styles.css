@@ -1067,57 +1067,45 @@ section + section {
   background:#111;
   color:#fff;
 }
+/* Micro-mensaje editorial definitivo */
+.topbar,
+.topbar-inner{
+  overflow: visible;
+}
 
-/* Micro-mensaje editorial (hover) */
 .topbar-inner{
   position: relative;
 }
 
 .topbar-hint{
   position: absolute;
-  left: 50%;
+  right: 40px;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 
   font-size: 12px;
   letter-spacing: 0.08em;
-  color: rgba(17,17,17,0.65);
+  color: rgba(17,17,17,0.75);
+
+  background: rgba(248,246,242,0.95);
+  border: 1px solid rgba(17,17,17,0.12);
+  padding: 6px 12px;
+  border-radius: 999px;
 
   opacity: 0;
   transition: opacity 180ms ease;
   pointer-events: none;
   white-space: nowrap;
 
-  z-index: 1001;
+  z-index: 9999;
 }
 
+.topbar:hover .topbar-hint,
+.topb
 
-.topbar:hover .topbar-hint{
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
 
-/* Evita recortes si algún contenedor los aplica */
-.topbar,
-.topbar-inner{
-  overflow: visible !important;
-}
-/* TEST: forzar visibilidad del hint */
-.topbar-hint{
-  opacity: 1 !important;
-  position: fixed !important;
-  top: 70px !important;
-  right: 24px !important;
-  left: auto !important;
-  transform: none !important;
 
-  background: rgba(248,246,242,0.96) !important;
-  border: 1px solid rgba(17,17,17,0.10) !important;
-  padding: 8px 12px !important;
-  border-radius: 999px !important;
-
-  z-index: 999999 !important;
-}
+  
 
 
 
