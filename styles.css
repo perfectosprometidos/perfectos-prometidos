@@ -1067,23 +1067,40 @@ section + section {
   background:#111;
   color:#fff;
 }
-/* Micro-mensaje editorial en header (hover) */
-.topbar::after{
-  content: "Más inspiración";
+
+/* Micro-mensaje editorial (hover) */
+.topbar-inner{
+  position: relative;
+}
+
+.topbar-hint{
   position: absolute;
   left: 50%;
-  bottom: -28px;
-  transform: translateX(-50%);
+  top: 100%;
+  transform: translate(-50%, 10px);
+  margin-top: 10px;
+
   font-size: 12px;
   letter-spacing: 0.08em;
   color: rgba(17,17,17,0.65);
+
   opacity: 0;
-  transition: opacity 180ms ease;
+  transition: opacity 180ms ease, transform 180ms ease;
   pointer-events: none;
+  white-space: nowrap;
+
+  z-index: 1001;
 }
 
-.topbar:hover::after{
+.topbar:hover .topbar-hint{
   opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Evita recortes si algún contenedor los aplica */
+.topbar,
+.topbar-inner{
+  overflow: visible !important;
 }
 
 
