@@ -1102,6 +1102,22 @@ section + section {
 .topbar-inner{
   overflow: visible !important;
 }
+/* TEST: forzar visibilidad del hint */
+.topbar-hint{
+  opacity: 1 !important;
+  position: fixed !important;
+  top: 70px !important;
+  right: 24px !important;
+  left: auto !important;
+  transform: none !important;
+
+  background: rgba(248,246,242,0.96) !important;
+  border: 1px solid rgba(17,17,17,0.10) !important;
+  padding: 8px 12px !important;
+  border-radius: 999px !important;
+
+  z-index: 999999 !important;
+}
 
 
 
