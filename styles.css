@@ -816,7 +816,7 @@ section + section {
 .world-item figcaption {
   padding: 20px 26px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.92rem;          /* más legible, editorial */
+  font-size: 0.94rem;          /* más legible, editorial */
   letter-spacing: 0.18em;     /* menos espaciado = más lujo */
   text-transform: uppercase;
   background: #fff;
