@@ -1424,6 +1424,34 @@ section + section {
   opacity: 1;
   transform: translateY(0);
 }
+.org-vineta a{
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  opacity: .65;
+  transition: opacity .4s ease;
+}
+
+.org-vineta a:hover{
+  opacity: 1;
+}
+.org-metodo-item h3{
+  font-size: 18px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.org-metodo-item p{
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: .85;
+}
+.org-metodo-item{
+  scroll-margin-top: 120px;
+}
 
 
 
