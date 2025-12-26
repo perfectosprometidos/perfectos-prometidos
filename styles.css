@@ -839,6 +839,15 @@ section + section {
 .world-item figcaption a:hover {
   border-bottom-color: rgba(47, 58, 47, 0.75);
 }
+/* Forzar color editorial en enlaces de tarjetas (anula azul global) */
+.world-item figcaption a,
+.world-item figcaption a:visited,
+.world-item figcaption a:active,
+.world-item figcaption a:focus {
+  color: #2F3A2F !important;
+  text-decoration: none !important;
+  border-bottom-color: rgba(47, 58, 47, 0.35) !important;
+}
 
 
 
