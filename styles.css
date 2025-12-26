@@ -790,6 +790,12 @@ section + section {
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 0.35s ease;
+    z-index: 2;
+  pointer-events: none;
+
+}
+.world-item{
+  position: relative;
 }
 
 .world-item:hover::after {
