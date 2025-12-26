@@ -776,7 +776,7 @@ section + section {
 }
 
 /* Capa editorial (hover) */
-.world-item::after {
+.world-card::after {
   content: "Ver esencia editorial";
   position: absolute;
   inset: 0;
@@ -798,8 +798,17 @@ section + section {
   position: relative;
 }
 
-.world-item:hover::after {
+.world-card:hover::after {
   opacity: 1;
+}
+.world-card{
+  position: relative;
+  display: block;
+}
+
+.world-card img{
+  position: relative;
+  z-index: 0;
 }
 
 /* Título inferior */
