@@ -644,15 +644,30 @@ section + section {
 }
 
 /* Piezas del collage */
-.organizacion-grid .org-hero{ grid-column: 1 / span 6; grid-row: 1 / span 2; min-height: 520px; }
-.organizacion-grid .org-a{    grid-column: 7 / span 3; grid-row: 1 / span 1; min-height: 250px; }
-.organizacion-grid .org-b{    grid-column: 10 / span 3; grid-row: 1 / span 1; min-height: 250px; }
+.organizacion-grid .org-c{
+  grid-column: 7 / span 3;
+  grid-row: 2 / span 1;
+  min-height: 250px;
+} /* Papelería */
 
-.organizacion-grid .org-c{    grid-column: 7 / span 6; grid-row: 2 / span 1; min-height: 250px; }
+.organizacion-grid .org-d{
+  grid-column: 10 / span 3;
+  grid-row: 2 / span 1;
+  min-height: 250px;
+} /* Complementos del novio */
 
-.organizacion-grid .org-d{    grid-column: 1 / span 4; grid-row: 3 / span 1; min-height: 260px; }
-.organizacion-grid .org-e{    grid-column: 5 / span 4; grid-row: 3 / span 1; min-height: 260px; }
-.organizacion-grid .org-f{    grid-column: 9 / span 4; grid-row: 3 / span 1; min-height: 260px; }
+.organizacion-grid .org-e{
+  grid-column: 1 / span 4;
+  grid-row: 3 / span 1;
+  min-height: 260px;
+} /* Detalles novia */
+
+.organizacion-grid .org-f{
+  grid-column: 5 / span 8;
+  grid-row: 3 / span 1;
+  min-height: 280px;
+} /* Mesa final en silencio */
+
 
 /* Responsive */
 @media (max-width: 900px){
@@ -670,8 +685,15 @@ section + section {
   .organizacion-grid .org-f{
     grid-column: auto;
     grid-row: auto;
-    min-height: 320px;
+   min-height: 240px;
+
   }
+.organizacion-grid .org-hero{
+  min-height: 420px;
+}
+
+.organizacion-grid .org-f{
+  min-height: 300px;
 }
 
 @media (max-width: 640px) {
