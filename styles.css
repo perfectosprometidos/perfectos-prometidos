@@ -596,6 +596,66 @@ section + section {
     gap: 16px;
   }
 }
+/* =========================
+   ORGANIZACIÓN — Collage editorial lujo
+   ========================= */
+
+.organizacion-grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 40px 40px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 22px;
+}
+
+.organizacion-grid .world-item{
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(17,17,17,0.08);
+  border: 1px solid rgba(17,17,17,0.08);
+}
+
+.organizacion-grid .world-item img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.01);
+}
+
+/* Piezas del collage */
+.organizacion-grid .org-hero{ grid-column: 1 / span 6; grid-row: 1 / span 2; min-height: 520px; }
+.organizacion-grid .org-a{    grid-column: 7 / span 3; grid-row: 1 / span 1; min-height: 250px; }
+.organizacion-grid .org-b{    grid-column: 10 / span 3; grid-row: 1 / span 1; min-height: 250px; }
+
+.organizacion-grid .org-c{    grid-column: 7 / span 6; grid-row: 2 / span 1; min-height: 250px; }
+
+.organizacion-grid .org-d{    grid-column: 1 / span 4; grid-row: 3 / span 1; min-height: 260px; }
+.organizacion-grid .org-e{    grid-column: 5 / span 4; grid-row: 3 / span 1; min-height: 260px; }
+.organizacion-grid .org-f{    grid-column: 9 / span 4; grid-row: 3 / span 1; min-height: 260px; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .organizacion-grid{
+    grid-template-columns: 1fr;
+    padding: 10px 22px 34px;
+    gap: 16px;
+  }
+  .organizacion-grid .org-hero,
+  .organizacion-grid .org-a,
+  .organizacion-grid .org-b,
+  .organizacion-grid .org-c,
+  .organizacion-grid .org-d,
+  .organizacion-grid .org-e,
+  .organizacion-grid .org-f{
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 320px;
+  }
+}
 
 @media (max-width: 640px) {
   .services-grid {
