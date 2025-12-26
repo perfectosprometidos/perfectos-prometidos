@@ -812,35 +812,34 @@ section + section {
   z-index: 0;
 }
 
-/* Título inferior */
+/* Título inferior editorial – versión lujo */
 .world-item figcaption {
-  padding: 16px 22px;
+  padding: 20px 26px;
   font-family: Georgia, "Times New Roman", serif;
- font-size: 0.78rem;
-letter-spacing: 0.22em;
+  font-size: 0.92rem;          /* más legible, editorial */
+  letter-spacing: 0.18em;     /* menos espaciado = más lujo */
   text-transform: uppercase;
   background: #fff;
-  color: #3F4B3E;
-margin-top: 6px;
-opacity: 0.92;
-}
-/* Título inferior - enlace editorial */
-.world-item figcaption a {
-  color: #3F4B3E !important;
-  text-decoration-line: underline;
-  text-decoration-color: #3F4B3E !important;
-  text-decoration-thickness: 0.8px;
-  text-underline-offset: 6px;
-  opacity: 0.9;
-  }
-.world-item figcaption a:visited {
-  color: #3F4B3E !important;
-  text-decoration-color: #3F4B3E !important;
+  color: #2F3A2F;              /* verde oliva profundo */
+  opacity: 0.95;
 }
 
-  .world-item figcaption a:hover {
-  opacity: 1;
+/* Enlace editorial (sin subrayado nativo, cero azul) */
+.world-item figcaption a,
+.world-item figcaption a:visited {
+  color: #2F3A2F !important;
+  text-decoration: none !important;
+
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(47, 58, 47, 0.45);
 }
+
+/* Hover silencioso, lujo */
+.world-item figcaption a:hover {
+  border-bottom-color: rgba(47, 58, 47, 0.75);
+}
+
 
 
 /* Responsive */
