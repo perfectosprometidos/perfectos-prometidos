@@ -1228,6 +1228,55 @@ section + section {
 .topbar-hint{ 
   display: none !important; 
 }
+/* === CIERRE EDITORIAL ORGANIZACIÓN === */
+
+.org-closing-lead {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 4rem auto 1.5rem;
+  max-width: 680px;
+  text-align: center;
+}
+
+.org-closing-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 680px;
+  margin: 0 auto 2.2rem;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.org-closing-signature {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 620px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+  color: #2f2f2f;
+}
+
+.org-closing-cta {
+  display: block;
+  text-align: center;
+  margin: 0 auto 5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
+.org-closing-cta::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #2f2f2f;
+  margin: 12px auto 0;
+}
 
   
 
