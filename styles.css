@@ -832,7 +832,7 @@ section + section {
 
   display: inline-block;
   padding-bottom: 6px;
-  border-bottom: 1px solid rgba(47, 58, 47, 0.45);
+ border-bottom: 0.8px solid rgba(47, 58, 47, 0.35);
 }
 
 /* Hover silencioso, lujo */
