@@ -600,6 +600,11 @@ section + section {
    ORGANIZACIÓN — Collage editorial lujo
    ========================= */
 
+/* =========================
+   ORGANIZACIÓN — GRID THE LANE (7 IMÁGENES)
+   Sustituye el bloque anterior completo
+========================= */
+
 .organizacion-grid{
   max-width: 1200px;
   margin: 0 auto;
@@ -608,31 +613,56 @@ section + section {
   grid-template-columns: repeat(12, 1fr);
   gap: 22px;
 }
-/* ORGANIZACIÓN: hero limpio, sin cortes ni barras */
+
+/* HERO superior (título + claim + viñeta) */
 .organizacion-hero{
   padding-top: 140px;
   background: transparent;
 }
 
-.organizacion-hero__inner{
+.organizacion-hero-inner{
   max-width: 980px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.organizacion-hero h1,
-.organizacion-hero p{
-  margin-left: auto;
-  margin-right: auto;
+/* Viñeta premium (chips) */
+.org-vineta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
 }
 
+.org-vineta span{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(17,17,17,.10);
+  font-size: .88rem;
+  letter-spacing: .02em;
+}
+
+.org-vineta span::before{
+  content:"";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(17,17,17,.35);
+}
+
+/* Tarjetas imagen */
 .organizacion-grid .world-item{
   position: relative;
   overflow: hidden;
   border-radius: 22px;
   background: #fff;
-  box-shadow: 0 16px 42px rgba(17,17,17,0.08);
-  border: 1px solid rgba(17,17,17,0.08);
+  box-shadow: 0 16px 42px rgba(17,17,17,.08);
+  border: 1px solid rgba(17,17,17,.08);
+  min-height: 260px; /* base */
 }
 
 .organizacion-grid .world-item img{
@@ -643,31 +673,59 @@ section + section {
   transform: scale(1.01);
 }
 
-/* Piezas del collage */
-.organizacion-grid .org-c{
+/* =========================
+   Piezas del collage (7)
+   Debe coincidir con tus clases: org-hero, org-a, org-b, org-c, org-d, org-e, org-f
+========================= */
+
+/* 1) HERO — banquete grande (izquierda, 2 filas) */
+.organizacion-grid .org-hero{
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 2;
+  min-height: 560px;
+}
+
+/* 2) Mesa lino (arriba derecha 1) */
+.organizacion-grid .org-a{
   grid-column: 7 / span 3;
-  grid-row: 2 / span 1;
-  min-height: 250px;
-} /* Papelería */
+  grid-row: 1 / span 1;
+  min-height: 260px;
+}
 
-.organizacion-grid .org-d{
+/* 3) Manos/novia en calma (arriba derecha 2) */
+.organizacion-grid .org-b{
   grid-column: 10 / span 3;
-  grid-row: 2 / span 1;
-  min-height: 250px;
-} /* Complementos del novio */
+  grid-row: 1 / span 1;
+  min-height: 260px;
+}
 
-.organizacion-grid .org-e{
+/* 4) Papelería (segunda fila derecha, ancho completo) */
+.organizacion-grid .org-c{
+  grid-column: 7 / span 6;
+  grid-row: 2 / span 1;
+  min-height: 320px;
+}
+
+/* 5) Complementos novio (fila inferior, 3 columnas) */
+.organizacion-grid .org-d{
   grid-column: 1 / span 4;
   grid-row: 3 / span 1;
   min-height: 260px;
-} /* Detalles novia */
+}
 
-.organizacion-grid .org-f{
-  grid-column: 5 / span 8;
+/* 6) Detalles novia (fila inferior, centro) */
+.organizacion-grid .org-e{
+  grid-column: 5 / span 4;
   grid-row: 3 / span 1;
-  min-height: 280px;
-} /* Mesa final en silencio */
+  min-height: 260px;
+}
 
+/* 7) Mesa final en silencio (fila inferior, derecha) */
+.organizacion-grid .org-f{
+  grid-column: 9 / span 4;
+  grid-row: 3 / span 1;
+  min-height: 260px;
+}
 
 /* Responsive */
 @media (max-width: 900px){
@@ -676,6 +734,7 @@ section + section {
     padding: 10px 22px 34px;
     gap: 16px;
   }
+
   .organizacion-grid .org-hero,
   .organizacion-grid .org-a,
   .organizacion-grid .org-b,
@@ -685,16 +744,13 @@ section + section {
   .organizacion-grid .org-f{
     grid-column: auto;
     grid-row: auto;
-   min-height: 240px;
-
+    min-height: 320px;
   }
-.organizacion-grid .org-hero{
-  min-height: 420px;
 }
 
-.organizacion-grid .org-f{
-  min-height: 300px;
-}
+
+
+
 
 @media (max-width: 640px) {
   .services-grid {
