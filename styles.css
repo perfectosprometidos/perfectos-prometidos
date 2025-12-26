@@ -1053,7 +1053,8 @@ section + section {
 }
 /* Header: estado al hacer scroll */
 .topbar{
-  transition: background 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;
+  transition: background 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;z-index: 100000;
+
 }
 
 .topbar.is-scrolled{
@@ -1097,13 +1098,15 @@ section + section {
   pointer-events: none;
   white-space: nowrap;
 
-  z-index: 9999;
+ z-index: 100000;
+
 }
 
 .topbar:hover .topbar-hint,
-.topb
-
-
+.topbar-inner:hover .topbar-hint,
+.topbar:focus-within .topbar-hint{
+  opacity: 1 !important;
+}
 
   
 
