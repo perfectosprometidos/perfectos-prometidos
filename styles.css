@@ -1383,7 +1383,34 @@ section + section {
   background:#2f2f2f;
   opacity:.65;
 }
-  
+ .org-metodo{
+  max-width: 980px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.org-metodo-item h3{
+  font-size: 1rem;
+  margin-bottom: 8px;
+  letter-spacing: .04em;
+}
+
+.org-metodo-item p{
+  font-size: .92rem;
+  line-height: 1.5;
+  opacity: .85;
+}
+
+@media (max-width: 900px){
+  .org-metodo{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+ 
 
 
 
