@@ -1410,7 +1410,21 @@ section + section {
     gap: 24px;
   }
 }
- 
+ html{
+  scroll-behavior: smooth;
+}
+/* Método editorial – aparición silenciosa */
+.org-metodo-item{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.org-metodo-item:target{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 
