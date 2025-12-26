@@ -827,14 +827,17 @@ opacity: 0.92;
 /* Título inferior - enlace editorial */
 .world-item figcaption a {
   color: #3F4B3E !important;
-
   text-decoration-line: underline;
   text-decoration-color: #3F4B3E !important;
   text-decoration-thickness: 0.8px;
   text-underline-offset: 6px;
-
   opacity: 0.9;
   }
+.world-item figcaption a:visited {
+  color: #3F4B3E !important;
+  text-decoration-color: #3F4B3E !important;
+}
+
   .world-item figcaption a:hover {
   opacity: 1;
 }
