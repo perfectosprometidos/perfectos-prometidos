@@ -820,10 +820,17 @@ section + section {
 letter-spacing: 0.22em;
   text-transform: uppercase;
   background: #fff;
-   color: #4A5546;
+  color: #3F4B3E;
 margin-top: 6px;
 opacity: 0.92;
-
+}
+/* Título inferior - enlace editorial */
+.world-item figcaption a {
+  color: #3F4B3E;
+  text-decoration: underline;
+  text-decoration-color: #3F4B3E;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 /* Responsive */
