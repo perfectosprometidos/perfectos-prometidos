@@ -1104,39 +1104,7 @@ section + section {
   background:#111;
   color:#fff;
 }
-/* Micro-mensaje editorial definitivo */
-.topbar,
-.topbar-inner{
-  overflow: visible;
-}
 
-.topbar-inner{
-  position: relative;
-}
-
-.topbar-hint{
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: rgba(17,17,17,0.75);
-
-  background: rgba(248,246,242,0.95);
-  border: 1px solid rgba(17,17,17,0.12);
-  padding: 6px 12px;
-  border-radius: 999px;
-
-  opacity: 0;
-  transition: opacity 180ms ease;
-  pointer-events: none;
-  white-space: nowrap;
-
- z-index: 100000;
-
-}
 
 .topbar:hover .topbar-hint,
 .topbar-inner:hover .topbar-hint,
