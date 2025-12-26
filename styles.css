@@ -816,11 +816,13 @@ section + section {
 .world-item figcaption {
   padding: 16px 22px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.16em;
+ font-size: 0.78rem;
+letter-spacing: 0.22em;
   text-transform: uppercase;
   background: #fff;
-    color: #4F5E4A;
+   color: #4A5546;
+margin-top: 6px;
+opacity: 0.92;
 
 }
 
