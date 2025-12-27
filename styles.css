@@ -1503,9 +1503,21 @@ section + section {
 
 .principios { padding: clamp(56px, 7vw, 96px) 0; }
 .principios__inner { width: min(1100px, 92vw); margin: 0 auto; }
-.principios__header { max-width: 760px; margin-bottom: clamp(18px, 3vw, 28px); }
+.principios__header {
+  max-width: 760px;
+  margin-bottom: clamp(18px, 3vw, 28px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .principios__title { margin: 0 0 10px; letter-spacing: .01em; }
-.principios__lead { margin: 0; line-height: 1.6; opacity: .88; }
+.principios__lead {
+  margin: 0 auto;
+  line-height: 1.65;
+  opacity: .88;
+  max-width: 52ch;
+}
 
 /* GRID igual de “tarjeta premium” que Experiencia */
 .principios__grid{
