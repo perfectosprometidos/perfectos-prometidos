@@ -1567,7 +1567,10 @@ justify-content: center;
 /* Título dentro de tarjeta */
 .principio__title{
   margin: 0;
-  letter-spacing: .01em;
+  letter-spacing: .01em;.principio__title{
+  text-wrap: balance;
+}
+
 }
 
 /* Texto: cerrado por defecto, se despliega al clicar */
@@ -1642,7 +1645,7 @@ justify-content: center;
 }
 
 .principios__grid .principio_text{
-  margin-top: 16px !important;
+  margin-top: 32px !important;
 }
 
 .principios__grid .principio__sub{
