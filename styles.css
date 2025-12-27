@@ -1548,21 +1548,20 @@ section + section {
   letter-spacing: .01em;
 }
 
-/* Texto: “cerrado” por defecto, se despliega al clicar */
+/* Texto: cerrado por defecto, se despliega al clicar */
 .principio__text{
   margin: 14px 0 0;
   line-height: 1.7;
   opacity: .86;
 
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .35s ease;
+  display: none; /* cerrado */
 }
 
 /* Abierto */
 .principio[aria-expanded="true"] .principio__text{
-  max-height: 220px; /* suficiente para tus textos */
+  display: block; /* abierto */
 }
+
 
 /* Focus accesible y limpio */
 .principio:focus-visible{
