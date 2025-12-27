@@ -1519,7 +1519,10 @@ section + section {
 /* Tarjeta (usamos button, pero se ve como card) */
 .principio{
   all: unset;
-  display: block;
+ display: flex;
+flex-direction: column;
+justify-content: center;
+
   cursor: pointer;
 
   background: rgba(255,255,255,.70);
@@ -1532,6 +1535,13 @@ section + section {
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
    min-height: 140px;
   box-sizing: border-box;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+
+.principio__text{
+  margin-top: 16px;
+}
 
 }
 
@@ -1560,6 +1570,19 @@ section + section {
 /* Abierto */
 .principio[aria-expanded="true"] .principio__text{
   display: block; /* abierto */
+}
+/* Micro-ajuste de lujo: aparición silenciosa */
+.principio__text{
+  transition: opacity .25s ease;
+}
+
+.principio[aria-expanded="true"] .principio__text{
+  animation: fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+  from{ opacity: 0; }
+  to{ opacity: .86; }
 }
 
 
