@@ -1530,6 +1530,9 @@ section + section {
   box-shadow: 0 10px 28px rgba(0,0,0,.06);
 
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+   min-height: 140px;
+  box-sizing: border-box;
+
 }
 
 /* Hover muy sutil, tipo editorial */
