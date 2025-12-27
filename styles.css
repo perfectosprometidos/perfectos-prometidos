@@ -1505,11 +1505,14 @@ section + section {
 .principios__inner { width: min(1100px, 92vw); margin: 0 auto; }
 .principios__header {
   max-width: 760px;
-  margin-bottom: clamp(18px, 3vw, 28px);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto clamp(32px, 4vw, 48px);
   text-align: center;
 }
+.principios__lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .principios__title { margin: 0 0 10px; letter-spacing: .01em; }
 .principios__lead {
@@ -1524,7 +1527,7 @@ section + section {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px;
-  margin-top: 26px;
+  margin-top: 36px;
   align-items: stretch;
 }
 
