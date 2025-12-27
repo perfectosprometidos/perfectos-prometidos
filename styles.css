@@ -1452,6 +1452,40 @@ section + section {
 .org-metodo-item{
   scroll-margin-top: 120px;
 }
+/* =========================
+   ORGANIZACIÓN · ACCORDION
+   ========================= */
+
+.org-accordion{
+  max-width: 880px;
+  margin: 72px auto 96px;
+  padding: 0 24px;
+}
+
+.org-drop{
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  padding: 24px 0;
+}
+
+.org-drop summary{
+  font-family: serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+
+.org-drop summary::-webkit-details-marker{
+  display: none;
+}
+
+.org-drop__content{
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(0,0,0,.75);
+  max-width: 620px;
+}
 
 
 
