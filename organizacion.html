@@ -43,47 +43,37 @@
       </p>
     </header>
 
-    <div class="principios__accordion">
-      <details class="principio" open>
-        <summary class="principio__summary">
-          <span class="principio__title">Dirección silenciosa</span>
-          <span class="principio__hint">Ver</span>
-        </summary>
-        <div class="principio__content">
-          Tomamos decisiones sin imponerlas. Liderazgo discreto, resultados visibles.
-        </div>
-      </details>
+<div class="principios__grid">
+  <button class="principio" aria-expanded="false" type="button">
+    <h3 class="principio__title">Dirección silenciosa</h3>
+    <p class="principio__text">
+      Tomamos decisiones sin imponerlas. Liderazgo discreto, resultados visibles.
+    </p>
+  </button>
 
-      <details class="principio">
-        <summary class="principio__summary">
-          <span class="principio__title">Precisión sin ruido</span>
-          <span class="principio__hint">Ver</span>
-        </summary>
-        <div class="principio__content">
-          Cada detalle tiene intención. Nada es casual, nada interrumpe.
-        </div>
-      </details>
+  <button class="principio" aria-expanded="false" type="button">
+    <h3 class="principio__title">Precisión sin ruido</h3>
+    <p class="principio__text">
+      Cada detalle tiene intención. Nada es casual, nada interrumpe.
+    </p>
+  </button>
 
-      <details class="principio">
-        <summary class="principio__summary">
-          <span class="principio__title">Anticipación elegante</span>
-          <span class="principio__hint">Ver</span>
-        </summary>
-        <div class="principio__content">
-          Nos adelantamos a lo importante para que la experiencia fluya sin sobresaltos.
-        </div>
-      </details>
+  <button class="principio" aria-expanded="false" type="button">
+    <h3 class="principio__title">Anticipación elegante</h3>
+    <p class="principio__text">
+      Nos adelantamos a lo importante para que la experiencia fluya sin sobresaltos.
+    </p>
+  </button>
 
-      <details class="principio">
-        <summary class="principio__summary">
-          <span class="principio__title">Ritmo y tiempos</span>
-          <span class="principio__hint">Ver</span>
-        </summary>
-        <div class="principio__content">
-          La boda respira. Cada momento sucede cuando debe, con naturalidad.
-        </div>
-      </details>
-    </div>
+  <button class="principio" aria-expanded="false" type="button">
+    <h3 class="principio__title">Ritmo y tiempos</h3>
+    <p class="principio__text">
+      La boda respira. Cada momento sucede cuando debe, con naturalidad.
+    </p>
+  </button>
+</div>
+
+      
   </div>
 </section>
 
@@ -171,6 +161,16 @@ para que todo lo que se vive permanezca.
     Conversemos con calma
   </a>
 </section>
+<script>
+  document.querySelectorAll('.principios__grid .principio').forEach(item => {
+    item.addEventListener('click', () => {
+      const isOpen = item.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.principios__grid .principio')
+        .forEach(i => i.setAttribute('aria-expanded', 'false'));
+      item.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+</script>
 
 
 </body>
