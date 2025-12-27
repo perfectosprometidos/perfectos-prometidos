@@ -1533,7 +1533,7 @@ justify-content: center;
   box-shadow: 0 10px 28px rgba(0,0,0,.06);
 
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-   min-height: 140px;
+   min-height: 180px;
   box-sizing: border-box;
   display: flex;
 flex-direction: column;
@@ -1564,13 +1564,23 @@ justify-content: center;
   line-height: 1.7;
   opacity: .86;
 
+  max-width: 32ch;
+
   display: none; /* cerrado */
+  transition: opacity .25s ease;
 }
+
 
 /* Abierto */
 .principio[aria-expanded="true"] .principio__text{
   display: block; /* abierto */
 }
+.principio__sub{
+  display: block;
+  margin-top: 8px;
+  opacity: .75;
+}
+
 /* Micro-ajuste de lujo: aparición silenciosa */
 .principio__text{
   transition: opacity .25s ease;
@@ -1603,53 +1613,7 @@ justify-content: center;
   .principio{ padding: 22px 20px; border-radius: 18px; }
 }
 
-/* =========================
-   PRINCIPIOS · tarjetas desplegables
-   ========================= */
 
-.principios__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  margin-top: 32px;
-}
-
-.principio {
-  all: unset;
-  cursor: pointer;
-  display: block;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0,0,0,.12);
-}
-
-.principio__title {
-  margin: 0;
-  letter-spacing: .01em;
-}
-
-.principio__text {
-  margin-top: 14px;
-  line-height: 1.7;
-  opacity: .85;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .4s ease, opacity .3s ease;
-  opacity: 0;
-}
-
-/* Estado abierto */
-.principio[aria-expanded="true"] .principio__text {
-  max-height: 200px;
-  opacity: .85;
-}
-
-/* Tablet */
-@media (max-width: 980px) {
-  .principios__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
-}
 
 /* Móvil */
 @media (max-width: 640px) {
@@ -1657,6 +1621,22 @@ justify-content: center;
     grid-template-columns: 1fr;
     gap: 24px;
   }
+}
+/* OVERRIDE FINAL · PRINCIPIOS centrado + ritmo premium */
+.principios__grid > .principio{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.principios__grid .principio_text{
+  margin-top: 16px !important;
+}
+
+.principios__grid .principio__sub{
+  display: block;
+  margin-top: 8px;
+  opacity: .75;
 }
 
 
