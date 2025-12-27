@@ -171,6 +171,70 @@ para que todo lo que se vive permanezca.
     });
   });
 </script>
+/* OVERRIDE FINAL · PRINCIPIOS como Experiencia */
+.principios__grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 26px;
+  align-items: stretch;
+}
+
+.principios__grid > .principio{
+  all: unset;
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 22px;
+
+  padding: 26px 26px 24px;
+  min-height: 160px;
+
+  box-shadow: 0 10px 28px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.principios__grid > .principio:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.08);
+  background: rgba(255,255,255,.86);
+}
+
+.principios__grid .principio__title{
+  margin: 0;
+  letter-spacing: .01em;
+}
+
+.principios__grid .principio__text{
+  margin: 14px 0 0;
+  line-height: 1.7;
+  opacity: .86;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+
+.principios__grid > .principio[aria-expanded="true"] .principio__text{
+  max-height: 220px;
+}
+
+.principios__grid > .principio:focus-visible{
+  outline: 2px solid rgba(0,0,0,.14);
+  outline-offset: 6px;
+}
+
+@media (max-width: 980px){
+  .principios__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px){
+  .principios__grid{ grid-template-columns: 1fr; gap: 18px; }
+  .principios__grid > .principio{ padding: 22px 20px; border-radius: 18px; }
+}
 
 
 </body>
