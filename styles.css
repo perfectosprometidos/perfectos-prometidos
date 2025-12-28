@@ -1489,6 +1489,7 @@ section + section {
   font-style: italic;
   color: #1f1f1f;
   letter-spacing: 0.03em;
+  margin-bottom: 56px;
 }
 .organization-epilogue-text::after{
   content: "—";
