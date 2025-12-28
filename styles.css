@@ -1724,6 +1724,57 @@ justify-content: center;
   .manifesto_main{ line-height: 1.75; }
   .epilogue_text{ line-height: 1.35; }
 }
+/* =========================
+   ORGANIZACIÓN · CIERRE EDITORIAL PREMIUM
+   ========================= */
+
+/* Contenedor general */
+.organizacion-text,
+.organizacion-epilogue{
+  width: min(880px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Primer golpe editorial */
+.org-closing-lead{
+  font-size: clamp(18px, 1.3vw, 20px);
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+/* Desarrollo silencioso */
+.org-closing-text{
+  font-size: clamp(15px, 1.05vw, 16px);
+  line-height: 1.75;
+  opacity: .82;
+  margin: 0 0 28px;
+}
+
+/* Firma editorial */
+.org-closing-signature{
+  font-size: clamp(14px, 1vw, 15px);
+  line-height: 1.8;
+  opacity: .6;
+  margin: 0 0 56px;
+}
+
+/* Epílogo final (frase de autor) */
+.organization-epilogue-text{
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.4;
+  font-style: italic;
+  letter-spacing: .01em;
+  max-width: 48ch;
+  margin: 0 auto 42px;
+}
+
+/* CTA respirado */
+.cta,
+.conversemos,
+.contact-cta{
+  margin-top: 48px;
+}
 
 
 
