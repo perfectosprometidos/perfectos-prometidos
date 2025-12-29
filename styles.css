@@ -1847,17 +1847,29 @@ justify-content: center;
   justify-self: center;
 }
 
-/* Tablet y móvil: comportamiento normal */
-@media (max-width: 980px) {
-  .services-grid {
-    place-content: stretch;
-  }
+/* === SERVICIOS: centrar las dos tarjetas inferiores (4 y 5) === */
+.services-grid .service-card:nth-child(4) {
+  grid-column: 1 / span 1;
+  justify-self: center;
+  width: min(100%, 520px);
+}
 
+.services-grid .service-card:nth-child(5) {
+  grid-column: 3 / span 1;
+  justify-self: center;
+  width: min(100%, 520px);
+}
+
+/* Tablet y móvil: volver al flujo normal */
+@media (max-width: 980px) {
   .services-grid .service-card:nth-child(4),
   .services-grid .service-card:nth-child(5) {
+    grid-column: auto;
     justify-self: stretch;
+    width: auto;
   }
 }
+
 
 
 
