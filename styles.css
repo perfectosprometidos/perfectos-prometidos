@@ -531,7 +531,7 @@ section + section {
   margin-top:26px;
     justify-items: stretch;
   align-items: stretch;
-}
+ 
 
 @media (max-width: 860px){
   .services-grid{
@@ -554,9 +554,7 @@ section + section {
 .services-grid .service-card ul {
   margin-top: auto;
 }
-.services-grid {
-  align-items: stretch;
-}
+
 
 /* Ajuste mobile: evitar alturas forzadas */
 @media (max-width: 640px) {
