@@ -540,7 +540,6 @@ section + section {
 
 /* Igualar altura de tarjetas para bloque editorial */
 .services-grid .service-card {
-  height: 100%;
   min-height: 270px;
   display: flex;
   flex-direction: column;
@@ -548,6 +547,10 @@ section + section {
 .services-grid .service-card ul {
   margin-top: auto;
 }
+.services-grid {
+  align-items: stretch;
+}
+
 /* Ajuste mobile: evitar alturas forzadas */
 @media (max-width: 640px) {
   .services-grid .service-card {
