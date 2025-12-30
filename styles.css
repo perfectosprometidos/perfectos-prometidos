@@ -934,7 +934,84 @@ section + section {
 .world-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 28px;
+}
+/* Mundo editorial: tarjetas clicables (The Lane style) */
+.world-card{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 10px 26px rgba(0,0,0,.05);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.world-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.08);
+}
+
+.world-media{
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #eee;
+}
+
+.world-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .35s ease;
+  display: block;
+}
+
+.world-card:hover .world-media img{
+  transform: scale(1.06);
+}
+
+.world-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,.08) 100%);
+  pointer-events:none;
+}
+
+.world-body{
+  padding: 18px 18px 20px;
+}
+
+.world-kicker{
+  font-size: 12px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.55);
+  margin: 0 0 8px;
+}
+
+.world-title{
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.world-text{
+  margin: 0 0 14px;
+  color: rgba(0,0,0,.72);
+  line-height: 1.7;
+}
+
+.world-link{
+  font-size: 13px;
+  letter-spacing: .6px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  display: inline-block;
 }
 
 /* Tarjeta */
