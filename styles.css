@@ -1847,6 +1847,12 @@ justify-content: center;
   max-width: 980px;
   margin: 0 auto;
 }
+/* Servicios: tarjeta de cierre a ancho completo */
+.service-card-wide{
+  grid-column: 1 / -1;
+  max-width: 980px;
+  margin: -40px auto 0;
+}
 
 
 
