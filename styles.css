@@ -1846,6 +1846,33 @@ justify-content: center;
 .contact-cta{
   margin-top: 48px;
 }
+/* =========================================
+   FIX MÓVIL — SERVICIOS (centrado y ancho)
+   Pegar al FINAL del styles.css
+========================================= */
+@media (max-width: 920px){
+
+  .services .services-grid{
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
+  .services .services-grid > .service-card{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* La tarjeta de cierre no debe comportarse “wide” en móvil */
+  .services .services-grid > .service-card.service-card-wide{
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 18px auto 0 !important;
+  }
+}
+
 /* ===============================
 
 
