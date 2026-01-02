@@ -1846,32 +1846,31 @@ justify-content: center;
 .contact-cta{
   margin-top: 48px;
 }
-/* ==========================
-   SERVICIOS · Mobile fix
-   1 columna + wide a ancho completo
-========================== */
-@media (max-width: 920px) {
-  .services-grid {
-    grid-template-columns: 1fr !important;
-    place-content: stretch !important;
+/* =================================
+MÓVIL - SERVICIOS
+Mantener 3 arriba + 1 centrada debajo (igual que PC)
+================================= */
+
+@media (max-width: 920px){
+
+  .services-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
   }
 
-  .services-grid .service-card {
-    width: 100% !important;
+  /* asegurar que ninguna tarjeta se “estrecha” o se centra raro */
+  .services-grid > .service-card{
+    width: auto !important;
+    max-width: none !important;
     justify-self: stretch !important;
   }
 
-  .service-card-wide {
-    grid-column: 1 / -1 !important;
-    max-width: 100% !important;
-    margin: 0 !important;
+  /* 4ª tarjeta centrada debajo (columna del medio) */
+  .services-grid > .service-card:nth-child(4){
+    grid-column: 2 / 3 !important;
   }
+
 }
-
-
-/* ===============================
-
-
 
 
 
