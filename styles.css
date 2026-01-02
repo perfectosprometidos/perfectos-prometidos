@@ -942,30 +942,22 @@ section + section {
 
 /* Responsive */
 @media (max-width: 920px) {
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contact-grid { grid-template-columns: 1fr; }
-  /* Mobile: servicios en columna, centrados y con ancho editorial */
+
+ /* Responsive */
 @media (max-width: 920px) {
+  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .contact-grid { grid-template-columns: 1fr; }
 
-  .services-grid{
-    justify-items: center;
-  }
-
-  .services-grid .service-card{
-    width: 100%;
-    max-width: 520px;
-  }
-
-  /* La tarjeta final (wide) se comporta como una tarjeta normal en móvil */
+  /* Mantener 3 + 1 como en PC */
   .services-grid .service-card-wide{
-    grid-column: auto;
-    width: 100%;
-    max-width: 520px;
-    margin: 18px auto 0;
+    grid-column: 1 / -1;
+    max-width: 980px;
+    margin: 24px auto 0;
   }
 }
 
-}
 /* =====================================================
    MUNDO EDITORIAL – GRID INTERACTIVO (The Lane style)
    ===================================================== */
