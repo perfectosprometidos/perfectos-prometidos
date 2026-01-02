@@ -532,6 +532,7 @@ section + section {
     justify-items: stretch;
   align-items: stretch;
 }
+ 
  /* Tarjeta final ancha (servicios complementarios) */
 .services-grid .service-card-wide {
   grid-column: 1 / -1;
@@ -942,22 +943,9 @@ section + section {
 
 /* Responsive */
 @media (max-width: 920px) {
-  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .services-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-
- /* Responsive */
-@media (max-width: 920px) {
-  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .contact-grid { grid-template-columns: 1fr; }
-
-  /* Mantener 3 + 1 como en PC */
-  .services-grid .service-card-wide{
-    grid-column: 1 / -1;
-    max-width: 980px;
-    margin: 24px auto 0;
-  }
 }
-
 /* =====================================================
    MUNDO EDITORIAL – GRID INTERACTIVO (The Lane style)
    ===================================================== */
@@ -1838,31 +1826,45 @@ justify-content: center;
 .contact-cta{
   margin-top: 48px;
 }
-/* =================================
-MÓVIL - SERVICIOS
-Mantener 3 arriba + 1 centrada debajo (igual que PC)
-================================= */
+/* ===============================
+   SERVICIOS · Centrar fila inferior
+   =============================== */
 
-@media (max-width: 920px){
-
-  .services-grid{
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 18px !important;
-  }
-
-  /* asegurar que ninguna tarjeta se “estrecha” o se centra raro */
-  .services-grid > .service-card{
-    width: auto !important;
-    max-width: none !important;
-    justify-self: stretch !important;
-  }
-
-  /* 4ª tarjeta centrada debajo (columna del medio) */
-  .services-grid > .service-card:nth-child(4){
-    grid-column: 2 / 3 !important;
-  }
-
+/* Centrar las 2 últimas tarjetas (cuando hay 5) */
+.services-grid {
+  place-content: center;
 }
+
+.services-grid .service-card:nth-child(4),
+.services-grid .service-card:nth-child(5) {
+  justify-self: center;
+}
+
+/* === SERVICIOS: centrar las dos tarjetas inferiores (4 y 5) === */
+.services-grid .service-card:nth-child(4) {
+  grid-column: 1 / span 1;
+  justify-self: center;
+  width: min(100%, 520px);
+}
+
+.services-grid .service-card:nth-child(5) {
+  grid-column: 3 / span 1;
+  justify-self: center;
+  width: min(100%, 520px);
+}
+
+/* Tablet y móvil: volver al flujo normal */
+@media (max-width: 980px) {
+  .services-grid .service-card:nth-child(4),
+  .services-grid .service-card:nth-child(5) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
+  }
+}
+
+
+
 
 
 
