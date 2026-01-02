@@ -944,6 +944,27 @@ section + section {
 @media (max-width: 920px) {
   .services-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  /* Mobile: servicios en columna, centrados y con ancho editorial */
+@media (max-width: 920px) {
+
+  .services-grid{
+    justify-items: center;
+  }
+
+  .services-grid .service-card{
+    width: 100%;
+    max-width: 520px;
+  }
+
+  /* La tarjeta final (wide) se comporta como una tarjeta normal en móvil */
+  .services-grid .service-card-wide{
+    grid-column: auto;
+    width: 100%;
+    max-width: 520px;
+    margin: 18px auto 0;
+  }
+}
+
 }
 /* =====================================================
    MUNDO EDITORIAL – GRID INTERACTIVO (The Lane style)
