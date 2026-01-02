@@ -1862,6 +1862,38 @@ justify-content: center;
     width: auto;
   }
 }
+/* ============================
+   SERVICIOS (4 tarjetas)
+   3 arriba + 1 centrada debajo
+   ============================ */
+
+/* Desktop: la 4ª ocupa las 3 columnas y queda centrada */
+.services-grid > .service-card.service-card-wide{
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 24px;
+}
+
+/* Móvil/Tablet: 1 columna, todo centrado (incluida la "wide") */
+@media (max-width: 920px){
+  .services-grid{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .services-grid > .service-card{
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .services-grid > .service-card.service-card-wide{
+    grid-column: auto;
+    max-width: 520px;
+    margin: 18px auto 0;
+  }
+}
 
 
 
