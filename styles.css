@@ -1837,5 +1837,50 @@ justify-content: center;
     display: block;
   }
 }
+/* =========================================
+   FIX PORTADA MÓVIL – CENTRADO HERO CARD
+   No afecta a Servicios, Mundo ni Experiencia
+========================================= */
+
+@media (max-width: 920px){
+
+  /* Seguridad: evitar desplazamientos laterales */
+  html, body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* El hero ocupa todo el ancho */
+  .hero{
+    width: 100%;
+    display: block;
+  }
+
+  /* Imagen de fondo correctamente contenida */
+  .hero-image{
+    width: 100%;
+  }
+
+  .hero-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* TARJETA DE TEXTO: centrada y editorial */
+  .hero-card{
+    position: relative;          /* anulamos cualquier offset raro */
+    left: auto;
+    right: auto;
+
+    width: 100%;
+    max-width: 560px;             /* ancho editorial perfecto */
+    margin: 24px auto 0 auto;     /* centrado real */
+
+    padding: 28px 22px;
+    box-sizing: border-box;
+  }
+
+}
 
 
