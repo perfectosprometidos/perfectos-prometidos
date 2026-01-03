@@ -1822,27 +1822,5 @@ justify-content: center;
 .contact-cta{
   margin-top: 48px;
 }
-/* =========================
-   FIX SERVICIOS EN MÓVIL
-   (no afecta a PC ni a Experiencia)
-   ========================= */
-@media (max-width: 920px) {
-  .services .services-grid {
-    grid-template-columns: 1fr !important;
-    justify-items: center;
-    gap: 18px;
-  }
-
-  .services .services-grid > .service-card {
-    width: 100% !important;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-
-  /* La tarjeta "wide" se comporta como normal en móvil */
-  .services .services-grid > .service-card.service-card-wide {
-    grid-column: auto !important;
-  }
-}
 
 
