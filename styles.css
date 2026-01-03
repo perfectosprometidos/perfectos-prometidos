@@ -556,11 +556,7 @@ section + section {
   }
 }
 
-@media (max-width: 640px){
-  .services-grid{
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* Igualar altura de tarjetas para bloque editorial */
 .services-grid .service-card {
@@ -577,11 +573,7 @@ section + section {
 
 
 /* Ajuste mobile: evitar alturas forzadas */
-@media (max-width: 640px) {
-  .services-grid .service-card {
-    min-height: auto;
-  }
-}
+
 /* Hover editorial silencioso */
 .services-grid .service-card {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
