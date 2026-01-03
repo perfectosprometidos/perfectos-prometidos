@@ -1901,5 +1901,74 @@ justify-content: center;
   }
 
 }
+/* =========================================
+   FIX MÓVIL · Layout centrado (sin tocar PC)
+   ========================================= */
+@media (max-width: 920px){
+
+  /* 1) Evitar “ancho de escritorio” y scroll lateral */
+  html, body{
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 2) Cualquier contenedor típico: que sea 100% y centrado */
+  .container, .wrap, .inner, .section, .section-inner, .topbar-inner, main{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3) Portada: centrar el bloque principal (la “tarjeta” del hero) */
+  .hero, .hero-inner, .hero-grid, .hero-wrap, .hero-container{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Si tu portada usa grid/2 columnas, lo forzamos a 1 columna */
+  .hero-grid, .hero-inner{
+    display: block !important;
+  }
+
+  /* La tarjeta (donde está “Bodas que se sienten…”) */
+  .hero-card, .hero-panel, .hero-content{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Si hay una “columna” de imagen a la izquierda/derecha, que no empuje el layout */
+  .hero-media, .hero-image, .hero-photo{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* 4) Servicios: si quieres 1 columna editorial en móvil (recomendado) */
+  .services-grid{
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* La “wide” (si existe) en móvil se comporta como normal */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: auto !important;
+  }
+}
 
 
