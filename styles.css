@@ -1882,5 +1882,24 @@ justify-content: center;
   }
 
 }
+/* FIX PORTADA MÓVIL – centrado hero */
+@media (max-width: 920px) {
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-card {
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    max-width: 520px;
+    width: calc(100% - 32px);
+  }
+
+}
 
 
