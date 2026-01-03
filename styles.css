@@ -1814,5 +1814,28 @@ justify-content: center;
 .contact-cta{
   margin-top: 48px;
 }
+/* ===============================
+   Pausa editorial SOLO móvil
+   No afecta a PC ni Experiencia
+================================ */
+
+.services-editorial-mobile{
+  display: none;
+}
+
+@media (max-width: 920px){
+  .services-editorial-mobile{
+    display: block;
+    max-width: 520px;
+    margin: 32px auto 0;
+  }
+
+  .services-editorial-mobile img{
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+  }
+}
 
 
