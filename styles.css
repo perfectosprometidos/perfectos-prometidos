@@ -1921,6 +1921,79 @@ justify-content: center;
     margin-right: auto !important;
     box-sizing: border-box !important;
   }
+  /* =====================================================
+   COLUMNA EDITORIAL CENTRADA EN MÓVIL (EXPERIENCIA / MUNDO)
+   No afecta a PC
+===================================================== */
+@media (max-width: 920px){
+
+  section,
+  .section-inner,
+  .experience,
+  .experience-section,
+  .experience-inner,
+  #mundo,
+  #experiencia{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .experience,
+  .experience-section,
+  .experience-inner,
+  #mundo,
+  #experiencia{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .experience h1,
+  .experience h2,
+  .experience h3{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
+
+/* Columna editorial centrada en móvil (texto largo) */
+@media (max-width: 920px){
+
+  /* Mantén el aire lateral */
+  section,
+  .section-inner,
+  .experience,
+  .experience-section,
+  .experience-inner{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* NUEVO: columna más “editorial” y centrada */
+  .experience,
+  .experience-section,
+  .experience-inner,
+  #mundo,
+  #experiencia{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Si el título también lo notas “muy a borde”, lo alineamos con la columna */
+  .experience h2,
+  .experience h3,
+  .experience h1{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
 
   /* 3) Portada: centrar el bloque principal (la “tarjeta” del hero) */
   .hero, .hero-inner, .hero-grid, .hero-wrap, .hero-container{
