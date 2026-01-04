@@ -2015,6 +2015,19 @@ justify-content: center;
 .hero-card{
   max-width: 560px !important;
 }
+/* =========================================
+   EXPERIENCIA – margen lateral en móvil
+   ========================================= */
+#experiencia,
+.experiencia,
+.experience,
+.experience-section,
+.experience-inner,
+.experience-content{
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box !important;
+}
 
 .hero-image img{
   width: 100% !important;
