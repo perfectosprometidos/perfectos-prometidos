@@ -1999,6 +1999,22 @@ justify-content: center;
   }
   /* --- FIX HERO móvil: centrado real (sin tocar PC) --- */
 .hero{
+   }
+  /* === MARGEN EDITORIAL TEXTO EN MÓVIL (Experiencia / Mundo) === */
+@media (max-width: 920px){
+
+  section,
+  .section-inner,
+  .experience,
+  .experience-section,
+  .experience-inner{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+}
+
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
