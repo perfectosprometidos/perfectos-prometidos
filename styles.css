@@ -2369,5 +2369,58 @@ justify-content: center;
   }
 
 }
+/* =========================================
+   FIX 1 — HERO móvil: evitar tarjeta cortada
+   (solo móvil vertical)
+========================================= */
+@media (max-width: 920px) and (orientation: portrait){
+
+  /* Asegura que el hero puede crecer y no recorta */
+  .hero,
+  .hero-inner,
+  .hero-wrap,
+  .hero-container{
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* La tarjeta nunca debe quedar recortada */
+  .hero-card{
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-bottom: 28px !important;
+  }
+}
+/* =========================================
+   FIX 2 — NAV móvil: que se vean Blog + Contacto
+========================================= */
+@media (max-width: 920px){
+
+  .topbar-inner{
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+    align-items: center !important;
+  }
+
+  .nav{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  .nav a{
+    font-size: 14px !important;
+    white-space: nowrap !important;
+  }
+
+  /* El CTA no debe “empujar” fuera a los demás */
+  .nav-cta{
+    margin-left: 0 !important;
+  }
+}
 
 
