@@ -2258,5 +2258,69 @@ justify-content: center;
 }
 
 }
+/* =========================================================
+   FIX DESPLAZAMIENTO LATERAL (culpable típico: 100vw)
+   SOLO MÓVIL VERTICAL
+========================================================= */
+@media (max-width: 920px) and (orientation: portrait){
+
+  html, body{
+    overflow-x: hidden !important;
+  }
+
+  /* Mata cualquier 100vw que esté empujando el layout */
+  .hero,
+  .hero-image,
+  .hero-image img,
+  .topbar,
+  .topbar-inner,
+  main,
+  section,
+  .section-inner{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Si algún bloque usa 100vw, lo neutralizamos */
+  [style*="100vw"],
+  [style*="100VW"]{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Aire editorial + centrado real */
+  .topbar-inner,
+  main,
+  section,
+  .section-inner{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+  }
+
+  /* Hero: columna centrada */
+  .hero{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .hero-image{
+    margin: 0 auto !important;
+  }
+
+  .hero-card{
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    margin: 18px auto 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+}
 
 
