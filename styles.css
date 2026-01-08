@@ -1956,38 +1956,6 @@ justify-content: center;
 }
 
 
-  .hero-card {
-    width: calc(100% - 32px) !important;
-    max-width: 520px !important;
-    margin: 18px auto 0 auto !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Servicios: 1 columna centrada (evita “3 arriba + 1 raro”) */
-  .services-inner {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 16px !important;
-    box-sizing: border-box !important;
-  }
-  .services-grid {
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
-  }
-  .services-grid > .service-card {
-    width: 100% !important;
-    max-width: 520px !important;
-  }
-  .services-grid > .service-card.service-card-wide {
-    grid-column: auto !important;
-    width: 100% !important;
-    max-width: 520px !important;
-    margin: 0 !important;
-  }
-
   /* Mundo / Experiencia: columna editorial centrada */
   .world-inner,
   .experience-inner,
