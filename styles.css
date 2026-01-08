@@ -2422,5 +2422,33 @@ justify-content: center;
     margin-left: 0 !important;
   }
 }
+/* =========================================================
+   FIX MÓVIL HORIZONTAL – HERO sin recortes
+   No afecta a PC
+========================================================= */
+@media (max-width: 920px) and (orientation: landscape){
+
+  .hero,
+  .hero-inner,
+  .hero-wrap,
+  .hero-container,
+  .hero-image{
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* La imagen nunca debe forzar alto fijo */
+  .hero-image img{
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover;
+  }
+
+  /* La tarjeta no puede recortarse */
+  .hero-card{
+    overflow: visible !important;
+  }
+}
 
 
