@@ -2450,5 +2450,41 @@ justify-content: center;
     overflow: visible !important;
   }
 }
+/* =========================================================
+   FIX ORGANIZACIÓN – centrado editorial en móvil
+   No afecta a PC ni a horizontal
+========================================================= */
+@media (max-width: 920px){
+
+  /* Contenedor general de Organización */
+  #organizacion,
+  .organizacion,
+  .organizacion-section,
+  .services,
+  .services-grid{
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Cada tarjeta */
+  .service-card,
+  .method-card,
+  .organizacion-card{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 24px auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Aire lateral editorial */
+  .service-card,
+  .method-card,
+  .organizacion-card{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
 
 
