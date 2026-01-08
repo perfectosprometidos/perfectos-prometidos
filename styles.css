@@ -1814,94 +1814,6 @@ justify-content: center;
 .contact-cta{
   margin-top: 48px;
 }
-/* ===============================
-   Pausa editorial SOLO móvil
-   No afecta a PC ni Experiencia
-================================ */
-
-.services-editorial-mobile{
-  display: none;
-}
-
-@media (max-width: 920px){
-  .services-editorial-mobile{
-    display: block;
-    max-width: 520px;
-    margin: 32px auto 0;
-  }
-
-  .services-editorial-mobile img{
-    width: 100%;
-    height: auto;
-    border-radius: 18px;
-    display: block;
-  }
-}
-/* =========================================
-   FIX PORTADA MÓVIL – CENTRADO HERO CARD
-   No afecta a Servicios, Mundo ni Experiencia
-========================================= */
-
-@media (max-width: 920px){
-
-  /* Seguridad: evitar desplazamientos laterales */
-  html, body{
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* El hero ocupa todo el ancho */
-  .hero{
-    width: 100%;
-    display: block;
-  }
-
-  /* Imagen de fondo correctamente contenida */
-  .hero-image{
-    width: 100%;
-  }
-
-  .hero-image img{
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* TARJETA DE TEXTO: centrada y editorial */
-  .hero-card{
-    position: relative;          /* anulamos cualquier offset raro */
-    left: auto;
-    right: auto;
-
-    width: 100%;
-    max-width: 560px;             /* ancho editorial perfecto */
-    margin: 24px auto 0 auto;     /* centrado real */
-
-    padding: 28px 22px;
-    box-sizing: border-box;
-  }
-
-}
-/* FIX PORTADA MÓVIL – centrado hero */
-@media (max-width: 920px) {
-
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-card {
-    margin: 0 auto;
-    left: auto;
-    right: auto;
-    transform: none;
-    max-width: 520px;
-    width: calc(100% - 32px);
-  }
-
-}
-
 
 /* =========================================
    EXPERIENCIA – margen lateral en móvil
@@ -1923,37 +1835,6 @@ justify-content: center;
   display: block !important;
 }
 
-/* --- FIX Servicios móvil: evitar 3+1 --- */
-.services-grid{
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 20px !important;
-}
-
-.services-grid > .service-card{
-  width: 100% !important;
-  max-width: none !important;
-}
-
-.services-grid > .service-card.service-card-wide{
-  grid-column: 1 / -1 !important;
-  max-width: 560px !important;
-  margin: 0 auto !important;
-}
-
-/* Móviles pequeños: 1 columna */
-@media (max-width: 560px){
-  .services-grid{
-    grid-template-columns: 1fr !important;
-  }
-  .services-grid > .service-card.service-card-wide{
-    grid-column: auto !important;
-    max-width: none !important;
-    margin: 0 !important;
-  }
-}
-
-}
 
 
   /* Mundo / Experiencia: columna editorial centrada */
