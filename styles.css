@@ -532,7 +532,7 @@ section + section {
     justify-items: stretch;
   align-items: stretch;
 }
- 
+
  /* Tarjeta final ancha (servicios complementarios) */
 .services-grid .service-card-wide {
   grid-column: 1 / -1;
@@ -1814,6 +1814,398 @@ justify-content: center;
 .contact-cta{
   margin-top: 48px;
 }
+/* ===============================
+   Pausa editorial SOLO móvil
+   No afecta a PC ni Experiencia
+================================ */
+
+.services-editorial-mobile{
+  display: none;
+}
+
+@media (max-width: 920px){
+  .services-editorial-mobile{
+    display: block;
+    max-width: 520px;
+    margin: 32px auto 0;
+  }
+
+  .services-editorial-mobile img{
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+  }
+}
+/* =========================================
+   FIX PORTADA MÓVIL – CENTRADO HERO CARD
+   No afecta a Servicios, Mundo ni Experiencia
+========================================= */
+
+@media (max-width: 920px){
+
+  /* Seguridad: evitar desplazamientos laterales */
+  html, body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* El hero ocupa todo el ancho */
+  .hero{
+    width: 100%;
+    display: block;
+  }
+
+  /* Imagen de fondo correctamente contenida */
+  .hero-image{
+    width: 100%;
+  }
+
+  .hero-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* TARJETA DE TEXTO: centrada y editorial */
+  .hero-card{
+    position: relative;          /* anulamos cualquier offset raro */
+    left: auto;
+    right: auto;
+
+    width: 100%;
+    max-width: 560px;             /* ancho editorial perfecto */
+    margin: 24px auto 0 auto;     /* centrado real */
+
+    padding: 28px 22px;
+    box-sizing: border-box;
+  }
+
+}
+/* FIX PORTADA MÓVIL – centrado hero */
+@media (max-width: 920px) {
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-card {
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    max-width: 520px;
+    width: calc(100% - 32px);
+  }
+
+}
+/* =========================================
+   FIX MÓVIL · Layout centrado (sin tocar PC)
+   ========================================= */
+@media (max-width: 920px){
+
+  /* 1) Evitar “ancho de escritorio” y scroll lateral */
+  html, body{
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 2) Cualquier contenedor típico: que sea 100% y centrado */
+  .container, .wrap, .inner, .section, .section-inner, .topbar-inner, main{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+  /* =====================================================
+   COLUMNA EDITORIAL CENTRADA EN MÓVIL (EXPERIENCIA / MUNDO)
+   No afecta a PC
+===================================================== */
+@media (max-width: 920px){
+
+  section,
+  .section-inner,
+  .experience,
+  .experience-section,
+  .experience-inner,
+  #mundo,
+  #experiencia{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .experience,
+  .experience-section,
+  .experience-inner,
+  #mundo,
+  #experiencia{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .experience h1,
+  .experience h2,
+  .experience h3{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
+
+/* Columna editorial centrada en móvil (texto largo) */
+@media (max-width: 920px){
+
+  /* Mantén el aire lateral */
+  section,
+  .section-inner,
+  .experience,
+  .experience-section,
+  .experience-inner{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* NUEVO: columna más “editorial” y centrada */
+  .experience,
+  .experience-section,
+  .experience-inner,
+  #mundo,
+  #experiencia{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Si el título también lo notas “muy a borde”, lo alineamos con la columna */
+  .experience h2,
+  .experience h3,
+  .experience h1{
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
+
+  /* 3) Portada: centrar el bloque principal (la “tarjeta” del hero) */
+  .hero, .hero-inner, .hero-grid, .hero-wrap, .hero-container{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Si tu portada usa grid/2 columnas, lo forzamos a 1 columna */
+  .hero-grid, .hero-inner{
+    display: block !important;
+  }
+
+  /* La tarjeta (donde está “Bodas que se sienten…”) */
+  .hero-card, .hero-panel, .hero-content{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Si hay una “columna” de imagen a la izquierda/derecha, que no empuje el layout */
+  .hero-media, .hero-image, .hero-photo{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  /* === HERO centrado en móvil (solo móvil) === */
+
+  .hero{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
+  .hero-image{
+    width: 100% !important;
+    justify-self: center !important;
+  }
+
+  .hero-image img{
+    display: block !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-card{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 18px auto 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  /* 4) Servicios: si quieres 1 columna editorial en móvil (recomendado) */
+  .services-grid{
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* La “wide” (si existe) en móvil se comporta como normal */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: auto !important;
+  }
+  /* --- FIX HERO móvil: centrado real (sin tocar PC) --- */
+.hero{
+   }
+  /* === MARGEN EDITORIAL TEXTO EN MÓVIL (Experiencia / Mundo) === */
+@media (max-width: 920px){
+
+  section,
+  .section-inner,
+  .experience,
+  .experience-section,
+  .experience-inner{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+}
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.hero-image,
+.hero-card{
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-self: center !important;
+}
+
+.hero-card{
+  max-width: 560px !important;
+}
+/* =========================================================
+   FIX DEFINITIVO MÓVIL VERTICAL – HERO + TEXTO
+   No afecta a PC ni a móvil horizontal
+   ========================================================= */
+
+@media (max-width: 920px) and (orientation: portrait) {
+  /* Seguridad total: nada se sale de pantalla */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  /* Reset real de centrado: evita “columna desplazada” */
+  * , *::before, *::after{
+    box-sizing: border-box !important;
+  }
+
+  body{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Header y contenedores principales SIEMPRE al 100% en móvil */
+  header, .topbar, .topbar-inner, main, .wrap, .container, .inner, .section, .section-inner{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Evita desplazamientos por transforms heredados */
+  .topbar-inner, main, .wrap, .container, .inner{
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  /* HERO: flujo natural en vertical (NO grid, NO offsets) */
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  /* Imagen del hero */
+  .hero-image,
+  .hero-image img {
+    width: 100% !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Tarjeta de texto del hero */
+  .hero-card {
+    width: calc(100% - 40px) !important;
+    max-width: 520px !important;
+    margin: 24px auto 0 auto !important;
+    padding: 28px 22px !important;
+    box-sizing: border-box !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  /* =====================================
+     EXPERIENCIA / MUNDO – columna editorial
+     ===================================== */
+
+  section,
+  .section-inner,
+  .experience,
+  .experience-section,
+  .experience-inner,
+  #experiencia,
+  #mundo {
+    width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .experience-inner,
+  #experiencia,
+  #mundo {
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .experience h1,
+  .experience h2,
+  .experience h3 {
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
 
 /* =========================================
    EXPERIENCIA – margen lateral en móvil
@@ -1835,7 +2227,120 @@ justify-content: center;
   display: block !important;
 }
 
+/* --- FIX Servicios móvil: evitar 3+1 --- */
+.services-grid{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
 
+.services-grid > .service-card{
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.services-grid > .service-card.service-card-wide{
+  grid-column: 1 / -1 !important;
+  max-width: 560px !important;
+  margin: 0 auto !important;
+}
+
+/* Móviles pequeños: 1 columna */
+@media (max-width: 560px){
+  .services-grid{
+    grid-template-columns: 1fr !important;
+  }
+  .services-grid > .service-card.service-card-wide{
+    grid-column: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+}
+
+}
+/* =========================================================
+   FIX DESPLAZAMIENTO LATERAL (culpable típico: 100vw)
+   SOLO MÓVIL VERTICAL
+========================================================= */
+@media (max-width: 920px) and (orientation: portrait){
+
+  html, body{
+    overflow-x: hidden !important;
+  }
+
+  /* Mata cualquier 100vw que esté empujando el layout */
+  .hero,
+  .hero-image,
+  .hero-image img,
+  .topbar,
+  .topbar-inner,
+  main,
+  section,
+  .section-inner{
+    width: 100% !important;
+    max-width: 100% !important;
+  .hero-card {
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    margin: 18px auto 0 auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Si algún bloque usa 100vw, lo neutralizamos */
+  [style*="100vw"],
+  [style*="100VW"]{
+  /* Servicios: 1 columna centrada (evita “3 arriba + 1 raro”) */
+  .services-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Aire editorial + centrado real */
+  .topbar-inner,
+  main,
+  section,
+  .section-inner{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+  }
+
+  /* Hero: columna centrada */
+  .hero{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
+  .hero-image{
+    margin: 0 auto !important;
+  .services-grid > .service-card {
+    width: 100% !important;
+    max-width: 520px !important;
+  }
+
+  .hero-card{
+    width: calc(100% - 32px) !important;
+  .services-grid > .service-card.service-card-wide {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 18px auto 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
 
   /* Mundo / Experiencia: columna editorial centrada */
   .world-inner,
@@ -1848,13 +2353,25 @@ justify-content: center;
   }
 }
 /* =========================================================
+   FIX DEFINITIVO MÓVIL VERTICAL – eliminar desbordes reales
+   No afecta a PC ni a móvil horizontal
+========================================================= */
+@media (max-width: 920px) and (orientation: portrait){
    FIX MÓVIL (unificado) — centra layout y elimina cortes
    - No toca escritorio
    - Corrige: desplazamiento lateral + hero cortado + nav + servicios 3+1
    ========================================================= */
 
+  html, body{
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
 @media (max-width: 920px) {
 
+  /* El layout debe usar el ancho real del móvil */
+  body > *{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   /* Base anti-desborde */
   html, body {
     width: 100%;
@@ -1862,12 +2379,27 @@ justify-content: center;
     overflow-x: hidden;
   }
 
+  /* HERO */
+  .hero{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   /* Todo dentro del ancho real del móvil */
   *, *::before, *::after {
     box-sizing: border-box;
     max-width: 100%;
   }
 
+  /* IMAGEN DEL HERO — CLAVE */
+  .hero-image,
+  .hero-image img{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    height: auto !important;
   /* Contenedores principales centrados */
   .topbar-inner,
   main,
@@ -1884,6 +2416,14 @@ justify-content: center;
     padding-right: 16px;
   }
 
+  /* TARJETA DE TEXTO */
+  .hero-card{
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    margin: 20px auto 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
   /* NAV: que no desaparezcan Blog/Contacto */
   .topbar-inner {
     display: flex;
@@ -1891,20 +2431,59 @@ justify-content: center;
     align-items: center;
     gap: 10px 14px;
   }
+
+}
+/* =========================================
+   FIX 1 — HERO móvil: evitar tarjeta cortada
+   (solo móvil vertical)
+========================================= */
+@media (max-width: 920px) and (orientation: portrait){
+
+  /* Asegura que el hero puede crecer y no recorta */
+  .hero,
+  .hero-inner,
+  .hero-wrap,
+  .hero-container{
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
   .nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px 14px;
     width: 100%;
   }
+
+  /* La tarjeta nunca debe quedar recortada */
+  .hero-card{
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-bottom: 28px !important;
   .nav a {
     white-space: nowrap;
     font-size: 14px;
   }
+}
+/* =========================================
+   FIX 2 — NAV móvil: que se vean Blog + Contacto
+========================================= */
+@media (max-width: 920px){
+
+  .topbar-inner{
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+    align-items: center !important;
   .nav-cta {
     margin-left: 0; /* evita empujes raros */
   }
 
+  .nav{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
   /* HERO: apilar y centrar sin recortes */
   .hero {
     display: flex;
@@ -1913,6 +2492,9 @@ justify-content: center;
     justify-content: flex-start;
   }
 
+  .nav a{
+    font-size: 14px !important;
+    white-space: nowrap !important;
   .hero-image,
   .hero-image img {
     display: block;
@@ -1920,6 +2502,22 @@ justify-content: center;
     height: auto;
   }
 
+  /* El CTA no debe “empujar” fuera a los demás */
+  .nav-cta{
+    margin-left: 0 !important;
+  }
+}
+/* =========================================================
+   FIX MÓVIL HORIZONTAL – HERO sin recortes
+   No afecta a PC
+========================================================= */
+@media (max-width: 920px) and (orientation: landscape){
+
+  .hero,
+  .hero-inner,
+  .hero-wrap,
+  .hero-container,
+  .hero-image{
   .hero-card {
     width: calc(100% - 32px);
     max-width: 520px;
@@ -1928,10 +2526,16 @@ justify-content: center;
     right: auto !important;
     transform: none !important;
     height: auto !important;
+    min-height: 0 !important;
     max-height: none !important;
     overflow: visible !important;
   }
 
+  /* La imagen nunca debe forzar alto fijo */
+  .hero-image img{
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover;
   /* SERVICIOS: evitar “3 arriba + 1 raro” */
   .services-grid {
     display: grid;
@@ -1941,12 +2545,32 @@ justify-content: center;
     align-items: stretch;
   }
 
+  /* La tarjeta no puede recortarse */
+  .hero-card{
+    overflow: visible !important;
   /* La 4ª (wide) ocupa 2 columnas y queda centrada */
   .services-grid > .service-card {
     width: 100%;
     max-width: none;
     margin: 0;
   }
+}
+/* =========================================================
+   FIX ORGANIZACIÓN – centrado editorial en móvil
+   No afecta a PC ni a horizontal
+========================================================= */
+@media (max-width: 920px){
+
+  /* Contenedor general de Organización */
+  #organizacion,
+  .organizacion,
+  .organizacion-section,
+  .services,
+  .services-grid{
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
   .services-grid > .service-card.service-card-wide {
     grid-column: 1 / -1;
     max-width: 560px;
@@ -1954,14 +2578,78 @@ justify-content: center;
   }
 }
 
+  /* Cada tarjeta */
+  .service-card,
+  .method-card,
+  .organizacion-card{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 24px auto !important;
+    box-sizing: border-box !important;
 /* Móviles pequeños: 1 columna */
 @media (max-width: 560px) {
   .services-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Aire lateral editorial */
+  .service-card,
+  .method-card,
+  .organizacion-card{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   .services-grid > .service-card.service-card-wide {
     grid-column: auto;
     max-width: none;
   }
 }
+/* === FIX MÓVIL ÚNICO (sin tocar escritorio) === */
+@media (max-width: 920px){
+  html, body{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
+  /* Centrado general y aire lateral */
+  .topbar-inner,
+  main,
+  section,
+  .section-inner{
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  /* Hero: que nada quede “cortado” */
+  .hero,
+  .hero-inner,
+  .hero-wrap,
+  .hero-container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .hero-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-card{
+    width: calc(100% - 32px);
+    max-width: 520px;
+    margin: 18px auto 0;
+    left: auto;
+    right: auto;
+    transform: none;
+    box-sizing: border-box;
+  }
+}
