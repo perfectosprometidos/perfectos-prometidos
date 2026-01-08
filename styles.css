@@ -2322,5 +2322,52 @@ justify-content: center;
   }
 
 }
+/* =========================================================
+   FIX DEFINITIVO MÓVIL VERTICAL – eliminar desbordes reales
+   No afecta a PC ni a móvil horizontal
+========================================================= */
+@media (max-width: 920px) and (orientation: portrait){
+
+  html, body{
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* El layout debe usar el ancho real del móvil */
+  body > *{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* HERO */
+  .hero{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* IMAGEN DEL HERO — CLAVE */
+  .hero-image,
+  .hero-image img{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    height: auto !important;
+  }
+
+  /* TARJETA DE TEXTO */
+  .hero-card{
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    margin: 20px auto 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+}
 
 
