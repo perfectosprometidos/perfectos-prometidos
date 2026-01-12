@@ -533,21 +533,25 @@ section + section {
   align-items: stretch;
 }
 
- /* Tarjeta final ancha (servicios complementarios) */
-.services-grid .service-card-wide {
+/* Tarjeta final ancha (servicios complementarios) */
+.services-grid .service-card-wide{
   grid-column: 1 / -1;
-  max-width: 980px;
-  margin: 24px auto 0;
+  width: 100%;
+   max-width: 980px; /* clave: que no se quede “corta” */
+   margin: 24px auto 0;   /* sin auto, que respete el ancho del grid */
 }
+
 
 /* Responsive */
 @media (max-width: 980px) {
-  .services-grid .service-card-wide {
-    grid-column: auto;
-    max-width: none;
-    margin-top: 18px;
-  }
+.services-grid .service-card-wide{
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  margin-top: 18px;
 }
+}
+
 
 
 @media (max-width: 860px){
