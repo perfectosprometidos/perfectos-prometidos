@@ -537,9 +537,11 @@ section + section {
 .services-grid .service-card-wide{
   grid-column: 1 / -1;
   width: 100%;
-   max-width: 980px; /* clave: que no se quede “corta” */
-   margin: 24px auto 0;   /* sin auto, que respete el ancho del grid */
+  max-width: none;
+  margin: 24px 0 0;
+    justify-self: stretch;
 }
+
 
 
 /* Responsive */
