@@ -549,8 +549,8 @@ section + section {
     grid-column: 1 / -1 !important;
     grid-row: 2 !important;
     width: 100% !important;
-    max-width: 1100px !important; /* mismo ancho editorial del contenedor */
-    margin: 24px auto 0 !important; /* centrada */
+   max-width: none !important; /* mismo ancho editorial del contenedor */
+   margin: 24px 0 0 !important; /* centrada */
     justify-self: stretch !important;
   }
 }
