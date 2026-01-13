@@ -608,6 +608,17 @@ section + section {
     margin-top: 30px;
   }
 }
+/* FIX PC: la tarjeta wide debe ser realmente ancha y centrada */
+@media (min-width: 981px){
+  .services-grid > article.service-card.service-card-wide{
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 980px !important;      /* ancho editorial */
+    margin: 24px auto 0 !important;   /* centrada */
+    justify-self: center !important;
+  }
+}
+
 /* Mundo: introducción editorial */
 .world-intro {
   max-width: 720px;
