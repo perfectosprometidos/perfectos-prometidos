@@ -534,21 +534,17 @@ section + section {
   grid-auto-flow: row dense;
 
 }
-/* FIX PC: 3 tarjetas arriba + 1 debajo centrada */
-@media (min-width: 981px){
-  .services-grid > article:nth-child(4){
-    grid-column: 1 / -1;
-  }
-}
+
 
 /* Tarjeta final ancha (servicios complementarios) */
 .services-grid .service-card-wide{
   grid-column: 1 / -1;
   width: 100%;
-  max-width: none;
-  margin: 24px 0 0;
-    justify-self: stretch;
+  max-width: 980px;
+  margin: 24px auto 0;
+  justify-self: center;
 }
+
 
 
 
