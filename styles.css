@@ -531,6 +531,8 @@ section + section {
   margin-top:26px;
     justify-items: stretch;
   align-items: stretch;
+  grid-auto-flow: row dense;
+
 }
 
 /* Tarjeta final ancha (servicios complementarios) */
