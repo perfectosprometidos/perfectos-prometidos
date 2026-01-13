@@ -2662,4 +2662,36 @@ justify-content: center;
     justify-self: stretch !important;
   }
 }
+/* =========================================================
+   OVERRIDE FINAL — SERVICIOS PC (3 arriba + 1 abajo full)
+   Pegar al FINAL del styles.css
+========================================================= */
+@media (min-width: 981px){
+
+  /* El grid en PC: 3 columnas */
+  .services-grid{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+  }
+
+  /* Todas las tarjetas en PC ocupan su columna (sin max-width “de móvil”) */
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: none !important;
+    justify-self: stretch !important;
+  }
+
+  /* La tarjeta wide ocupa toda la fila y se estira a todo el ancho del grid */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 24px 0 0 !important;
+    justify-self: stretch !important;
+  }
+
+}
 
