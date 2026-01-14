@@ -2696,3 +2696,26 @@ section + section {
     margin: 24px 0 0 !important;
     justify-self: stretch !important;
   }
+/* =========================================================
+   FIX DEFINITIVO · SERVICIOS DESKTOP (sin tocar portada/móvil)
+   ========================================================= */
+@media (min-width: 981px){
+
+  .services-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    justify-items: stretch !important;
+  }
+
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-self: stretch !important;
+  }
+
+  .services-grid > .service-card.service-card-wide{
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 24
