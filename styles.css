@@ -1889,7 +1889,6 @@ section + section {
    COLUMNA EDITORIAL CENTRADA EN MÓVIL (EXPERIENCIA / MUNDO)
    No afecta a PC
 ===================================================== */
-@media (max-width: 920px){
 
   section,
   .section-inner,
@@ -1921,7 +1920,6 @@ section + section {
     margin-right: auto !important;
   }
 
-}
 
 /* Columna editorial centrada en móvil (texto largo) */
 @media (max-width: 920px){
