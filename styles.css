@@ -2719,3 +2719,6 @@ section + section {
     width: 100% !important;
     max-width: none !important;
     margin: 24
+@media (min-width: 981px){
+  article.service-card.service-card-wide{ max-width: none !important; width: auto !important; }
+}
