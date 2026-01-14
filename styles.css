@@ -567,6 +567,12 @@ section + section {
     grid-column: auto;
   }
 }
+@media (min-width: 981px){
+  .services-grid > .service-card{
+    max-width: none !important;
+    width: 100% !important;
+  }
+}
 
 /* Mundo: introducción editorial */
 .world-intro {
