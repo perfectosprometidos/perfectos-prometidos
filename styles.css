@@ -2017,7 +2017,9 @@ section + section {
     transform: none !important;
   }
 
-  /* 4) Servicios: si quieres 1 columna editorial en móvil (recomendado) */
+/* 4) Servicios: 1 columna editorial SOLO en móvil */
+@media (max-width: 560px){
+
   .services-grid{
     grid-template-columns: 1fr !important;
     justify-items: center !important;
@@ -2030,10 +2032,12 @@ section + section {
     margin-right: auto !important;
   }
 
-  /* La “wide” (si existe) en móvil se comporta como normal */
+  /* La “wide” en móvil se comporta como normal */
   .services-grid > .service-card.service-card-wide{
     grid-column: auto !important;
   }
+}
+
   /* --- FIX HERO móvil: centrado real (sin tocar PC) --- */
 .hero{
    }
@@ -2633,6 +2637,34 @@ section + section {
   .services-grid > .service-card:nth-child(4){
     grid-column: auto !important;
     margin-top: 0 !important;
+  }
+}
+/* =========================================================
+   SERVICIOS · DESKTOP FINAL (3 arriba + 1 abajo ancho)
+   ========================================================= */
+
+@media (min-width: 981px){
+
+  .services-grid{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+  }
+
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: none !important;
+    justify-self: stretch !important;
+  }
+
+  /* TARJETA COMPLEMENTARIA A TODO ANCHO */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin-top: 24px !important;
+    justify-self: stretch !important;
   }
 }
 
