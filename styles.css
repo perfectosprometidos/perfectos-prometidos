@@ -2667,4 +2667,36 @@ section + section {
     justify-self: stretch !important;
   }
 }
+/* =========================================================
+   SERVICIOS · DESKTOP OVERRIDE (anti-centrado definitivo)
+   Pegar AL FINAL del styles.css
+   ========================================================= */
+@media (min-width: 981px){
+
+  /* El grid debe estirar, no centrar */
+  .services-grid{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
+  }
+
+  /* Ninguna tarjeta en PC debe tener max-width ni márgenes auto */
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    justify-self: stretch !important;
+  }
+
+  /* La “wide” ocupa toda la fila */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 24px 0 0 !important;
+    justify-self: stretch !important;
+  }
+}
 
