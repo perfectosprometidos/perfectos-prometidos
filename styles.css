@@ -1521,21 +1521,27 @@ section + section {
    PRINCIPIOS · tarjetas premium (coherente con Experiencia)
    ========================= */
 
-.principios { padding: clamp(56px, 7vw, 96px) 0; }
-.principios__inner { width: min(1100px, 92vw); margin: 0 auto; }
-.principios__header {
+.principios{
+  padding: clamp(56px, 7vw, 96px) 0;
+}
+
+.principios__inner{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.principios__header{
   max-width: 760px;
   margin: 0 auto clamp(32px, 4vw, 48px);
   text-align: center;
 }
-.principios__lead {
-  margin-left: auto;
-  margin-right: auto;
+
+.principios__title{
+  margin: 0 0 10px;
+  letter-spacing: .01em;
 }
 
-
-.principios__title { margin: 0 0 10px; letter-spacing: .01em; }
-.principios__lead {
+.principios__lead{
   margin: 0 auto;
   line-height: 1.65;
   opacity: .88;
@@ -1551,12 +1557,12 @@ section + section {
   align-items: stretch;
 }
 
-/* Tarjeta (usamos button, pero se ve como card) */
+/* Tarjeta (button) con apariencia de card */
 .principio{
   all: unset;
- display: flex;
-flex-direction: column;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   cursor: pointer;
 
@@ -1567,17 +1573,10 @@ justify-content: center;
   padding: 26px 26px 24px;
   box-shadow: 0 10px 28px rgba(0,0,0,.06);
 
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-   min-height: 180px;
+  min-height: 180px;
   box-sizing: border-box;
-  display: flex;
-flex-direction: column;
-justify-content: center;
 
-.principio__text{
-  margin-top: 16px;
-}
-
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
 }
 
 /* Hover muy sutil, tipo editorial */
@@ -1587,13 +1586,24 @@ justify-content: center;
   background: rgba(255,255,255,.78);
 }
 
+/* Focus accesible y limpio */
+.principio:focus-visible{
+  outline: 2px solid rgba(0,0,0,.14);
+  outline-offset: 6px;
+}
+
 /* Título dentro de tarjeta */
 .principio__title{
   margin: 0;
-  letter-spacing: .01em;.principio__title{
+  letter-spacing: .01em;
   text-wrap: balance;
 }
 
+/* Subtítulo */
+.principio__sub{
+  display: block;
+  margin-top: 8px;
+  opacity: .75;
 }
 
 /* Texto: cerrado por defecto, se despliega al clicar */
@@ -1601,30 +1611,14 @@ justify-content: center;
   margin: 14px 0 0;
   line-height: 1.7;
   opacity: .86;
-
   max-width: 32ch;
 
   display: none; /* cerrado */
-  transition: opacity .25s ease;
 }
-
 
 /* Abierto */
 .principio[aria-expanded="true"] .principio__text{
-  display: block; /* abierto */
-}
-.principio__sub{
   display: block;
-  margin-top: 8px;
-  opacity: .75;
-}
-
-/* Micro-ajuste de lujo: aparición silenciosa */
-.principio__text{
-  transition: opacity .25s ease;
-}
-
-.principio[aria-expanded="true"] .principio__text{
   animation: fadeIn .35s ease;
 }
 
@@ -1633,33 +1627,26 @@ justify-content: center;
   to{ opacity: .86; }
 }
 
-
-/* Focus accesible y limpio */
-.principio:focus-visible{
-  outline: 2px solid rgba(0,0,0,.14);
-  outline-offset: 6px;
-}
-
 /* Tablet: 2x2 */
 @media (max-width: 980px){
-  .principios__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-/* Móvil: 1 columna (o carrusel si lo prefieres) */
-@media (max-width: 640px){
-  .principios__grid{ grid-template-columns: 1fr; gap: 18px; }
-  .principio{ padding: 22px 20px; border-radius: 18px; }
-}
-
-
-
-/* Móvil */
-@media (max-width: 640px) {
-  .principios__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .principios__grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Móvil: 1 columna */
+@media (max-width: 640px){
+  .principios__grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .principio{
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+}
+
 /* OVERRIDE FINAL · PRINCIPIOS centrado + ritmo premium */
 .principios__grid > .principio{
   display: flex !important;
@@ -1667,15 +1654,11 @@ justify-content: center;
   justify-content: center;
 }
 
-.principios__grid .principio_text{
-  margin-top: 32px !important;
+/* OJO: aquí tenías un typo: "principio_text" -> "principio__text" */
+.principios__grid .principio__text{
+  margin-top: 16px;
 }
 
-.principios__grid .principio__sub{
-  display: block;
-  margin-top: 8px;
-  opacity: .75;
-}
 /* =========================
    ORGANIZACIÓN · CIERRE EDITORIAL (micro-ajuste premium)
    ========================= */
