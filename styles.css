@@ -2813,4 +2813,38 @@ body{
     line-height: 1.8;
   }
 }
+/* =========================================
+   PAUSA EDITORIAL · LUJO
+   No interfiere con hero ni servicios
+========================================= */
+
+.editorial-pause {
+  padding: 96px 24px;
+  background: transparent;
+}
+
+.editorial-pause-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.editorial-quote {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(26px, 4vw, 36px);
+  line-height: 1.35;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+/* Móvil: más compacto, igual de elegante */
+@media (max-width: 820px) {
+  .editorial-pause {
+    padding: 64px 20px;
+  }
+
+  .editorial-quote {
+    font-size: 24px;
+  }
+}
 
