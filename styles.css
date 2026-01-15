@@ -2723,7 +2723,7 @@ body{
    (Lujo editorial · no afecta móvil ni hero)
 ========================================================= */
 
-@media (min-width: 981px){
+@media (min-width: 861px){
 
   .services-grid{
     display: grid !important;
