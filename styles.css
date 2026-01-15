@@ -2708,4 +2708,11 @@ background-image: url("/assets/images/_assets_linen_premium.jpg");
   background-size: 600px 600px; /* grano fino, lujo */
   background-attachment: fixed; /* calma editorial */
 }
+/* Lino premium SOLO en Servicios (sin tocar layout) */
+#servicios{
+  background-image: url("/assets/images/_assets_linen_premium.jpg") !important;
+  background-repeat: repeat !important;
+  background-size: 600px 600px !important;
+  background-color: transparent !important;
+}
 
