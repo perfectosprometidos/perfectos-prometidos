@@ -1,0 +1,92 @@
+/* =========================================================
+   MOBILE FIX (portrait) — no toca desktop
+   - Corrige: portada cortada, tarjeta hero mal posicionada
+   - Corrige: Servicios “alargados” por columnas estrechas
+   ========================================================= */
+
+/* MÓVIL general */
+@media (max-width: 820px){
+
+  /* Header fijo limpio en móvil (evita superposición rara) */
+  .topbar{
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    background: rgba(251,250,247,.92) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Asegura que el contenido no quede debajo del header */
+  .hero{
+    padding-top: 92px !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* La imagen del hero NO debe forzar 92vh en móvil */
+  .hero-image img{
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover;
+    object-position: 60% 35%;
+  }
+
+  /* Tarjeta del hero: pasa a flujo natural, centrada */
+  .hero-card{
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+
+    width: calc(100% - 32px) !important;
+    max-width: 560px !important;
+    margin: 18px auto 0 !important;
+  }
+
+  /* Evita “columnas estrechas” que alargan textos */
+  .services-grid{
+    grid-template-columns: 1fr !important;
+    justify-items: stretch !important;
+  }
+
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+  }
+
+  /* La wide, en móvil: normal y centrada */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 18px auto 0 !important;
+  }
+
+  /* Imagen “pausa editorial” móvil, centrada y con aire */
+  .services-editorial-mobile{
+    max-width: 560px !important;
+    margin: 18px auto 0 !important;
+  }
+  .services-editorial-mobile img{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+}
+
+/* MÓVIL muy pequeño */
+@media (max-width: 420px){
+  .topbar-inner{
+    padding: 14px 16px !important;
+  }
+  .hero{
+    padding-top: 86px !important;
+  }
+  .hero-card{
+    width: calc(100% - 24px) !important;
+  }
+}
