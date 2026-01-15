@@ -84,3 +84,45 @@ html, body { max-width: 100%; overflow-x: hidden; }
   margin-left: auto;
   margin-right: auto;
 }
+/* ==========================
+   FIX DEFINITIVO: CONTENEDOR EDITORIAL
+   (funciona aunque el hero no tenga clase)
+   ========================== */
+
+:root{
+  --pp-max: 1100px;
+  --pp-pad: 24px;
+}
+
+html, body { max-width: 100%; overflow-x: hidden; }
+body#top { overflow-x: hidden; }
+
+/* 1) Todo bloque principal (div/section) tendrá padding lateral */
+body#top > section,
+body#top > div {
+  padding-left: var(--pp-pad) !important;
+  padding-right: var(--pp-pad) !important;
+}
+
+/* 2) Y su contenido se centra en un ancho editorial */
+body#top > section > * ,
+body#top > div > * {
+  max-width: var(--pp-max);
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 3) Ajuste específico del bloque de “pausa” para que no deje un vacío exagerado */
+.editorial-pause, .pause, #pause {
+  padding-top: 72px !important;
+  padding-bottom: 28px !important;
+}
+
+/* 4) Si algún módulo debe ir full-bleed (ancho total), lo “liberamos” aquí */
+.full-bleed, .bleed, .hero-media, .hero-image, .cover, .banner {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
