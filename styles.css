@@ -2717,4 +2717,36 @@ body{
   background-size: 600px 600px !important;
   background-color: transparent !important;
 }
+/* =========================================================
+   SERVICIOS · DESKTOP DEFINITIVO
+   3 tarjetas arriba + 1 tarjeta abajo a todo ancho
+   (Lujo editorial · no afecta móvil ni hero)
+========================================================= */
+
+@media (min-width: 981px){
+
+  .services-grid{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
+  }
+
+  /* Las 3 primeras tarjetas */
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  /* La tarjeta complementaria ocupa toda la fila */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin-top: 32px !important;
+  }
+
+}
 
