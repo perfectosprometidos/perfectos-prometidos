@@ -1,0 +1,38 @@
+/* =========================================================
+   SERVICIOS · FIX LIMPIO
+   3 arriba + 1 abajo full (desktop)
+   No toca hero / mundo / experiencia
+========================================================= */
+
+.services-grid{
+  display: grid !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+
+  /* Por defecto (pantallas medias): 2 columnas */
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Desktop real: 3 columnas */
+@media (min-width: 861px){
+  .services-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* La tarjeta “wide” siempre ocupa toda la fila */
+.services-grid > .service-card.service-card-wide{
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-top: 32px !important;
+  justify-self: stretch !important;
+}
+
+/* Evitar límites antiguos en tarjetas */
+.services-grid > .service-card{
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
