@@ -39,3 +39,48 @@
     font-size: 18px;
   }
 }
+/* ==========================
+   LAYOUT FIX — LUJO / ALINEACIÓN
+   ========================== */
+
+/* Base: evita desbordes y asegura cálculos correctos */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Contenedor editorial universal */
+:root{
+  --pp-max: 1100px;
+  --pp-pad: 24px;
+}
+
+/* Asegura padding lateral y ancho de lectura en el “hero” (la zona que sale pegada a la izquierda) */
+.hero, .intro, .home-hero, #hero {
+  padding-left: var(--pp-pad);
+  padding-right: var(--pp-pad);
+}
+
+.hero > *, .intro > *, .home-hero > *, #hero > * {
+  max-width: var(--pp-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ajuste de aire entre la Pausa y el Hero */
+.editorial-pause, .pause, #pause {
+  padding-top: 72px;
+  padding-bottom: 28px;
+}
+
+.hero, .intro, .home-hero, #hero {
+  padding-top: 28px;
+}
+
+/* La tarjeta de la pausa: ancho elegante y centrado */
+.editorial-pause .card,
+.pause .card,
+.editorial-pause .pause-card,
+.pause .pause-card {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
