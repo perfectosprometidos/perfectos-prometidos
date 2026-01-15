@@ -2847,4 +2847,49 @@ body{
     font-size: 24px;
   }
 }
+/* =========================================
+   PAUSA EDITORIAL (LUJO) — entre Servicios y Manifiesto
+   ========================================= */
+.editorial-pause{
+  padding: 64px 0;
+  background: transparent;
+}
+
+.editorial-pause-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.editorial-quote{
+  margin: 0;
+  width: 100%;
+  max-width: 720px;
+
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.65;
+  color: rgba(17,17,17,.82);
+
+  padding: 34px 28px;
+  border-radius: 22px;
+
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 14px 40px rgba(0,0,0,.06);
+}
+
+/* móvil: respiración y ancho perfecto */
+@media (max-width: 820px){
+  .editorial-pause{ padding: 44px 0; }
+  .editorial-quote{
+    max-width: 520px;
+    padding: 26px 20px;
+    font-size: 18px;
+  }
+}
 
