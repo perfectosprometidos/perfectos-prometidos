@@ -2749,4 +2749,68 @@ body{
   }
 
 }
+/* =========================================================
+   MANIFIESTO · BLOQUE RETENCIÓN (post-Servicios)
+   Lujo editorial, sin tocar el resto
+========================================================= */
+.manifesto{
+  padding: clamp(56px, 7vw, 92px) 0;
+  background: transparent;
+}
+
+.manifesto-inner{
+  width: min(920px, calc(100% - 48px));
+  margin: 0 auto;
+  text-align: left;
+}
+
+.manifesto-kicker{
+  margin: 0 0 18px;
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,.55);
+}
+
+.manifesto-title{
+  margin: 0 0 22px;
+  font-size: clamp(36px, 4.2vw, 60px);
+  line-height: 1.03;
+  letter-spacing: -0.01em;
+  color: #111;
+}
+
+.manifesto-body{
+  max-width: 62ch;
+}
+
+.manifesto-body p{
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: rgba(17,17,17,.68);
+}
+
+.manifesto-signature{
+  margin: 26px 0 0;
+  font-size: 13px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,.50);
+}
+
+/* Móvil: ritmo editorial y sin cortes */
+@media (max-width: 820px){
+  .manifesto-inner{
+    width: min(560px, calc(100% - 32px));
+  }
+  .manifesto-title{
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.05;
+  }
+  .manifesto-body p{
+    font-size: 1.02rem;
+    line-height: 1.8;
+  }
+}
 
