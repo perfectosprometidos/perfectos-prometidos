@@ -2702,12 +2702,13 @@ section + section {
    ========================================= */
 
 body{
-  background-color: #fbfaf7; /* fallback elegante */
-background-image: url("/assets/images/_assets_linen_premium.jpg");
+  background-color: #fbfaf7;
+  background-image: url("/perfectos-prometidos/assets/images/_assets_linen_premium.jpg");
   background-repeat: repeat;
-  background-size: 600px 600px; /* grano fino, lujo */
-  background-attachment: fixed; /* calma editorial */
+  background-size: 600px 600px;
+  background-attachment: fixed;
 }
+
 /* Lino premium SOLO en Servicios (sin tocar layout) */
 #servicios{
   background-image: url("/assets/images/_assets_linen_premium.jpg") !important;
