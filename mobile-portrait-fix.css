@@ -90,3 +90,66 @@
     width: calc(100% - 24px) !important;
   }
 }
+/* MOBILE PORTRAIT FIX — no afecta a desktop ni a landscape */
+@media (max-width: 920px) and (orientation: portrait){
+
+  /* 1) Header fijo: que no tape contenido */
+  .topbar{
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    z-index: 9999;
+  }
+
+  /* 2) HERO: que no recorte (tu CSS actual fuerza alturas grandes) */
+  .hero{
+    padding-top: 96px !important;   /* espacio real bajo el header */
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* 3) Imagen hero: sin “92vh” en vertical */
+  .hero-image img{
+    height: auto !important;
+    max-height: none !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+
+  /* 4) Tarjeta hero: apilada, centrada, sin posición absoluta */
+  .hero-card{
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: calc(100% - 32px) !important;
+    max-width: 560px !important;
+    margin: 18px auto 0 !important;
+  }
+
+  /* 5) SERVICIOS: 1 columna en vertical (evita textos “en columna”) */
+  .services-grid{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .services-grid > .service-card{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+  }
+
+  /* La wide se comporta como card normal en 1 columna */
+  .services-grid > .service-card.service-card-wide{
+    grid-column: auto !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 6) Un poco de aire lateral premium */
+  .services-inner{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
