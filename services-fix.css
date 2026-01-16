@@ -111,4 +111,25 @@
 .services-grid > .service-card p{
   margin-top: 10px;
 }
+/* =========================================================
+   AJUSTE FINO: ALTURA Y RITMO EN LAS 3 TARJETAS SUPERIORES
+   (solo desktop, sin tocar móvil)
+   ========================================================= */
+@media (min-width: 861px){
+  /* Las 3 primeras tarjetas: misma base y distribución */
+  .services-grid > .service-card:nth-child(-n+3){
+    display: flex;
+    flex-direction: column;
+    min-height: 360px; /* ajuste óptico: iguala el “peso” */
+  }
+
+  /* Empuja listas y enlace hacia la base para equilibrar alturas */
+  .services-grid > .service-card:nth-child(-n+3) ul{
+    margin-top: auto;
+  }
+
+  .services-grid > .service-card:nth-child(-n+3) .service-link{
+    margin-top: 14px;
+  }
+}
 
