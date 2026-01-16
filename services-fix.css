@@ -75,3 +75,15 @@
 .service-card h3{
   letter-spacing: .02em;
 }
+/* Recuperar viñetas en el servicio 1 (layout superior) */
+.services-grid > article.service-card:first-child ul{
+  list-style: disc !important;
+  list-style-position: outside !important;
+  padding-left: 18px !important;
+  margin: 14px 0 0 !important;
+}
+
+.services-grid > article.service-card:first-child li{
+  display: list-item !important;
+  margin: 8px 0 !important;
+}
