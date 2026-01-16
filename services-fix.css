@@ -62,6 +62,7 @@
   text-decoration: none;
   border-bottom: 1px solid rgba(0,0,0,.18);
   padding-bottom: 2px;
+  color: rgba(0,0,0,.70);
 }
 .service-link a:hover{
   border-bottom-color: rgba(0,0,0,.35);
@@ -75,18 +76,7 @@
 .service-card h3{
   letter-spacing: .02em;
 }
-/* Recuperar viñetas en el servicio 1 (layout superior) */
-.services-grid > article.service-card:first-child ul{
-  list-style: disc !important;
-  list-style-position: outside !important;
-  padding-left: 18px !important;
-  margin: 14px 0 0 !important;
-}
 
-.services-grid > article.service-card:first-child li{
-  display: list-item !important;
-  margin: 8px 0 !important;
-}
 /* FORZAR LINK PREMIUM (evitar azul navegador) */
 .services .service-link a,
 .services .service-link a:visited{
@@ -96,90 +86,29 @@
   color: rgba(0,0,0,.88) !important;
   border-bottom-color: rgba(0,0,0,.35) !important;
 }
-/* SERVICIO 1 (arriba): que se sienta tarjeta editorial */
-.services-grid > article.service-card:first-child{
-  background: rgba(255,255,255,.92) !important;
-  border: 1px solid rgba(0,0,0,.06) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 14px 40px rgba(0,0,0,.04) !important;
-  padding: 26px 26px !important;
-}
 
-/* Dentro del servicio 1: ordenar y alinear */
-.services-grid > article.service-card:first-child h3{
-  margin-top: 0 !important;
-}
-
-.services-grid > article.service-card:first-child p{
-  margin-top: 10px !important;
-}
-
-.services-grid > article.service-card:first-child ul{
-  margin-top: 14px !important;
-  padding-left: 14px !important;
-}
 /* Bullets más discretos (The Lane) */
 .service-card li::marker{
   color: rgba(0,0,0,.28);
 }
 /* =========================================================
-   FIX DEFINITIVO: VIÑETAS SIEMPRE VISIBLES EN SERVICIO 1
-   (independiente de list-style / layout / reset)
+   THE LANE: coherencia en TODAS las tarjetas de servicio
    ========================================================= */
 
-/* Desactiva el marcador nativo solo en el servicio 1 */
-.services-grid > article.service-card:first-child ul{
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-top: 14px !important;
+.services-grid > .service-card{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.04);
+  padding: 26px 26px;
 }
 
-/* Crea la viñeta editorial con pseudo-elemento */
-.services-grid > article.service-card:first-child li{
-  position: relative;
-  padding-left: 18px !important;
-  margin: 8px 0 !important;
+/* Ritmo interno */
+.services-grid > .service-card h3{
+  margin-top: 0;
 }
 
-.services-grid > article.service-card:first-child li::before{
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: rgba(0,0,0,.28);
-  line-height: 1.2;
-}
-/* Servicio 1: el mismo feeling de tarjeta que las demás */
-.services-grid > article.service-card:first-child{
-  border-radius: 18px !important;
-  border: 1px solid rgba(0,0,0,.06) !important;
-  background: rgba(255,255,255,.92) !important;
-  box-shadow: 0 14px 40px rgba(0,0,0,.04) !important;
-}
-/* =========================================================
-   RESET SERVICIO 1: volver a 3 tarjetas iguales arriba
-   (anula cualquier layout especial del primer service-card)
-   ========================================================= */
-
-/* En desktop, el servicio 1 NO debe ocupar toda la fila ni dividirse en 3 columnas internas */
-@media (min-width: 861px){
-  .services-grid > article.service-card:first-child{
-    grid-column: auto !important;
-    display: block !important;
-  }
-
-  /* Si algún CSS anterior está forzando un grid interno en sus hijos, lo neutralizamos */
-  .services-grid > article.service-card:first-child > *{
-    grid-column: auto !important;
-  }
+.services-grid > .service-card p{
+  margin-top: 10px;
 }
 
-/* Viñetas nativas consistentes en el servicio 1 */
-.services-grid > article.service-card:first-child ul{
-  list-style: disc !important;
-  list-style-position: outside !important;
-  padding-left: 14px !important;
-}
-.services-grid > article.service-card:first-child li{
-  display: list-item !important;
-}
