@@ -166,3 +166,41 @@ body#top > div > * {
   font-style: italic;
   color: rgba(0,0,0,.65);
 }
+/* ==========================
+   AJUSTES FINOS — RITMO EDITORIAL
+   ========================== */
+
+/* Pausa: un poco menos de “bloque” y más continuidad */
+.editorial-pause{
+  padding-top: 64px !important;
+  padding-bottom: 24px !important;
+}
+
+/* Manifiesto: baja ligeramente el arranque para que no “caiga” tan tarde */
+.manifesto{
+  padding-top: 72px !important;
+  padding-bottom: 112px !important;
+}
+/* ==========================
+   TRANSICIÓN MANIFIESTO → MUNDO
+   ========================== */
+
+/* Línea editorial suave (separador premium) */
+.manifesto::after{
+  content:"";
+  display:block;
+  width: 140px;
+  height: 1px;
+  margin: 56px auto 0;
+  background: rgba(0,0,0,.10);
+}
+
+/* Si tu sección siguiente se llama .world, mejoramos el arranque */
+.world{
+  padding-top: 84px !important;
+}
+
+/* Kicker/título del mundo: ligeramente más aire y coherencia */
+.world-tag, .world-kicker{
+  margin-bottom: 18px !important;
+}
