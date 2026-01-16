@@ -87,3 +87,38 @@
   display: list-item !important;
   margin: 8px 0 !important;
 }
+/* FORZAR LINK PREMIUM (evitar azul navegador) */
+.services .service-link a,
+.services .service-link a:visited{
+  color: rgba(0,0,0,.70) !important;
+}
+.services .service-link a:hover{
+  color: rgba(0,0,0,.88) !important;
+  border-bottom-color: rgba(0,0,0,.35) !important;
+}
+/* SERVICIO 1 (arriba): que se sienta tarjeta editorial */
+.services-grid > article.service-card:first-child{
+  background: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(0,0,0,.06) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 14px 40px rgba(0,0,0,.04) !important;
+  padding: 26px 26px !important;
+}
+
+/* Dentro del servicio 1: ordenar y alinear */
+.services-grid > article.service-card:first-child h3{
+  margin-top: 0 !important;
+}
+
+.services-grid > article.service-card:first-child p{
+  margin-top: 10px !important;
+}
+
+.services-grid > article.service-card:first-child ul{
+  margin-top: 14px !important;
+  padding-left: 14px !important;
+}
+/* Bullets más discretos (The Lane) */
+.service-card li::marker{
+  color: rgba(0,0,0,.28);
+}
