@@ -122,3 +122,37 @@
 .service-card li::marker{
   color: rgba(0,0,0,.28);
 }
+/* =========================================================
+   FIX DEFINITIVO: VIÑETAS SIEMPRE VISIBLES EN SERVICIO 1
+   (independiente de list-style / layout / reset)
+   ========================================================= */
+
+/* Desactiva el marcador nativo solo en el servicio 1 */
+.services-grid > article.service-card:first-child ul{
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-top: 14px !important;
+}
+
+/* Crea la viñeta editorial con pseudo-elemento */
+.services-grid > article.service-card:first-child li{
+  position: relative;
+  padding-left: 18px !important;
+  margin: 8px 0 !important;
+}
+
+.services-grid > article.service-card:first-child li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(0,0,0,.28);
+  line-height: 1.2;
+}
+/* Servicio 1: el mismo feeling de tarjeta que las demás */
+.services-grid > article.service-card:first-child{
+  border-radius: 18px !important;
+  border: 1px solid rgba(0,0,0,.06) !important;
+  background: rgba(255,255,255,.92) !important;
+  box-shadow: 0 14px 40px rgba(0,0,0,.04) !important;
+}
