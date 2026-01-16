@@ -204,3 +204,20 @@ body#top > div > * {
 .world-tag, .world-kicker{
   margin-bottom: 18px !important;
 }
+/* ==========================
+   TRANSICIÓN MANIFIESTO → MUNDO
+   ========================== */
+
+.manifesto::after{
+  content:"";
+  display:block;
+  width: 140px;
+  height: 1px;
+  margin: 56px auto 0;
+  background: rgba(0,0,0,.10);
+}
+
+/* ajuste fino tras eliminar el kicker */
+.manifesto-title{
+  margin-top: 0;
+}
