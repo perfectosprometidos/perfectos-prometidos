@@ -132,4 +132,12 @@
     margin-top: 14px;
   }
 }
+/* Nota editorial (Services) — sin repetir exclusividad */
+.services-note{
+  max-width: 74ch;
+  margin: 18px 0 34px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0,0,0,.74);
+}
 
