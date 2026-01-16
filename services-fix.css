@@ -36,3 +36,42 @@
   max-width: none !important;
   margin: 0 !important;
 }
+/* ==========================
+   SERVICES — THE LANE FINISH
+   ========================== */
+
+.service-card p{
+  max-width: 62ch;
+}
+
+.service-card ul{
+  margin-top: 14px;
+  padding-left: 18px;
+}
+
+.service-card li{
+  margin: 8px 0;
+  color: rgba(0,0,0,.78);
+}
+
+/* Link editorial */
+.service-link{ margin-top: 14px; }
+.service-link a{
+  font-size: 13px;
+  letter-spacing: .06em;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+  padding-bottom: 2px;
+}
+.service-link a:hover{
+  border-bottom-color: rgba(0,0,0,.35);
+}
+/* Aire premium entre tarjetas */
+.services-grid{
+  row-gap: 28px;
+}
+
+/* Títulos de servicio: un punto más editorial */
+.service-card h3{
+  letter-spacing: .02em;
+}
