@@ -166,4 +166,18 @@
   color: rgba(0,0,0,.9);
   border-bottom-color: rgba(0,0,0,.45);
 }
+/* =========================================================
+   RITMO EDITORIAL: separación CTA → bloque editorial siguiente
+   ========================================================= */
+.services-cta{
+  margin-top: 64px;     /* ya existía, lo reafirmamos */
+  margin-bottom: 72px;  /* aire antes del bloque “No se trata…” */
+}
+
+/* En pantallas grandes, un punto más de respiración */
+@media (min-width: 861px){
+  .services-cta{
+    margin-bottom: 84px;
+  }
+}
 
