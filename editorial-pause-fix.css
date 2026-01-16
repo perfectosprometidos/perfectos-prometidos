@@ -191,9 +191,10 @@ body#top > div > * {
   display:block;
   width: 140px;
   height: 1px;
-  margin: 56px auto 0;
+  margin: 72px auto 24px;
   background: rgba(0,0,0,.10);
 }
+
 
 /* Si tu sección siguiente se llama .world, mejoramos el arranque */
 .world{
