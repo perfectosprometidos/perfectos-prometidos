@@ -156,3 +156,30 @@
   background: rgba(255,255,255,.92) !important;
   box-shadow: 0 14px 40px rgba(0,0,0,.04) !important;
 }
+/* =========================================================
+   RESET SERVICIO 1: volver a 3 tarjetas iguales arriba
+   (anula cualquier layout especial del primer service-card)
+   ========================================================= */
+
+/* En desktop, el servicio 1 NO debe ocupar toda la fila ni dividirse en 3 columnas internas */
+@media (min-width: 861px){
+  .services-grid > article.service-card:first-child{
+    grid-column: auto !important;
+    display: block !important;
+  }
+
+  /* Si algún CSS anterior está forzando un grid interno en sus hijos, lo neutralizamos */
+  .services-grid > article.service-card:first-child > *{
+    grid-column: auto !important;
+  }
+}
+
+/* Viñetas nativas consistentes en el servicio 1 */
+.services-grid > article.service-card:first-child ul{
+  list-style: disc !important;
+  list-style-position: outside !important;
+  padding-left: 14px !important;
+}
+.services-grid > article.service-card:first-child li{
+  display: list-item !important;
+}
