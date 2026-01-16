@@ -216,6 +216,14 @@ body#top > div > * {
   margin: 56px auto 0;
   background: rgba(0,0,0,.10);
 }
+/* Ajuste fino texto exclusividad — fase 1 */
+.manifesto-exclusivity{
+  max-width: 680px;
+  margin: 48px 0 56px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0,0,0,.75);
+}
 
 /* ajuste fino tras eliminar el kicker */
 .manifesto-title{
