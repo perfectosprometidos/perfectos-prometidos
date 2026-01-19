@@ -1045,6 +1045,29 @@ section + section {
   margin: 0 auto;
   padding: 0 28px;
 }
+/* FIX CONTENEDOR EDITORIAL — alineación texto + imagen */
+.experience-hero__inner,
+.experience-hero-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Grid de imágenes alineado con el hero */
+.experience-grid{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Ritmo premium entre hero e imagen */
+.experience-hero{
+  padding: 110px 0 44px;
+}
+
+.experience-grid{
+  padding-top: 6px;
+}
 
 
 .experience-kicker{
