@@ -3048,4 +3048,44 @@ body{
     border-radius: 18px;
   }
 }
+/* =========================================================
+   FIX DEFINITIVO — EJE EDITORIAL MÓVIL
+   Igualar Experiencia y Organización a Home / Servicios
+   ========================================================= */
+
+@media (max-width: 768px){
+
+  /* Contenedor editorial maestro (MISMO que Home) */
+  .experience-hero-inner,
+  .experience-grid,
+  .experience-text,
+  .organizacion-hero-inner,
+  .principios__inner,
+  .organizacion-grid,
+  .organizacion_manifesto,
+  .organizacion_epilogue,
+  .organizacion-cta {
+
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 28px;
+    padding-right: 28px;
+
+    box-sizing: border-box;
+  }
+
+  /* Evita cualquier desplazamiento lateral heredado */
+  .experience-hero,
+  .organizacion-hero {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Seguridad extra: nada puede empujar el layout */
+  body {
+    overflow-x: hidden;
+  }
+}
 
