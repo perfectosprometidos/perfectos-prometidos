@@ -2908,4 +2908,26 @@ body{
   color: rgba(0,0,0,.88);
   border-bottom-color: rgba(0,0,0,.45);
 }
+/* =========================================
+   CONTENEDOR EDITORIAL (móvil/desktop)
+   Igual que “esencia editorial”
+   ========================================= */
+:root{
+  --pp-max: 1100px;
+  --pp-pad: 28px;
+}
+
+/* Centrado + margen editorial en páginas internas */
+.experience-hero-inner,
+.experience-text-inner,
+.organizacion-hero-inner,
+.principios__inner,
+.organizacion_manifesto,
+.organizacion_epilogue{
+  max-width: var(--pp-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--pp-pad);
+  padding-right: var(--pp-pad);
+}
 
