@@ -263,3 +263,37 @@
   }
 
 }
+/* =========================================================
+   ORGANIZACION (MOVIL) — eliminar bloques blancos bajo imagen
+   ========================================================= */
+@media (max-width: 768px){
+
+  /* La tarjeta no debe tener “papel” blanco debajo */
+  .organizacion-grid .world-item{
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    line-height: 0 !important; /* evita hueco inferior */
+  }
+
+  /* La imagen debe comportarse como bloque y recortar a cover */
+  .organizacion-grid .world-item img{
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+  }
+
+  /* Proporciones editoriales */
+  .organizacion-grid .org-hero{ aspect-ratio: 16 / 9 !important; }
+  .organizacion-grid .org-a,
+  .organizacion-grid .org-b,
+  .organizacion-grid .org-c,
+  .organizacion-grid .org-d,
+  .organizacion-grid .org-e,
+  .organizacion-grid .org-f{ aspect-ratio: 4 / 3 !important; }
+}
