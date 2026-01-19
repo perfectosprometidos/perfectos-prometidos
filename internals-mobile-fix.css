@@ -73,3 +73,99 @@
   }
 }
 <link rel="stylesheet" href="internals-mobile-fix.css?v=1">
+/* =========================================================
+   INTERNALS MOBILE FIX (Experiencia + Organización)
+   - Centrado y márgenes iguales a Home
+   - Elimina “bloques sobrantes” bajo imágenes
+   - No toca escritorio
+========================================================= */
+
+@media (max-width: 768px){
+
+  /* 1) Header: mismo “aire” que Home (sin desplazar) */
+  .topbar-inner{
+    padding: 14px 16px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 2) Contenedor editorial maestro (mismo eje que Home) */
+  .experience-hero__inner,
+  .experience-text-inner,
+  .experience-cta__inner,
+  .experience-grid,
+  .organizacion-hero-inner,
+  .principios__inner,
+  .organizacion-grid,
+  .organizacion_manifesto,
+  .organizacion_epilogue,
+  .organizacion-cta{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3) Asegura que “las secciones” no añaden padding extra raro */
+  .experience-hero,
+  .experience-text,
+  .experience-cta,
+  .organizacion-hero,
+  .principios{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* =====================================================
+     FIX BLOQUE SOBRANTE (la “zona gris” bajo imágenes)
+     ===================================================== */
+
+  /* Las figuras no pueden mantener alturas antiguas en móvil */
+  .experience-item,
+  .experience-item--hero,
+  .organizacion-grid .world-item{
+    height: auto !important;
+    min-height: 0 !important;
+    background: transparent !important;
+  }
+
+  /* La imagen debe “definir” la tarjeta (sin huecos) */
+  .experience-item img,
+  .organizacion-grid .world-item img{
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+  }
+
+  /* Proporciones editoriales consistentes (como tu Home) */
+  .experience-item--hero img,
+  .organizacion-grid .org-hero img{
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .experience-item img{
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  /* 4) CTA links: nunca azul/púrpura en móvil */
+  .experience-cta a,
+  .experience-cta a:visited,
+  .organizacion-cta a,
+  .organizacion-cta a:visited{
+    color: rgba(0,0,0,.72) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0,0,0,.25) !important;
+    padding-bottom: 2px !important;
+  }
+
+  .experience-cta a:hover,
+  .organizacion-cta a:hover{
+    color: rgba(0,0,0,.88) !important;
+    border-bottom-color: rgba(0,0,0,.45) !important;
+  }
+}
