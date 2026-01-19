@@ -3057,4 +3057,36 @@ body{
     overflow-x: hidden;
   }
 }
+@media (max-width: 768px){
+
+  /* Grid en móvil: una columna, ritmo limpio */
+  .experience-grid,
+  .organizacion-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Primera imagen: hero con proporción editorial */
+  .experience-item--hero img,
+  .org-hero img{
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+  }
+
+  /* Resto: coherencia de alturas */
+  .experience-item img,
+  .world-item img{
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+  }
+}
 
