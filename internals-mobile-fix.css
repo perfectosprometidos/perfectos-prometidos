@@ -1,0 +1,74 @@
+/* =========================================================
+   INTERNAS (Experiencia + Organización)
+   FIX MÓVIL: mismo eje editorial que Home
+   ========================================================= */
+
+@media (max-width: 768px){
+
+  /* 1) Contenedores de texto: centrados y con el mismo padding */
+  .experience-hero__inner,
+  .experience-hero-inner,
+  .experience-text-inner,
+  .organizacion-hero-inner,
+  .principios__inner,
+  .organizacion_manifesto,
+  .organizacion_epilogue{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2) Contenedores de grids (imágenes): mismo eje editorial */
+  .experience-grid,
+  .organizacion-grid{
+    width: 100% !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* 3) Evitar que algún padding del “hero” empuje el layout */
+  .experience-hero,
+  .organizacion-hero{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 4) Imágenes: bloque, centradas y sin empujar */
+  .experience-item,
+  .world-item{
+    margin: 0 !important;
+  }
+
+  .experience-item img,
+  .organizacion-grid img{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 18px !important;
+  }
+
+  /* 5) Proporciones editoriales (como Home) */
+  .experience-item--hero img,
+  .org-hero img{
+    aspect-ratio: 16 / 9 !important;
+    object-fit: cover !important;
+  }
+
+  .experience-item img,
+  .organizacion-grid img{
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+  }
+}
