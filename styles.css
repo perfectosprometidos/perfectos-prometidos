@@ -3089,4 +3089,59 @@ body{
     display: block;
   }
 }
+/* =========================================================
+   EJE EDITORIAL ÚNICO · MÓVIL VERTICAL
+   Iguala Home / Experiencia / Organización
+========================================================= */
+
+@media (max-width: 920px) {
+
+  /* 1) Eje maestro = MISMO que la Home */
+  :root{
+    --mobile-pad: 16px;
+  }
+
+  /* HEADER / NAV */
+  .topbar-inner{
+    padding-left: var(--mobile-pad) !important;
+    padding-right: var(--mobile-pad) !important;
+  }
+
+  /* HERO HOME */
+  .hero-image,
+  .hero-image img{
+    padding-left: var(--mobile-pad) !important;
+    padding-right: var(--mobile-pad) !important;
+    box-sizing: border-box;
+  }
+
+  /* HERO EXPERIENCIA / ORGANIZACIÓN */
+  .experience-hero-inner,
+  .organizacion-hero-inner{
+    padding-left: var(--mobile-pad) !important;
+    padding-right: var(--mobile-pad) !important;
+  }
+
+  /* IMÁGENES (todas las páginas internas) */
+  .experience-grid,
+  .organizacion-grid,
+  .world-grid{
+    padding-left: var(--mobile-pad) !important;
+    padding-right: var(--mobile-pad) !important;
+    box-sizing: border-box;
+  }
+
+  /* Cada imagen ocupa exactamente el mismo eje */
+  .experience-item,
+  .organizacion-grid .world-item,
+  .world-item{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Seguridad total */
+  html, body{
+    overflow-x: hidden;
+  }
+}
 
