@@ -2971,4 +2971,49 @@ body{
   padding-left: var(--pp-pad);
   padding-right: var(--pp-pad);
 }
+/* =========================================================
+   MOBILE PREMIUM — Experiencia + Organización
+   Mismo eje editorial y misma “lectura” de imagen que Home
+   ========================================================= */
+@media (max-width: 768px){
+
+  /* 1) Contenedor editorial consistente (como Home) */
+  .experience-grid,
+  .organizacion-grid{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  /* 2) En móvil, todo en 1 columna (evita mosaicos raros) */
+  .experience-grid,
+  .organizacion-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* 3) Imagen principal: mismo “impacto” y proporción */
+  .experience-item--hero img,
+  .org-hero img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+  }
+
+  /* 4) Resto de imágenes: coherencia visual (no saltos de alto) */
+  .experience-item img,
+  .world-item img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+  }
+}
 
