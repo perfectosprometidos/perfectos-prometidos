@@ -3160,4 +3160,17 @@ main{ padding-top: 92px; }
 @media (max-width: 920px){
   main{ padding-top: 88px; }
 }
+/* =========================================
+   HEADER · CTA CONTACTO visible en móvil
+   (restaura el comportamiento de Home)
+========================================= */
+@media (max-width: 920px){
+  .nav-cta,
+  .nav a.contacto,
+  .nav a[href*="contacto"]{
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
 
