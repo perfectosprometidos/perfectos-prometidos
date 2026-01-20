@@ -1240,86 +1240,8 @@ section + section {
    HEADER GLOBAL (TOPBAR)
    =============================== */
 
-.topbar{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:transparent;
-}
-
-.topbar-inner{
-  max-width:1200px;
-  margin:0 auto;
-  padding:24px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.topbar .brand{
-  text-decoration:none;
-  letter-spacing:.12em;
-  font-size:14px;
-  color:#111;
-}
-
-.topbar .nav a{
-  margin-left:28px;
-  text-decoration:none;
-  font-size:14px;
-  color:#111;
-}
-
-.topbar .nav-cta{
-  background:#111;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:20px;
-}
-
-/* Evita que el hero “se coma” el header */
-.hero{
-  padding-top:140px;
-}
-/* Hero de páginas interiores (Experiencia, etc.) */
-.hero-experience,
-.hero-experiencia,
-.experience-hero,
-.experiencia-hero{
-  padding-top:140px;
-}
-/* Estado activo del menú */
-.topbar .nav a.is-active{
-  opacity: 0.7;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-/* Header: estado al hacer scroll */
-.topbar{
-  transition: background 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;z-index: 100000;
-
-}
-
-.topbar.is-scrolled{
-  background: rgba(248,246,242,0.92);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 rgba(17,17,17,0.08);
-}
-
-/* En modo scrolled, asegura contraste del CTA */
-.topbar.is-scrolled .nav-cta{
-  background:#111;
-  color:#fff;
-}
 
 
-.topbar:hover .topbar-hint,
-.topbar-inner:hover .topbar-hint,
-.topbar:focus-within .topbar-hint{
-  opacity: 1 !important;
-}
 /* FIX stacking: bloque Experiencia (texto por delante de la imagen) */
 .experience-hero,
 .experience-grid,
@@ -1891,26 +1813,7 @@ section + section {
   }
 
 }
-/* =========================================
-   FIX MÓVIL · Layout centrado (sin tocar PC)
-   ========================================= */
-@media (max-width: 920px){
 
-  /* 1) Evitar “ancho de escritorio” y scroll lateral */
-  html, body{
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-
-  /* 2) Cualquier contenedor típico: que sea 100% y centrado */
-  .container, .wrap, .inner, .section, .section-inner, .topbar-inner, main{
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-  }
   /* =====================================================
    COLUMNA EDITORIAL CENTRADA EN MÓVIL (EXPERIENCIA / MUNDO)
    No afecta a PC
@@ -2067,23 +1970,19 @@ section + section {
    }
   /* === MARGEN EDITORIAL TEXTO EN MÓVIL (Experiencia / Mundo) === */
 @media (max-width: 920px){
-
-  section,
-  .section-inner,
-  .experience,
-  .experience-section,
-  .experience-inner{
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+  .experience-hero-inner,
+  .experience-grid,
+  .organizacion-hero-inner,
+  .organizacion-grid,
+  .principios__inner{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
     box-sizing: border-box !important;
   }
-
 }
 
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
+
+  
 
 .hero-image,
 .hero-card{
@@ -3089,59 +2988,95 @@ body{
     display: block;
   }
 }
+
 /* =========================================================
-   EJE EDITORIAL ÚNICO · MÓVIL VERTICAL
-   Iguala Home / Experiencia / Organización
-========================================================= */
+   FINAL · EJE MÓVIL ÚNICO (HOME = INTERNAS)
+   ========================================================= */
+@media (max-width: 920px){
+  :root{ --pp-mpad: 16px; }
 
-@media (max-width: 920px) {
-
-  /* 1) Eje maestro = MISMO que la Home */
-  :root{
-    --mobile-pad: 16px;
-  }
-
-  /* HEADER / NAV */
+  /* NAV: mismo eje que Home */
   .topbar-inner{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
+    padding-left: var(--pp-mpad) !important;
+    padding-right: var(--pp-mpad) !important;
   }
 
-  /* HERO HOME */
+  /* Home: imagen y bloque */
   .hero-image,
   .hero-image img{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
-    box-sizing: border-box;
+    padding-left: var(--pp-mpad) !important;
+    padding-right: var(--pp-mpad) !important;
+    box-sizing: border-box !important;
   }
 
-  /* HERO EXPERIENCIA / ORGANIZACIÓN */
-  .experience-hero-inner,
-  .organizacion-hero-inner{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
+  /* Internas: títulos + contenido */
+  .experience-hero__inner,
+  .organizacion-hero-inner,
+  .principios__inner,
+  .experience-text-inner,
+  .experience-cta__inner,
+  .organizacion_manifesto,
+  .organizacion_epilogue{
+    padding-left: var(--pp-mpad) !important;
+    padding-right: var(--pp-mpad) !important;
+    box-sizing: border-box !important;
   }
 
-  /* IMÁGENES (todas las páginas internas) */
+  /* Internas: grids de imágenes */
   .experience-grid,
-  .organizacion-grid,
-  .world-grid{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
-    box-sizing: border-box;
+  .organizacion-grid{
+    padding-left: var(--pp-mpad) !important;
+    padding-right: var(--pp-mpad) !important;
+    box-sizing: border-box !important;
   }
 
-  /* Cada imagen ocupa exactamente el mismo eje */
-  .experience-item,
-  .organizacion-grid .world-item,
-  .world-item{
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  /* Evita “doble empuje” por padding del section */
+  .experience-hero,
+  .organizacion-hero{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
-  /* Seguridad total */
-  html, body{
-    overflow-x: hidden;
-  }
+  html, body{ overflow-x: hidden !important; }
 }
+/* =========================================================
+   PP · EJE EDITORIAL ÚNICO (DESKTOP + MÓVIL)
+   Igualar márgenes: Organización + Experiencia = Dirección/Home
+   Pegar AL FINAL del styles.css
+========================================================= */
+
+:root{
+  --pp-max: 1100px;
+  --pp-pad-d: 28px;  /* desktop */
+  --pp-pad-m: 16px;  /* móvil */
+}
+
+/* 1) Contenedores principales: mismo eje */
+.experience-hero-inner,
+.experience-grid,
+.organizacion-hero-inner,
+.org-accordion,
+.principios__inner,
+.organizacion_manifesto,
+.organizacion_epilogue,
+.world-inner,
+.services-inner,
+.contact-inner,
+.editorial-image{
+  max-width: var(--pp-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--pp-pad-d) !important;
+  padding-right: var(--pp-pad-d) !important;
+  box-sizing: border-box !important;
+}
+
+/* 2) Organización: que no “rompa” el eje con 1200/40px */
+.organizacion-grid{
+  max-width: var(--pp-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--pp-pad-d) !important;
+  padding-right: var(--pp-pad-d) !important;
+  box-sizing: border-box
 
