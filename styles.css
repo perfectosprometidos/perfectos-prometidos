@@ -3207,4 +3207,37 @@ body{ padding-top: 0; }
 }
 /* Al hacer click en anclas, que no quede tapado por el header */
 html{ scroll-padding-top: 110px; }
+/* =========================================================
+   FIX DEFINITIVO: header fijo no debe tapar contenido
+   Universal y estable (sin depender de clases)
+========================================================= */
+
+:root{
+  --topbar-h: 96px;   /* alto real del header en desktop */
+}
+
+@media (max-width: 920px){
+  :root{ --topbar-h: 88px; }  /* alto real en móvil */
+}
+
+/* 1) Anclas / navegación interna: evita que el header tape el destino */
+html{
+  scroll-padding-top: var(--topbar-h);
+}
+
+/* 2) Si haces scroll manual, los bloques “arrancan” con margen de seguridad */
+section, header, main, h1, h2, h3{
+  scroll-margin-top: var(--topbar-h);
+}
+
+/* 3) Offset global bajo header fijo (para TODAS las páginas) */
+body{
+  padding-top: var(--topbar-h);
+}
+
+/* 4) EXCEPCIÓN: la Home ya tiene su propio hero con padding-top
+      Quitamos el doble offset solo en el hero */
+.hero{
+  margin-top: calc(var(--topbar-h) * -1);
+}
 
