@@ -3150,4 +3150,14 @@ body{
   .nav{ gap: 10px !important; }
   .nav a{ font-size: 13px !important; }
 }
+/* =========================================================
+   UNIFICAR HEADER · usar TOPBAR (home) en toda la web
+   Desactiva el header antiguo (.site-header)
+========================================================= */
+.site-header{ display:none !important; }
+/* Ajuste universal: evitar que el contenido se esconda bajo el header fijo */
+main{ padding-top: 92px; }
+@media (max-width: 920px){
+  main{ padding-top: 88px; }
+}
 
