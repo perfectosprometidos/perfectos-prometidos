@@ -3171,4 +3171,40 @@ body{
     justify-content: center !important;
   }
 }
+/* =========================================================
+   OFFSET GLOBAL BAJO TOPBAR (sin romper el hero)
+   Evita que el contenido quede debajo del header fijo
+========================================================= */
+
+/* 1) Por defecto, no empujamos nada (Home/hero ya lo gestiona) */
+body{ padding-top: 0; }
+
+/* 2) Empuja SOLO las secciones que vienen después del hero */
+.hero + section,
+.hero + .services,
+.hero + .world,
+.hero + .editorial,
+.hero + .author{
+  padding-top: 40px;
+}
+
+/* 3) En páginas internas (sin hero), empujamos el primer bloque visible */
+.experience-hero,
+.organizacion-hero,
+.editorial-hero,
+.page-hero{
+  padding-top: 120px !important;
+}
+
+/* Ajuste móvil */
+@media (max-width: 920px){
+  .experience-hero,
+  .organizacion-hero,
+  .editorial-hero,
+  .page-hero{
+    padding-top: 110px !important;
+  }
+}
+/* Al hacer click en anclas, que no quede tapado por el header */
+html{ scroll-padding-top: 110px; }
 
