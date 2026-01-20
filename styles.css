@@ -3079,4 +3079,75 @@ body{
   padding-left: var(--pp-pad-d) !important;
   padding-right: var(--pp-pad-d) !important;
   box-sizing: border-box
+/* =========================================================
+   HEADER · MÓVIL PREMIUM (igual que Home)
+   Organización + Experiencia deben verse como la portada
+   Pegar AL FINAL del styles.css
+========================================================= */
+
+@media (max-width: 920px){
+
+  /* Contenedor del header: mismo eje y misma respiración */
+  .topbar-inner,
+  .site-header .nav-inner{
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 16px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    flex-wrap: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Marca: que no “empuje” ni se haga enorme */
+  .brand,
+  .site-header .brand{
+    font-size: 15px !important;
+    letter-spacing: .12em !important;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Navegación: una sola línea, centrada visualmente */
+  .nav,
+  .site-header nav{
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    min-width: 0 !important;
+  }
+
+  /* Enlaces: compactos, sin saltos */
+  .nav a,
+  .site-header nav a{
+    font-size: 14px !important;
+    white-space: nowrap !important;
+  }
+
+  /* CTA Contacto: siempre visible y a la derecha */
+  .nav-cta{
+    flex: 0 0 auto !important;
+    margin-left: 0 !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Si por alguna razón Contacto está dentro del nav y “salta”, lo fijamos */
+  .nav a.nav-cta{
+    margin-left: auto !important;
+  }
+}
+
+/* Móviles muy pequeños: reduce el “gap” para que no se corte */
+@media (max-width: 380px){
+  .nav{ gap: 10px !important; }
+  .nav a{ font-size: 13px !important; }
+}
 
