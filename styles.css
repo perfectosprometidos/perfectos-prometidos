@@ -3156,9 +3156,7 @@ body{
 ========================================================= */
 .site-header{ display:none !important; }
 /* Ajuste universal: evitar que el contenido se esconda bajo el header fijo */
-main{ padding-top: 92px; }
-@media (max-width: 920px){
-  main{ padding-top: 88px; }
+
 }
 /* =========================================
    HEADER · CTA CONTACTO visible en móvil
