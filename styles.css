@@ -3143,3 +3143,53 @@ body{
   html, body{
     overflow-x: hidden;
   }
+/* =========================================================
+   MOBILE ONLY · PP eje editorial + estabilidad
+   No toca PC
+========================================================= */
+@media (max-width: 920px){
+
+  :root{ --pp-mpad: 16px; }
+
+  html, body{ overflow-x: hidden; }
+
+  /* 1) Header: que no se coma anclas y no corte secciones */
+  html{ scroll-padding-top: 96px; } /* si tu topbar es fijo */
+  
+  /* 2) Contenedor editorial consistente (internas + secciones) */
+  .topbar-inner,
+  .services-inner,
+  .world-inner,
+  .contact-inner,
+  .experience-hero-inner,
+  .experience-grid,
+  .experience-text-inner,
+  .organizacion-hero-inner,
+  .organizacion-grid,
+  .principios__inner,
+  .organizacion_manifesto,
+  .organizacion_epilogue{
+    padding-left: var(--pp-mpad) !important;
+    padding-right: var(--pp-mpad) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3) Home Hero: evitar “empujes” raros y desbordes */
+  .hero-image,
+  .hero-image img{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* 4) Tarjeta hero centrada en móvil (si existe hero-card) */
+  .hero-card{
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 18px auto 0 !important;
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    box-sizing: border-box !important;
+  }
+}
