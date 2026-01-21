@@ -2355,7 +2355,7 @@ section + section {
    SERVICIOS · DESKTOP FINAL (3 arriba + 1 abajo ancho)
    ========================================================= */
 
-@media (min-width: 981px){
+@media (min-width: 861px){
 
   .services-grid{
     display: grid !important;
@@ -2410,6 +2410,13 @@ section + section {
     margin: 24px 0 0 !important;
     justify-self: stretch !important;
   }
+  .services-grid > .service-card:last-child{
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-top: 32px !important;
+}
+
 /* =========================================
    LINO EDITORIAL PREMIUM · FONDO GLOBAL
    (solo imagen, sin tocar layout)
