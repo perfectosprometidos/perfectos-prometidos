@@ -12,44 +12,7 @@ body{
   font-family: Georgia, "Times New Roman", serif;
   color: var(--ink);
   background: var(--paper2);
-}
-/* HEADER / NAV */
-.site-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background: rgba(246,244,239,.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-}
 
-.site-header .nav-inner{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-header nav{
-  display: flex;
-  gap: 18px;
-}
-
-.site-header nav a{
-  font-size: 13px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: rgba(17,17,17,.72);
-  text-decoration: none;
-}
-
-.site-header nav a:hover{
-  color: rgba(17,17,17,.95);
-}
 
 /* TOPBAR / NAV — lujo */
 .topbar{
@@ -742,7 +705,7 @@ section + section {
 @media (max-width: 900px){
   .organizacion-grid{
     grid-template-columns: 1fr;
-    padding: 10px 22px 34px;
+    padding: 10px 16px 34px;
     gap: 16px;
   }
 
@@ -1236,90 +1199,7 @@ section + section {
   margin-bottom: 1.6rem;
   color: #2a2a2a;
 }
-/* ===============================
-   HEADER GLOBAL (TOPBAR)
-   =============================== */
 
-.topbar{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:transparent;
-}
-
-.topbar-inner{
-  max-width:1200px;
-  margin:0 auto;
-  padding:24px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.topbar .brand{
-  text-decoration:none;
-  letter-spacing:.12em;
-  font-size:14px;
-  color:#111;
-}
-
-.topbar .nav a{
-  margin-left:28px;
-  text-decoration:none;
-  font-size:14px;
-  color:#111;
-}
-
-.topbar .nav-cta{
-  background:#111;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:20px;
-}
-
-/* Evita que el hero “se coma” el header */
-.hero{
-  padding-top:140px;
-}
-/* Hero de páginas interiores (Experiencia, etc.) */
-.hero-experience,
-.hero-experiencia,
-.experience-hero,
-.experiencia-hero{
-  padding-top:140px;
-}
-/* Estado activo del menú */
-.topbar .nav a.is-active{
-  opacity: 0.7;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-/* Header: estado al hacer scroll */
-.topbar{
-  transition: background 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;z-index: 100000;
-
-}
-
-.topbar.is-scrolled{
-  background: rgba(248,246,242,0.92);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 rgba(17,17,17,0.08);
-}
-
-/* En modo scrolled, asegura contraste del CTA */
-.topbar.is-scrolled .nav-cta{
-  background:#111;
-  color:#fff;
-}
-
-
-.topbar:hover .topbar-hint,
-.topbar-inner:hover .topbar-hint,
-.topbar:focus-within .topbar-hint{
-  opacity: 1 !important;
-}
 /* FIX stacking: bloque Experiencia (texto por delante de la imagen) */
 .experience-hero,
 .experience-grid,
@@ -2343,257 +2223,65 @@ section + section {
     padding: 0 16px !important;
     box-sizing: border-box !important;
   }
-}
 /* =========================================================
-   FIX DEFINITIVO MÓVIL VERTICAL – eliminar desbordes reales
-   No afecta a PC ni a móvil horizontal
-========================================================= */
-@media (max-width: 920px) and (orientation: portrait){
-   FIX MÓVIL (unificado) — centra layout y elimina cortes
-   - No toca escritorio
-   - Corrige: desplazamiento lateral + hero cortado + nav + servicios 3+1
+   MOBILE · EJE EDITORIAL ÚNICO (vertical)
+   Organización + Experiencia = Dirección editorial + Home
    ========================================================= */
-
-  html, body{
-    width: 100% !important;
-    overflow-x: hidden !important;
-  }
-@media (max-width: 920px) {
-
-  /* El layout debe usar el ancho real del móvil */
-  body > *{
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  /* Base anti-desborde */
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+@media (max-width: 920px) and (orientation: portrait){
+  :root{
+    --pp-mpad: 16px;
+    --pp-max: 560px;
   }
 
-  /* HERO */
-  .hero{
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  /* Todo dentro del ancho real del móvil */
-  *, *::before, *::after {
+  /* Header: logo centrado + nav centrada + CTA visible */
+  .topbar-inner{
+    max-width: var(--pp-max);
+    margin: 0 auto;
+    padding: 14px var(--pp-mpad);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 14px;
     box-sizing: border-box;
-    max-width: 100%;
   }
-
-  /* IMAGEN DEL HERO — CLAVE */
-  .hero-image,
-  .hero-image img{
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    height: auto !important;
-  /* Contenedores principales centrados */
-  .topbar-inner,
-  main,
-  section,
-  .section-inner,
-  .wrap,
-  .inner,
-  .container {
+  .brand{ width: 100%; text-align: center; }
+  .nav{
     width: 100%;
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .nav-cta{ display: inline-block; }
+
+  /* Columna editorial (internas y secciones) */
+  .organizacion-hero-inner,
+  .organizacion-grid,
+  .experience-hero-inner,
+  .experience-grid,
+  .experience-text-inner,
+  .org-accordion,
+  .principios__inner,
+  .services-inner,
+  .world-inner,
+  .contact-inner,
+  .editorial-inner{
+    max-width: var(--pp-max);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: var(--pp-mpad);
+    padding-right: var(--pp-mpad);
+    box-sizing: border-box;
   }
 
-  /* TARJETA DE TEXTO */
-  .hero-card{
-    width: calc(100% - 32px) !important;
-    max-width: 520px !important;
-    margin: 20px auto 0 !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-  /* NAV: que no desaparezcan Blog/Contacto */
-  .topbar-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px 14px;
-  }
+  /* Organización: tarjetas a ancho editorial */
+  .principios__grid{ grid-template-columns: 1fr; gap: 18px; }
+  .principio{ width: 100%; border-radius: 18px; }
 
-}
-/* =========================================
-   FIX 1 — HERO móvil: evitar tarjeta cortada
-   (solo móvil vertical)
-========================================= */
-@media (max-width: 920px) and (orientation: portrait){
-
-  /* Asegura que el hero puede crecer y no recorta */
-  .hero,
-  .hero-inner,
-  .hero-wrap,
-  .hero-container{
-    height: auto !important;
-    min-height: 0 !important;
-    overflow: visible !important;
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 14px;
-    width: 100%;
-  }
-
-  /* La tarjeta nunca debe quedar recortada */
-  .hero-card{
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding-bottom: 28px !important;
-  .nav a {
-    white-space: nowrap;
-    font-size: 14px;
-  }
-}
-/* =========================================
-   FIX 2 — NAV móvil: que se vean Blog + Contacto
-========================================= */
-@media (max-width: 920px){
-
-  .topbar-inner{
-    flex-wrap: wrap !important;
-    gap: 10px 14px !important;
-    align-items: center !important;
-  .nav-cta {
-    margin-left: 0; /* evita empujes raros */
-  }
-
-  .nav{
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 10px 14px !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-  /* HERO: apilar y centrar sin recortes */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .nav a{
-    font-size: 14px !important;
-    white-space: nowrap !important;
-  .hero-image,
-  .hero-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  /* El CTA no debe “empujar” fuera a los demás */
-  .nav-cta{
-    margin-left: 0 !important;
-  }
-}
-/* =========================================================
-   FIX MÓVIL HORIZONTAL – HERO sin recortes
-   No afecta a PC
-========================================================= */
-@media (max-width: 920px) and (orientation: landscape){
-
-  .hero,
-  .hero-inner,
-  .hero-wrap,
-  .hero-container,
-  .hero-image{
-  .hero-card {
-    width: calc(100% - 32px);
-    max-width: 520px;
-    margin: 18px auto 0 auto;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  /* La imagen nunca debe forzar alto fijo */
-  .hero-image img{
-    height: auto !important;
-    max-height: none !important;
-    object-fit: cover;
-  /* SERVICIOS: evitar “3 arriba + 1 raro” */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: stretch;
-  }
-
-  /* La tarjeta no puede recortarse */
-  .hero-card{
-    overflow: visible !important;
-  /* La 4ª (wide) ocupa 2 columnas y queda centrada */
-  .services-grid > .service-card {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-  }
-}
-/* =========================================================
-   FIX ORGANIZACIÓN – centrado editorial en móvil
-   No afecta a PC ni a horizontal
-========================================================= */
-@media (max-width: 920px){
-
-  /* Contenedor general de Organización */
-  #organizacion,
-  .organizacion,
-  .organizacion-section,
-  .services,
-  .services-grid{
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-  .services-grid > .service-card.service-card-wide {
-    grid-column: 1 / -1;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-}
-
-  /* Cada tarjeta */
-  .service-card,
-  .method-card,
-  .organizacion-card{
-    width: 100% !important;
-    max-width: 560px !important;
-    margin: 24px auto !important;
-    box-sizing: border-box !important;
-/* Móviles pequeños: 1 columna */
-@media (max-width: 560px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Aire lateral editorial */
-  .service-card,
-  .method-card,
-  .organizacion-card{
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  .services-grid > .service-card.service-card-wide {
-    grid-column: auto;
-    max-width: none;
-  }
+  /* Experiencia: imágenes a ancho editorial */
+  .experience-grid{ width: 100%; padding-left: var(--pp-mpad); padding-right: var(--pp-mpad); }
+  .experience-item, .experience-item img{ border-radius: 18px; }
 }
 
 /* =========================================================
