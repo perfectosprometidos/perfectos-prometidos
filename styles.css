@@ -3082,3 +3082,57 @@ body{
     border-radius: 22px !important;
   }
 }
+/* =========================================================
+   HEADER · MÓVIL VERTICAL · Unificar cabecera como Home
+   (Organización / Experiencia = Dirección editorial / Home)
+========================================================= */
+@media (max-width: 920px) and (orientation: portrait){
+
+  /* Contenedor del header: columna editorial centrada */
+  .topbar-inner{
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    padding: 14px 16px !important;
+
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 10px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Marca: siempre centrada y ocupando la primera línea */
+  .brand{
+    flex: 0 0 100% !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* Menú: centrado y con wrap para que entren todas (Servicios/Mundo/Blog/Experiencia/Contacto) */
+  .nav{
+    flex: 0 0 100% !important;
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    gap: 14px 18px !important;
+  }
+
+  .nav a{
+    white-space: nowrap !important;
+    font-size: 14px !important;
+  }
+
+  /* CTA Contacto: siempre visible y al final */
+  .nav-cta{
+    display: inline-block !important;
+    margin-left: 0 !important;
+    order: 99 !important;
+    white-space: nowrap !important;
+  }
+}
