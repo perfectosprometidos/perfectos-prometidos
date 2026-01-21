@@ -3253,3 +3253,144 @@ body{
     border-radius: 18px !important;
   }
 }
+/* =========================================================
+   PP · MÓVIL VERTICAL · Header + Eje editorial unificado
+   (Organización / Experiencia = Dirección editorial / Home)
+========================================================= */
+@media (max-width: 920px) and (orientation: portrait){
+
+  :root{
+    --pp-mpad: 16px;     /* margen editorial */
+    --pp-max: 560px;     /* ancho de columna */
+    --pp-topbar: 92px;   /* altura visual del header */
+  }
+
+  /* =========================
+     1) HEADER como en Home (4)
+     ========================= */
+  .topbar-inner{
+    max-width: var(--pp-max) !important;
+    margin: 0 auto !important;
+    padding: 14px var(--pp-mpad) !important;
+
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px 14px !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /* Marca centrada arriba */
+  .brand{
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  /* Menú en segunda línea + CTA visible */
+  .nav{
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .nav a{ white-space: nowrap !important; }
+
+  .nav-cta{
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+
+  /* Evita que el contenido quede “debajo” del header */
+  html{ scroll-padding-top: var(--pp-topbar) !important; }
+
+
+  /* ==========================================
+     2) EJE EDITORIAL (márgenes iguales 1-2=3-4)
+     ========================================== */
+  .organizacion-hero-inner,
+  .experience-hero-inner,
+  .experience-grid,
+  .organizacion-grid,
+  .org-accordion,
+  .principios__inner,
+  .editorial-image,
+  .world-inner,
+  .services-inner,
+  .contact-inner{
+    max-width: var(--pp-max) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: var(--pp-mpad) !important;
+    padding-right: var(--pp-mpad) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Si hay secciones con padding lateral “extra”, lo neutralizamos */
+  section{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+
+  /* ==================================================
+     3) “A PANTALLA” como 3 y 4: escala de título e imagen
+     ================================================== */
+
+  /* Organización: aire superior correcto y tipografía más “Vogue” */
+  .organizacion-hero{
+    padding-top: calc(var(--pp-topbar) + 20px) !important;
+  }
+  .organizacion-hero h1{
+    font-size: clamp(42px, 10vw, 60px) !important;
+    line-height: 1.02 !important;
+  }
+  .organizacion-hero p{
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* Experiencia: mismo ritmo y escala */
+  .experience-hero{
+    padding-top: calc(var(--pp-topbar) + 20px) !important;
+  }
+  .experience-hero h1{
+    font-size: clamp(42px, 10vw, 60px) !important;
+    line-height: 1.02 !important;
+  }
+  .experience-lead{
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+  }
+
+  /* Imágenes: full dentro de la columna, sin “margen raro” */
+  .experience-grid{
+    width: 100% !important;
+    padding-left: var(--pp-mpad) !important;
+    padding-right: var(--pp-mpad) !important;
+  }
+  .experience-item,
+  .experience-item img{
+    border-radius: 22px !important;
+  }
+
+  /* Tarjetas (Organización): mismo ancho editorial, no a “pantalla total” */
+  .principios__grid{
+    max-width: var(--pp-max) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .principio{
+    width: 100% !important;
+    max-width: var(--pp-max) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 22px !important;
+  }
+}
