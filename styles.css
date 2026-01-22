@@ -2698,6 +2698,17 @@ section + section {
   margin-bottom: 22px;
 }
 
+/* primer párrafo: entradilla editorial */
+.legal-content p:first-of-type {
+  font-size: 1.12rem;
+  color: rgba(17,17,17,.92);
+  max-width: 92%;
+}
+
+.legal-content p + p {
+  margin-top: 26px;
+}
+
 .legal-content ul {
   margin: 24px 0 32px 20px;
 }
@@ -2708,7 +2719,8 @@ section + section {
 }
 
 .legal-content strong {
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 /* bloque editorial suave */
@@ -2722,20 +2734,6 @@ section + section {
   padding: 56px 64px;
   box-shadow: var(--shadow);
 }
-/* refinamiento editorial del texto legal */
-.legal-content p:first-of-type {
-  font-size: 1.1rem;
-  color: rgba(17,17,17,.9);
-}
-
-.legal-content p + p {
-  margin-top: 26px;
-}
-
-.legal-content strong {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
 
 /* móvil */
 @media (max-width: 720px) {
@@ -2747,7 +2745,3 @@ section + section {
     padding-top: 110px;
   }
 }
-
-
-
-
