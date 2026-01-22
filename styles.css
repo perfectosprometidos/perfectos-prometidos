@@ -2803,4 +2803,20 @@ line-height: 1.85;
     gap: 6px;
   }
 }
+/* volver a home – editorial */
+.legal-back {
+  margin-top: 56px;
+}
+
+.legal-back a {
+  font-size: .95rem;
+  color: rgba(17,17,17,.6);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.legal-back a:hover {
+  color: rgba(17,17,17,.85);
+}
 
