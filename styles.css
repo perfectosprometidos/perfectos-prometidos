@@ -2669,6 +2669,70 @@ section + section {
     white-space: nowrap !important;
     flex: 0 0 auto !important;
   }
+/* ===============================
+   LEGAL PAGES – editorial style
+   =============================== */
+
+.legal-page {
+  background: var(--paper2);
+  padding-top: 140px; /* respira bajo la topbar */
+  padding-bottom: 140px;
+}
+
+.legal-page .container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.legal-content h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+.legal-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(17,17,17,.78);
+  margin-bottom: 22px;
+}
+
+.legal-content ul {
+  margin: 24px 0 32px 20px;
+}
+
+.legal-content li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.legal-content strong {
+  font-weight: 600;
+}
+
+/* bloque editorial suave */
+.legal-content {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.55),
+    rgba(255,255,255,0.35)
+  );
+  border-radius: 22px;
+  padding: 56px 64px;
+  box-shadow: var(--shadow);
+}
+
+/* móvil */
+@media (max-width: 720px) {
+  .legal-content {
+    padding: 36px 26px;
+  }
+
+  .legal-page {
+    padding-top: 110px;
+  }
+}
 
 
 
