@@ -14,82 +14,79 @@
       color: #1c1c1c;
     }
 
-    .blog-placeholder {
-      min-height: 100vh;
+       /* BLOG HERO · PORTADA EDITORIAL */
+
+    .blog-hero {
+      min-height: 90vh;
+      background-image: url("assets/images/perfectos_prometidos_portada_blog_editorial.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
+      background-attachment: fixed;
+
+      padding-top: 140px;
     }
 
-    .blog-box {
-      max-width: 720px;
+    .blog-hero-inner {
+      max-width: 1100px;
+      width: 100%;
+      padding: 0 40px;
     }
 
-    .blog-box h1 {
-      font-size: 42px;
-      font-weight: 400;
-      margin-bottom: 24px;
-      letter-spacing: 0.5px;
-    }
-
-    .blog-box p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #555;
-      margin-bottom: 40px;
-    }
-
-    .blog-box span {
-      display: block;
-      font-size: 14px;
-      letter-spacing: 1.5px;
+    .blog-masthead {
+      font-family: "Didot", "Baskerville", "Times New Roman", serif;
+      font-size: clamp(3.2rem, 6vw, 5.4rem);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #8a8a8a;
-      margin-bottom: 16px;
+      margin: 0 0 18px 0;
+      color: #111;
     }
 
-    .blog-box a {
-      display: inline-block;
-      text-decoration: none;
-      border: 1px solid #1c1c1c;
-      padding: 12px 28px;
-      color: #1c1c1c;
-      font-size: 14px;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
+    .blog-subtitle {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(17, 17, 17, 0.75);
+      max-width: 520px;
     }
 
-    .blog-box a:hover {
-      background-color: #1c1c1c;
-      color: #ffffff;
+    @media (max-width: 768px) {
+      .blog-hero {
+        min-height: 70vh;
+        padding-top: 100px;
+      }
+
+      .blog-masthead { font-size: 2.4rem; }
+      .blog-subtitle { font-size: 1rem; }
     }
+
   </style>
 </head>
 
 <body>
+  <section class="blog-hero">
+    <section class="blog-intro">
+  <p class="intro-title">Estamos preparando una mirada.</p>
+  <p class="intro-text">
+    Una forma distinta de hablar de bodas, tiempo y elegancia.<br>
+    Con calma. Sin ruido.
+  </p>
+</section>
+<section class="blog-intro">
+  <p class="intro-title">Estamos preparando una mirada.</p>
+  <p class="intro-text">
+    Una forma distinta de hablar de bodas, tiempo y elegancia.<br>
+    Con calma. Sin ruido.
+  </p>
+</section>
 
-  <section class="blog-placeholder">
-    <div class="blog-box">
-      <span>Perfectos Prometidos · Diario Editorial</span>
-
- <h1>Un diario en proceso</h1>
+   
 
 
-      <p>
-        Nuestro blog será un lugar para compartir inspiración, dirección creativa
-        y reflexiones sobre el arte de crear bodas con calma, elegancia y significado.
-        <br><br>
-        Muy pronto.
-      </p>
-<p style="margin-top:18px; font-size:13px; letter-spacing:0.4px; color:#7a7a7a;">
-  Galicia & Madrid · Pazos y fincas privadas · Domingos exclusivos
-</p>
 
-      <a href="index.html">Volver a la web</a>
-    </div>
-  </section>
 
 </body>
 </html>
