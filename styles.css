@@ -2615,6 +2615,7 @@ section + section {
 ========================================================= */
 @media (max-width: 920px) and (orientation: portrait){
 
+  /* Header móvil premium: marca centrada + menú visible (2 filas si hace falta) */
   .topbar-inner{
     width: 100% !important;
     max-width: 100% !important;
@@ -2622,35 +2623,32 @@ section + section {
     padding: 14px 16px !important;
 
     display: flex !important;
+    flex-wrap: wrap !important;              /* CLAVE: permite 2 filas */
     align-items: center !important;
-    justify-content: space-between !important;
-    gap: 12px !important;
+    justify-content: center !important;
+    gap: 10px 14px !important;
 
-    flex-wrap: nowrap !important;
     box-sizing: border-box !important;
   }
 
   .brand{
-    flex: 0 0 auto !important;
+    width: 100% !important;                  /* 1ª fila */
+    text-align: center !important;
+    display: block !important;
     font-size: 15px !important;
     white-space: nowrap !important;
   }
 
-  /* Nav como la experiencia: una línea.
-     Si algún móvil es estrecho, permitimos scroll horizontal SIN romper diseño. */
   .nav{
-    flex: 1 1 auto !important;
+    width: 100% !important;                  /* 2ª fila */
     display: flex !important;
+    flex-wrap: wrap !important;              /* CLAVE: evita cortes */
     align-items: center !important;
-    justify-content: flex-end !important;
-    gap: 14px !important;
+    justify-content: center !important;
+    gap: 14px 16px !important;
 
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    overflow: visible !important;            /* CLAVE: no scroll horizontal */
   }
-  .nav::-webkit-scrollbar{ display:none; }
 
   .nav a{
     font-size: 14px !important;
@@ -2660,7 +2658,8 @@ section + section {
   .nav-cta{
     display: inline-block !important;
     white-space: nowrap !important;
-    flex: 0 0 auto !important;
   }
 }
+
+
 
