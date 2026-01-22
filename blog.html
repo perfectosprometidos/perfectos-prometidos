@@ -55,16 +55,28 @@
       max-width: 520px;
     }
 
-    @media (max-width: 768px) {
-      .blog-hero {
-        min-height: 70vh;
-        padding-top: 100px;
-      }
+ @media (max-width: 768px) {
+  .blog-hero {
+    min-height: 85vh;
+    padding-top: 60px;
+  }
 
-      .blog-masthead { font-size: 2.4rem; }
-      .blog-subtitle { font-size: 1rem; }
-    }
+  .blog-whisper {
+    bottom: 40px;
+    max-width: 300px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+}
 
+@media (max-width: 420px) {
+  .blog-whisper {
+    bottom: 28px;
+    max-width: 260px;
+    font-size: 0.84rem;
+  }
+}
+   
 .blog-whisper {
   position: absolute;
   bottom: 80px;
@@ -86,8 +98,7 @@
 <body>
 <section class="blog-hero">
   <div class="blog-hero-inner">
-    <h1 class="blog-masthead">Perfectos Prometidos</h1>
-    <p class="blog-subtitle">una mirada editorial sobre bodas, tiempo y elegancia</p>
+   </p>
 
     <p class="blog-whisper">
       Estamos preparando una mirada.<br>
