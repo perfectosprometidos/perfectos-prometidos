@@ -2674,14 +2674,14 @@ section + section {
    =============================== */
 .legal-page {
   background: var(--paper2);
-  padding-top: 180px; /* respira bajo la topbar */
-  padding-bottom: 180px;
+  padding-top: 220px; /* respira bajo la topbar */
+  padding-bottom: 200px;
 }
 
 .legal-page .container {
-  max-width: 780px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 32px;
 }
 
 /* bloque editorial suave */
@@ -2692,19 +2692,19 @@ section + section {
     rgba(255,255,255,0.35)
   );
   border-radius: 22px;
-  padding: 56px 64px;
+padding: 72px 80px;
   box-shadow: var(--shadow);
 }
 
 .legal-content h1 {
   font-size: clamp(2.4rem, 4vw, 3.2rem);
-  margin-bottom: 32px;
+ margin-bottom: 36px;
   letter-spacing: -0.02em;
 }
 
 .legal-content p {
   font-size: 1.05rem;
-  line-height: 1.8;
+line-height: 1.85;
   color: rgba(17,17,17,.78);
   margin: 0;                /* evitamos dobles márgenes */
 }
@@ -2741,12 +2741,14 @@ section + section {
 /* móvil */
 @media (max-width: 720px) {
   .legal-content {
-    padding: 36px 26px;
+ padding: 40px 28px;
   }
 
   .legal-page {
-    padding-top: 110px;
-    padding-bottom: 110px;
+ padding-top: 140px;
+
+ padding-bottom: 120px;
+
   }
 
   .legal-content p:first-of-type {
