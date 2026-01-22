@@ -2781,7 +2781,4 @@ main.legal-page .container{
     gap: 6px;
   }
 }
-/* DEBUG LEGAL – quitar después */
-main.legal-page { outline: 3px solid red; }
-main.legal-page .container { outline: 3px solid blue; }
-.legal-page .legal-content { outline: 3px solid green; }
+
