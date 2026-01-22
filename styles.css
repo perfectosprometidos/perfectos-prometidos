@@ -2752,3 +2752,21 @@ main.legal-page{
     padding: 0 18px;
   }
 }
+.blog-intro {
+  max-width: 720px;
+  margin: 120px auto 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.intro-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(28,28,28,0.75);
+}
