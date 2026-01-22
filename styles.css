@@ -2672,55 +2672,16 @@ section + section {
 /* ===============================
    LEGAL PAGES – editorial style
    =============================== */
-
 .legal-page {
   background: var(--paper2);
-  padding-top: 140px; /* respira bajo la topbar */
-  padding-bottom: 140px;
+  padding-top: 180px; /* respira bajo la topbar */
+  padding-bottom: 180px;
 }
 
 .legal-page .container {
   max-width: 780px;
   margin: 0 auto;
   padding: 0 28px;
-}
-
-.legal-content h1 {
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
-  margin-bottom: 32px;
-  letter-spacing: -0.02em;
-}
-
-.legal-content p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: rgba(17,17,17,.78);
-  margin-bottom: 22px;
-}
-
-/* primer párrafo: entradilla editorial */
-.legal-content p:first-of-type {
-  font-size: 1.12rem;
-  color: rgba(17,17,17,.92);
-  max-width: 92%;
-}
-
-.legal-content p + p {
-  margin-top: 26px;
-}
-
-.legal-content ul {
-  margin: 24px 0 32px 20px;
-}
-
-.legal-content li {
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-.legal-content strong {
-  font-weight: 500;
-  letter-spacing: 0.02em;
 }
 
 /* bloque editorial suave */
@@ -2735,6 +2696,48 @@ section + section {
   box-shadow: var(--shadow);
 }
 
+.legal-content h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+.legal-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(17,17,17,.78);
+  margin: 0;                /* evitamos dobles márgenes */
+}
+
+/* ritmo editorial entre párrafos */
+.legal-content p + p {
+  margin-top: 30px;
+}
+
+/* primer párrafo: entradilla editorial */
+.legal-content p:first-of-type {
+  font-size: 1.12rem;
+  color: rgba(17,17,17,.92);
+  max-width: 92%;
+}
+
+/* ficha editorial (Titular / Correo / Dominio) */
+.legal-content p strong {
+  display: inline-block;
+  min-width: 180px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.legal-content ul {
+  margin: 24px 0 32px 20px;
+}
+
+.legal-content li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
 /* móvil */
 @media (max-width: 720px) {
   .legal-content {
@@ -2743,5 +2746,16 @@ section + section {
 
   .legal-page {
     padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .legal-content p:first-of-type {
+    max-width: 100%;
+  }
+
+  .legal-content p strong {
+    min-width: 0;
+    display: inline;
   }
 }
+
