@@ -62,35 +62,27 @@ main.legal-page{
   .legal-wrap{ padding: 0 18px; }
 }
 /* ===============================
-   LEGAL · PERFECTOS PROMETIDOS
-   Refinamiento editorial (safe)
+   LEGAL · PERFECTOS PROMETIDOS (FINAL)
    =============================== */
 
-/* Ritmo general más elegante */
 .legal-wrap{
   letter-spacing: 0.01em;
 }
 
-/* Título principal: más editorial */
 .legal-wrap h1{
   font-weight: 500;
-  letter-spacing: -0.015em;
 }
 
-/* Subtítulos: claridad + distinción */
 .legal-wrap h2{
   font-weight: 500;
-  text-transform: none;
   color: rgba(17,17,17,.9);
 }
 
-/* Texto: sensación impresa */
 .legal-wrap p,
 .legal-wrap li{
   text-align: left;
 }
 
-/* Separación visual muy sutil entre bloques */
 .legal-wrap h2::before{
   content: "";
   display: block;
@@ -100,7 +92,6 @@ main.legal-page{
   margin: 48px 0 18px;
 }
 
-/* Listas más editoriales */
 .legal-wrap ul{
   list-style: none;
   padding-left: 0;
@@ -118,7 +109,6 @@ main.legal-page{
   color: rgba(17,17,17,.45);
 }
 
-/* Enlaces: más discretos, más lujo */
 .legal-wrap a{
   border-bottom-color: rgba(17,17,17,.18);
 }
@@ -127,11 +117,11 @@ main.legal-page{
   border-bottom-color: rgba(17,17,17,.4);
 }
 
-/* Volver a home: gesto editorial */
 .legal-back a{
   font-weight: 500;
   letter-spacing: .12em;
 }
+
 /* ===============================
    PORTADILLA LEGAL · PP
    =============================== */
