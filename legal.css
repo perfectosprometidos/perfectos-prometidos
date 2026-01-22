@@ -96,4 +96,75 @@ main.legal-page{
   display: block;
   width: 28px;
   height: 1px;
-  background: rgba(17,
+  background: rgba(17,17,17,.25);
+  margin: 48px 0 18px;
+}
+
+/* Listas más editoriales */
+.legal-wrap ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.legal-wrap ul li{
+  position: relative;
+  padding-left: 18px;
+}
+
+.legal-wrap ul li::before{
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: rgba(17,17,17,.45);
+}
+
+/* Enlaces: más discretos, más lujo */
+.legal-wrap a{
+  border-bottom-color: rgba(17,17,17,.18);
+}
+
+.legal-wrap a:hover{
+  border-bottom-color: rgba(17,17,17,.4);
+}
+
+/* Volver a home: gesto editorial */
+.legal-back a{
+  font-weight: 500;
+  letter-spacing: .12em;
+}
+/* ===============================
+   PORTADILLA LEGAL · PP
+   =============================== */
+
+.legal-cover{
+  margin: 0 0 54px;
+  padding: 18px 0 22px;
+  position: relative;
+}
+
+.legal-cover::after{
+  content: "";
+  display: block;
+  width: 84px;
+  height: 1px;
+  background: rgba(17,17,17,.22);
+  margin-top: 18px;
+}
+
+.legal-kicker{
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,.55);
+}
+
+.legal-caption{
+  margin-top: 10px;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: rgba(17,17,17,.78);
+}
+
+.legal-cover + h1{
+  margin-top: 0;
+}
