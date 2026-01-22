@@ -2615,7 +2615,6 @@ section + section {
 ========================================================= */
 @media (max-width: 920px) and (orientation: portrait){
 
-  /* Header móvil premium: marca centrada + menú visible (2 filas si hace falta) */
   .topbar-inner{
     width: 100% !important;
     max-width: 100% !important;
@@ -2623,7 +2622,7 @@ section + section {
     padding: 14px 16px !important;
 
     display: flex !important;
-    flex-wrap: wrap !important;              /* CLAVE: permite 2 filas */
+    flex-wrap: wrap !important;               /* logo arriba + menú abajo */
     align-items: center !important;
     justify-content: center !important;
     gap: 10px 14px !important;
@@ -2631,23 +2630,22 @@ section + section {
     box-sizing: border-box !important;
   }
 
+  /* Logo centrado (fila 1) */
   .brand{
-    width: 100% !important;                  /* 1ª fila */
+    width: 100% !important;
     text-align: center !important;
-    display: block !important;
     font-size: 15px !important;
     white-space: nowrap !important;
   }
 
+  /* Menú (fila 2) como Home: centrado, con CTA visible */
   .nav{
-    width: 100% !important;                  /* 2ª fila */
+    width: 100% !important;
     display: flex !important;
-    flex-wrap: wrap !important;              /* CLAVE: evita cortes */
     align-items: center !important;
     justify-content: center !important;
-    gap: 14px 16px !important;
-
-    overflow: visible !important;            /* CLAVE: no scroll horizontal */
+    flex-wrap: nowrap !important;             /* mantenemos una línea */
+    gap: 16px !important;
   }
 
   .nav a{
@@ -2655,11 +2653,23 @@ section + section {
     white-space: nowrap !important;
   }
 
-  .nav-cta{
-    display: inline-block !important;
-    white-space: nowrap !important;
+  /* OCULTAR en móvil el link "Experiencia" para que quede igual que Home */
+  .nav a[href*="experiencia"]{
+    display: none !important;
   }
-}
+
+  /* CTA igual que Home, sin saltos ni cortes */
+  .nav-cta{
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+    border-radius: 999px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+  }
+
 
 
 
