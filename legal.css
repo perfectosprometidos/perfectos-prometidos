@@ -61,3 +61,39 @@ main.legal-page{
   main.legal-page{ padding: 140px 0 120px; }
   .legal-wrap{ padding: 0 18px; }
 }
+/* ===============================
+   LEGAL · PERFECTOS PROMETIDOS
+   Refinamiento editorial (safe)
+   =============================== */
+
+/* Ritmo general más elegante */
+.legal-wrap{
+  letter-spacing: 0.01em;
+}
+
+/* Título principal: más editorial */
+.legal-wrap h1{
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+/* Subtítulos: claridad + distinción */
+.legal-wrap h2{
+  font-weight: 500;
+  text-transform: none;
+  color: rgba(17,17,17,.9);
+}
+
+/* Texto: sensación impresa */
+.legal-wrap p,
+.legal-wrap li{
+  text-align: left;
+}
+
+/* Separación visual muy sutil entre bloques */
+.legal-wrap h2::before{
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: rgba(17,
