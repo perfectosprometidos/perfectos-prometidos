@@ -2752,13 +2752,16 @@ main.legal-page .container{
   background: var(--paper2);
 }
 .footer-inner{
-  max-width: 760px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  padding: 0 52px;
 }
+.footer-inner > *{
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer-legal{
   display: flex;
   gap: 28px;
@@ -2778,5 +2781,3 @@ main.legal-page .container{
     gap: 6px;
   }
 }
-
-
