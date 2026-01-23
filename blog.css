@@ -61,7 +61,7 @@ background: linear-gradient(
 ..blog-whisper{
   position: absolute;
   left: 50%;
-  bottom: 320px;
+  bottom: 420px !important;
   transform: translateX(-50%);
   width: calc(100% - 72px);
   max-width: 520px;
@@ -86,7 +86,7 @@ backdrop-filter: blur(6px);
 /* Mobile */
 @media (max-width: 420px){
   .blog-whisper{
-    bottom: 300px;
+    bottom: 380px !important;
     max-width: 320px;
     font-size: 0.9rem;
     line-height: 1.65;
