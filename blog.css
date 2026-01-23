@@ -93,5 +93,36 @@ backdrop-filter: blur(6px);
     padding: 12px 14px;
   }
 }
+/* ===============================
+   BLOG HERO — DESKTOP FIX
+   =============================== */
+@media (min-width: 900px){
+
+  .blog-hero{
+    /* Mantiene el encuadre editorial en PC */
+    min-height: 100vh;
+    height: 100vh;
+
+    /* En desktop: NO recortes agresivos */
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #f6f4ef;
+
+    /* Ajusta la separación de la topbar fija */
+    padding-top: 160px;
+  }
+
+  /* Texto: en desktop mejor anclarlo por top/left (no por bottom) */
+  .blog-whisper{
+    left: 64px;
+    top: 54%;
+    bottom: auto;
+    transform: none;
+
+    max-width: 520px;
+    text-align: left;
+  }
+}
 
 
