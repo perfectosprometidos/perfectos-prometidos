@@ -6,110 +6,11 @@
   <meta name="description" content="Blog editorial de Perfectos Prometidos. Inspiración, dirección creativa y el arte de crear bodas con elegancia." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #f6f4ef;
-      color: #1c1c1c;
-    }
-
-       /* BLOG HERO · PORTADA EDITORIAL */
-
-.blog-hero {
-  min-height: 100vh;
-  background-image: url("assets/images/perfectos_prometidos_portada_blog_editorial.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #f6f4ef;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 180px;
-  position: relative;
-  overflow: hidden;
-}
-.blog-hero::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:38%;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0)
-  );
-  pointer-events:none;
-  z-index: 1;
-
-}
-
-
-    .blog-hero-inner {
-      max-width: 1100px;
-      width: 100%;
-      padding: 0 40px;
-    }
-.blog-hero-inner.full {
-  max-width: 100%;
-  padding: 0;
-}
-
-    .blog-masthead {
-      font-family: "Didot", "Baskerville", "Times New Roman", serif;
-      font-size: clamp(3.2rem, 6vw, 5.4rem);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin: 0 0 18px 0;
-      color: #111;
-    }
-
-    .blog-subtitle {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.1rem;
-      font-style: italic;
-      color: rgba(17, 17, 17, 0.75);
-      max-width: 520px;
-    }
-
- @media (max-width: 768px) {
-  .blog-hero {
-    min-height: 85vh;
-    padding-top: 140px;
-  }
- }
+  <link rel="stylesheet" href="/styles.css?v=9">
  
-
-@media (max-width: 420px) {
-  .blog-whisper {
-    bottom: 28px;
-    max-width: 260px;
-    font-size: 0.84rem;
-  }
-}
-   
-.blog-whisper {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 420px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.92);
-  font-style: italic;
-  text-align: center;
-  text-shadow: 0 10px 30px rgba(0,0,0,.45);
-  z-index: 2;
-width: calc(100% - 80px);
-
-}
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 
-  </style>
 </head>
 
 
@@ -117,13 +18,13 @@ width: calc(100% - 80px);
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="index.html#top">Perfectos Prometidos</a>
+    <a class="brand" href="/">Perfectos Prometidos</a>
 
-    <nav class="nav">
-      <a href="index.html#servicios">Servicios</a>
-      <a href="index.html#mundo">Mundo</a>
-      <a href="blog.html">Blog</a>
-      <a class="nav-cta" href="index.html#contacto">Contacto</a>
+    <nav class="nav" aria-label="Navegación">
+      <a href="/index.html#servicios">Servicios</a>
+<a href="/index.html#mundo">Mundo</a>
+<a href="/blog.html">Blog</a>
+<a class="nav-cta" href="/index.html#contacto">Contacto</a>
     </nav>
   </div>
 </header>
