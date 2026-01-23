@@ -12,7 +12,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  padding-top: 360px; /* respeta la topbar fija */
+  padding-top: 380px; /* respeta la topbar fija */
   position: relative;
   overflow: hidden;
 }
@@ -78,7 +78,7 @@ border-radius: 18px;
   
   text-shadow: 0 1px 12px rgba(255,255,255,0.25);
   z-index: 5;
-  background: rgba(0,0,0,0.46);
+  background: rgba(0,0,0,0.55);
 backdrop-filter: blur(6px);
   
 }
