@@ -12,7 +12,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  padding-top: 320px; /* respeta la topbar fija */
+  padding-top: 360px; /* respeta la topbar fija */
   position: relative;
   overflow: hidden;
 }
@@ -61,7 +61,7 @@ background: linear-gradient(
 ..blog-whisper{
   position: absolute;
   left: 50%;
-  bottom: 180px;
+  bottom: 260px;
   transform: translateX(-50%);
   width: calc(100% - 72px);
   max-width: 520px;
@@ -70,22 +70,23 @@ border-radius: 18px;
 
   font-size: 1.02rem;
   line-height: 1.7;
-  color: rgba(255,255,255,0.97);
+  color: rgba(255,255,255,0.92);
   font-style: italic;
   text-align: center;
 
   letter-spacing: 0.02em;
-  text-shadow: 0 14px 40px rgba(0,0,0,0.55);
+  
+  text-shadow: 0 1px 12px rgba(255,255,255,0.25);
   z-index: 5;
   background: rgba(0,0,0,0.46);
 backdrop-filter: blur(6px);
-  mix-blend-mode: screen;
+  
 }
 
 /* Mobile */
 @media (max-width: 420px){
   .blog-whisper{
-    bottom: 120px;
+    bottom: 240px;
     max-width: 320px;
     font-size: 0.9rem;
     line-height: 1.65;
