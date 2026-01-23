@@ -10,7 +10,7 @@
 
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 
   padding-top: 320px; /* respeta la topbar fija */
   position: relative;
@@ -21,7 +21,7 @@
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,0.06);
+  background: rgba(0,0,0,0.04);
   z-index: 0;
   pointer-events:none;
 }
@@ -61,7 +61,7 @@ background: linear-gradient(
 ..blog-whisper{
   position: absolute;
   left: 50%;
-  bottom: 36px;
+  bottom: 42px;
   transform: translateX(-50%);
   width: calc(100% - 72px);
   max-width: 520px;
@@ -70,7 +70,7 @@ border-radius: 18px;
 
   font-size: 1.02rem;
   line-height: 1.7;
-  color: rgba(255,255,255,0.96);
+  color: rgba(255,255,255,0.97);
   font-style: italic;
   text-align: center;
 
@@ -79,6 +79,7 @@ border-radius: 18px;
   z-index: 5;
   background: rgba(0,0,0,0.46);
 backdrop-filter: blur(6px);
+  mix-blend-mode: screen;
 }
 
 /* Mobile */
