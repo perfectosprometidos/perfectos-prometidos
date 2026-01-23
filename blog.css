@@ -12,7 +12,7 @@
   align-items: flex-start;
   justify-content: center;
 
-  padding-top: 180px; /* respeta la topbar fija */
+  padding-top: 220px; /* respeta la topbar fija */
   position: relative;
   overflow: hidden;
 }
@@ -24,11 +24,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 38%;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0)
+  height: 46%;
+background: linear-gradient(
+  to top,
+  rgba(0,0,0,0.72),
+  rgba(0,0,0,0.18),
+  rgba(0,0,0,0)
   );
   pointer-events: none;
   z-index: 1;
@@ -49,20 +50,22 @@
 }
 
 /* Texto susurrado */
-.blog-whisper{
+..blog-whisper{
   position: absolute;
   left: 50%;
-  bottom: 80px;
+  bottom: 70px;
   transform: translateX(-50%);
-  width: calc(100% - 80px);
-  max-width: 420px;
+  width: calc(100% - 72px);
+  max-width: 520px;
 
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.92);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.94);
   font-style: italic;
   text-align: center;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.45);
+
+  letter-spacing: 0.02em;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.55);
   z-index: 2;
 }
 
@@ -70,7 +73,9 @@
 @media (max-width: 420px){
   .blog-whisper{
     bottom: 28px;
-    max-width: 260px;
-    font-size: 0.84rem;
+    max-width: 300px;
+    font-size: 0.9rem;
+    line-height: 1.65;
   }
+
 }
