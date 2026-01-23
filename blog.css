@@ -12,7 +12,7 @@
   align-items: flex-start;
   justify-content: center;
 
-  padding-top: 220px; /* respeta la topbar fija */
+  padding-top: 280px; /* respeta la topbar fija */
   position: relative;
   overflow: hidden;
 }
@@ -40,7 +40,7 @@ background: linear-gradient(
   rgba(0,0,0,0)
 );
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Contenedor interior */
@@ -76,7 +76,7 @@ border-radius: 18px;
 
   letter-spacing: 0.02em;
   text-shadow: 0 14px 40px rgba(0,0,0,0.55);
-  z-index: 2;
+  z-index: 5;
   background: rgba(0,0,0,0.46);
 backdrop-filter: blur(6px);
 }
