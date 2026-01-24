@@ -65,25 +65,31 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-z-index: 2;
-position: absolute;
 
-  /* Colocación: debajo del “una mirada editorial...” */
-  top: 52%;
+  /* BAJAMOS el texto para lujo editorial */
+  top: 62%;
 
-  width: min(560px, calc(100% - 80px));
+  width: min(520px, calc(100% - 96px));
   margin: 0;
-  padding: 14px 18px;
+  padding: 0;
 
   text-align: center;
   font-style: italic;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 
-  color: rgba(255,255,255,.95);
-  text-shadow: 0 10px 35px rgba(0,0,0,.55);
+  /* Blanco editorial limpio */
+  color: #ffffff;
+
+  /* Sombra sutil, nada dramática */
+  text-shadow: 0 6px 24px rgba(0,0,0,.45);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
 
   z-index: 2;
 }
+
+
 
 /* Mobile */
 @media (max-width: 768px){
@@ -101,20 +107,23 @@ position: absolute;
    
     border-radius: 12px;
   }
+@media (max-width: 768px){
   .blog-whisper{
-    top: 58%;
-    width: calc(100% - 56px);
-    font-size: 0.95rem;
+    top: 66%;
+    width: calc(100% - 48px);
+    font-size: 0.9rem;
     line-height: 1.6;
-    padding: 12px 14px;
+    padding: 0;
   }
 }
+
 
 /* Desktop grande: refina la posición del texto */
 @media (min-width: 1200px){
   .blog-whisper{
-    top: 54%;
-    font-size: 1.02rem;
-    line-height: 1.7;
+    top: 64%;
+    font-size: 1rem;
+    line-height: 1.75;
   }
 }
+
