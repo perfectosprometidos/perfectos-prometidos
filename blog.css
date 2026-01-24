@@ -60,33 +60,22 @@
   pointer-events:none;
 }
 
-/* Texto: BLANCO premium, debajo del titular dentro de la portada */
+/* Texto editorial bajo la imagen (lujo real) */
 .blog-whisper{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 28px;
 
-  /* BAJAMOS el texto para lujo editorial */
-  top: 62%;
-
-  width: min(520px, calc(100% - 96px));
-  margin: 0;
-  padding: 0;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 
   text-align: center;
   font-style: italic;
   letter-spacing: 0.03em;
 
-  /* Blanco editorial limpio */
-  color: #ffffff;
-
-  /* Sombra sutil, nada dramática */
-  text-shadow: 0 6px 24px rgba(0,0,0,.45);
+  color: #1a1a1a;
 
   font-size: 0.95rem;
-  line-height: 1.7;
-
-  z-index: 2;
+  line-height: 1.75;
 }
 
 
