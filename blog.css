@@ -1,130 +1,111 @@
 /* BLOG · PERFECTOS PROMETIDOS — HERO EDITORIAL */
 
+/* BLOG · PERFECTOS PROMETIDOS — PORTADA EDITORIAL (LUJO) */
+
 .blog-hero{
-  position: relative;
-  min-height: 100vh;
-
-  background-image: url("/assets/images/perfectos_prometidos_portada_blog_editorial.jpg");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
+  /* Respira bajo la topbar fija sin trucos */
+  padding-top: 110px;
+  padding-bottom: 40px;
+  background: #f6f4ef;
 }
 
-/* Velo editorial general (sube contraste sin “ensuciar”) */
-.blog-hero::before{
+/* Contenedor de portada */
+.blog-cover{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Imagen SIEMPRE ENTERA (sin recortes) */
+.blog-cover img{
+  width: 100%;
+  height: auto;
+  display: block;
+
+  /* Mantiene la portada grande, pero sin deformar */
+  max-height: calc(100vh - 160px);
+  object-fit: contain;
+
+  /* Acabado editorial */
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.22);
+}
+
+/* Velo editorial (sutil) para lectura premium */
+.blog-cover::after{
   content:"";
   position:absolute;
-  inset:0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.35)
-  );
-  z-index:1;
-}
-
-/* Degradado editorial inferior */
-.blog-hero::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
+  left: 24px;
+  right: 24px;
+  top: 0;
   bottom: 0;
-  height: 38%;
-background: linear-gradient(
-  to top,
-  rgba(0,0,0,0.55),
-  rgba(0,0,0,0.18),
-  rgba(0,0,0,0)
-);
-  pointer-events: none;
-  z-index: 2;
+  border-radius: 14px;
+
+  /* Oscurece suave el tercio inferior, no ensucia la foto */
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.18),
+    rgba(0,0,0,0)
+  );
+  pointer-events:none;
 }
 
-/* Contenedor interior */
-.blog-hero-inner{
-  position: relative;
-  z-index: 2;
-
-  max-width: 520px;
-  padding: 0 24px;
-  text-align: center;
-  
-
-}
-
-
-.blog-hero-inner.full{
-  max-width: 100%;
-  padding: 0;
-}
-
-/* Texto susurrado */
-..blog-whisper{
+/* Texto: BLANCO premium, debajo del titular dentro de la portada */
+.blog-whisper{
   position: absolute;
   left: 50%;
-  bottom: 420px !important;
   transform: translateX(-50%);
-  width: calc(100% - 72px);
-  max-width: 520px;
-  padding: 14px 16px;
-border-radius: 18px;
 
- .blog-whisper{
-  font-size: 1.05rem;
-  line-height: 1.75;
+  /* Colocación: debajo del “una mirada editorial...” */
+  top: 44%;
 
+  width: min(560px, calc(100% - 80px));
+  margin: 0;
+  padding: 14px 18px;
+
+  text-align: center;
   font-style: italic;
   letter-spacing: 0.02em;
 
-  color: rgba(255,255,255,0.95);
+  color: rgba(255,255,255,.95);
+  text-shadow: 0 10px 35px rgba(0,0,0,.55);
 
-  text-shadow: 0 8px 30px rgba(0,0,0,0.45);
+  z-index: 2;
 }
 
 /* Mobile */
 @media (max-width: 768px){
+  .blog-hero{
+    padding-top: 96px;
+  }
+  .blog-cover{
+    padding: 0 16px;
+  }
+  .blog-cover img{
+    border-radius: 12px;
+    max-height: none;
+  }
+  .blog-cover::after{
+    left: 16px;
+    right: 16px;
+    border-radius: 12px;
+  }
   .blog-whisper{
+    top: 48%;
+    width: calc(100% - 56px);
     font-size: 0.95rem;
     line-height: 1.6;
+    padding: 12px 14px;
   }
 }
-/* ===============================
-   BLOG HERO — DESKTOP FIX
-   =============================== */
-@media (min-width: 900px){
 
-  .blog-hero{
-    /* Mantiene el encuadre editorial en PC */
-    min-height: 100vh;
-    height: 100vh;
-
-    /* En desktop: NO recortes agresivos */
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-color: #f6f4ef;
-
-    /* Ajusta la separación de la topbar fija */
-    padding-top: 160px;
-  }
-
-  /* Texto: en desktop mejor anclarlo por top/left (no por bottom) */
+/* Desktop grande: refina la posición del texto */
+@media (min-width: 1200px){
   .blog-whisper{
-    left: 64px;
-    top: 54%;
-    bottom: auto;
-    transform: none;
-
-    max-width: 520px;
-    text-align: left;
+    top: 46%;
+    font-size: 1.02rem;
+    line-height: 1.7;
   }
 }
-
-
