@@ -36,11 +36,19 @@
 .blog-cover::after{
   content:"";
   position:absolute;
-  left: 24px;
-  right: 24px;
-  top: 0;
-  bottom: 0;
+  inset: 0;
   border-radius: 14px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.18),
+    rgba(0,0,0,0)
+  );
+  pointer-events:none;
+  z-index: 1;
+}
+
 
   /* Oscurece suave el tercio inferior, no ensucia la foto */
   background: linear-gradient(
@@ -57,9 +65,11 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+z-index: 2;
+position: absolute;
 
   /* Colocación: debajo del “una mirada editorial...” */
-  top: 44%;
+  top: 52%;
 
   width: min(560px, calc(100% - 80px));
   margin: 0;
@@ -88,12 +98,11 @@
     max-height: none;
   }
   .blog-cover::after{
-    left: 16px;
-    right: 16px;
+   
     border-radius: 12px;
   }
   .blog-whisper{
-    top: 48%;
+    top: 58%;
     width: calc(100% - 56px);
     font-size: 0.95rem;
     line-height: 1.6;
@@ -104,7 +113,7 @@
 /* Desktop grande: refina la posición del texto */
 @media (min-width: 1200px){
   .blog-whisper{
-    top: 46%;
+    top: 54%;
     font-size: 1.02rem;
     line-height: 1.7;
   }
