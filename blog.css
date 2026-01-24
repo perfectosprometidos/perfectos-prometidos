@@ -1,12 +1,16 @@
 /* BLOG · PERFECTOS PROMETIDOS — HERO EDITORIAL */
 
 .blog-hero{
-  min-height: 100vh;
-  background-image: url("/assets/images/perfectos_prometidos_portada_blog_editorial.jpg");
-background-image: url("/activos/imagenes/perfectos_prometidos_portada_blog_editorial.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min.blog-hero{
+  background-color: #f6f4ef;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 140px;
+  position: relative;
+  }-height: 100vh;
+
   background-color: #f6f4ef;
 
   display: flex;
@@ -66,6 +70,13 @@ background-image: url("/activos/imagenes/perfectos_prometidos_portada_blog_edito
 
   font-size: 0.95rem;
   line-height: 1.75;
+}
+.blog-cover img{
+  width: 100%;
+  height: auto;
+  max-height: 75vh; /* CLAVE */
+  object-fit: contain;
+  display: block;
 }
 
 /* Mobile */
