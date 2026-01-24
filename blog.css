@@ -50,21 +50,22 @@ background-image: url("/activos/imagenes/perfectos_prometidos_portada_blog_edito
 }
 
 /* Texto susurrado */
-.blog-whisper{
-  position: absolute;
-  left: 50%;
-  bottom: 80px;
-  transform: translateX(-50%);
-  width: calc(100% - 80px);
-  max-width: 420px;
+..blog-whisper{
+  margin-top: 28px;
+
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+  text-shadow: 0 10px 35px rgba(0,0,0,.55);
 
   font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.92);
-  font-style: italic;
-  text-align: center;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.45);
-  z-index: 2;
+  line-height: 1.75;
 }
 
 /* Mobile */
