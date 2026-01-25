@@ -710,3 +710,93 @@ main.post-page{
   color: rgba(0,0,0,.62);
   background: rgba(246,244,239,.65);
 }
+/* ===============================
+   POST · MAQUETACIÓN SOLO DESKTOP
+   (móvil se queda como está)
+   Pegar AL FINAL de blog.css
+   =============================== */
+
+@media (min-width: 861px){
+
+  /* Respira bajo la topbar fija */
+  main.post-page{
+    padding-top: 140px;
+    padding-bottom: 120px;
+    background: var(--paper2, #fbfaf7);
+  }
+
+  /* Hero tipográfico más editorial */
+  .post-hero{
+    padding: 70px 0 28px;
+  }
+
+  .post-hero__inner{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  .post-title{
+    font-size: clamp(2.6rem, 3.4vw, 3.4rem);
+    line-height: 1.03;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  .post-intro{
+    font-size: 1.10rem;
+    line-height: 1.9;
+    max-width: 52rem;
+  }
+
+  /* Cuerpo: columna + caja editorial premium */
+  .post-body{
+    padding: 28px 0 0;
+  }
+
+  .post-body .post{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  .post-content{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 44px 46px 52px;
+    border-radius: 28px;
+    border: 1px solid rgba(0,0,0,.10);
+    background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.42));
+    box-shadow: 0 34px 90px rgba(0,0,0,.14);
+  }
+
+  /* Ritmo de lectura en escritorio */
+  .post-content p{
+    font-size: 1.08rem;
+    line-height: 1.95;
+    margin-bottom: 20px;
+  }
+
+  .post-content h2{
+    margin-top: 44px;
+    margin-bottom: 16px;
+    font-size: 1.00rem;
+    letter-spacing: .22em;
+  }
+
+  .post-content blockquote{
+    margin: 34px 0 30px;
+    padding: 22px 22px;
+    border-radius: 20px;
+    box-shadow: 0 22px 70px rgba(0,0,0,.12);
+    font-size: 1.10rem;
+    line-height: 1.8;
+  }
+
+  /* Next: que parezca pieza editorial */
+  .post-next{
+    margin-top: 38px;
+    padding: 22px 22px 20px;
+    border-radius: 20px;
+  }
+}
