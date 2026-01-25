@@ -336,6 +336,8 @@ color: rgba(20,20,20,0.88);
 .blog-index{
   padding: 56px 0 90px;
   background: var(--paper2, #fbfaf7);
+  max-width: 100%;
+
 }
 
 .blog-index__inner{
@@ -344,9 +346,6 @@ color: rgba(20,20,20,0.88);
   padding: 0 52px;
 }
 
-@media (max-width: 860px){
-  .blog-index__inner{ padding: 0 22px; }
-}
 
 .entry{
   max-width: 640px;
@@ -439,9 +438,7 @@ main.post-page{
   padding: 0 52px;
 }
 
-@media (max-width: 860px){
-  .post-hero__inner{ padding: 0 22px; }
-}
+
 
 .post-back{
   display: inline-block;
@@ -490,9 +487,6 @@ main.post-page{
   padding: 0 52px;
 }
 
-@media (max-width: 860px){
-  .post-body .post{ padding: 0 22px; }
-}
 
 .post-content{
   max-width: 640px;
@@ -583,9 +577,6 @@ main.post-page{
   padding: 0 52px;
 }
 
-@media (max-width: 860px){
-  .blog-index__inner{ padding: 0 22px; }
-}
 
 .blog-index__head{
   max-width: 640px;
