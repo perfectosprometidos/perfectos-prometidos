@@ -1055,6 +1055,52 @@ main.post-page{
   color: rgba(0,0,0,.55);
   text-align: center;
 }
+/* =========================================
+   IMAGEN EDITORIAL CENTRADA (MÓVIL + PC)
+   ========================================= */
+
+.post-lead{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 48px;
+}
+
+.post-lead__figure{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen */
+.post-lead__figure img{
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 82vw;          /* móvil */
+  border-radius: 18px;
+}
+
+/* Caption */
+.post-lead__caption{
+  margin-top: 12px;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-align: center;
+  opacity: .6;
+}
+
+/* Desktop editorial */
+@media (min-width: 861px){
+  .post-lead{
+    margin: 48px 0 64px;
+  }
+
+  .post-lead__figure img{
+    max-width: 420px;       /* tamaño revista */
+  }
+}
 
 
 
