@@ -2724,3 +2724,53 @@ main.legal-page{
   line-height: 1.7;
   color: rgba(28,28,28,0.75);
 }
+/* última regla actual */
+... 
+/* línea 2727 */
+}
+
+/* ⬇️ LÍNEA 2728 — PEGAR DESDE AQUÍ ⬇️ */
+
+/* CONTACTO · CONFIRMACIÓN EDITORIAL (LUJO) */
+.contact-success{
+  margin: 0 0 16px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(255,255,255,.65);
+  box-shadow: 0 18px 55px rgba(0,0,0,.08);
+}
+
+.success-title{
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.success-text{
+  margin: 0 0 14px;
+  line-height: 1.75;
+  color: rgba(0,0,0,.74);
+}
+
+.success-signature{
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(0,0,0,.70);
+}
+
+.contact-error{
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(0,0,0,.03);
+  color: rgba(0,0,0,.78);
+}
+
+/* Al enviar: desaparece el formulario y queda solo la confirmación */
+.contact-form.is-sent .contact-grid,
+.contact-form.is-sent textarea,
+.contact-form.is-sent .contact-btn,
+.contact-form.is-sent .contact-micro{
+  display: none;
+}
