@@ -327,3 +327,38 @@ main.post-page{
   text-align: center !important;
   opacity: .55 !important;
 }
+/* ===============================
+   POST · PORTADA EDITORIAL (SOLO PC)
+   Ajusta imagen + caption a look revista
+   =============================== */
+
+.post-lead{
+  max-width: 560px !important;     /* más editorial */
+  margin: 30px auto 46px !important;
+}
+
+/* Encadre tipo revista (evita imagen “interminable”) */
+.post-lead__img{
+  width: 100% !important;
+  aspect-ratio: 4 / 5 !important;  /* clave: recorte editorial */
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 26px !important;
+  border: 1px solid rgba(0,0,0,.10) !important;
+  box-shadow: 0 32px 95px rgba(0,0,0,.16) !important; /* más fino */
+}
+
+/* Pie de foto más “Vogue” */
+.post-lead__caption{
+  margin-top: 12px !important;
+  text-align: center !important;
+  font-size: .72rem !important;
+  letter-spacing: .20em !important;
+  text-transform: uppercase !important;
+  opacity: .55 !important;
+}
+
+/* Aire adicional entre intro e imagen */
+.post-intro{
+  margin-bottom: 18px !important;
+}
