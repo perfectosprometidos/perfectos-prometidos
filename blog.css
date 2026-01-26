@@ -1019,30 +1019,31 @@ main.post-page{
   .entry__link::after{ content:"→"; opacity:.85; }
 }
 /* ===============================
-   POST · AJUSTE IMAGEN SOLO MÓVIL
+   POST · IMAGEN MUY CONTENIDA (MÓVIL)
    =============================== */
 
 @media (max-width: 860px){
 
   .post-lead{
-    margin: 18px auto 22px;
-    max-width: 86%;
+    margin: 12px auto 18px;
+    max-width: 78%;
   }
 
   .post-lead__img{
     display: block;
     width: 100%;
-    max-width: 420px;
+    max-width: 300px;   /* CLAVE: aquí reducimos fuerte */
     margin: 0 auto;
-    border-radius: 18px;
+    border-radius: 16px;
   }
 
   .post-lead__cap{
-    margin-top: 10px;
-    font-size: .72rem;
-    letter-spacing: .14em;
+    margin-top: 8px;
+    font-size: .68rem;
+    letter-spacing: .16em;
     text-align: center;
-    opacity: .65;
+    opacity: .55;
   }
 
 }
+
