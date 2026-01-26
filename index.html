@@ -371,7 +371,7 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
 </p>
 <form class="contact-form"
       id="contact-form"
-          action="https://formspree.io/f/mzdrvgk"
+       action="https://formspree.io/f/mzdrvgk"
       method="POST"
       autocomplete="on">
 
@@ -420,24 +420,27 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
   (function () {
     const form = document.getElementById('contact-form');
     if (!form) return;
-
     const success = document.getElementById('contact-success');
     const error = document.getElementById('contact-error');
     const btn = form.querySelector('button[type="submit"]');
-
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (error) error.hidden = true;
+if (success) success.hidden = true;
 
-      const original = btn ? btn.textContent : '';
-      if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+     const controller = new AbortController();
+const timeout = setTimeout(() => controller.abort(), 12000);
 
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
+const res = await fetch(form.action, {
+  method: 'POST',
+  body: new FormData(form),
+  headers: { 'Accept': 'application/json' },
+  signal: controller.signal
+});
+
+clearTimeout(timeout);
+
+
 
         if (res.ok) {
           form.classList.add('is-sent');
