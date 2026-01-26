@@ -1064,4 +1064,31 @@ main.post-page{
     width: 420px;
   }
 }
+/* ===============================
+   POST · AJUSTE IMAGEN SOLO DESKTOP
+   =============================== */
 
+@media (min-width: 861px){
+
+  .post-lead{
+    max-width: 880px;     /* contenedor editorial */
+    margin: 28px auto 42px;
+  }
+
+  .post-lead__img{
+    display: block;
+    width: 100%;
+    max-width: 640px;     /* CLAVE: reduce presencia */
+    margin: 0 auto;
+    border-radius: 22px;
+  }
+
+  .post-lead__cap{
+    margin-top: 10px;
+    font-size: .70rem;
+    letter-spacing: .18em;
+    text-align: center;
+    opacity: .55;
+  }
+
+}
