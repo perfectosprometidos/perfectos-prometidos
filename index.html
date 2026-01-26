@@ -369,28 +369,93 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
   Si imagináis una boda serena, editorial y profundamente vuestra, contadnos la fecha (aprox.), la zona (Galicia / Madrid) y el tipo de celebración que queréis vivir.
   Trabajamos con plazas limitadas. Respuesta en 24–48h.
 </p>
+<form class="contact-form"
+      id="contact-form"
+      action="https://formspree.io/f/mzdrvgrk"
+      method="POST">
 
+  <!-- Confirmación editorial (oculta hasta enviar) -->
+  <div class="contact-success" id="contact-success" hidden>
+    <p class="success-title">Gracias. Hemos recibido tu solicitud.</p>
+    <p class="success-text">
+      Leemos cada mensaje con atención y criterio.  
+      Si sentimos que hay encaje, te escribiremos personalmente en las próximas 24–48 h.
+    </p>
 
-    <form class="contact-form" action="mailto:ac@perfectosprometidos.com" method="post" enctype="text/plain">
-      <div class="contact-grid">
-        <input type="text" name="Nombre" placeholder="Nombre y apellidos" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <input type="text" name="Zona" placeholder="Galicia / Madrid (o destino)">
-        <input type="text" name="Fecha" placeholder="Fecha (aprox.)">
-      </div>
+    <div class="success-signature">
+      <strong>Perfectos Prometidos</strong><br>
+      Dirección editorial de bodas<br>
+      Galicia · Madrid
+    </div>
+  </div>
 
-  <textarea name="Mensaje" rows="5" placeholder="Contadnos vuestra idea: lugar (pazo/finca), atmósfera, número de invitados y cualquier detalle importante."></textarea>
+  <!-- Error (oculto) -->
+  <p class="contact-error" id="contact-error" hidden>
+    No hemos podido enviar el formulario. Inténtalo de nuevo en unos minutos.
+  </p>
 
-   <button class="contact-btn" type="submit">Enviar solicitud</button>
-     <p class="contact-micro">
-  Al enviar este formulario aceptas nuestra <a href="/privacidad.html">política de privacidad</a>.  
-  Utilizamos tus datos únicamente para responder a tu solicitud.
-</p>
- 
-     <p class="contact-micro">
-  Si lo prefieres, escríbenos directamente a <a href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>
-</p>
-    </form>
+  <div class="contact-grid">
+    <input type="text" name="Nombre" placeholder="Nombre y apellidos" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <input type="text" name="Zona" placeholder="Galicia / Madrid (o destino)">
+    <input type="text" name="Fecha" placeholder="Fecha (aprox.)">
+  </div>
+
+  <textarea name="Mensaje" rows="5"
+    placeholder="Contadnos vuestra idea: lugar (pazo/finca), atmósfera, número de invitados y cualquier detalle importante."
+    required></textarea>
+<input type="hidden" name="_subject" value="Nueva solicitud · Perfectos Prometidos">
+<input type="hidden" name="_language" value="es">
+
+  <button class="contact-btn" type="submit">Enviar solicitud</button>
+
+  <p class="contact-micro">
+    Al enviar este formulario aceptas nuestra <a href="/privacidad.html">política de privacidad</a>.
+    Utilizamos tus datos únicamente para responder a tu solicitud.
+  </p>
+</form>
+
+<script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    const success = document.getElementById('contact-success');
+    const error = document.getElementById('contact-error');
+    const btn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (error) error.hidden = true;
+
+      const original = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.classList.add('is-sent');
+          if (success) success.hidden = false;
+          form.reset();
+          if (success) success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          if (error) error.hidden = false;
+        }
+      } catch {
+        if (error) error.hidden = false;
+      } finally {
+        if (btn) { btn.disabled = false; btn.textContent = original; }
+      }
+    });
+  })();
+</script>
+
+   
   </div>
 </section>
 <!-- fin CONTACTO -->
@@ -411,16 +476,7 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
     onScroll();
   })();
 </script>
-<!-- SEO silencioso -->
-<div style="display:none;">
-  Wedding planner editorial Galicia
-  Bodas de lujo Galicia
-  Wedding planner Madrid
-  Bodas en pazos Galicia
-  Bodas de domingo Galicia
-  Organización de bodas premium
-</div>
- </div>
+
 
 <!-- FOOTER LEGAL -->
 <footer class="site-footer">
@@ -438,6 +494,5 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
  </body>
  </html>
 
-</body>
-</html>
+
 
