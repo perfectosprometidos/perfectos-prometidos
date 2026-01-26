@@ -1018,32 +1018,37 @@ main.post-page{
 
   .entry__link::after{ content:"→"; opacity:.85; }
 }
-/* ===============================
-   POST · IMAGEN MUY CONTENIDA (MÓVIL)
-   =============================== */
+.post-lead{
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 56px;
+}
 
-@media (max-width: 860px){
+.post-lead__figure{
+  margin: 0;
+  text-align: center;
+}
 
-  .post-lead{
-    margin: 12px auto 18px;
-    max-width: 78%;
+.post-lead__figure img{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 18px;
+}
+
+.post-lead__caption{
+  margin-top: 12px;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.55);
+}
+
+@media (min-width: 861px){
+  .post-lead__figure img{
+    max-width: 420px;
   }
-
-  .post-lead__img{
-    display: block;
-    width: 100%;
-    max-width: 300px;   /* CLAVE: aquí reducimos fuerte */
-    margin: 0 auto;
-    border-radius: 16px;
-  }
-
-  .post-lead__cap{
-    margin-top: 8px;
-    font-size: .68rem;
-    letter-spacing: .16em;
-    text-align: center;
-    opacity: .55;
-  }
-
 }
 
