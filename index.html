@@ -372,7 +372,9 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
 <form class="contact-form"
       id="contact-form"
       action="https://formspree.io/f/mzdrvgrk"
-      method="POST">
+      method="POST"
+      autocomplete="on">
+
 
   <!-- Confirmación editorial (oculta hasta enviar) -->
   <div class="contact-success" id="contact-success" hidden>
@@ -395,15 +397,12 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
   </p>
 
   <div class="contact-grid">
-    <input type="text" name="Nombre" placeholder="Nombre y apellidos" required>
-    <input type="email" name="Email" placeholder="Email" required>
-    <input type="text" name="Zona" placeholder="Galicia / Madrid (o destino)">
-    <input type="text" name="Fecha" placeholder="Fecha (aprox.)">
-  </div>
-
-  <textarea name="Mensaje" rows="5"
-    placeholder="Contadnos vuestra idea: lugar (pazo/finca), atmósfera, número de invitados y cualquier detalle importante."
-    required></textarea>
+  <input type="text"  name="name"  autocomplete="name" required placeholder="Nombre y apellidos">
+<input type="email" name="email" autocomplete="email" required placeholder="Email">
+<input type="text"  name="location" autocomplete="address-level1" placeholder="Galicia / Madrid (o destino)">
+<input type="text" name="date" autocomplete="off" inputmode="numeric" placeholder="Fecha (aprox.)">
+<textarea name="message" autocomplete="off" rows="5" required
+  placeholder="Contadnos vuestra idea: lugar (pazo/finca), atmósfera, número de invitados y cualquier detalle importante."></textarea>
 <input type="hidden" name="_subject" value="Nueva solicitud · Perfectos Prometidos">
 <input type="hidden" name="_language" value="es">
 
