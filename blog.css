@@ -1018,3 +1018,31 @@ main.post-page{
 
   .entry__link::after{ content:"→"; opacity:.85; }
 }
+/* ===============================
+   POST · AJUSTE IMAGEN SOLO MÓVIL
+   =============================== */
+
+@media (max-width: 860px){
+
+  .post-lead{
+    margin: 18px auto 22px;
+    max-width: 86%;
+  }
+
+  .post-lead__img{
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .post-lead__cap{
+    margin-top: 10px;
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-align: center;
+    opacity: .65;
+  }
+
+}
