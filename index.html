@@ -371,7 +371,7 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
 </p>
 <form class="contact-form"
       id="contact-form"
-       action=https://formspree.io/f/mzdrvgrk
+  action="https://formspree.io/f/mzdrvgk"
       method="POST"
       autocomplete="on">
 
@@ -439,6 +439,7 @@ const res = await fetch(form.action, {
 });
 
 clearTimeout(timeout);
+console.log('Formspree status:', res.status, await res.text());
 
 
 
