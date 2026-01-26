@@ -97,20 +97,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
 html, body { max-width: 100%; overflow-x: hidden; }
 body#top { overflow-x: hidden; }
 
-/* 1) Todo bloque principal (div/section) tendrá padding lateral */
-body#top > section,
-body#top > div {
-  padding-left: var(--pp-pad) !important;
-  padding-right: var(--pp-pad) !important;
-}
 
-/* 2) Y su contenido se centra en un ancho editorial */
-body#top > section > * ,
-body#top > div > * {
-  max-width: var(--pp-max);
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
 
 /* 3) Ajuste específico del bloque de “pausa” para que no deje un vacío exagerado */
 .editorial-pause, .pause, #pause {
@@ -181,19 +168,7 @@ body#top > div > * {
   padding-top: 72px !important;
   padding-bottom: 112px !important;
 }
-/* ==========================
-   TRANSICIÓN MANIFIESTO → MUNDO
-   ========================== */
 
-/* Línea editorial suave (separador premium) */
-.manifesto::after{
-  content:"";
-  display:block;
-  width: 140px;
-  height: 1px;
-  margin: 72px auto 24px;
-  background: rgba(0,0,0,.10);
-}
 
 
 /* Si tu sección siguiente se llama .world, mejoramos el arranque */
