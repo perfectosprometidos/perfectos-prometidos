@@ -2767,13 +2767,11 @@ main.legal-page{
   color: rgba(0,0,0,.78);
 }
 
-/* Al enviar: desaparece el formulario y queda solo la confirmación */
-.contact-form.is-sent .contact-grid,
-.contact-form.is-sent textarea,
-.contact-form.is-sent .contact-btn,
-.contact-form.is-sent .contact-micro{
-  display: none;
+/* Al enviar: ocultar TODO excepto el bloque de éxito */
+.contact-form.is-sent > *:not(.contact-success){
+  display: none !important;
 }
+
 /* CONFIRMACIÓN CONTACTO · EDITORIAL (LUJO) */
 .contact-success{
   margin: 0 0 16px;
