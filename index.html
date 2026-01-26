@@ -374,6 +374,29 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
 action="https://formspree.io/f/xykwpodp"
       method="POST"
       autocomplete="on">
+<!-- ÉXITO (oculto) -->
+<div class="contact-success" id="contact-success" hidden>
+  <div class="success-brand">
+    <img class="success-logo" src="/pp-logo-circle-256.png" alt="Perfectos Prometidos" width="56" height="56" loading="lazy" decoding="async">
+    <div class="success-brandtext">
+      <p class="success-title">Gracias. Hemos recibido tu solicitud.</p>
+      <p class="success-text">
+        Leemos cada mensaje con atención y criterio. Si sentimos que hay encaje,
+        te escribiremos personalmente en las próximas 24–48 h.
+      </p>
+      <p class="success-signature">
+        <strong>Perfectos Prometidos</strong><br>
+        Dirección editorial de bodas<br>
+        Galicia · Madrid
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ERROR (oculto) -->
+<p class="contact-error" id="contact-error" hidden>
+  No hemos podido enviar el formulario. Inténtalo de nuevo en unos minutos.
+</p>
 
 
   <!-- Confirmación editorial (oculta hasta enviar) -->
@@ -408,7 +431,7 @@ action="https://formspree.io/f/xykwpodp"
 <input type="hidden" name="_subject" value="Nueva solicitud · Perfectos Prometidos">
 <input type="hidden" name="_language" value="es">
 
-  <button class="contact-btn" type="submit">Enviar solicitud</button>
+  <button class="contact-btn" id="contact-btn" type="submit">Enviar solicitud</button>
 
   <p class="contact-micro">
     Al enviar este formulario aceptas nuestra <a href="/privacidad.html">política de privacidad</a>.
@@ -417,71 +440,56 @@ action="https://formspree.io/f/xykwpodp"
 </form>
 
 <script>
-  (function () {
-    const form = document.getElementById('contact-form');
-    if (!form) return;
-    const success = document.getElementById('contact-success');
-    const error = document.getElementById('contact-error');
-    const btn = form.querySelector('button[type="submit"]');
+(() => {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const success = document.getElementById('contact-success');
+  const error = document.getElementById('contact-error');
+  const btn = document.getElementById('contact-btn') || form.querySelector('button[type="submit"]');
+
   form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  if (error) error.hidden = true;
-  if (success) success.hidden = true;
+    e.preventDefault();
 
-  const original = btn ? btn.textContent : '';
-  if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+    if (error) error.hidden = true;
+    if (success) success.hidden = true;
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 12000);
+    const original = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
 
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' },
-      signal: controller.signal
-    });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
 
-    clearTimeout(timeout);
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+        signal: controller.signal
+      });
 
-    if (res.ok) {
-      form.classList.add('is-sent');
-      if (success) success.hidden = false;
-      form.reset();
-      if (success) success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      if (error) error.hidden = false;
-    }
-  } catch (err) {
-    clearTimeout(timeout);
-    if (error) error.hidden = false;
-  } finally {
-    if (btn) { btn.disabled = false; btn.textContent = original; }
-  }
-});
+      clearTimeout(timeout);
 
-
-clearTimeout(timeout);
-console.log('Formspree status:', res.status, await res.text());
-
-
-
-        if (res.ok) {
-          form.classList.add('is-sent');
-          if (success) success.hidden = false;
-          form.reset();
-          if (success) success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-          if (error) error.hidden = false;
+      if (res.ok) {
+        form.classList.add('is-sent');
+        form.reset();
+        if (success) {
+          success.hidden = false;
+          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      } catch {
+      } else {
         if (error) error.hidden = false;
-      } finally {
-        if (btn) { btn.disabled = false; btn.textContent = original; }
       }
-    });
-  })();
+    } catch (err) {
+      clearTimeout(timeout);
+      if (error) error.hidden = false;
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = original; }
+    }
+  });
+})();
 </script>
+
 
    
   </div>
