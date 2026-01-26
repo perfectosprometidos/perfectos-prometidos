@@ -1018,43 +1018,7 @@ main.post-page{
 
   .entry__link::after{ content:"→"; opacity:.85; }
 }
-/* =========================================
-   FIX DEFINITIVO · IMAGEN CENTRADA (PC + MÓVIL)
-   ========================================= */
 
-.post-lead__figure{
-  margin: 0;
-  width: fit-content;
-  display: grid;
-  place-items: center;
-}
-
-
-.post-lead__figure img{
-  display: block;
-  width: auto;
- max-width: min(70vw, 420px);
-  height: auto;
-  border-radius: 18px;
-  margin: 0 auto;
-}
-
-@media (min-width: 861px){
-  .post-lead__figure img{
-    max-width: 420px;
-  }
-}
-
-
-/* Caption */
-.post-lead__caption{
-  margin-top: 14px;
-  font-size: .76rem;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,.55);
-  text-align: center;
-}
 /* =========================================
    IMAGEN EDITORIAL CENTRADA (MÓVIL + PC)
    ========================================= */
