@@ -2839,27 +2839,7 @@ main.legal-page{
 .footer-legal .footer-ig:hover{
   opacity: .95;
 }
-/* FOOTER · Layout correcto en móvil */
-.footer-legal{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-}
 
-/* Instagram · firma editorial */
-.footer-legal .footer-ig{
-  display: inline;
-  opacity: .6;
-  font-size: 12px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-/* Hover (desktop) */
-.footer-legal .footer-ig:hover{
-  opacity: .9;
-}
 
 /* MÓVIL: Instagram en segunda línea, centrado */
 @media (max-width: 768px){
