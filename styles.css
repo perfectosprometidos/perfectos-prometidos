@@ -2826,3 +2826,16 @@ main.legal-page{
 .contact-form.is-sent .contact-fields{
   display: none !important;
 }
+/* FOOTER · Instagram (visible pero ultra discreto) */
+.footer-legal .footer-ig{
+  display: inline !important;
+  opacity: .65;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.footer-legal .footer-ig:hover{
+  opacity: .95;
+}
