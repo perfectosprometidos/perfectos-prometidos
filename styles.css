@@ -2849,3 +2849,27 @@ main.legal-page{
     margin-top: 6px;
   }
 }
+/* Footer · Instagram institucional (ultra discreto) */
+.footer-instagram{
+  margin: 10px 0 0;
+}
+
+.footer-instagram .footer-ig{
+  display: inline-block;
+  opacity: .60;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.footer-instagram .footer-ig:hover{
+  opacity: .90;
+}
+
+@media (max-width:768px){
+  .footer-instagram{
+    text-align: center;
+  }
+}
