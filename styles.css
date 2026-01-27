@@ -2816,60 +2816,49 @@ main.legal-page{
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,.12);
-  background: rgba(0,0,0,.03);
+  background: rgba(0,0,0,.0ŕ3);
   color: rgba(0,0,0,.78);
 }
 
 
 }
-/* Al enviar: ocultar el bloque de campos completo */
-.contact-form.is-sent .contact-fields{
-  display: none !important;
-}
-/* FOOTER · Instagram (visible pero ultra discreto) */
-.footer-legal .footer-ig{
-  display: inline !important;
-  opacity: .65;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.footer-legal .footer-ig:hover{
-  opacity: .95;
-}
 
 
-/* MÓVIL: Instagram en segunda línea, centrado */
-@media (max-width: 768px){
-  .footer-legal .footer-ig{
-    flex-basis: 100%;
-    text-align: center;
-    margin-top: 6px;
-  }
-}
-/* Footer · Instagram institucional (ultra discreto) */
+/* FOOTER · Firma Instagram editorial (definitiva) */
 .footer-instagram{
-  margin: 10px 0 0;
+  margin-top: 10px;
+  text-align: center;
+}
+.footer-instagram::before{
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  margin: 0 auto 10px;
+  background: rgba(0,0,0,.15);
 }
 
 .footer-instagram .footer-ig{
   display: inline-block;
-  opacity: .60;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: .08em;
+  font-size: 11px;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: inherit;
+  color: rgba(0,0,0,.45);
+  text-decoration: none;
 }
 
 .footer-instagram .footer-ig:hover{
-  opacity: .90;
+  color: rgba(0,0,0,.75);
+}
+/* FOOTER · Enlaces legales más silenciosos */
+.footer-legal a{
+  color: rgba(0,0,0,.55);
+  text-decoration: none;
+  font-size: 12px;
 }
 
-@media (max-width:768px){
-  .footer-instagram{
-    text-align: center;
-  }
+.footer-legal a:hover{
+  color: rgba(0,0,0,.85);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
