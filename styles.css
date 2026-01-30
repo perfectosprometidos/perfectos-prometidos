@@ -2795,6 +2795,14 @@ main.legal-page{
   border-radius: 999px;
   display: block;
 }
+.success-hero{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
 
 .success-title{
   margin: 0 0 10px;
