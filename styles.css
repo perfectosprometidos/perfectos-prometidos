@@ -2771,6 +2771,9 @@ main.legal-page{
 .contact-form.is-sent > *:not(.contact-success){
   display: none !important;
 }
+.contact-form.is-sent .contact-fields{
+  display: none !important;
+}
 
 /* CONFIRMACIÓN CONTACTO · EDITORIAL (LUJO) */
 .contact-success{
