@@ -112,6 +112,13 @@ body{
   font-size: clamp(2.2rem, 4.8vw, 4rem);
   line-height: 1.02;
 }
+.hero-subline{
+  margin: 0 0 14px 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  letter-spacing: .02em;
+  color: rgba(17,17,17,.78);
+}
 
 .hero-intro{
   margin: 0 0 14px 0;
@@ -307,7 +314,7 @@ body{
   padding: clamp(26px, 3vw, 44px);
   border-radius: 28px;
 
-  background: rgba(246, 244, 239, 0.86); /* más transparente */
+   background: rgba(246, 244, 239, 0.88); /* más transparente */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
@@ -437,9 +444,17 @@ section + section {
   line-height: 1.08;
   margin: 0 0 18px;
 }
+
 /* ===============================
    SERVICIOS · Grid editorial (único)
    =============================== */
+.services-claim{
+  max-width: 760px;
+   margin: 6px 0 30px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+   color: rgba(17,17,17,.72);
+}
 
 .services-grid{
   display: grid;
@@ -504,6 +519,14 @@ section + section {
 
 .world-intro h2 {
   margin-bottom: 22px;
+}
+.contact-filter{
+  max-width: 720px;
+  margin: 0 0 14px;
+  font-size: .95rem;
+  line-height: 1.6;
+  letter-spacing: .01em;
+  color: rgba(17,17,17,.65);
 }
 
 .world-intro .contact-lead {
@@ -1745,54 +1768,7 @@ section + section {
     margin-right: auto !important;
     box-sizing: border-box !important;
   }
-  /* =====================================================
-   COLUMNA EDITORIAL CENTRADA EN MÓVIL (EXPERIENCIA / MUNDO)
-   No afecta a PC
-===================================================== */
-
-  section,
-  .section-inner,
-  .experience,
-  .experience-section,
-  .experience-inner,
-  #mundo,
-  #experiencia{
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    box-sizing: border-box !important;
-  }
-
-  .experience,
-  .experience-section,
-  .experience-inner,
-  #mundo,
-  #experiencia{
-    max-width: 560px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .experience h1,
-  .experience h2,
-  .experience h3{
-    max-width: 560px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-
-/* Columna editorial centrada en móvil (texto largo) */
-@media (max-width: 920px){
-
-  /* Mantén el aire lateral */
-  section,
-  .section-inner,
-  .experience,
-  .experience-section,
-  .experience-inner{
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    box-sizing: border-box !important;
+der-box !important;
   }
 
   /* NUEVO: columna más “editorial” y centrada */
@@ -1894,37 +1870,17 @@ section + section {
   .services-grid > .service-card.service-card-wide{
     grid-column: auto !important;
   }
-}
 
-  /* --- FIX HERO móvil: centrado real (sin tocar PC) --- */
-.hero{
-   }
-  /* === MARGEN EDITORIAL TEXTO EN MÓVIL (Experiencia / Mundo) === */
-@media (max-width: 920px){
 
-  section,
-  .section-inner,
-  .experience,
-  .experience-section,
-  .experience-inner{
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    box-sizing: border-box !important;
-  }
 
-}
 
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
 
 .hero-image,
 .hero-card{
-  width: 100% !important;
+   width: min(560px, 100%) !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  justify-self: center !important;
+
 }
 
 .hero-card{
@@ -2398,430 +2354,10 @@ section + section {
     display: block;
   }
 }
-/* =========================================================
-   EJE EDITORIAL ÚNICO · MÓVIL VERTICAL
-   Iguala Home / Experiencia / Organización
-========================================================= */
-
-@media (max-width: 920px) {
-
-  /* 1) Eje maestro = MISMO que la Home */
-  :root{
-    --mobile-pad: 16px;
-  }
-
-  /* HEADER / NAV */
-  .topbar-inner{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
-  }
-
-  /* HERO HOME */
-  .hero-image,
-  .hero-image img{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
-    box-sizing: border-box;
-  }
-
-  /* HERO EXPERIENCIA / ORGANIZACIÓN */
-  .experience-hero-inner,
-  .organizacion-hero-inner{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
-  }
-
-  /* IMÁGENES (todas las páginas internas) */
-  .experience-grid,
-  .organizacion-grid,
-  .world-grid{
-    padding-left: var(--mobile-pad) !important;
-    padding-right: var(--mobile-pad) !important;
-    box-sizing: border-box;
-  }
-
-  /* Cada imagen ocupa exactamente el mismo eje */
-  .experience-item,
-  .organizacion-grid .world-item,
-  .world-item{
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  /* Seguridad total */
-  html, body{
-    overflow-x: hidden;
-  }
-/* =========================================================
-   MOBILE ONLY · PP eje editorial + estabilidad
-   No toca PC
-========================================================= */
-@media (max-width: 920px){
-
-  :root{ --pp-mpad: 16px; }
-
-  html, body{ overflow-x: hidden; }
-
-  /* 1) Header: que no se coma anclas y no corte secciones */
-  html{ scroll-padding-top: 96px; } /* si tu topbar es fijo */
-  
-  /* 2) Contenedor editorial consistente (internas + secciones) */
-  .topbar-inner,
-  .services-inner,
-  .world-inner,
-  .contact-inner,
-  .experience-hero-inner,
-  .experience-grid,
-  .experience-text-inner,
-  .organizacion-hero-inner,
-  .organizacion-grid,
-  .principios__inner,
-  .organizacion_manifesto,
-  .organizacion_epilogue{
-    padding-left: var(--pp-mpad) !important;
-    padding-right: var(--pp-mpad) !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 3) Home Hero: evitar “empujes” raros y desbordes */
-  .hero-image,
-  .hero-image img{
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-  }
-
-  /* 4) Tarjeta hero centrada en móvil (si existe hero-card) */
-  .hero-card{
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    margin: 18px auto 0 !important;
-    width: calc(100% - 32px) !important;
-    max-width: 520px !important;
-    box-sizing: border-box !important;
-  }
-}
-/* =========================================================
-   MÓVIL VERTICAL · EJE EDITORIAL ÚNICO (PP)
-   Organización + Experiencia con el mismo margen que Home
-========================================================= */
-@media (max-width: 920px) and (orientation: portrait){
-
-  :root{ --pp-mpad: 18px; } /* margen editorial premium */
-
-  /* 1) Contenedores: mismo eje */
-  .organizacion-hero-inner,
-  .experience-hero-inner,
-  .experience-grid,
-  .org-accordion,
-  .org-metodo,
-  .org-accordion,
-  .principios__inner,
-  .world-inner,
-  .services-inner,
-  .contact-inner{
-    padding-left: var(--pp-mpad) !important;
-    padding-right: var(--pp-mpad) !important;
-    box-sizing: border-box !important;
-    max-width: 560px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* 2) Organización: tarjetas (método) con ancho editorial, no “a pantalla” */
-  #organizacion .principios__grid,
-  .principios__grid{
-    width: 100% !important;
-    max-width: 560px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 3) Cards de Organización: respiración + proporción lujo */
-  .principio{
-    width: 100% !important;
-    max-width: 560px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-radius: 20px !important;
-  }
-
-  /* 4) Experiencia: imágenes alineadas con el eje (sin “saltar” a los lados) */
-  .experience-grid{
-    width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .experience-item,
-  .experience-item img{
-    border-radius: 18px !important;
-  }
-}
-
-/* =========================================================
-   HEADER · MÓVIL VERTICAL (Home y Dirección = Experiencia)
-   Logo izquierda · nav en una línea · CTA visible
-========================================================= */
-@media (max-width: 920px) and (orientation: portrait){
-
-  .topbar-inner{
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 14px 16px !important;
-
-    display: flex !important;
-    flex-wrap: wrap !important;               /* logo arriba + menú abajo */
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px 14px !important;
-
-    box-sizing: border-box !important;
-  }
-
-  /* Logo centrado (fila 1) */
-  .brand{
-    width: 100% !important;
-    text-align: center !important;
-    font-size: 15px !important;
-    white-space: nowrap !important;
-  }
-
-  /* Menú (fila 2) como Home: centrado, con CTA visible */
-  .nav{
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: nowrap !important;             /* mantenemos una línea */
-    gap: 16px !important;
-  }
-
-  .nav a{
-    font-size: 14px !important;
-    white-space: nowrap !important;
-  }
-
-  /* OCULTAR en móvil el link "Experiencia" para que quede igual que Home */
-  .nav a[href*="experiencia"]{
-    display: none !important;
-  }
-
-  /* CTA igual que Home, sin saltos ni cortes */
-  .nav-cta{
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 10px 14px !important;
-    border-radius: 999px !important;
-    font-size: 13px !important;
-    white-space: nowrap !important;
-    flex: 0 0 auto !important;
-  }
-/* ===============================
-   LEGAL PAGES · PERFECTOS PROMETIDOS (UNIFICADO)
-   =============================== */
-
-main.legal-page{
-  background: var(--paper2);
-  padding: 220px 0 200px;
-}
-
-.legal-wrap{
-  max-width: 780px;            /* ancho editorial */
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-.legal-wrap h1{
-  font-size: clamp(2.2rem, 4vw, 3.0rem);
-  margin: 0 0 44px;
-  letter-spacing: -0.02em;
-}
-
-.legal-wrap h2{
-  font-size: 1.2rem;
-  margin: 38px 0 14px;
-  letter-spacing: 0.02em;
-}
-
-.legal-wrap p,
-.legal-wrap li{
-  font-size: 1.05rem;
-  line-height: 1.85;
-  color: rgba(17,17,17,.78);
-}
-
-.legal-wrap p{
-  margin: 0 0 26px;
-}
-
-.legal-wrap ul{
-  margin: 0 0 26px;
-  padding-left: 18px;
-}
-
-.legal-wrap strong{
-  color: rgba(17,17,17,.9);
-  font-weight: 600;
-}
-
-.legal-wrap a{
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(17,17,17,.25);
-}
-
-.legal-wrap a:hover{
-  border-bottom-color: rgba(17,17,17,.5);
-}
-
-.legal-note{
-  font-size: 0.95rem;
-  color: rgba(17,17,17,.65);
-}
-
-.legal-back{
-  margin-top: 56px;
-}
-
-.legal-back a{
-  font-size: .9rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: rgba(17,17,17,.6);
-}
-
-/* Mobile */
-@media (max-width:720px){
-  main.legal-page{
-    padding: 140px 0 120px;
-  }
-  .legal-wrap{
-    padding: 0 18px;
-  }
-}
-.blog-intro {
-  max-width: 720px;
-  margin: 120px auto 0 auto;
-  padding: 0 24px;
-  text-align: center;
-}
-
-.intro-title {
-  font-size: 1.2rem;
-  letter-spacing: 0.04em;
-  margin-bottom: 18px;
-}
-
-.intro-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(28,28,28,0.75);
-}
-/* última regla actual */
-... 
-/* línea 2727 */
-}
-
-/* ⬇️ LÍNEA 2728 — PEGAR DESDE AQUÍ ⬇️ */
-
-/* CONTACTO · CONFIRMACIÓN EDITORIAL (LUJO) */
-.contact-success{
-  margin: 0 0 16px;
-  padding: 18px 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,.08);
-  background: rgba(255,255,255,.65);
-  box-shadow: 0 18px 55px rgba(0,0,0,.08);
-}
-
-.success-title{
-  margin: 0 0 10px;
-  font-weight: 600;
-}
-
-.success-text{
-  margin: 0 0 14px;
-  line-height: 1.75;
-  color: rgba(0,0,0,.74);
-}
-
-.success-signature{
-  font-size: 13px;
-  line-height: 1.6;
-  color: rgba(0,0,0,.70);
-}
-
-.contact-error{
-  margin: 0 0 14px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.12);
-  background: rgba(0,0,0,.03);
-  color: rgba(0,0,0,.78);
-}
-
-/* Al enviar: ocultar TODO excepto el bloque de éxito */
-.contact-form.is-sent > *:not(.contact-success){
-  display: none !important;
-}
-
-/* CONFIRMACIÓN CONTACTO · EDITORIAL (LUJO) */
-.contact-success{
-  margin: 0 0 16px;
-  padding: 18px 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,.08);
-  background: rgba(255,255,255,.65);
-  box-shadow: 0 18px 55px rgba(0,0,0,.08);
-}
-
-.success-brand{
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.success-logo{
-  border-radius: 999px;
-  display: block;
-}
-
-.success-title{
-  margin: 0 0 10px;
-  font-weight: 600;
-}
-
-.success-text{
-  margin: 0 0 14px;
-  line-height: 1.75;
-  color: rgba(0,0,0,.74);
-}
-
-.success-signature{
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color: rgba(0,0,0,.70);
-}
-
-.contact-error{
-  margin: 0 0 14px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.12);
-  background: rgba(0,0,0,.0ŕ3);
-  color: rgba(0,0,0,.78);
-}
 
 
-}
+
+
 
 
 /* FOOTER · Firma Instagram editorial (definitiva) */
