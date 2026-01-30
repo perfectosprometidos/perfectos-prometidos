@@ -442,23 +442,38 @@ action="https://formspree.io/f/xykwpodp"
 
       clearTimeout(timeout);
 
-      if (res.ok) {
-        form.classList.add('is-sent');
-        form.reset();
-        if (success) {
-          success.hidden = false;
-          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      } else {
-        if (error) error.hidden = false;
-      }
+  if (res.ok) {
+  form.classList.add('is-sent');
+
+  // mostrar gracias
+  if (success) {
+    success.hidden = false;
+    success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ocultar campos explícitamente (blindaje)
+  const fields = form.querySelector('.contact-fields');
+  if (fields) fields.style.display = 'none';
+
+
+  // ya podemos limpiar
+    const fields = form.querySelector('.contact-fields');
+if (fields) fields.style.display = 'none';
+  form.reset();
+} else {
+  if (error) error.hidden = false;
+}
+
     } catch (err) {
       clearTimeout(timeout);
       if (error) error.hidden = false;
-    } finally {
-      if (btn) { btn.disabled = false; btn.textContent = original; }
-    }
-  });
+  } finally {
+  if (btn && !form.classList.contains('is-sent')) {
+    btn.disabled = false;
+    btn.textContent = original;
+  }
+}
+
 })();
 </script>
 
