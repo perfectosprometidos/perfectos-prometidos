@@ -357,12 +357,10 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
 
 <form class="contact-form"
       id="contact-form"
-<form class="contact-form"
-      id="contact-form"
       action="https://formspree.io/f/xykwpodp"
       method="POST"
-      autocomplete="on"
-      onsubmit="event.preventDefault();"e.stopPropagation();
+      autocomplete="on">
+
 <!-- ÉXITO (oculto) -->
 <div class="contact-success" id="contact-success" hidden>
   <div class="success-brand">
@@ -430,6 +428,7 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    e.stopPropagation();
 
     if (error) error.hidden = true;
     if (success) success.hidden = true;
@@ -450,37 +449,34 @@ Pazos con historia, fincas privadas y domingos vividos como un lujo sereno.
 
       clearTimeout(timeout);
 
-  if (res.ok) {
-  form.classList.add('is-sent');
+      if (res.ok) {
+        form.classList.add('is-sent');
 
-  // mostrar gracias
-  if (success) {
-    success.hidden = false;
-    success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+        const fields = form.querySelector('.contact-fields');
+        if (fields) fields.style.display = 'none';
 
-  // ocultar campos explícitamente (blindaje)
-  const fields = form.querySelector('.contact-fields');
-  if (fields) fields.style.display = 'none';
+        if (success) {
+          success.hidden = false;
+          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
 
-
-
-} else {
-  if (error) error.hidden = false;
-}
-
+        form.reset();
+      } else {
+        if (error) error.hidden = false;
+      }
     } catch (err) {
       clearTimeout(timeout);
       if (error) error.hidden = false;
-  } finally {
-  if (btn && !form.classList.contains('is-sent')) {
-    btn.disabled = false;
-    btn.textContent = original;
-  }
-}
-
+    } finally {
+      if (btn && !form.classList.contains('is-sent')) {
+        btn.disabled = false;
+        btn.textContent = original;
+      }
+    }
+  });
 })();
 </script>
+
 
 
    
