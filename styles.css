@@ -2787,8 +2787,9 @@ main.legal-page{
 
 .success-brand{
   display: flex;
-  gap: 14px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
 }
 
 .success-logo{
