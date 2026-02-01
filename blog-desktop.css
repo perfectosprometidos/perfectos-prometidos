@@ -362,3 +362,25 @@ main.post-page{
 .post-intro{
   margin-bottom: 18px !important;
 }
+/* ===============================
+   FIX · IMÁGENES DENTRO DE TARJETAS (BLOG)
+   Evita que la imagen se salga del card
+   =============================== */
+
+.entry{
+  overflow: hidden !important; /* clave */
+}
+
+.entry_media,
+.entry__media{
+  margin: 14px 0 16px !important;
+}
+
+.entry_media img,
+.entry__media img{
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;  /* clave */
+  height: auto !important;
+  border-radius: 18px !important;
+}
