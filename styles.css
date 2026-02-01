@@ -2900,3 +2900,31 @@ max-width: 280px; /* The Lane scale */
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+/* ===============================
+   FIX · IMAGEN CONTACTO (HOME)
+   Evita desborde horizontal
+   =============================== */
+
+#contacto img,
+.contact img,
+.contacto img,
+.contact-card img,
+.contact-box img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#contacto,
+.contact,
+.contacto{
+  overflow-x: hidden;
+}
+
+/* Si la imagen está dentro de una caja con bordes redondeados */
+#contacto .card,
+#contacto .box,
+#contacto .panel{
+  overflow: hidden;
+}
