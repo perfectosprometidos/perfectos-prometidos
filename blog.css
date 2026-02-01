@@ -1006,35 +1006,29 @@ main.post-page{
 
 
 /* ===============================
-   BLOG · POST 02 · IMAGEN ÍNDICE (MÓVIL · EDITORIAL)
-   Más grande, más ancha, lujo real
+   AJUSTE IMAGEN BLOG · SOLO MÓVIL
+   Más ancha, más editorial
    =============================== */
 
 @media (max-width: 860px){
 
-  .entry_media,
-  .entry__media{
-    max-width: 90%;
-    margin: 14px auto 16px;
+  .post-lead{
+    width: 100%;
+    margin-left: -8px;
+    margin-right: -8px;
   }
 
-  .entry_media img,
-  .entry__media img{
-    display: block;
+  .post-lead__figure{
+    max-width: none;
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    height: auto;
-    border-radius: 16px;
+    max-width: 96%;
+
   }
 
-  .entry > img{
-    display: block;
+  .post-lead__img{
     width: 100%;
-    max-width: 420px;
-    margin: 14px auto 16px;
     height: auto;
-    border-radius: 16px;
+    border-radius: 18px;
   }
+
 }
-
