@@ -1002,7 +1002,7 @@ main.post-page{
   /* contenedor de la imagen dentro de la tarjeta */
   .entry_media{
     margin: 14px auto 16px;
-    max-width: 96%;
+    max-width: 98%;
   }
 
   /* la imagen */
