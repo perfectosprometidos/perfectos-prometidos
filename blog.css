@@ -1009,7 +1009,7 @@ main.post-page{
   .entry_media img{
     display: block;
     width: 100%;
-    max-width: 420px;   /* <-- controla tamaño real */
+    max-width: 480px;   /* <-- controla tamaño real */
     height: auto;
     margin: 0 auto;
     border-radius: 16px;
