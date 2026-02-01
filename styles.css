@@ -2749,7 +2749,7 @@ margin-right: auto;
 
 .success-hero{
   width: 100%;
-  max-width: 420px;       /* tamaño editorial real */
+max-width: 280px; /* The Lane scale */
   height: auto;
   display: block;
   margin: 0 auto 32px;
@@ -2757,6 +2757,11 @@ margin-right: auto;
   box-shadow: var(--shadow);
 
 
+}
+@media (min-width: 1024px){
+  .success-hero{
+    margin-bottom: 40px;
+  }
 }
 
 
