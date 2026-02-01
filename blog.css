@@ -1005,3 +1005,37 @@ main.post-page{
   }
 
 }
+/* ===============================
+   BLOG · POST 02 · IMAGEN EN ÍNDICE (SOLO MÓVIL)
+   Reduce tamaño y da aire
+   =============================== */
+
+@media (max-width: 860px){
+
+  /* Si usas <figure class="entry_media"> */
+  .entry_media,
+  .entry__media{
+    max-width: 86%;
+    margin: 14px auto 16px;
+  }
+
+  .entry_media img,
+  .entry__media img{
+    display: block;
+    width: 100%;
+    max-width: 360px;     /* clave: más pequeña en móvil */
+    margin: 0 auto;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* Si la imagen estuviera directa dentro de .entry sin figure */
+  .entry > img{
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 14px auto 16px;
+    height: auto;
+    border-radius: 16px;
+  }
+}
