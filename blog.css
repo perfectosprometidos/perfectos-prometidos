@@ -993,4 +993,26 @@ main.post-page{
     opacity: .55;
   }
 }
+/* ===============================
+   BLOG (ÍNDICE) · IMAGEN EN TARJETA · SOLO MÓVIL
+   Control editorial (NO enorme)
+   =============================== */
+@media (max-width: 860px){
+
+  /* contenedor de la imagen dentro de la tarjeta */
+  .entry_media{
+    margin: 14px auto 16px;
+    max-width: 90%;
+  }
+
+  /* la imagen */
+  .entry_media img{
+    display: block;
+    width: 100%;
+    max-width: 380px;   /* <-- controla tamaño real */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+}
 
