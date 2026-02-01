@@ -1004,38 +1004,37 @@ main.post-page{
     opacity: .55;
   }
 
-}
+
 /* ===============================
-   BLOG · POST 02 · IMAGEN EN ÍNDICE (SOLO MÓVIL)
-   Reduce tamaño y da aire
+   BLOG · POST 02 · IMAGEN ÍNDICE (MÓVIL · EDITORIAL)
+   Más grande, más ancha, lujo real
    =============================== */
 
 @media (max-width: 860px){
 
-  /* Si usas <figure class="entry_media"> */
   .entry_media,
   .entry__media{
-    max-width: 86%;
-    margin: 14px auto 16px;
+    max-width: 100%;
+    margin: 18px 0 20px;
   }
 
   .entry_media img,
   .entry__media img{
     display: block;
     width: 100%;
-    max-width: 360px;     /* clave: más pequeña en móvil */
+    max-width: 92vw;   /* clave */
     margin: 0 auto;
     height: auto;
-    border-radius: 16px;
+    border-radius: 18px;
   }
 
-  /* Si la imagen estuviera directa dentro de .entry sin figure */
   .entry > img{
     display: block;
     width: 100%;
-    max-width: 360px;
-    margin: 14px auto 16px;
+    max-width: 92vw;
+    margin: 18px auto 20px;
     height: auto;
-    border-radius: 16px;
+    border-radius: 18px;
   }
 }
+
