@@ -2798,12 +2798,14 @@ main.legal-page{
 }
 .success-hero{
   width: 100%;
+  max-width: 820px;
   height: auto;
   display: block;
+  margin: 0 auto 32px;
   border-radius: 18px;
   box-shadow: var(--shadow);
-  margin-bottom: 24px;
 }
+
 
 .success-title{
   margin: 0 0 10px;
