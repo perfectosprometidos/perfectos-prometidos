@@ -961,24 +961,26 @@ main.post-page{
   }
 }
 /* ===============================
-   AJUSTE IMAGEN BLOG · SOLO MÓVIL
-   Editorial, proporcionada
+   POST · IMAGEN · SOLO MÓVIL (CONTROLADA)
    =============================== */
-
 @media (max-width: 860px){
 
   .post-lead{
     width: 100%;
-    margin: 16px auto 22px;
+    margin: 14px auto 20px;
   }
 
   .post-lead figure{
-    max-width: 94%;   /* CLAVE: ni enorme ni pequeña */
+    width: 100%;
+    max-width: 78%;     /* MÁS PEQUEÑA */
     margin: 0 auto;
   }
 
   .post-lead__img{
+    display: block;
     width: 100%;
+    max-width: 360px;   /* LÍMITE REAL (evita “enorme”) */
+    margin: 0 auto;
     height: auto;
     border-radius: 16px;
   }
