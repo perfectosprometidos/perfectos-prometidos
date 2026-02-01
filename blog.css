@@ -1014,15 +1014,14 @@ main.post-page{
 
   .post-lead{
     width: 100%;
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-left: -4px;
+    margin-right: -4px;
   }
 
   .post-lead__figure{
-    max-width: none;
     width: 100%;
     max-width: 96%;
-
+    margin: 0 auto;
   }
 
   .post-lead__img{
@@ -1032,3 +1031,4 @@ main.post-page{
   }
 
 }
+
