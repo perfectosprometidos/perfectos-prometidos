@@ -2739,16 +2739,24 @@ main.legal-page{
   border: 1px solid rgba(0,0,0,.08);
   background: rgba(255,255,255,.65);
   box-shadow: 0 18px 55px rgba(0,0,0,.08);
-  max-width: 880px;        /* 👈 CLAVE */
+text-align: left;
+ width: min(880px, 100%);
+max-width: 880px;
+margin-left: auto;
+margin-right: auto;
+
 }
+
 .success-hero{
   width: 100%;
-  max-width: 680px;       /* tamaño editorial real */
+  max-width: 420px;       /* tamaño editorial real */
   height: auto;
   display: block;
   margin: 0 auto 32px;
   border-radius: 18px;
   box-shadow: var(--shadow);
+
+
 }
 
 
