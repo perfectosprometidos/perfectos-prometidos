@@ -2928,3 +2928,13 @@ max-width: 280px; /* The Lane scale */
 #contacto .panel{
   overflow: hidden;
 }
+/* ===============================
+   NAV · móvil — permitir salto (no afecta a PC)
+   =============================== */
+@media (max-width: 920px) and (orientation: portrait){
+  .nav{
+    flex-wrap: wrap !important;
+    row-gap: 10px !important;
+    justify-content: center !important;
+  }
+}
