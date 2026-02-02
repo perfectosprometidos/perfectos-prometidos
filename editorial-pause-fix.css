@@ -205,3 +205,118 @@ body#top { overflow-x: hidden; }
 .manifesto-title{
   margin-top: 0;
 }
+/* ===============================
+   MIRADA EDITORIAL — PREMIUM
+   =============================== */
+
+body.editorial-page{
+  background: var(--paper2, #f6f4ef);
+}
+
+/* HERO */
+.editorial-hero{
+  padding: 140px 0 64px;
+  background: var(--paper2, #f6f4ef);
+}
+
+.editorial-hero-inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.editorial-eyebrow{
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  opacity: 0.75;
+  margin-bottom: 18px;
+}
+
+.editorial-hero h1{
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+
+.editorial-lead{
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* BLOCKS */
+.editorial-block{
+  padding: 52px 0;
+}
+
+.editorial-soft{
+  background: rgba(255,255,255,0.35);
+}
+
+.editorial-text{
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.editorial-text h2{
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.editorial-text p{
+  max-width: 680px;
+  margin: 0 auto 14px;
+  line-height: 1.75;
+  opacity: 0.88;
+}
+
+.editorial-quote{
+  margin-top: 22px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* CLOSING */
+.editorial-closing{
+  padding: 72px 0 110px;
+  text-align: center;
+}
+
+.closing-statement{
+  max-width: 680px;
+  margin: 0 auto 22px;
+  opacity: 0.9;
+}
+
+.editorial-cta{
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.18);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.editorial-cta:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.6);
+  border-color: rgba(0,0,0,0.28);
+}
+
+/* DESKTOP */
+@media (min-width: 980px){
+  .editorial-hero{
+    padding: 170px 0 78px;
+  }
+  .editorial-block{
+    padding: 68px 0;
+  }
+}
