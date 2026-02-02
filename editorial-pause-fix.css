@@ -235,9 +235,11 @@ body.editorial-page{
 
 /* Hero de texto debajo de la imagen */
 .editorial-hero{
-  padding: 96px 0 64px;
+  padding: 0 0 72px;
   background: var(--paper2, #f6f4ef);
+  margin-top: -72px;
 }
+
 
 .editorial-hero-inner{
   max-width: 980px;
@@ -334,8 +336,10 @@ body.editorial-page{
 /* DESKTOP */
 @media (min-width: 980px){
   .editorial-hero{
-    padding: 120px 0 78px;
+    padding: 0 0 80px;
+    margin-top: -80px;
   }
+
   .editorial-block{
     padding: 68px 0;
   }
