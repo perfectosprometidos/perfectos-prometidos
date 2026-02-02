@@ -230,7 +230,7 @@ body.editorial-page{
   height: clamp(380px, 58vh, 680px);
   display: block;
   object-fit: cover;
-  object-position: 50% 40%;
+  object-position: 50% 50%;
 }
 
 /* Hero de texto debajo de la imagen */
