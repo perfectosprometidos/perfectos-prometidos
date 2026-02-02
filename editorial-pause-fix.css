@@ -344,3 +344,21 @@ body.editorial-page{
     padding: 68px 0;
   }
 }
+/* Volver a home · Mirada editorial */
+.editorial-back{
+  margin-top: 28px;
+  text-align: center;
+}
+
+.editorial-back a{
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity .2s ease;
+}
+
+.editorial-back a:hover{
+  opacity: 1;
+}
