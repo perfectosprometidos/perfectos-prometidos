@@ -213,9 +213,29 @@ body.editorial-page{
   background: var(--paper2, #f6f4ef);
 }
 
-/* HERO */
+/* ===============================
+   MIRADA EDITORIAL · HERO IMAGE + TEXTO
+   =============================== */
+
+/* Imagen a sangre */
+.editorial-hero-image{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.editorial-hero-image img{
+  width: 100%;
+  height: clamp(380px, 58vh, 680px);
+  display: block;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+/* Hero de texto debajo de la imagen */
 .editorial-hero{
-  padding: 140px 0 64px;
+  padding: 96px 0 64px;
   background: var(--paper2, #f6f4ef);
 }
 
@@ -229,8 +249,8 @@ body.editorial-page{
 .editorial-eyebrow{
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-size: 0.82rem;
-  opacity: 0.75;
+  font-size: 0.78rem;
+  opacity: 0.7;
   margin-bottom: 18px;
 }
 
@@ -314,7 +334,7 @@ body.editorial-page{
 /* DESKTOP */
 @media (min-width: 980px){
   .editorial-hero{
-    padding: 170px 0 78px;
+    padding: 120px 0 78px;
   }
   .editorial-block{
     padding: 68px 0;
