@@ -404,12 +404,11 @@ body.editorial-page{
 .edition-secondary{
   display:inline-block;
   text-decoration:none;
-  border: 1px solid rgba(28,28,28,.35);
+ border: 1px solid rgba(28,28,28,.22);
   padding: 12px 22px;
   font-size: 0.82rem;
   letter-spacing: .12em;
   text-transform: uppercase;
-  border-radius: 999px;
   transition: .25s ease;
   color: rgba(28,28,28,.88);
 }
