@@ -1044,3 +1044,26 @@ main.post-page{
   }
 }
 
+/* ===============================
+   EDICIONES · AJUSTE SOLO MÓVIL
+   =============================== */
+@media (max-width: 520px){
+
+  .editorial-title{
+    font-size: 1.9rem;      /* antes: clamp grande */
+    letter-spacing: 0.18em;
+    margin-bottom: 10px;
+  }
+
+  .editorial-subtitle{
+    font-size: 0.96rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .editorial-intro{
+    font-size: 0.90rem;
+    line-height: 1.6;
+    padding: 0 6px;
+  }
+}
