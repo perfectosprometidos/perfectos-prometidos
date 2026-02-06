@@ -1,7 +1,35 @@
 /* BLOG · PERFECTOS PROMETIDOS — HERO 
 /* ===== BLOG · EDICIÓN LUJO (FINAL) ===== */
-
 /* La página debe sentirse como papel, no como un vacío gris */
+/* ===============================
+   BLOG · EDICIONES (CABECERA)
+   =============================== */
+
+.editorial-title{
+  margin: 0 0 14px;
+  font-size: clamp(2.4rem, 3.8vw, 3.2rem);
+  letter-spacing: 0.22em;
+  text-align: center;
+}
+
+.editorial-subtitle{
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: rgba(0,0,0,.70);
+}
+
+.editorial-intro{
+  margin: 0 auto;
+  max-width: 520px;
+  text-align: center;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  color: rgba(0,0,0,.82);
+}
+
 .blog-hero{
   padding: 90px 0 120px;
   background: linear-gradient(
