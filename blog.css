@@ -1246,3 +1246,40 @@ main.blog-article{
   color: inherit;
   text-decoration: none;
   border-b
+/* =========================================
+   FIX CLICS · BOTONES NO ACCESIBLES
+   (hay una capa por encima bloqueando clicks)
+   ========================================= */
+
+/* Asegura que el contenido del post está por encima */
+.blog-article,
+.blog-header,
+.blog-content,
+.blog-cta,
+.blog-related,
+.blog-footer{
+  position: relative;
+  z-index: 5;
+}
+
+/* Asegura que links y botones reciben el click */
+.blog-article a,
+.blog-article .btn{
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* Si hay overlays/pseudo-elementos (muy habitual), que no bloqueen */
+.blog-article::before,
+.blog-article::after,
+.blog-content::before,
+.blog-content::after,
+.blog-header::before,
+.blog-header::after{
+  pointer-events: none !important;
+}
+.blog-footer{
+  margin-top: 28px;
+  padding-bottom: 40px;
+}
