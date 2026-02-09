@@ -1245,7 +1245,10 @@ main.blog-article{
 .blog-related a{
   color: inherit;
   text-decoration: none;
-  border-b
+  border-bottom: 1px solid rgba(0,0,0,.18);
+  padding-bottom: 3px;
+}
+
 /* =========================================
    FIX CLICS · BOTONES NO ACCESIBLES
    (hay una capa por encima bloqueando clicks)
