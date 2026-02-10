@@ -1286,3 +1286,22 @@ main.blog-article{
   margin-top: 28px;
   padding-bottom: 40px;
 }
+/* =========================================
+   ETIQUETAS EDITORIALES (NO CTA)
+   ========================================= */
+
+.blog-meta{
+  pointer-events: none; /* no clicables */
+}
+
+.blog-tag{
+  cursor: default;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.15);
+  color: rgba(0,0,0,0.55);
+  font-weight: 400;
+}
+
+.blog-tag:hover{
+  background: transparent;
+}
