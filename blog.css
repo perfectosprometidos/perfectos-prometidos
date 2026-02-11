@@ -1314,3 +1314,21 @@ main.blog-article{
 .btn.secondary:hover {
   background: #f4f1ec;
 }
+/* Editorial breadcrumb */
+
+.editorial-breadcrumb {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.editorial-home {
+  text-decoration: none;
+  color: #8A9772;
+  transition: opacity 0.3s ease;
+}
+
+.editorial-home:hover {
+  opacity: 0.7;
+}
