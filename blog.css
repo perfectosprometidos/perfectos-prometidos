@@ -1305,3 +1305,12 @@ main.blog-article{
 .blog-tag:hover{
   background: transparent;
 }
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #bfae8f;
+  color: #6f6a63;
+}
+
+.btn.secondary:hover {
+  background: #f4f1ec;
+}
