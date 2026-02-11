@@ -1332,3 +1332,32 @@ main.blog-article{
 .editorial-home:hover {
   opacity: 0.7;
 }
+/* ---------- EDITORIAL NAV SUPERIOR ---------- */
+
+.editorial-nav {
+  margin-bottom: 48px;
+}
+
+.editorial-home-link {
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  letter-spacing: 4px;
+  font-size: 13px;
+  color: #8A9772;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.editorial-home-link:hover {
+  opacity: 0.7;
+}
+
+.editorial-sub {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: #777;
+  margin-top: 6px;
+   }
