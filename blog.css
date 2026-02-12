@@ -1108,16 +1108,15 @@ main.blog-article{
   letter-spacing: -0.02em;
   font-weight: 600;
   color: var(--ink, #111);
-  margin-top: 1.1rem;
+  margin-top: 0.6rem;
 }
 
 .blog-subtitle{
   margin: 0;
-  font-size: 1.08rem;
-  font-size: 1.2rem;
-  line-height: 1.85;
-  color: rgba(0,0,0,.70);
-  max-width: 52rem;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: rgba(0,0,0,.68);
+  max-width: 46rem;
 }
 /* Cabecera editorial (volver a home) */
 .editorial-nav{
