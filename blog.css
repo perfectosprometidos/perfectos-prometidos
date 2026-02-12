@@ -1437,3 +1437,22 @@ main.blog-article{
 .editorial-contact-link:hover {
   opacity: 0.5;
 }
+.editorial-footer-nav{
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+.editorial-back{
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8A9772;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.editorial-back:hover{
+  opacity: 1;
+}
