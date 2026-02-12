@@ -1415,3 +1415,22 @@ main.blog-article{
   color: #777;
   margin-top: 6px;
    }
+.editorial-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.editorial-contact-link {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #8c8c8c;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+}
+
+.editorial-contact-link:hover {
+  opacity: 0.6;
+}
