@@ -1158,14 +1158,7 @@ color: rgba(0,0,0,.55);
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Línea fina de lujo debajo de la cabecera */
-.editorial-nav::after{
-  content:"";
-  display:block;
-  margin-top: 12px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.10), rgba(0,0,0,0));
-}
+
 
 @media (max-width: 860px){
   .editorial-nav{
