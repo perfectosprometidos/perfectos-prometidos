@@ -1107,6 +1107,7 @@ main.blog-article{
   line-height: 1.06;
   letter-spacing: -0.03em;
   color: var(--ink, #111);
+   margin-top: 2rem;
 }
 
 .blog-subtitle{
@@ -1120,7 +1121,7 @@ main.blog-article{
 .editorial-nav{
   max-width: 980px;
   margin: 0 auto;
-  padding: 28px 22px 6px;
+  padding: 1rem 0 2rem 0;
 }
 
 .editorial-home-link{
@@ -1129,7 +1130,7 @@ main.blog-article{
   color: rgba(0,0,0,.66);
   letter-spacing: .22em;
   text-transform: uppercase;
-  font-size: .86rem;
+  font-size: .75rem;
 }
 
 .editorial-home-link:visited{
