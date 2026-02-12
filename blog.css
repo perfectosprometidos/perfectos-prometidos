@@ -1418,16 +1418,17 @@ main.blog-article{
 .editorial-nav {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  padding: 1.5rem 0;
 }
 
 .editorial-contact-link {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #8c8c8c;
-  font-weight: 400;
+  color: #6b7a55; /* oliva institucional */
+  font-family: 'Georgia', serif;
   transition: opacity 0.3s ease;
 }
 
