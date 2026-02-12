@@ -1420,18 +1420,20 @@ main.blog-article{
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
+   gap: 2rem;
 }
 
 .editorial-contact-link {
-  font-size: 0.7rem;
-  letter-spacing: 0.25em;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #6b7a55; /* oliva institucional */
+  color: #6b7a55;
   font-family: 'Georgia', serif;
-  transition: opacity 0.3s ease;
+  opacity: 0.85;
+  align-self: flex-start;
 }
 
 .editorial-contact-link:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
