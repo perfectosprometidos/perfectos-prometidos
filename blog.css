@@ -1083,9 +1083,8 @@ main.blog-article{
 .blog-header{
   max-width: 860px;
   margin: 0 auto;
-  padding: 28px 52px 12px;
+  padding: 46px 52px 18px;
 }
-
 
 @media (max-width: 860px){
   .blog-header{ padding: 34px 22px 12px; }
@@ -1103,36 +1102,31 @@ main.blog-article{
 
 /* Título + subtítulo */
 .blog-header h1{
-  margin: 0 0 16px;
-  font-weight: 650;              /* menos bloque, más editorial */
-  font-size: clamp(2.35rem, 6.2vw, 3.55rem);
-  line-height: 1.03;
+  margin: 0 0 14px;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
+  font-weight: 600;
   color: var(--ink, #111);
+  margin-top: 0.6rem;
 }
-
 
 .blog-subtitle{
   margin: 0;
-  font-size: 1.08rem;            /* un pelín menos “bloque” */
-  line-height: 1.75;             /* lectura revista */
-  letter-spacing: 0.01em;
-  color: rgba(0,0,0,.66);
-  max-width: 52rem;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: rgba(0,0,0,.68);
+  max-width: 46rem;
 }
-
 /* Cabecera editorial (volver a home) */
 .editorial-nav{
   max-width: 980px;
   margin: 0 auto;
-.editorial-nav{
-  padding: 0.6rem 0 0.75rem 0;   /* baja el padding-bottom ~35% */
+  padding: 0.6rem 0 1.2rem 0;
 }
-
 /* Línea editorial bajo cabecera */
 .editorial-nav{
-border-bottom: 1px solid rgba(0,0,0,.06);
-
+  border-bottom: 1px solid rgba(0,0,0,.08);
 }
 .editorial-home-link{
   display: inline-block;
@@ -1164,6 +1158,14 @@ color: rgba(0,0,0,.55);
   font-family: Georgia, "Times New Roman", serif;
 }
 
+/* Línea fina de lujo debajo de la cabecera */
+.editorial-nav::after{
+  content:"";
+  display:block;
+  margin-top: 12px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.10), rgba(0,0,0,0));
+}
 
 
 @media (max-width: 860px){
@@ -1188,16 +1190,16 @@ letter-spacing: 0.02em;
 }
 
 .blog-tag{
-  padding: 8px 14px;
+  display: inline-block;
+  padding: 9px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.10);
-  font-size: .76rem;
+  border: 1px solid rgba(0,0,0,.12);
+  font-size: .78rem;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(0,0,0,.58);
-  background: rgba(246,244,239,.55);
+  color: rgba(0,0,0,.62);
+  background: rgba(246,244,239,.70);
 }
-
 
 /* Columna editorial del texto (estilo revista) */
 .blog-content{
