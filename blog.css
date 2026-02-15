@@ -1456,3 +1456,59 @@ letter-spacing: 0.02em;
 .editorial-contact-link:hover {
   opacity: 0.5;
 }
+/* === Conversación Editorial === */
+
+.editorial-intro{
+  padding: 120px 52px 60px;
+  background: #f6f4ef;
+}
+
+@media (max-width:860px){
+  .editorial-intro{
+    padding: 90px 18px 40px;
+  }
+}
+
+.editorial-container{
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.editorial-eyebrow{
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: .75rem;
+  color: rgba(0,0,0,.45);
+  margin-bottom: 18px;
+}
+
+.editorial-intro h1{
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  line-height: 1.12;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.editorial-lead{
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(0,0,0,.65);
+  max-width: 36rem;
+}
+
+.editorial-form{
+  padding: 0 52px 120px;
+  background: #f6f4ef;
+}
+
+@media (max-width:860px){
+  .editorial-form{
+    padding: 0 18px 90px;
+  }
+}
+
+.editorial-form iframe{
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.05);
+  background: white;
+}
