@@ -1535,3 +1535,124 @@ letter-spacing: 0.02em;
   border-color: rgba(0,0,0,.25);
   color: rgba(0,0,0,.9);
 }
+/* === HOTFIX · The Lane (móvil + retención) === */
+
+/* 1) Reducir aire superior y acercar el titular */
+.blog-header{
+  padding: 110px 52px 24px !important;
+}
+@media (max-width: 860px){
+  .blog-header{
+    padding: 84px 18px 18px !important;
+  }
+}
+
+/* 2) Línea editorial bajo cabecera (sutil, lujo) */
+.editorial-nav::after{
+  content:"";
+  display:block;
+  margin-top: 10px;
+  height: 1px;
+  background: linear-gradient(90deg,
+    rgba(0,0,0,0),
+    rgba(0,0,0,.08),
+    rgba(0,0,0,0)
+  );
+}
+
+/* 3) Tags más “editorial”, menos UI */
+.blog-meta{ gap: 10px !important; }
+.blog-tag{
+  border: 1px solid rgba(0,0,0,.10) !important;
+  background: rgba(246,244,239,.78) !important;
+}
+
+/* 4) Footer sin azul (lujo) */
+.blog-footer a{
+  color: rgba(0,0,0,.55) !important;
+  text-decoration: none !important;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+.blog-footer a:hover{ color: rgba(0,0,0,.75) !important; }
+
+/* === Conversación editorial (tarjeta premium + CTA) === */
+.conversation-header .blog-meta{ margin-top: 14px; }
+
+.conversation-cta{
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.14);
+  background: rgba(246,244,239,.65);
+  color: rgba(0,0,0,.72);
+  text-decoration: none;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+.conversation-cta:hover{
+  background: rgba(246,244,239,.82);
+  color: rgba(0,0,0,.85);
+}
+
+.conversation-card{
+  background: rgba(255,255,255,.60);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 26px;
+  padding: 22px 22px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+}
+
+.form-embed{
+  margin-top: 14px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(246,244,239,.55);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.conversation-note{
+  margin: 0 0 8px;
+  color: rgba(0,0,0,.68);
+  line-height: 1.7;
+}
+
+.conversation-actions{
+  margin: 10px 0 0;
+}
+
+.conversation-open{
+  display: inline-block;
+  color: rgba(0,0,0,.70);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+}
+.conversation-open:hover{
+  color: rgba(0,0,0,.85);
+  border-bottom-color: rgba(0,0,0,.28);
+}
+
+.conversation-footnote{
+  margin: 14px 0 0;
+  color: rgba(0,0,0,.60);
+  line-height: 1.7;
+}
+.conversation-footnote a{
+  color: rgba(0,0,0,.70);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+}
+.conversation-footnote a:hover{
+  color: rgba(0,0,0,.85);
+  border-bottom-color: rgba(0,0,0,.28);
+}
+
+@media (max-width: 860px){
+  .conversation-card{
+    padding: 18px 16px;
+    border-radius: 22px;
+  }
+}
