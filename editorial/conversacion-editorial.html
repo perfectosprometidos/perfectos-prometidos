@@ -3,45 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Cada boda comienza con una conversación en calma. Cuestionario premium para bodas a medida en Galicia y Madrid · Perfectos Prometidos."> 
 <title>Conversación Editorial · Perfectos Prometidos</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="blog.css">
 </head>
 
-<body>
+<body class="conversation-page">
 
-<section class="editorial-intro">
-  <div class="editorial-container">
-    <p class="editorial-eyebrow">Conversación editorial</p>
+<main class="blog-article" id="top">
 
-    <h1>
-      Cada boda comienza<br>
-      con una conversación en calma.
-    </h1>
+  <!-- Cabecera editorial (igual que en blog, versión lujo) -->
+  <nav class="editorial-nav" aria-label="Cabecera editorial">
+    <div class="editorial-nav-left">
+      <a class="editorial-home-link" href="/">Perfectos Prometidos</a>
+      <div class="editorial-sub">Wedding Planner en Galicia · Organización integral de bodas exclusivas</div>
+    </div>
 
-    <p class="editorial-lead">
-      Si esta forma de entender una celebración resuena contigo,
-      cuéntanos vuestra historia.
+    <a class="editorial-cta-link" href="#cuestionario">Hablar en calma</a>
+  </nav>
+
+  <header class="blog-header conversation-header">
+    <p class="blog-kicker">Conversación editorial</p>
+
+    <h1>Cada boda comienza<br>con una conversación en calma.</h1>
+
+    <p class="blog-subtitle">
+      Si esta forma de entender una celebración resuena con vosotros, contadnos vuestra historia.
       Leemos cada mensaje personalmente.
     </p>
-  </div>
-</section>
 
-<section class="editorial-form">
-  <div class="editorial-container">
+    <div class="blog-meta" aria-label="Etiquetas">
+      <span class="blog-tag">Editorial</span>
+      <span class="blog-tag">Conversación</span>
+      <span class="blog-tag">Quiet Luxury</span>
+    </div>
+  </header>
 
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeNKM8OvOiO2DegL36QPcbWJdKY061jaQMC3SK1R5nHo8UE8w/viewform?embedded=true" 
-      width="100%" 
-      height="1600" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0">
-      Cargando…
-    </iframe>
+  <article class="blog-body">
+    <section class="conversation-card" id="cuestionario" aria-label="Cuestionario premium">
+      <p class="conversation-note">
+        Este cuestionario es el primer gesto de calma: nos ayuda a entender el tono, el ritmo y la intención.
+      </p>
 
-  </div>
-</section>
+      <div class="form-embed" role="group" aria-label="Formulario (Google Forms)">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeNKM8OvOiO2DegL36QPcbWJdKY061jaQMC3SK1R5nHo8UE8w/viewform?embedded=true"
+          title="Cuestionario Premium · Perfectos Prometidos"
+          loading="lazy"
+          width="100%"
+          height="1600"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">
+          Cargando…
+        </iframe>
+      </div>
+
+      <p class="conversation-footnote">
+        Si preferís, también podéis escribir directamente a <a href="mailto:ac@perfectosprometidos.com">ac@perfectosprometidos.com</a>.
+      </p>
+    </section>
+
+    <p class="blog-signature"><em>Perfectos Prometidos · El arte de crear con elegancia</em></p>
+  </article>
+
+  <footer class="blog-footer">
+    <p><a href="/editorial/">Volver a Editorial</a> · <a href="/">Inicio</a> · <a href="#top">Subir</a></p>
+  </footer>
+
+</main>
+
 
 </body>
 </html>
