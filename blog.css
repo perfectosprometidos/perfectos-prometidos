@@ -1074,7 +1074,7 @@ main.post-page{
    ========================================= */
 
 main.blog-article{
-  padding-top: 140px; /* respira bajo topbar fija */
+  padding-top: 96px; /* respira bajo topbar fija */
   padding-bottom: 120px;
   background: var(--paper2, #fbfaf7);
 }
@@ -1088,7 +1088,7 @@ main.blog-article{
 
 @media (max-width: 860px){
   .blog-header{ padding: 34px 22px 12px; }
-  main.blog-article{ padding-top: 110px; padding-bottom: 80px; }
+  main.blog-article{ padding-top: 72px; padding-bottom: 80px; }
 }
 
 /* Kicker (si lo usas) */
@@ -1124,9 +1124,7 @@ main.blog-article{
   margin: 0 auto;
   padding: 0.6rem 0 1.2rem 0;
 }
-/* Línea editorial bajo cabecera */
-.editorial-nav{
-  border-bottom: 1px solid rgba(0,0,0,.08);
+
 }
 .editorial-home-link{
   display: inline-block;
