@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Cada boda comienza con una conversación en calma. Cuestionario premium para bodas a medida en Galicia y Madrid · Perfectos Prometidos."> 
-<title>Conversación Editorial · Perfectos Prometidos</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="blog.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Cada boda comienza con una conversación en calma. Cuestionario premium para bodas a medida."/>
+  <title>Conversación editorial · Perfectos Prometidos</title>
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../blog.css">
 </head>
 
 <body class="conversation-page">
 
 <main class="blog-article" id="top">
 
-  <!-- Cabecera editorial (igual que en blog, versión lujo) -->
+  <!-- Cabecera editorial (misma lógica que el blog) -->
   <nav class="editorial-nav" aria-label="Cabecera editorial">
     <div class="editorial-nav-left">
       <a class="editorial-home-link" href="/">Perfectos Prometidos</a>
@@ -32,103 +33,8 @@
       Si esta forma de entender una celebración resuena con vosotros, contadnos vuestra historia.
       Leemos cada mensaje personalmente.
     </p>
-   /* === Conversación editorial · The Lane finish === */
 
-.editorial-nav{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:24px;
-}
-
-.editorial-nav-left{ max-width: 70%; }
-
-.editorial-sub{
-  margin-top:10px;
-  font-family: 'Georgia', serif;
-  color: rgba(0,0,0,.55);
-  letter-spacing: .06em;
-  font-size: .92rem;
-  line-height: 1.35;
-}
-
-.editorial-cta-link{
-  text-decoration:none;
-  font-family:'Georgia', serif;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  font-size:.78rem;
-  color:#8A9772;
-  padding-top:2px;
-}
-
-.editorial-nav::after{
-  content:"";
-  display:block;
-  margin-top: 12px;
-  height: 1px;
-  background: linear-gradient(90deg,
-    rgba(0,0,0,0),
-    rgba(0,0,0,.08),
-    rgba(0,0,0,0)
-  );
-}
-
-/* Tarjeta premium para el Google Form */
-.conversation-card{
-  background: rgba(255,255,255,.60);
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 26px;
-  padding: 22px 22px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.06);
-}
-
-.form-embed{
-  margin-top: 14px;
-  border-radius: 18px;
-  overflow: hidden;
-  background: rgba(246,244,239,.55);
-  border: 1px solid rgba(0,0,0,.06);
-}
-
-.conversation-note{
-  margin: 0 0 8px;
-  color: rgba(0,0,0,.68);
-  line-height: 1.7;
-}
-
-.conversation-footnote{
-  margin: 14px 0 0;
-  color: rgba(0,0,0,.60);
-  line-height: 1.7;
-}
-
-.conversation-footnote a{
-  color: rgba(0,0,0,.70);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,.18);
-}
-
-.conversation-footnote a:hover{
-  color: rgba(0,0,0,.85);
-  border-bottom-color: rgba(0,0,0,.28);
-}
-
-/* Footer sin azul (lujo) */
-.blog-footer a{
-  color: rgba(0,0,0,.55);
-  text-decoration: none;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  font-size: .78rem;
-}
-.blog-footer a:hover{ color: rgba(0,0,0,.75); }
-
-@media (max-width: 860px){
-  .editorial-nav-left{ max-width: 68%; }
-  .conversation-card{ padding: 18px 16px; border-radius: 22px; }
-}
-
+    <a class="conversation-cta" href="#cuestionario">Iniciar cuestionario</a>
 
     <div class="blog-meta" aria-label="Etiquetas">
       <span class="blog-tag">Editorial</span>
@@ -143,6 +49,12 @@
         Este cuestionario es el primer gesto de calma: nos ayuda a entender el tono, el ritmo y la intención.
       </p>
 
+      <div class="conversation-actions">
+        <a class="conversation-open" href="https://docs.google.com/forms/d/e/1FAIpQLSeNKM8OvOiO2DegL36QPcbWJdKY061jaQMC3SK1R5nHo8UE8w/viewform" target="_blank" rel="noopener">
+          Abrir en una nueva pestaña
+        </a>
+      </div>
+
       <div class="form-embed" role="group" aria-label="Formulario (Google Forms)">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSeNKM8OvOiO2DegL36QPcbWJdKY061jaQMC3SK1R5nHo8UE8w/viewform?embedded=true"
@@ -152,9 +64,7 @@
           height="1600"
           frameborder="0"
           marginheight="0"
-          marginwidth="0">
-          Cargando…
-        </iframe>
+          marginwidth="0">Cargando…</iframe>
       </div>
 
       <p class="conversation-footnote">
@@ -166,11 +76,14 @@
   </article>
 
   <footer class="blog-footer">
-    <p><a href="/editorial/">Volver a Editorial</a> · <a href="/">Inicio</a> · <a href="#top">Subir</a></p>
+    <p>
+      <a href="/editorial/">Volver a Editorial</a> ·
+      <a href="/">Inicio</a> ·
+      <a href="#top">Subir</a>
+    </p>
   </footer>
 
 </main>
-
 
 </body>
 </html>
