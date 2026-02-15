@@ -1510,3 +1510,28 @@ letter-spacing: 0.02em;
   box-shadow: 0 30px 60px rgba(0,0,0,.05);
   background: white;
 }
+/* === BOTÓN EDITORIAL · Conversación === */
+
+.conversation-cta{
+  margin-top: 28px;
+}
+
+.btn-editorial{
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.14);
+  background: rgba(246,244,239,.85);
+  text-decoration: none;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .82rem;
+  color: rgba(0,0,0,.72);
+  transition: all .3s ease;
+}
+
+.btn-editorial:hover{
+  background: rgba(0,0,0,.04);
+  border-color: rgba(0,0,0,.25);
+  color: rgba(0,0,0,.9);
+}
