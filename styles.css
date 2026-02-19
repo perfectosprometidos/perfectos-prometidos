@@ -3285,3 +3285,53 @@ max-width: 280px; /* The Lane scale */
     gap: 26px;
   }
 }
+/* =========================================
+   HEADER LUJO – Igual que Home
+========================================= */
+
+.site-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 26px 0;
+  z-index: 100;
+}
+
+.site-header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header .brand{
+  font-size: 0.95rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,.85);
+  transition: opacity .3s ease;
+}
+
+.site-header .brand:hover{
+  opacity: .6;
+}
+
+.site-header .site-nav{
+  display: flex;
+  gap: 32px;
+}
+
+.site-header .site-nav a{
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,.75);
+  position: relative;
+  transition: opacity .3s ease;
+}
+
+.site-header .site-nav a:hover{
+  opacity: .6;
+}
