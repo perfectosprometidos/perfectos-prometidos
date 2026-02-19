@@ -2958,7 +2958,21 @@ max-width: 280px; /* The Lane scale */
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.22);
+}
+.hero--image .actions{
+  margin-top: 22px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.hero--image .kicker{
+  letter-spacing:.10em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .9;
 }
 
 .hero--image .container,
