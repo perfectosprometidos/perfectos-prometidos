@@ -3011,3 +3011,17 @@ max-width: 280px; /* The Lane scale */
   color:#fff !important;
   border:1px solid rgba(255,255,255,.65);
 }
+/* === Layout rhythm === */
+.section{ padding: 96px 0; }
+.section--soft{ background:#f6f4f1; } /* lino suave */
+.prose{ max-width: 760px; margin: 0 auto; }
+.prose p{ line-height: 1.75; }
+
+.section h2{ margin: 0 0 22px; }
+.grid{ display:grid; gap:18px; }
+.grid--3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (max-width: 900px){
+  .grid--3{ grid-template-columns: 1fr; }
+  .section{ padding: 72px 0; }
+}
