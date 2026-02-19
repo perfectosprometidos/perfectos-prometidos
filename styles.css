@@ -3119,36 +3119,133 @@ max-width: 280px; /* The Lane scale */
 }
 
 /* =========================================
-   FAQ – Bloques limpios sin ">"
+   MADRID – Refinamiento The Lane (v2)
+   Para tu HTML real: .grid--3 + ol.steps + details.faq
 ========================================= */
 
-.page-madrid .madrid-faq .container{
+.page--madrid .container,
+.page-madrid .container{
+  width: 100%;
   max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
 }
 
+/* Ritmo vertical más fino (menos “bloque enorme”) */
+.page--madrid .section,
+.page-madrid .section{
+  padding: 84px 0;
+}
+
+.page--madrid .section h2,
+.page-madrid .section h2{
+  margin: 0 0 22px;
+  letter-spacing: .2px;
+}
+
+/* Texto editorial: ancho de lectura */
+.page--madrid .prose,
+.page-madrid .prose{
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.page--madrid .prose p,
+.page-madrid .prose p{
+  line-height: 1.9;
+  margin-top: 16px;
+  color: rgba(17,17,17,.75);
+}
+
+/* Ajuste fino de grid servicios (ya lo tienes, pero lo “lujamos”) */
+.page--madrid .grid--3,
+.page-madrid .grid--3{
+  gap: 48px;
+}
+
+.page--madrid .card,
+.page-madrid .card{
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.page--madrid .card h3,
+.page-madrid .card h3{
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.page--madrid .card p,
+.page-madrid .card p{
+  margin: 0;
+  line-height: 1.85;
+  color: rgba(17,17,17,.70);
+}
+
+/* =========================================
+   CÓMO TRABAJAMOS (ol.steps) – editorial real
+========================================= */
+.page--madrid ol.steps,
+.page-madrid ol.steps{
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 0;
+  max-width: 820px;
+}
+
+.page--madrid ol.steps li,
+.page-madrid ol.steps li{
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 18px 0;
+  line-height: 1.85;
+  color: rgba(17,17,17,.75);
+}
+
+.page--madrid ol.steps li:last-child,
+.page-madrid ol.steps li:last-child{
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.page--madrid ol.steps li strong,
+.page-madrid ol.steps li strong{
+  font-weight: 650;
+  color: rgba(17,17,17,.88);
+}
+
+/* =========================================
+   FAQ (details.faq) – acordeón lujo
+========================================= */
+.page--madrid details.faq,
 .page-madrid details.faq{
   border-top: 1px solid rgba(0,0,0,0.08);
   padding: 18px 0;
 }
 
+.page--madrid details.faq:last-of-type,
 .page-madrid details.faq:last-of-type{
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
+.page--madrid details.faq summary,
 .page-madrid details.faq summary{
   cursor: pointer;
   list-style: none;
   font-size: 1.05rem;
   line-height: 1.6;
   color: rgba(17,17,17,.88);
-  padding-right: 26px;
+  padding-right: 28px;
   position: relative;
 }
 
+.page--madrid details.faq summary::-webkit-details-marker,
 .page-madrid details.faq summary::-webkit-details-marker{
   display:none;
 }
 
+.page--madrid details.faq summary::after,
 .page-madrid details.faq summary::after{
   content: "＋";
   position: absolute;
@@ -3157,11 +3254,13 @@ max-width: 280px; /* The Lane scale */
   opacity: .55;
 }
 
+.page--madrid details.faq[open] summary::after,
 .page-madrid details.faq[open] summary::after{
   content: "—";
   opacity: .55;
 }
 
+.page--madrid details.faq p,
 .page-madrid details.faq p{
   margin: 12px 0 0;
   max-width: 74ch;
@@ -3169,35 +3268,20 @@ max-width: 280px; /* The Lane scale */
   color: rgba(17,17,17,.70);
 }
 
-/* =========================================
-   CTA Final – Igual que Home
-========================================= */
-
-.page-madrid .madrid-cta {
-  text-align: left;
-}
-
-.page-madrid .madrid-cta .container {
+/* CTA final: más aire y lectura */
+.page--madrid .section--cta .container,
+.page-madrid .section--cta .container{
   max-width: 900px;
 }
 
-.page-madrid .madrid-cta p {
-  max-width: 700px;
-  margin-bottom: 30px;
-}
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 900px) {
-
-  .page-madrid .section {
-    padding: 80px 0;
+/* Responsive */
+@media (max-width: 900px){
+  .page--madrid .section,
+  .page-madrid .section{
+    padding: 68px 0;
   }
-
-  .page-madrid .madrid-services .container > div {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .page--madrid .grid--3,
+  .page-madrid .grid--3{
+    gap: 26px;
   }
 }
