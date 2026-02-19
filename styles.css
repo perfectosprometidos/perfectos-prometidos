@@ -2725,7 +2725,7 @@ main.legal-page{
   color: rgba(28,28,28,0.75);
 }
 /* última regla actual */
-... 
+
 /* línea 2727 */
 }
 
@@ -2854,7 +2854,7 @@ max-width: 280px; /* The Lane scale */
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,.12);
-  background: rgba(0,0,0,.0ŕ3);
+  background: rgba(0,0,0,.03);
   color: rgba(0,0,0,.78);
 }
 
@@ -2961,7 +2961,8 @@ max-width: 280px; /* The Lane scale */
   background: rgba(0, 0, 0, 0.28);
 }
 
-.hero--image .hero__content {
+.hero--image .container,
+.hero--image .hero__content{
   position: relative;
   z-index: 2;
   text-align: center;
