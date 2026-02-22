@@ -3335,3 +3335,96 @@ max-width: 280px; /* The Lane scale */
 .site-header .site-nav a:hover{
   opacity: .6;
 }
+/* =========================================
+   MADRID – Header lujo + Hero overlay
+========================================= */
+
+/* Header flotando sobre el hero (premium) */
+.page--madrid .site-header,
+.page-madrid .site-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 22px 0;
+}
+
+/* Alineación y aire como home */
+.page--madrid .site-header .container,
+.page-madrid .site-header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Marca + links en blanco suave */
+.page--madrid .site-header a,
+.page-madrid .site-header a{
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+}
+
+/* Nav con espaciado editorial */
+.page--madrid .site-header nav,
+.page-madrid .site-header nav{
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* Links del nav: uppercase suave, tracking */
+.page--madrid .site-header nav a,
+.page-madrid .site-header nav a{
+  font-size: 0.82rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: .86;
+  transition: opacity .25s ease;
+}
+.page--madrid .site-header nav a:hover,
+.page-madrid .site-header nav a:hover{
+  opacity: .6;
+}
+
+/* HERO: overlay para que texto + header respiren */
+.page--madrid .hero,
+.page-madrid .hero{
+  position: relative;
+}
+
+.page--madrid .hero::before,
+.page-madrid .hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.35) 35%,
+    rgba(0,0,0,.15) 70%,
+    rgba(0,0,0,.25) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Asegura que el contenido del hero quede encima del overlay */
+.page--madrid .hero > * ,
+.page-madrid .hero > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive: nav más compacto */
+@media (max-width: 900px){
+  .page--madrid .site-header nav,
+  .page-madrid .site-header nav{
+    gap: 16px;
+  }
+  .page--madrid .site-header nav a,
+  .page-madrid .site-header nav a{
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+  }
+}
