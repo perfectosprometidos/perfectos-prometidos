@@ -3206,3 +3206,4 @@ max-width: 280px; /* The Lane scale */
   .page--madrid .hero.hero--madrid{ min-height: 68vh; padding: 96px 0 70px; }
   .page--madrid .container{ width: min(1120px, calc(100% - 34px)); }
 }
+#contacto { scroll-margin-top: 120px; }
