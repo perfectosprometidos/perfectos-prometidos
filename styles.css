@@ -3596,3 +3596,10 @@ max-width: 280px; /* The Lane scale */
     justify-content: flex-end;
   }
 }
+.manifesto {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
