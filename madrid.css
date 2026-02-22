@@ -276,3 +276,90 @@ img{ max-width:100%; display:block; }
   }
   .nav__links.is-open{ display:flex; flex-direction:column; align-items:flex-start; }
 }
+/* === HERO COVER (mismo lenguaje que la home) === */
+.hero--cover{
+  padding: 54px 0 26px;
+}
+
+.hero-cover__wrap{
+  position: relative;
+  padding: 0;
+}
+
+/* Imagen grande tipo portada */
+.hero-cover__media{
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,.30);
+}
+
+/* Alto grande como home */
+.hero-cover__media img{
+  width: 100%;
+  height: min(76vh, 640px);
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.03) saturate(0.98);
+}
+
+/* Overlay suave para “editorial” (no oscurece demasiado) */
+.hero-cover__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(246,241,232,.92) 0%,
+    rgba(246,241,232,.74) 26%,
+    rgba(246,241,232,.10) 56%,
+    rgba(246,241,232,0) 72%
+  );
+  pointer-events:none;
+}
+
+/* Tarjeta editorial superpuesta (como home) */
+.hero-cover__card{
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(520px, 92%);
+  padding: 28px 28px 24px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(246,241,232,.92);
+  box-shadow: var(--shadow);
+}
+
+/* Ajustes tipográficos para que “respire” como home */
+.hero-cover__card .kicker{ margin-bottom: 14px; }
+.hero-cover__card .h1{
+  font-size: clamp(46px, 5.6vw, 76px);
+  line-height: 1.02;
+}
+.hero-cover__card .lead{ margin-bottom: 18px; }
+
+/* Responsive: en móvil la tarjeta baja debajo (evita solapes) */
+@media (max-width: 920px){
+  .hero-cover__card{
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 14px;
+    padding: 20px;
+  }
+  .hero-cover__media img{
+    height: 360px;
+  }
+  .hero-cover__media::after{
+    background: linear-gradient(
+      180deg,
+      rgba(246,241,232,.06) 0%,
+      rgba(246,241,232,.42) 70%,
+      rgba(246,241,232,.84) 100%
+    );
+  }
+}
