@@ -3212,3 +3212,44 @@ body.madrid .hero-image img{
   object-fit: cover;
   object-position: 50% 60%;
 }
+/* ===== NAV: estética premium unificada ===== */
+
+/* Links del menú */
+.topbar .nav a{
+  color:#111;
+  text-decoration:none;
+  font-weight:400;
+  letter-spacing:.01em;
+  padding: 6px 0;
+  opacity:.92;
+}
+
+.topbar .nav a:hover{
+  opacity:1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Estado activo (Madrid subrayado) */
+.topbar .nav a.is-active,
+.topbar .nav a[aria-current="page"]{
+  opacity:1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Botón CTA "Contacto" */
+.topbar .nav .nav-cta{
+  margin-left: 12px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.14);
+  background: rgba(255,255,255,.55);
+  text-decoration:none !important;
+  opacity:1;
+}
+
+/* Hover del botón */
+.topbar .nav .nav-cta:hover{
+  background: rgba(255,255,255,.74);
+}
