@@ -2973,31 +2973,39 @@ max-width: 280px; /* The Lane scale */
 }
 
 /* HERO (Palacio Real) – premium overlay + tighter hierarchy */
-.page--madrid .hero.hero--madrid{
+.page--madrid .hero--madrid{
   position: relative;
   min-height: 72vh;
-  display: grid;
+  display: flex;
   align-items: center;
-  padding: 110px 0 80px;
-  background-position: center;
+  justify-content: center;
+  padding: 140px 0 110px;
+  overflow: hidden;
+
+  /* IMAGEN HERO (Palacio Real) */
+  background-image: url("assets/images/palacio-real-madrid-wedding-planner-madrid.webp");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.page--madrid .hero.hero--madrid::before{
-  content:"";
-  position:absolute;
-  inset:0;
+
+.page--madrid .hero--madrid::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Overlay lujo: contraste editorial + lectura perfecta */
   background: linear-gradient(
-    to bottom,
+    180deg,
     rgba(0,0,0,.55) 0%,
-    rgba(0,0,0,.38) 45%,
+    rgba(0,0,0,.35) 45%,
     rgba(0,0,0,.55) 100%
   );
+  z-index: 1;
 }
-.page--madrid .hero__content{
+
+.page--madrid .hero--madrid .hero-content{
   position: relative;
-  text-align: center;
-  width: min(980px, calc(100% - 48px));
-  margin: 0 auto;
+  z-index: 2;
 }
 .page--madrid .kicker{
   display: inline-block;
