@@ -19,8 +19,7 @@
   <link rel="icon" href="favicon.ico" />
 
   <!-- CSS NUEVO SOLO PARA ESTA PÁGINA -->
-  <link rel="stylesheet" href="madrid.css" />
-
+<link rel="stylesheet" href="styles.css" />
   <!-- Schema -->
   <script type="application/ld+json">
   {
@@ -46,28 +45,24 @@
   </script>
 </head>
 
-<body>
+<body class="madrid">
 
-  <!-- NAV minimal, elegante, sin depender de tu CSS global -->
-  <header class="nav">
-    <div class="wrap nav__inner">
-      <a class="nav__brand" href="index.html">Perfectos Prometidos</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="index.html" class="brand">PERFECTOS PROMETIDOS</a>
 
-      <nav class="nav__links" aria-label="Navegación">
-        <a href="mirada_editorial.html">La Mirada Editorial</a>
-        <a href="servicios.html">Servicios</a>
-        <a class="is-active" href="wedding-planner-madrid.html">Madrid</a>
-        <a href="blog.html">Blog</a>
-       <a class="btn btn--small" href="/#contacto">Contacto</a>
-      </nav>
+    <nav class="menu">
+      <a href="servicios.html">Servicios</a>
+      <a href="mundo.html">Mundo</a>
+      <a href="mirada_editorial.html">Mirada editorial</a>
+      <a href="wedding-planner-madrid.html" class="is-active">Madrid</a>
+      <a href="blog.html">Blog</a>
+      <a href="/#contacto" class="btn-contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-      <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
+<main>
 
   <!-- PORTADA / HERO (MISMA ESTÉTICA QUE HOME) -->
 <section class="hero">
