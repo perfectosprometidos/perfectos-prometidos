@@ -3603,3 +3603,16 @@ max-width: 280px; /* The Lane scale */
   letter-spacing: 0.02em;
   opacity: 0.9;
 }
+.madrid-manifesto {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 992px) {
+  .madrid-manifesto {
+    font-size: 2.8rem;
+  }
+}
