@@ -70,41 +70,46 @@
   <main>
 
     <!-- HERO editorial con imagen -->
-    <section class="hero">
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
-          <p class="kicker">GALICIA &nbsp;·&nbsp; MADRID &nbsp;·&nbsp; RAÍZ MADRILEÑA</p>
+  <section class="hero hero--cover">
+  <div class="wrap hero-cover__wrap">
 
-          <h1 class="h1">Wedding Planner en Madrid</h1>
+    <!-- Imagen portada (igual estética que home: grande, protagonista) -->
+    <div class="hero-cover__media">
+      <img
+        src="assets/images/palacio-real-madrid-wedding-planner-madrid.webp"
+        alt="Palacio Real de Madrid en blanco y negro · bodas editoriales en Madrid"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
 
-          <p class="lead">
-            Bodas elegantes en fincas privadas y espacios con carácter.
-            Dirección editorial, planificación estratégica y producción impecable.
-          </p>
+    <!-- Tarjeta editorial (como la home) -->
+    <div class="hero-cover__card">
+      <p class="kicker">GALICIA · MADRID · RAÍZ MADRILEÑA</p>
 
-          <div class="actions">
-       <a class="btn btn--primary" href="/#contacto">Solicitar conversación</a>
-            <a class="btn btn--ghost" href="mirada_editorial.html">Ver la mirada editorial</a>
-          </div>
+      <h1 class="h1">Wedding Planner en Madrid</h1>
 
-          <div class="tags" aria-label="Etiquetas">
-            <span>Bodas en Madrid</span>
-            <span>Fincas privadas</span>
-            <span>Palacios</span>
-            <span>Estética editorial</span>
-          </div>
-        </div>
+      <p class="lead">
+        Bodas elegantes en fincas privadas y espacios con carácter.
+        Dirección editorial, planificación estratégica y producción impecable.
+      </p>
 
-        <figure class="hero__media">
-          <img
-            src="assets/images/palacio-real-madrid-wedding-planner-madrid.webp"
-            alt="Palacio Real de Madrid en blanco y negro · bodas editoriales en Madrid"
-            loading="eager"
-            decoding="async"
-          />
-        </figure>
+      <div class="actions">
+        <!-- IMPORTANTE: tu contacto está en index con id="contacto" -->
+        <a class="btn btn--primary" href="/#contacto">Solicitar conversación</a>
+        <a class="btn btn--ghost" href="mirada_editorial.html">Ver la mirada editorial</a>
       </div>
-    </section>
+
+      <div class="tags" aria-label="Etiquetas">
+        <span>Bodas en Madrid</span>
+        <span>Fincas privadas</span>
+        <span>Palacios</span>
+        <span>Estética editorial</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- EDITORIAL: Madrid es Madrid / Galicia es la mirada -->
     <section class="section section--soft">
