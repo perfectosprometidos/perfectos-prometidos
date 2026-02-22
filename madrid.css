@@ -363,3 +363,84 @@ img{ max-width:100%; display:block; }
     );
   }
 }
+/* ===== Madrid: menú igual de premium (quita azul/subrayado default) ===== */
+body.madrid header a{
+  color: inherit;
+  text-decoration: none;
+}
+
+body.madrid .menu a{
+  color:#1b1b1b;
+  text-decoration:none;
+  font-size: 15px;
+  letter-spacing: .01em;
+  opacity: .92;
+}
+
+body.madrid .menu a:hover{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+body.madrid .menu a.is-active{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+body.madrid .btn-contacto{
+  display:inline-flex;
+  align-items:center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.55);
+}
+body.madrid .btn-contacto:hover{
+  background: rgba(255,255,255,.72);
+}
+/* ===== Madrid: tipografía + listas editorial premium ===== */
+body.madrid main{
+  background: var(--bg, #f6f1e8);
+}
+
+body.madrid .section,
+body.madrid section{
+  scroll-margin-top: 110px;
+}
+
+body.madrid h2{
+  letter-spacing: -.01em;
+  margin: 26px 0 12px;
+}
+
+body.madrid h3{
+  margin: 26px 0 10px;
+}
+
+body.madrid ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 22px;
+}
+
+body.madrid li{
+  position: relative;
+  padding-left: 18px;
+  margin: 8px 0;
+  line-height: 1.55;
+}
+
+body.madrid li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .45;
+}
+body.madrid .hero-image img{
+  height: clamp(420px, 72vh, 720px);
+  object-fit: cover;
+  object-position: 50% 62%;
+}
