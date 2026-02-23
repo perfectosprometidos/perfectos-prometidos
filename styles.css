@@ -13,7 +13,9 @@ body{
   color: var(--ink);
   background: var(--paper2);
 }
-
+/* Links globales: sin azul por defecto */
+a{ color: inherit; }
+a:visited{ color: inherit; }
 /* TOPBAR / NAV — lujo */
 .topbar{
   position: fixed;
@@ -1787,8 +1789,8 @@ section + section {
 
 
 /* Columna editorial centrada en móvil (texto largo) */
-@media (max-width: 920px){
 
+  
   /* Mantén el aire lateral */
   section,
   .section-inner,
@@ -1820,7 +1822,6 @@ section + section {
     margin-right: auto !important;
   }
 
-}
 
   /* 3) Portada: centrar el bloque principal (la “tarjeta” del hero) */
   .hero, .hero-inner, .hero-grid, .hero-wrap, .hero-container{
