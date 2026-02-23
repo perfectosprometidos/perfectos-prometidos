@@ -75,12 +75,19 @@ a:visited{ color: inherit; }
   padding: 10px 14px;
   border-radius: 999px;
 
-  background: #111;
-  color: #fff !important;
+  background: rgba(17,17,17,.06);
+  color: #111;
+  border: 1px solid rgba(17,17,17,.25);
+
   text-decoration: none;
   font-size: 13px;
-}
 
+  transition: all .25s ease;
+}
+.nav-cta:hover{
+  background: rgba(17,17,17,.10);
+  border-color: rgba(17,17,17,.40);
+}
 
 
 
