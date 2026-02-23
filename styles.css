@@ -3262,52 +3262,62 @@ body.madrid .hero-image img{
 .hero-madrid{
   background: transparent;
 }
-/* ===========================
-   NAV / HEADER — MOBILE FIX
-   (aplica a TODAS las páginas)
-   =========================== */
+@media (max-width: 560px){
 
-/* ===== NAV / HEADER — MOBILE (una línea, estrecho, premium) ===== */
-@media (max-width: 560px) {
-  .topbar {
-    padding: 10px 0;
+  /* Header más compacto y controlado (solo móvil) */
+  .topbar{
+    background: rgba(251, 250, 247, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,.08);
   }
 
-  .topbar-inner {
-    padding: 0 14px;
-    gap: 10px;
-    flex-wrap: nowrap;
+  .topbar-inner{
+    padding: 12px 14px;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .brand {
+  .brand{
     font-size: 14px;
-    letter-spacing: 0.16em;
+    letter-spacing: .18em;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
     white-space: nowrap;
-    flex: 0 0 auto;
   }
 
-  .nav {
-    flex: 1 1 auto;
-    display: flex;
-    flex-wrap: nowrap;              /* clave: no saltar de línea */
+  /* Menú: que no se “coma” la pantalla */
+  .nav{
+    width: 100%;
+    justify-content: center;
     gap: 12px;
-    justify-content: flex-end;
-    overflow-x: auto;               /* clave: scroll horizontal */
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
   }
-  .nav::-webkit-scrollbar { display: none; }
 
-  .nav a {
-    font-size: 14px;
-    padding: 6px 2px;
+  .nav a{
+    font-size: 13px;
+    padding: 6px 0;
     white-space: nowrap;
   }
 
-  .nav-cta {
-    padding: 8px 12px;
+  .nav-cta{
+    font-size: 12px;
+    padding: 7px 12px;
     border-radius: 999px;
-    margin-left: 6px;
+    margin-left: 0;
+  }
+
+  /* CLAVE: deja espacio real para la topbar fixed */
+  main{
+    padding-top: 132px;
+  }
+
+  /* Evita saltos raros en hero */
+  .hero, .hero-cover, .hero-image{
+    margin-top: 0;
   }
 }
