@@ -3514,8 +3514,8 @@ body.madrid .hero-image img{
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 44px;
-  padding: 0 18px;
+ height: 48px;
+  padding: 0 28px;
   border-radius: 999px;
   text-decoration: none;
   font-size: 13px;
@@ -3526,10 +3526,27 @@ body.madrid .hero-image img{
 }
 
 .pp-btn-primary{
-  background: #111;
-  color: #fff;
-  border: 1px solid #111;
-  box-shadow: 0 12px 26px rgba(0,0,0,.18);
+  background: #f3efe8;
+  color: #111;
+  border: 1px solid rgba(17,17,17,.25);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.pp-btn-primary:hover{
+  background: #ffffff;
+  border-color: rgba(17,17,17,.40);
+  box-shadow: 0 12px 32px rgba(0,0,0,.12);
+  transform: translateY(-1px);
+}
+
+.pp-btn-primary:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 .pp-btn-primary:hover{
