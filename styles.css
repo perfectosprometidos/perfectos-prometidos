@@ -3060,11 +3060,20 @@ max-width: 280px; /* The Lane scale */
   letter-spacing: .01em;
 }
 .page--madrid .btn--primary{
-  background: #0f0f10;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.10);
+  background: #f3efe8;
+  color: #111;
+  border: 1px solid rgba(17,17,17,.25);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 12px;
+  transition: all .25s ease;
 }
+
 .page--madrid .btn--primary:hover{
+  background: #ffffff;
+  border-color: rgba(17,17,17,.40);
+  box-shadow: 0 14px 36px rgba(0,0,0,.12);
   transform: translateY(-1px);
 }
 .page--madrid .btn--ghost{
