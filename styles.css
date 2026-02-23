@@ -3258,3 +3258,7 @@ body.madrid .hero-image img{
 .topbar .nav .nav-cta:hover{
   background: rgba(255,255,255,.74);
 }
+/* ===== FIX HERO MADRID (quitar fondo superior) ===== */
+.hero-madrid{
+  background: transparent;
+}
