@@ -3040,7 +3040,18 @@ max-width: 280px; /* The Lane scale */
   flex-wrap: wrap;
   justify-content: center;
 }
+/* Madrid – tipografía básica (evita azul/viñetas “browser default”) */
+.page--madrid main a{ color: inherit; }
+.page--madrid main a:not(.btn){
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+.page--madrid main a:not(.btn):hover{ opacity: .85; }
 
+.page--madrid main ul{ margin: 12px 0 0; padding-left: 18px; }
+.page--madrid main li{ margin: 6px 0; }
+.page--madrid main li::marker{ color: rgba(0,0,0,.45); }
 /* Buttons – more “home” feel (clean + soft) */
 .page--madrid .btn{
   border-radius: 999px;
@@ -3057,13 +3068,19 @@ max-width: 280px; /* The Lane scale */
   transform: translateY(-1px);
 }
 .page--madrid .btn--ghost{
+  background: rgba(255,255,255,.60);
+  color: var(--ink);
+  border: 1px solid rgba(0,0,0,.18);
+}
+.page--madrid .btn--ghost:hover{ background: rgba(255,255,255,.75); }
+
+/* En el HERO sí lo queremos claro (sobre foto) */
+.page--madrid .hero .btn--ghost{
   background: rgba(255,255,255,.06);
   color: #fff;
   border: 1px solid rgba(255,255,255,.28);
 }
-.page--madrid .btn--ghost:hover{
-  background: rgba(255,255,255,.10);
-}
+.page--madrid .hero .btn--ghost:hover{ background: rgba(255,255,255,.10); }
 
 /* Grid – premium spacing + correct breakpoints (3 col desktop) */
 .page--madrid .grid{
@@ -3265,13 +3282,6 @@ body.madrid .hero-image img{
 }
 @media (max-width: 560px){
 
-  /* Header más compacto y controlado (solo móvil) */
-  .topbar{
-    background: rgba(251, 250, 247, 0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,.08);
-  }
-
   .topbar-inner{
     padding: 12px 14px;
     flex-direction: column;
@@ -3283,42 +3293,40 @@ body.madrid .hero-image img{
   .brand{
     font-size: 14px;
     letter-spacing: .18em;
-    line-height: 1;
-    margin: 0;
-    text-align: center;
     white-space: nowrap;
   }
 
-  /* Menú: que no se “coma” la pantalla */
+  /* Menú en una sola fila con scroll horizontal */
   .nav{
     width: 100%;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+    justify-content: flex-start;
+    gap: 14px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .nav::-webkit-scrollbar{
+    display: none;
   }
 
   .nav a{
-    font-size: 13px;
+    font-size: 14px;
     padding: 6px 0;
     white-space: nowrap;
+    flex: 0 0 auto;
   }
 
   .nav-cta{
-    font-size: 12px;
+    font-size: 13px;
     padding: 7px 12px;
-    border-radius: 999px;
     margin-left: 0;
   }
 
-  /* CLAVE: deja espacio real para la topbar fixed */
+  /* espacio real para header fixed */
   main{
-    padding-top: 132px;
+    padding-top: 118px;
   }
 
-  /* Evita saltos raros en hero */
-  .hero, .hero-cover, .hero-image{
-    margin-top: 0;
-  }
 }
