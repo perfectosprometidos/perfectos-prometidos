@@ -3262,3 +3262,58 @@ body.madrid .hero-image img{
 .hero-madrid{
   background: transparent;
 }
+/* ===========================
+   NAV / HEADER — MOBILE FIX
+   (aplica a TODAS las páginas)
+   =========================== */
+@media (max-width: 560px){
+
+  /* Reduce altura del header para que no "tape" */
+  header, .topbar, .nav, .site-header {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  /* Si tu header usa contenedor interno */
+  .topbar-inner, .nav__inner, .wrap, .container {
+    max-width: 100% !important;
+  }
+
+  /* Ajuste del bloque del menú */
+  .menu, nav.menu, .nav, nav.nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px 14px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Links del menú: más pequeños y compactos */
+  .menu a, nav.menu a,
+  .nav a, nav.nav a {
+    font-size: 14px !important;
+    padding: 6px 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Botón Contacto: que no engorde el header */
+  .btn-contacto, .nav-cta, .btn.btn--nav {
+    font-size: 13px !important;
+    padding: 7px 12px !important;
+    border-radius: 999px !important;
+    margin-left: 0 !important;
+  }
+
+  /* Evita que el primer bloque quede escondido bajo el header */
+  main{
+    padding-top: 8px !important;
+  }
+
+  /* Si tienes HERO con imagen arriba, que empiece sin quedar tapado */
+  .hero, .hero-cover, .hero-image{
+    margin-top: 0 !important;
+  }
+}
