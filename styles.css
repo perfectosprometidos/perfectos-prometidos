@@ -3620,3 +3620,61 @@ body.madrid .hero-image img{
   .pp-cta{ padding: 52px 0 64px; }
   .pp-cta-box{ padding: 26px 18px; }
 }
+/* ==========================================
+   GLOBAL MOBILE PROPORTION FIX (ALL PAGES)
+   ========================================== */
+@media (max-width: 768px) {
+
+  /* 1) Reduce el “aire” excesivo en los bloques tipo tarjeta */
+  .card,
+  .box,
+  .panel,
+  .content-box,
+  .hero-text,
+  .hero-content,
+  .section-intro,
+  .intro-box,
+  .text-box {
+    padding: 34px 20px !important;
+    margin: 18px 16px !important;
+    border-radius: 22px !important;
+  }
+
+  /* 2) Titulares: siguen siendo lujo, pero no se comen la pantalla */
+  h1 {
+    font-size: clamp(30px, 8.6vw, 42px) !important;
+    line-height: 1.08 !important;
+    margin: 0 0 14px 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(22px, 6.6vw, 30px) !important;
+    line-height: 1.15 !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  /* 3) Texto base proporcional */
+  p, li {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 4) Ajuste clave: evita huecos enormes entre imagen y bloque */
+  .hero,
+  .hero-wrap,
+  .hero-media,
+  .hero-image,
+  .section-hero,
+  .page-hero {
+    margin-bottom: 14px !important;
+  }
+
+  /* 5) Imágenes hero: que respiren pero no empujen todo hacia abajo */
+  .hero img,
+  .hero-image img,
+  .page-hero img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+}
