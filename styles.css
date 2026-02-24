@@ -3420,7 +3420,11 @@ body.madrid .hero-image img{
   line-height: 1.85;
   color: rgba(17,17,17,.75);
 }
-
+.pp-lead-sub{
+  display:block;
+  margin-top: 8px;
+  opacity: .9;
+}
 /* Grid: 3 desktop / 2 tablet / 1 móvil */
 .pp-grid-3{
   display: grid;
