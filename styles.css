@@ -3685,3 +3685,44 @@ body.madrid .hero-image img{
   .hero, .page-hero, .section-hero{ margin-top: 18px !important; }
   h1{ font-size: 34px !important; line-height: 1.1 !important; }
 }
+/* ==========================================
+   MADRID HERO — MOBILE PROPORTION FIX
+   ========================================== */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Imagen del Palacio: más presencia, menos aire */
+  .hero-madrid .hero-image {
+    margin: 16px 0 12px 0 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-madrid .hero-image img {
+    width: 100% !important;
+    height: 52vh !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
+  /* 2️⃣ Tarjeta de texto: menos padding gigante */
+  .hero-madrid .hero-card {
+    padding: 36px 22px !important;
+    margin: 12px 16px !important;
+    border-radius: 24px !important;
+  }
+
+  /* 3️⃣ H1 más proporcionado (sigue lujo) */
+  .hero-madrid h1 {
+    font-size: clamp(30px, 8.2vw, 42px) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* 4️⃣ Texto más fino */
+  .hero-madrid p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+
+}
