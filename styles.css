@@ -2987,12 +2987,13 @@ max-width: 280px; /* The Lane scale */
   margin: 0 auto;
 }
 .page--madrid .prose{
-  width: min(820px, 100%);
+ width: min(720px, 100%);
   margin: 0 auto;
 }
 .page--madrid .prose p{
-  line-height: 1.85;
-  letter-spacing: 0.01em;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.005em;
   opacity: 0.92;
 }
 .page--madrid .prose h2{
