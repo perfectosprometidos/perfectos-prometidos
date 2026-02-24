@@ -264,66 +264,47 @@
     line-height: 1.6 !important;
   }
 }
-/* =========================================
-   MOBILE — MADRID HERO (FIX LUJO)
-   - elimina hueco gigante
-   - imagen hero grande (cover)
-   - tarjeta NO se corta
-   ========================================= */
+/* ===============================
+   MADRID — HERO MOBILE CLEAN
+   =============================== */
 @media (max-width: 768px){
 
-  /* 0) Quita cualquier “alto” o recorte heredado */
-  .hero.hero-madrid,
-  .hero.hero-madrid *{
-    max-height: none !important;
-  }
-
+  /* Reset total del hero */
   .hero.hero-madrid{
-    padding-top: 18px !important;
-    padding-bottom: 18px !important;
+    padding: 24px 0 0 0 !important;
+    margin: 0 !important;
     overflow: visible !important;
   }
 
-  /* 1) Imagen: ancho completo + aspecto hero (más lujo) */
+  /* Imagen hero real */
   .hero.hero-madrid .hero-image{
-    width: calc(100% - 32px) !important;
-    margin: 0 16px 14px 16px !important; /* <- elimina el hueco enorme */
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
   }
 
   .hero.hero-madrid .hero-image img{
     width: 100% !important;
-    max-width: none !important;
     display: block !important;
-    border-radius: 18px !important;
-
-    /* clave “lujo”: imagen grande tipo hero */
-    aspect-ratio: 16 / 10 !important;
-    object-fit: cover !important;
-    height: auto !important;
+    border-radius: 20px !important;
+    max-width: none !important;
   }
 
-  /* 2) Tarjeta: sin recorte (el H1 NO se corta) */
+  /* Tarjeta elegante sin efecto “caja cortada” */
   .hero.hero-madrid .hero-card{
-    width: calc(100% - 32px) !important;
-    margin: 0 16px !important;
-    padding: 34px 18px 26px 18px !important; /* +padding-top para evitar corte */
-    border-radius: 22px !important;
-
-    overflow: visible !important;  /* <- evita clipping */
-    height: auto !important;
-    min-height: 0 !important;
+    width: 100% !important;
+    margin: -28px 0 0 0 !important; /* ligera superposición lujo */
+    padding: 40px 20px 32px 20px !important;
+    border-radius: 28px !important;
+    overflow: visible !important;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08) !important;
   }
 
   .hero.hero-madrid .hero-card h1{
-    margin: 0 0 12px 0 !important;   /* <- evita margen raro que “sube” el texto */
-    padding: 0 !important;
     font-size: 36px !important;
-    line-height: 1.06 !important;
+    line-height: 1.05 !important;
+    margin: 0 0 16px 0 !important;
   }
 
-  .hero.hero-madrid .hero-subline,
-  .hero.hero-madrid .hero-intro{
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-  }
 }
+   
