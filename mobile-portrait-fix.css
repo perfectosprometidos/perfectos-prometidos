@@ -208,3 +208,59 @@
     padding: 14px 14px !important;
   }
 }
+/* ================================
+   MOBILE — MADRID HERO (LUJO)
+   Imagen grande + tarjeta sin corte
+   ================================ */
+@media (max-width: 768px){
+
+  /* Quita alturas forzadas que generan “tarjeta cortada” */
+  .hero.hero-madrid,
+  .hero.hero-madrid .hero-card{
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Reduce el vacío enorme antes de la imagen */
+  .hero.hero-madrid{
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  /* Imagen: que sea HERO real (ancho completo) */
+  .hero.hero-madrid .hero-image{
+    width: calc(100% - 32px) !important;
+    margin: 0 16px 14px 16px !important;
+  }
+
+  .hero.hero-madrid .hero-image img{
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 18px !important;
+  }
+
+  /* Tarjeta: mismo ancho que la imagen, sin cortes */
+  .hero.hero-madrid .hero-card{
+    width: calc(100% - 32px) !important;
+    margin: 0 16px !important;
+    padding: 26px 18px !important;
+    border-radius: 22px !important;
+  }
+
+  /* Tipografía: editorial pero proporcional */
+  .hero.hero-madrid .hero-card h1{
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  .hero.hero-madrid .hero-subline,
+  .hero.hero-madrid .hero-intro{
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+}
