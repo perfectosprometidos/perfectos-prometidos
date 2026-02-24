@@ -3415,9 +3415,9 @@ body.madrid .hero-image img{
 
 .pp-lead{
   margin: 0;
-  font-size: 16px;
-  line-height: 1.8;
-  color: rgba(17,17,17,.72);
+  font-size: 18px;
+  line-height: 1.85;
+  color: rgba(17,17,17,.75);
 }
 
 /* Grid: 3 desktop / 2 tablet / 1 móvil */
@@ -3460,7 +3460,7 @@ body.madrid .hero-image img{
 
 .pp-card p{
   margin: 0 0 14px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.85;
   color: rgba(17,17,17,.72);
 }
