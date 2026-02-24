@@ -3678,3 +3678,10 @@ body.madrid .hero-image img{
     display: block !important;
   }
 }
+/* SIMPLE MOBILE FIX — evita que el header tape contenido */
+@media (max-width: 768px){
+  body{ padding-top: 96px !important; } /* reserva espacio para el menú */
+  header, .navbar, .nav{ position: sticky !important; top: 0; z-index: 9999; }
+  .hero, .page-hero, .section-hero{ margin-top: 18px !important; }
+  h1{ font-size: 34px !important; line-height: 1.1 !important; }
+}
