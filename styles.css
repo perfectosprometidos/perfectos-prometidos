@@ -3812,7 +3812,7 @@ body.page--madrid .hero .hero-image{
 
 body.page--madrid .hero .hero-image img{
   width: 100%;
- height: clamp(520px, 78vh, 820px);
+height: clamp(420px, 62vh, 680px);
   object-fit: cover;
  object-position: 50% 48%;
   display: block;
@@ -3843,7 +3843,7 @@ body.page--madrid .section--image-break img.full-image{
   }
 
   body.page--madrid .hero .hero-image img{
-    height: 56vh;
+    height: 52vh;
     object-position: 50% 48%;
   }
 
