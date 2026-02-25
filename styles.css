@@ -3798,3 +3798,64 @@ body.madrid .hero-image img{
     border-radius: 18px;
   }
 } 
+/* =========================================================
+   MADRID — LUJO (PC + MÓVIL) usando body.page--madrid
+========================================================= */
+
+body.page--madrid .hero .hero-image{
+  width: min(1200px, calc(100% - 52px));
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+body.page--madrid .hero .hero-image img{
+  width: 100%;
+  height: clamp(460px, 72vh, 760px);
+  object-fit: cover;
+  object-position: 50% 55%;
+  display: block;
+}
+
+/* Image break Madrid */
+body.page--madrid .section--image-break{
+  padding: 72px 0;
+}
+
+body.page--madrid .section--image-break .wrap{
+  width: min(1100px, calc(100% - 52px));
+  margin: 0 auto;
+}
+
+body.page--madrid .section--image-break img.full-image{
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+/* Móvil */
+@media (max-width: 768px){
+  body.page--madrid .hero .hero-image{
+    width: calc(100% - 32px);
+    border-radius: 18px;
+  }
+
+  body.page--madrid .hero .hero-image img{
+    height: 56vh;
+    object-position: 50% 48%;
+  }
+
+  body.page--madrid .section--image-break{
+    padding: 44px 0;
+  }
+
+  body.page--madrid .section--image-break .wrap{
+    width: calc(100% - 32px);
+  }
+
+  body.page--madrid .section--image-break img.full-image{
+    border-radius: 18px;
+  }
+}
