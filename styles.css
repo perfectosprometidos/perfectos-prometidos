@@ -232,7 +232,19 @@ a:visited{ color: inherit; }
   gap: 3rem;
   align-items: center;
 }
+/* AUTHOR — editorial column without breaking the grid */
+.author-text{
+  width: 100%;
+  min-width: 0;
+}
 
+.author-text .author-lead,
+.author-text .author-body,
+.author-text .author-signature{
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .author-photo{
   margin:0;
   border-radius: 24px;
@@ -282,9 +294,7 @@ a:visited{ color: inherit; }
   text-transform: uppercase;
   opacity: .6;
 }
-.author{
-  max-width: 640px;
-}
+
 /* EDITORIAL */
 .editorial{
   background: var(--paper2);
