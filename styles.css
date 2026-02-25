@@ -569,8 +569,37 @@ section + section {
   font-weight: 500;
 }
 /* Cierre editorial del bloque servicios */
-#servicios {
-  padding-bottom: 72px;
+#servicios{
+  padding-bottom: 44px; /* antes 72: demasiado aire antes de la pausa */
+}
+
+/* HOME — ajuste fino del final de Servicios */
+.services.home-services{
+  padding-bottom: 56px; /* cierra el bloque con intención */
+}
+
+/* CTA al final de Servicios (Conversemos) — más editorial */
+.services-cta{
+  margin-top: 28px;
+  text-align: center;
+}
+.services-cta p{
+  margin: 0 0 10px;
+  line-height: 1.6;
+  color: rgba(17,17,17,.78);
+}
+.services-cta-link{
+  display: inline-block;
+  font-style: italic;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  color: rgba(17,17,17,.82);
+  border-bottom: 1px solid rgba(0,0,0,.20);
+  padding-bottom: 2px;
+}
+.services-cta-link:hover{
+  border-bottom-color: rgba(0,0,0,.42);
 }
 
 @media (max-width: 1024px) {
@@ -2207,15 +2236,17 @@ line-height: 1.9;
    No interfiere con hero ni servicios
 ========================================= */
 
-.editorial-pause {
-  padding: 96px 24px;
+.editorial-pause{
+  padding: 34px 0 56px;   /* menos aire arriba, más “intención” abajo */
   background: transparent;
 }
 
-.editorial-pause-inner {
-  max-width: 820px;
-  margin: 0 auto;
-  text-align: center;
+.editorial-pause-inner{
+  max-width: 1100px;
+  margin: -16px auto 0;   /* clave: “engancha” con el bloque anterior */
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
 }
 
 .editorial-quote {
