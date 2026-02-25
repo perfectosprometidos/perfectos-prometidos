@@ -225,10 +225,11 @@ a:visited{ color: inherit; }
 }
 
 .author-wrap{
- max-width: 1180px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
-grid-template-columns: 440px minmax(0, 1fr);
+  grid-template-columns: 460px minmax(0, 1fr);
+  gap: 3rem;
   align-items: center;
 }
 /* AUTHOR — editorial column without breaking the grid */
