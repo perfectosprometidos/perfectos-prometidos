@@ -272,7 +272,14 @@ a:visited{ color: inherit; }
   color: rgba(17,17,17,.78);
   line-height: 1.7;
 }
-
+.author-signature{
+  margin-top: 2.2rem;
+  font-style: italic;
+  font-size: .95rem;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  opacity: .72;
+}
 /* EDITORIAL */
 .editorial{
   background: var(--paper2);
