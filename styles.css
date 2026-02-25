@@ -2161,11 +2161,12 @@ section + section {
 }
 
 .manifesto-title{
-  margin: 0 0 22px;
-  font-size: clamp(36px, 4.2vw, 60px);
-  line-height: 1.03;
-  letter-spacing: -0.01em;
+  margin: 0 0 28px;
+  font-size: clamp(38px, 4.8vw, 64px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
   color: #111;
+  font-weight: 500;
 }
 
 .manifesto-body{
@@ -2174,8 +2175,8 @@ section + section {
 
 .manifesto-body p{
   margin: 0 0 18px;
-  font-size: 1.05rem;
-  line-height: 1.85;
+font-size: 1.08rem;
+line-height: 1.9;
   color: rgba(17,17,17,.68);
 }
 
