@@ -3728,4 +3728,73 @@ body.madrid .hero-image img{
     border-radius: 24px !important;
   }
 }
-   
+  /* =========================================================
+   MADRID — FIX PREMIUM (PC + MÓVIL)
+   No toca Home
+========================================================= */
+
+/* 1) HERO Madrid: encuadre estable y centrado (desktop primero) */
+.hero.hero-madrid{
+  background: transparent;
+}
+
+/* Caja centrada + ancho editorial */
+.hero.hero-madrid .hero-image{
+  width: min(1200px, calc(100% - 52px));
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+/* Imagen: presencia + encuadre limpio (NO hereda el 62% 38%) */
+.hero.hero-madrid .hero-image img{
+  width: 100%;
+  height: clamp(460px, 72vh, 760px);
+  object-fit: cover;
+  object-position: 50% 55%;
+  display: block;
+}
+
+/* 2) Image-break (tu sección de foto grande) */
+.section--image-break{
+  padding: 72px 0;
+}
+
+.section--image-break .wrap{
+  width: min(1100px, calc(100% - 52px));
+  margin: 0 auto;
+}
+
+.section--image-break img.full-image{
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+/* 3) Móvil: ritmo, sin recorte raro */
+@media (max-width: 768px){
+
+  .hero.hero-madrid .hero-image{
+    width: calc(100% - 32px);
+    border-radius: 18px;
+  }
+
+  .hero.hero-madrid .hero-image img{
+    height: 56vh;
+    object-position: 50% 48%; /* sube un poco el foco (más “palacio”) */
+  }
+
+  .section--image-break{
+    padding: 44px 0;
+  }
+
+  .section--image-break .wrap{
+    width: calc(100% - 32px);
+  }
+
+  .section--image-break img.full-image{
+    border-radius: 18px;
+  }
+} 
