@@ -262,23 +262,28 @@ a:visited{ color: inherit; }
 }
 
 .author-lead{
-  margin: 0 0 16px 0;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  margin: 0 0 1.8rem 0;
+  font-size: 1.18rem;
+  line-height: 1.6;
 }
 
 .author-body{
-  margin:0;
+  margin: 0 0 1.6rem 0;
   color: rgba(17,17,17,.78);
-  line-height: 1.7;
+  line-height: 1.85;
+ font-size: 1.02rem;
 }
+
 .author-signature{
-  margin-top: 2.2rem;
+  margin-top: 3.5rem;
   font-style: italic;
-  font-size: .95rem;
-  letter-spacing: .10em;
+  font-size: .9rem;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  opacity: .72;
+  opacity: .6;
+}
+.author{
+  max-width: 640px;
 }
 /* EDITORIAL */
 .editorial{
