@@ -228,8 +228,8 @@ a:visited{ color: inherit; }
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 460px minmax(0, 1fr);
-  gap: 3rem;
+  grid-template-columns: 468px minmax(0, 1fr);
+ gap: 2.4rem;
   align-items: center;
 }
 /* AUTHOR — editorial column without breaking the grid */
@@ -281,7 +281,7 @@ a:visited{ color: inherit; }
 
 .author-body{
   margin: 0 0 1.6rem 0;
-  color: rgba(17,17,17,.78);
+  color: rgba(17,17,17,.88);
   line-height: 1.85;
  font-size: 1.02rem;
 }
