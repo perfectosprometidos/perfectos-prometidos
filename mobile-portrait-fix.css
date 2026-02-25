@@ -331,3 +331,51 @@
     line-height: 1.55 !important;
   }
 }
+/* =========================================================
+   OVERRIDE FINAL — SOLO MADRID (MÓVIL) — 100% LUJO
+   Pegar al FINAL del archivo para que gane a .hero y .hero-card globales
+   ========================================================= */
+
+/* Móvil general */
+@media (max-width: 820px){
+  /* Quita el hueco enorme solo en Madrid */
+  .hero.hero-madrid{
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  /* Imagen: que sea hero real (no “centrada pequeña”) */
+  .hero.hero-madrid .hero-image{
+    width: calc(100% - 32px) !important;
+    margin: 0 16px 14px 16px !important;
+  }
+  .hero.hero-madrid .hero-image img{
+    width: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    border-radius: 22px !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+  }
+
+  /* Tarjeta: quita el max-width 560 global y evita “corte” */
+  .hero.hero-madrid .hero-card{
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+    margin: -30px 16px 0 16px !important;
+    padding: 38px 20px 30px 20px !important;
+    overflow: visible !important;
+  }
+
+  .hero.hero-madrid .hero-card h1{
+    font-size: 34px !important;
+    line-height: 1.06 !important;
+    margin: 0 0 14px 0 !important;
+  }
+}
+
+/* Portrait (tu CSS usa este breakpoint) */
+@media (max-width: 920px) and (orientation: portrait){
+  .hero.hero-madrid{ padding-top: 18px !important; }
+  .hero.hero-madrid .hero-card{ max-width: none !important; }
+}
