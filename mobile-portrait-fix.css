@@ -307,4 +307,27 @@
   }
 
 }
-   
+   /* ===============================
+   MADRID — MICRO AJUSTE FINAL (NO ROMPE NADA)
+   =============================== */
+@media (max-width: 768px){
+
+  /* Sube un poco la tarjeta (más editorial) */
+  .hero.hero-madrid .hero-card{
+    margin-top: -38px !important;   /* si ya tienes -28, esto lo pisa */
+    padding-top: 34px !important;   /* baja un poco el “aire” superior */
+    padding-bottom: 28px !important;
+  }
+
+  /* H1 un punto más lujo (menos mastodonte) */
+  .hero.hero-madrid .hero-card h1{
+    font-size: 34px !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .hero.hero-madrid .hero-subline{
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+}
