@@ -3913,3 +3913,82 @@ body.page--madrid .section--image-break img.full-image{
     border-radius: 18px;
   }
 }
+/* ===========================
+   HOME — RITMO EDITORIAL (The Lane)
+   Ajustes finos: CTA + Pausa + Manifiesto
+   =========================== */
+
+/* 1) Servicios: recorta el aire inferior para que no quede “vacío” antes de la pausa */
+.services{
+  padding-bottom: 56px;
+}
+@media (max-width: 900px){
+  .services{ padding-bottom: 44px; }
+}
+
+/* 2) CTA “Todo empieza…” — que se vea editorial y no un link suelto */
+.services-cta{
+  max-width: 720px;
+  margin: 22px auto 0;
+  text-align: center;
+}
+.services-cta p{
+  margin: 0 0 14px;
+  line-height: 1.65;
+  color: rgba(17,17,17,.78);
+}
+.services-cta-link{
+  display: inline-block;
+  margin-top: 6px;
+  font-size: .78rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(17,17,17,.22);
+  padding-bottom: 4px;
+}
+.services-cta-link:hover{
+  border-bottom-color: rgba(17,17,17,.45);
+}
+
+/* 3) Pausa — menos padding vertical (ahora mismo suma demasiado aire) */
+.editorial-pause{
+  padding: 52px 0;
+}
+@media (max-width: 900px){
+  .editorial-pause{ padding: 40px 0; }
+}
+
+/* 4) Tarjeta de cita — más “quiet luxury”: tamaño, padding y sombra más sutil */
+.editorial-pause-inner{
+  max-width: 820px;
+  padding: 0 1.25rem;
+}
+.editorial-quote{
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 26px 34px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(17,17,17,.06);
+  border: 1px solid rgba(17,17,17,.05);
+  color: rgba(17,17,17,.72);
+  line-height: 1.7;
+  font-size: 1.02rem;
+}
+@media (max-width: 600px){
+  .editorial-quote{
+    padding: 22px 22px;
+    border-radius: 20px;
+    font-size: .98rem;
+  }
+}
+
+/* 5) Manifiesto — recorta padding superior para que entre antes y se sienta “edición” */
+.manifesto{
+  padding: 76px 0 92px;
+}
+@media (max-width: 900px){
+  .manifesto{ padding: 60px 0 76px; }
+}
