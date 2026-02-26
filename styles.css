@@ -4270,3 +4270,161 @@ body.page--madrid .hero.hero-madrid .hero-card h1{
 body.page--madrid main .section:first-of-type{
   padding-top: 72px;
 }
+/* =========================================================
+   MADRID — UPGRADE EDITORIAL (quiet luxury)
+   Pegar al final de styles.css
+========================================================= */
+
+/* 1) MANIFIESTO: “Madrid es Madrid…” como página de revista */
+body.page--madrid .madrid-manifesto{
+  padding-top: clamp(70px, 8vw, 120px);
+  padding-bottom: clamp(70px, 8vw, 120px);
+}
+
+body.page--madrid .madrid-manifesto .container,
+body.page--madrid .madrid-manifesto .inner,
+body.page--madrid .madrid-manifesto .wrap{
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+body.page--madrid .madrid-manifesto h2{
+  max-width: 20ch;
+  letter-spacing: -0.01em;
+}
+
+body.page--madrid .madrid-manifesto p{
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 72ch;
+}
+
+body.page--madrid .madrid-manifesto p:first-of-type{
+  font-size: 1.12rem;
+}
+
+body.page--madrid .madrid-manifesto::before{
+  content: "CAPÍTULO I · MADRID";
+  display: block;
+  text-align: center;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  opacity: .55;
+  margin-bottom: 18px;
+}
+
+/* 2) 3 TARJETAS: menos “UI”, más editorial */
+body.page--madrid .madrid-pillars{
+  padding-top: clamp(70px, 8vw, 120px);
+  padding-bottom: clamp(70px, 8vw, 120px);
+}
+
+body.page--madrid .madrid-pillars .cards,
+body.page--madrid .madrid-pillars .grid{
+  gap: 22px;
+}
+
+body.page--madrid .madrid-pillars .card{
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 18px 60px rgba(0,0,0,.08);
+  background: rgba(246, 244, 239, .72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+body.page--madrid .madrid-pillars .card h3{
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+body.page--madrid .madrid-pillars .card ul{
+  margin-top: 18px;
+}
+
+body.page--madrid .madrid-pillars .card li{
+  position: relative;
+  padding-left: 14px;
+  opacity: .92;
+}
+
+body.page--madrid .madrid-pillars .card li::before{
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(0,0,0,.35);
+  position: absolute;
+  left: 0;
+  top: .72em;
+}
+
+/* 3) CLÁSICO / URBANO: ritmo editorial + separador fino */
+body.page--madrid .madrid-scene{
+  padding-top: clamp(70px, 8vw, 120px);
+  padding-bottom: clamp(70px, 8vw, 120px);
+}
+
+body.page--madrid .madrid-scene + .madrid-scene{
+  position: relative;
+}
+
+body.page--madrid .madrid-scene + .madrid-scene::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: min(980px, calc(100% - 64px));
+  height: 1px;
+  background: rgba(0,0,0,.08);
+}
+
+/* Si estas escenas están centradas, les damos un “layout de revista” en desktop */
+@media (min-width: 980px){
+  body.page--madrid .madrid-scene .container,
+  body.page--madrid .madrid-scene .inner,
+  body.page--madrid .madrid-scene .wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 44px;
+    align-items: start;
+  }
+
+  body.page--madrid .madrid-scene--urban .container,
+  body.page--madrid .madrid-scene--urban .inner,
+  body.page--madrid .madrid-scene--urban .wrap{
+    grid-template-columns: .95fr 1.05fr;
+  }
+
+  body.page--madrid .madrid-scene--urban h2,
+  body.page--madrid .madrid-scene--urban h3{
+    grid-column: 2;
+  }
+
+  body.page--madrid .madrid-scene--urban p,
+  body.page--madrid .madrid-scene--urban ul{
+    grid-column: 2;
+  }
+}
+
+/* 4) CTA final: más exclusivo (menos “bloque”, más “invitación”) */
+body.page--madrid .cta,
+body.page--madrid .cta-card,
+body.page--madrid .cta-box{
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 22px 70px rgba(0,0,0,.10);
+}
+
+@media (max-width: 720px){
+  body.page--madrid .cta,
+  body.page--madrid .cta-card,
+  body.page--madrid .cta-box{
+    width: calc(100% - 32px);
+  }
+}
