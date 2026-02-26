@@ -4578,3 +4578,47 @@ body.page--madrid .cta-box{
   font-style: italic;
   opacity: .75;
 }
+/* ===== Conversaciones habituales (FAQ Madrid) ===== */
+
+.pp-faq .pp-accordion{
+  margin-top: 26px;
+  max-width: 820px;
+}
+
+.pp-faq details{
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 18px 40px rgba(0,0,0,.06);
+  margin: 14px 0;
+  overflow: hidden;
+}
+
+.pp-faq summary{
+  cursor: pointer;
+  list-style: none;
+  padding: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pp-faq summary::-webkit-details-marker{ display:none; }
+
+.pp-faq summary::after{
+  content: "+";
+  opacity: .7;
+  transform: translateY(-1px);
+}
+
+.pp-faq details[open] summary::after{
+  content:"–";
+}
+
+.pp-faq .pp-panel{
+  padding: 0 18px 18px;
+  line-height: 1.7;
+  opacity: .78;
+  max-width: 72ch;
+}
