@@ -4565,3 +4565,16 @@ body.page--madrid .cta-box{
   font-style: italic;
   opacity: .75;
 }
+/* Compatibilidad nombres (kicker/note) */
+.scene-kicker { 
+  margin-top: 50px;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: .55;
+}
+.scene-note {
+  margin-top: 40px;
+  font-style: italic;
+  opacity: .75;
+}
