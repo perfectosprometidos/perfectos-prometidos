@@ -3992,3 +3992,31 @@ body.page--madrid .section--image-break img.full-image{
 @media (max-width: 900px){
   .manifesto{ padding: 60px 0 76px; }
 }
+/* ===== HOME · AJUSTE FINAL CTA (LUJO) ===== */
+
+.services-cta{
+  margin-top: 36px;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.services-cta p{
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(17,17,17,.78);
+  max-width: 620px;
+  margin: 0 auto 18px;
+}
+
+.services-cta-link{
+  font-size: .82rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(17,17,17,.25);
+  padding-bottom: 4px;
+  text-decoration: none;
+}
+
+.services-cta-link:hover{
+  border-bottom-color: rgba(17,17,17,.45);
+}
