@@ -4537,3 +4537,31 @@ body.page--madrid .cta-box{
   margin-top: 12px;
   opacity: .8;
 }
+/* ===== Madrid escenas refinadas ===== */
+
+.madrid-scene {
+  padding: 140px 0;
+}
+
+.scene-subtitle {
+  margin-top: 50px;
+  font-size: 0.95rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .55;
+}
+
+.scene-list {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.scene-list li {
+  margin-bottom: 10px;
+}
+
+.scene-closing {
+  margin-top: 40px;
+  font-style: italic;
+  opacity: .75;
+}
