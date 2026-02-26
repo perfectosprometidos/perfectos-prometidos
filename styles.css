@@ -4428,3 +4428,50 @@ body.page--madrid .cta-box{
     width: calc(100% - 32px);
   }
 }
+/* Madrid FAQ – Accordion (luxury, clean) */
+.pp-accordion { margin-top: 18px; }
+
+.pp-acc-item {
+  border-top: 1px solid rgba(0,0,0,.10);
+  padding: 10px 0;
+}
+
+.pp-acc-item:last-child {
+  border-bottom: 1px solid rgba(0,0,0,.10);
+}
+
+.pp-acc-summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: .01em;
+  padding: 10px 34px 10px 0;
+  position: relative;
+}
+
+.pp-acc-summary::-webkit-details-marker { display: none; }
+
+.pp-acc-summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.14);
+  font-weight: 500;
+  opacity: .85;
+}
+
+.pp-acc-item[open] .pp-acc-summary::after { content: "–"; }
+
+.pp-acc-body {
+  padding: 6px 0 14px 0;
+  color: rgba(0,0,0,.78);
+}
+
+.pp-acc-body p { margin: 0; }
