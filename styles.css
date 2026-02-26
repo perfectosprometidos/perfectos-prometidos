@@ -4169,7 +4169,8 @@ body.page--madrid .hero.hero-madrid{
 }
 
 body.page--madrid .hero.hero-madrid .hero-image{
-  width: min(1100px, calc(100% - 48px));
+  width: calc(100% - 64px);   /* igual que Home */
+  max-width: 1400px;         /* mismo límite visual que Home */
   margin: 120px auto 0;
   border-radius: 28px;
   overflow: hidden;
@@ -4179,7 +4180,7 @@ body.page--madrid .hero.hero-madrid .hero-image{
 body.page--madrid .hero.hero-madrid .hero-image img{
   width: 100%;
   height: 92vh;
-  max-height: 720px;
+ max-height: 820px;
   object-fit: cover;
   object-position: 50% 55%;
   display: block;
