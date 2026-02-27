@@ -1866,7 +1866,7 @@ section + section {
 
 /* Columna editorial centrada en móvil (texto largo) */
 
-  
+
   /* Mantén el aire lateral */
   section,
   .section-inner,
@@ -2549,7 +2549,7 @@ line-height: 1.9;
 
   /* 1) Header: que no se coma anclas y no corte secciones */
   html{ scroll-padding-top: 96px; } /* si tu topbar es fijo */
-  
+
   /* 2) Contenedor editorial consistente (internas + secciones) */
   .topbar-inner,
   .services-inner,
@@ -4020,7 +4020,35 @@ body.page--madrid .section--image-break img.full-image{
 .services-cta-link:hover{
   border-bottom-color: rgba(17,17,17,.45);
 }
+/* MADRID HERO — MOBILE THE LANE */
 
+@media (max-width: 768px){
+
+  .hero-image{
+    display:block;
+  }
+
+  .hero-card{
+    position:relative;
+    background:transparent;
+    box-shadow:none;
+    padding:2rem 1.4rem 2.5rem;
+    max-width:100%;
+    margin:0;
+  }
+
+  .hero-image img{
+    border-radius:0;
+    width:100%;
+    height:auto;
+  }
+
+  .hero-cta{
+    display:inline-block;
+    margin-top:1.4rem;
+  }
+
+}
 /* =========================================
    MADRID HERO — The Lane stable layout
    (mobile-proof, no overlaps)
@@ -4041,6 +4069,9 @@ body.page--madrid .section--image-break img.full-image{
 
 .hero.hero-madrid .hero-image img{
   width: 100%;
+  height: 54vh;
+  min-height: 340px;
+  object-fit: cover;
  height: auto;
 min-height: 0;
 object-fit: contain;
@@ -4050,6 +4081,7 @@ object-fit: contain;
 /* Card sits UNDER the image with a subtle editorial overlap */
 .hero.hero-madrid .hero-card{
   max-width: 760px;
+  margin: -78px auto 0;
 margin: 0 auto;
   padding: 2.2rem 2.2rem 2rem;
   background: rgba(248,246,241,.96);
@@ -4109,11 +4141,16 @@ margin: 0 auto;
   }
 
   .hero.hero-madrid .hero-image img{
+    height: 42vh;
+    min-height: 280px;
+  }
+
     height: auto;
 min-height: 0;
 object-fit: contain;
 }
   .hero.hero-madrid .hero-card{
+    margin: -56px auto 0;
    margin: 0 auto;
     padding: 1.55rem 1.35rem 1.35rem;
     border-radius: 22px;
@@ -4127,7 +4164,121 @@ object-fit: contain;
     width: 100%;
   }
 }
+/* =========================================================
+   MADRID — OPTION A: MISMA ESTÉTICA QUE HOME + SEO
+   (Override FINAL, pegar al final de styles.css)
+========================================================= */
 
+body.page--madrid .hero.hero-madrid{
+  position: relative;
+  min-height: 92vh;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+body.page--madrid .hero.hero-madrid .hero-image{
+  width: calc(100% - 40px);   /* mismo margen lateral que Home */
+  max-width: none;           /* quitamos límite artificial */
+  margin: 120px auto 0;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+body.page--madrid .hero.hero-madrid{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+body.page--madrid .hero.hero-madrid .hero-image img{
+  width: 100%;
+  height: 92vh;
+ max-height: 820px;
+  object-fit: cover;
+  object-position: 50% 55%;
+  display: block;
+  border-radius: 0;
+}
+
+body.page--madrid .hero.hero-madrid .hero-card{
+  position: absolute;
+  left: clamp(20px, 5vw, 70px);
+  top: 52%;
+  transform: translateY(-50%);
+  width: min(640px, 92vw);
+  padding: clamp(26px, 3vw, 44px);
+  border-radius: 28px;
+
+  background: rgba(246, 244, 239, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 28px 80px rgba(0,0,0,.22);
+  z-index: 2;
+}
+
+body.page--madrid .hero.hero-madrid .hero-card h1{
+  margin: 0 0 18px 0;
+  font-size: clamp(2.1rem, 3.2vw, 3.1rem);
+  line-height: 1.06;
+}
+
+@media (max-width: 860px){
+  body.page--madrid .hero.hero-madrid{ min-height: 88vh; }
+
+  body.page--madrid .hero.hero-madrid .hero-image{
+    width: calc(100% - 32px);
+    margin: 110px auto 0;
+    border-radius: 22px;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-image img{
+    height: 88vh;
+    max-height: 680px;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-card{
+    left: 50%;
+    top: auto;
+    bottom: 18px;
+    transform: translateX(-50%);
+    width: min(680px, 92vw);
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 540px){
+  body.page--madrid .hero.hero-madrid{ min-height: 78vh; }
+
+  body.page--madrid .hero.hero-madrid .hero-image{
+    margin: 108px auto 0;
+    border-radius: 18px;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-image img{
+    height: 56vh;
+    min-height: 320px;
+    max-height: none;
+    object-position: 50% 48%;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-card{
+    width: calc(100% - 32px);
+    max-width: 520px;
+    padding: 22px 20px;
+    margin: 0;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-card h1{
+    font-size: clamp(2.0rem, 8.2vw, 3.0rem);
+    line-height: 1.05;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-cta{ width: 100%; }
+}
+
+body.page--madrid main .section:first-of-type{
+  padding-top: 72px;
+}
 /* =========================================================
    MADRID — UPGRADE EDITORIAL (quiet luxury)
    Pegar al final de styles.css
@@ -4604,156 +4755,50 @@ body.page--madrid .cta-box{
   opacity: .78;
   max-width: 72ch;
 }
+
 }
-/* ===== Madrid hero — FIX DEFINITIVO: SOLO móvil vertical (portrait) ===== */
-@media (max-width: 600px) and (orientation: portrait){
+/* ===== Madrid hero (móvil): imagen completa + sin solape (NO afecta PC) ===== */
+@media (max-width: 900px){
 
-  /* 1) Layout: imagen arriba, tarjeta abajo (sin solape) */
-  body.page--madrid .hero.hero-madrid{
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 18px !important;
-
-    min-height: auto !important;
-    overflow: visible !important;
-
-    /* respira como Home en móvil */
-    padding: 96px 20px 28px !important;
-  }
-
-  /* 2) Marco de la imagen: lujo, centrado, sin “montaje raro” */
-  body.page--madrid .hero.hero-madrid .hero-image{
-    width: 100% !important;
-    max-width: 720px !important;
-    margin: 0 auto !important;
-
-    overflow: hidden !important;
-    border-radius: 28px !important;
-
-    /* marco suave editorial */
-    padding: 18px !important;
-    background: rgba(255,255,255,.55) !important;
-    box-shadow: var(--shadow-soft) !important;
-
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-  }
-
-  /* 3) Imagen: NUNCA recorta (se ve completa) */
-  body.page--madrid .hero.hero-madrid .hero-image img{
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-
-    object-fit: contain !important;
-    object-position: center top !important;
-
-    border-radius: 18px !important;
-  }
-
-  /* 4) Tarjeta: debajo, centrada, sin absolute/transform */
-  body.page--madrid .hero.hero-madrid .hero-card{
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-
-    width: 100% !important;
-    max-width: 720px !important;
-    margin: 0 auto !important;
-  }
-}
-/* ===== Madrid hero: ajuste FINAL móvil vertical (imagen un poco más grande + sin solape) ===== */
-@media (max-width: 600px) and (orientation: portrait){
-
-  /* Mantener layout en columna y aire editorial */
+  /* Hero en columna: imagen arriba, tarjeta abajo */
   .hero.hero-madrid{
     display: flex !important;
     flex-direction: column !important;
-    gap: 22px !important;
-    padding-top: 56px !important;
+    gap: 20px !important;
+    padding-top: 56px !important; /* reduce el “vacío” arriba en móvil */
   }
 
-  /* Imagen: ocupa más ancho (se ve más grande) y centrada */
+  /* Contenedor de imagen: SIN altura fija (para que no recorte) */
   .hero.hero-madrid .hero-image{
-    max-width: calc(100% - 24px) !important;   /* antes quedaba más “pequeña” */
-    margin: 0 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+
+    /* mantenemos marco lujo */
+    padding: 18px !important;
+    background: rgba(255,255,255,.55) !important;
+    border-radius: 34px !important;
+    box-shadow: var(--shadow-soft) !important;
   }
 
-  /* Importante: evita recortes y mantiene foto completa */
+  /* Imagen: SIEMPRE completa y centrada (no cover) */
   .hero.hero-madrid .hero-image img{
+    display: block !important;
     width: 100% !important;
     height: auto !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    display: block !important;
+    max-height: 72vh !important;      /* evita que “empuje” demasiado */
+    object-fit: contain !important;   /* clave: NO recorta */
+    object-position: center top !important;
+
+    border-radius: 22px !important;
   }
 
-  /* Tarjeta: SIEMPRE debajo, sin solape */
+  /* Tarjeta: nunca montada encima */
   .hero.hero-madrid .hero-card{
-    position: relative !important;
+    position: static !important;
     transform: none !important;
-    margin: 0 auto !important;     /* elimina cualquier margin negativo */
-    top: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    right: auto !important;
+    margin: 0 !important;
   }
 }
-/* ===== Madrid hero: foto “full bleed” dentro del marco (móvil vertical) ===== */
-@media (max-width: 600px) and (orientation: portrait){
-
-  /* Quita cualquier padding interno que cree “reborde” */
-  .hero.hero-madrid .hero-image{
-    padding: 0 !important;
-  }
-
-  /* La foto llena el marco (sin borde blanco interno) */
-  .hero.hero-madrid .hero-image img{
-    width: 100% !important;
-    height: 48vh !important;        /* ajusta el tamaño visual en móvil */
-    min-height: 260px !important;
-    max-height: 420px !important;
-    object-fit: cover !important;   /* clave: llena el marco */
-    object-position: 50% 55% !important; /* sube/baja el encuadre si hace falta */
-    display: block !important;
-  }
-
-  /* Mantén la tarjeta SIEMPRE debajo (por si hay reglas antiguas) */
-  .hero.hero-madrid .hero-card{
-    margin-top: 0 !important;
-    transform: none !important;
-    top: auto !important;
-    bottom: auto !important;
-  }
-}
-/* ===== Madrid hero (móvil): marco panorámico sin recorte “feo” ===== */
-@media (max-width: 600px) and (orientation: portrait){
-
-  /* El marco pasa a ser panorámico (como editorial) */
-  .hero.hero-madrid .hero-image{
-    padding: 0 !important;           /* sin reborde blanco interno */
-    aspect-ratio: 16 / 9 !important; /* clave: evita recorte en foto panorámica */
-    height: auto !important;
-    overflow: hidden !important;
-  }
-
-  /* La imagen llena el marco panorámico */
-  .hero.hero-madrid .hero-image img{
-    width: 100% !important;
-    height: 100% !important;         /* rellena el alto del marco */
-    object-fit: cover !important;     /* full bleed */
-    object-position: 50% 70% !important; /* ajusta el encuadre */
-    display: block !important;
-  }
-
-  /* Tarjeta: siempre debajo, sin solape raro */
-  .hero.hero-madrid .hero-card{
-    transform: none !important;
-    top: auto !important;
-    bottom: auto !important;
-  }
 }
