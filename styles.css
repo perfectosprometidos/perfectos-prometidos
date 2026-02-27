@@ -4784,4 +4784,17 @@ body.page--madrid .cta-box{
   padding-right: 0 !important;
 }
 }
+/* ===== FIX SOLAPE MÓVIL MADRID ===== */
+@media (max-width: 900px){
 
+  .hero.hero-madrid{
+    display: block !important;
+  }
+
+  .hero.hero-madrid .hero-card{
+    margin: 24px auto 0 !important;
+    position: relative !important;
+    top: auto !important;
+  }
+
+}
