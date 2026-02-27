@@ -4748,35 +4748,48 @@ body.page--madrid .cta-box{
 }
 
 }
-/* ===== Madrid hero: SOLO móvil vertical (imagen centrada y completa) ===== */
-@media (max-width: 600px) and (orientation: portrait){
+/* ===== Madrid hero (móvil): imagen completa + sin solape (NO afecta PC) ===== */
+@media (max-width: 900px){
 
+  /* Hero en columna: imagen arriba, tarjeta abajo */
   .hero.hero-madrid{
     display: flex !important;
     flex-direction: column !important;
-    gap: 16px !important;
+    gap: 20px !important;
+    padding-top: 56px !important; /* reduce el “vacío” arriba en móvil */
   }
 
+  /* Contenedor de imagen: SIN altura fija (para que no recorte) */
   .hero.hero-madrid .hero-image{
     height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
     overflow: visible !important;
-    padding: 0 !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+
+    /* mantenemos marco lujo */
+    padding: 18px !important;
+    background: rgba(255,255,255,.55) !important;
+    border-radius: 34px !important;
+    box-shadow: var(--shadow-soft) !important;
   }
 
+  /* Imagen: SIEMPRE completa y centrada (no cover) */
   .hero.hero-madrid .hero-image img{
+    display: block !important;
     width: 100% !important;
     height: auto !important;
-    object-fit: contain !important;      /* no recorte */
-    object-position: center center !important;
-    display: block !important;
+    max-height: 72vh !important;      /* evita que “empuje” demasiado */
+    object-fit: contain !important;   /* clave: NO recorta */
+    object-position: center top !important;
+
+    border-radius: 22px !important;
   }
 
+  /* Tarjeta: nunca montada encima */
   .hero.hero-madrid .hero-card{
     position: static !important;
     transform: none !important;
-    margin-top: 0 !important;
+    margin: 0 !important;
   }
+}
 }
