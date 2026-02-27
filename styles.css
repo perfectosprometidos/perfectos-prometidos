@@ -4730,3 +4730,30 @@ body.page--madrid .cta-box{
     bottom: auto !important;
   }
 }
+/* ===== Madrid hero (móvil): marco panorámico sin recorte “feo” ===== */
+@media (max-width: 600px) and (orientation: portrait){
+
+  /* El marco pasa a ser panorámico (como editorial) */
+  .hero.hero-madrid .hero-image{
+    padding: 0 !important;           /* sin reborde blanco interno */
+    aspect-ratio: 16 / 9 !important; /* clave: evita recorte en foto panorámica */
+    height: auto !important;
+    overflow: hidden !important;
+  }
+
+  /* La imagen llena el marco panorámico */
+  .hero.hero-madrid .hero-image img{
+    width: 100% !important;
+    height: 100% !important;         /* rellena el alto del marco */
+    object-fit: cover !important;     /* full bleed */
+    object-position: 50% 55% !important; /* ajusta el encuadre */
+    display: block !important;
+  }
+
+  /* Tarjeta: siempre debajo, sin solape raro */
+  .hero.hero-madrid .hero-card{
+    transform: none !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+}
