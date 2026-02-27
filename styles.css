@@ -4703,3 +4703,30 @@ body.page--madrid .cta-box{
     right: auto !important;
   }
 }
+/* ===== Madrid hero: foto “full bleed” dentro del marco (móvil vertical) ===== */
+@media (max-width: 600px) and (orientation: portrait){
+
+  /* Quita cualquier padding interno que cree “reborde” */
+  .hero.hero-madrid .hero-image{
+    padding: 0 !important;
+  }
+
+  /* La foto llena el marco (sin borde blanco interno) */
+  .hero.hero-madrid .hero-image img{
+    width: 100% !important;
+    height: 48vh !important;        /* ajusta el tamaño visual en móvil */
+    min-height: 260px !important;
+    max-height: 420px !important;
+    object-fit: cover !important;   /* clave: llena el marco */
+    object-position: 50% 55% !important; /* sube/baja el encuadre si hace falta */
+    display: block !important;
+  }
+
+  /* Mantén la tarjeta SIEMPRE debajo (por si hay reglas antiguas) */
+  .hero.hero-madrid .hero-card{
+    margin-top: 0 !important;
+    transform: none !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+}
