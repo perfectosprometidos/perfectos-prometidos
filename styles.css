@@ -4746,7 +4746,7 @@ body.page--madrid .cta-box{
     width: 100% !important;
     height: 100% !important;         /* rellena el alto del marco */
     object-fit: cover !important;     /* full bleed */
-    object-position: 50% 55% !important; /* ajusta el encuadre */
+    object-position: 50% 70% !important; /* ajusta el encuadre */
     display: block !important;
   }
 
