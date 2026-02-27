@@ -4779,6 +4779,9 @@ body.page--madrid .cta-box{
     object-fit: cover !important;
     object-position: 50% 52% !important;
   }
-
+.hero.hero-madrid{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 }
 
