@@ -4615,11 +4615,11 @@ body.page--madrid .cta-box{
   grid-column: 1;
   margin: 0;
 
-  font-size: clamp(2rem, 2.6vw, 2.6rem);
-  line-height: 1.08;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.8rem, 2.2vw, 2.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.005em;
   font-weight: 500;
-  max-width: 380px;
+  max-width: 360px;
 }
 
 .madrid-scene .scene-body{
