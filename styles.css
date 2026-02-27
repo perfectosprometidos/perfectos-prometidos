@@ -4666,4 +4666,40 @@ body.page--madrid .cta-box{
     margin: 0 auto !important;
   }
 }
+/* ===== Madrid hero: ajuste FINAL móvil vertical (imagen un poco más grande + sin solape) ===== */
+@media (max-width: 600px) and (orientation: portrait){
 
+  /* Mantener layout en columna y aire editorial */
+  .hero.hero-madrid{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+    padding-top: 56px !important;
+  }
+
+  /* Imagen: ocupa más ancho (se ve más grande) y centrada */
+  .hero.hero-madrid .hero-image{
+    max-width: calc(100% - 24px) !important;   /* antes quedaba más “pequeña” */
+    margin: 0 auto !important;
+  }
+
+  /* Importante: evita recortes y mantiene foto completa */
+  .hero.hero-madrid .hero-image img{
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+
+  /* Tarjeta: SIEMPRE debajo, sin solape */
+  .hero.hero-madrid .hero-card{
+    position: relative !important;
+    transform: none !important;
+    margin: 0 auto !important;     /* elimina cualquier margin negativo */
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+}
