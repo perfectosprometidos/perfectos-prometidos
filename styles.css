@@ -4773,3 +4773,12 @@ body.page--madrid .cta-box{
     background: transparent !important;
   }
 }
+@media (max-width: 600px) and (orientation: portrait){
+  .hero.hero-madrid{
+    display: block !important;
+  }
+  .hero.hero-madrid .hero-card{
+    position: relative !important;
+    margin-top: 18px !important;
+  }
+}
