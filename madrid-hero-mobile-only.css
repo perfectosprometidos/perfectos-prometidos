@@ -42,7 +42,7 @@
   /* IMAGEN COMPLETA (sin recorte) y a pantalla completa */
   body.page--madrid .hero.hero-madrid .hero-image img,
   body.page--madrid .hero--madrid .hero-image img{
-    width: 100vw !important;
+       width: 100% !important;
  height: 52vh !important;
     display: block !important;
 
