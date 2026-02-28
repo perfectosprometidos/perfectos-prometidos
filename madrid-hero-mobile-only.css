@@ -1,51 +1,46 @@
 /* =========================================================
-   MADRID HERO — MÓVIL · FULL WIDTH LUJO (CERRADO)
-   - Imagen ocupa todo el ancho blanco
-   - Altura editorial justa (sin cielo infinito)
-   - Tarjeta visible debajo sin solapes
-   NO afecta PC
+   MADRID HERO — MÓVIL FULL WIDTH SIN RECORTE
+   Imagen completa, sin margen lateral blanco,
+   sin cortes arriba/abajo, tarjeta debajo.
 ========================================================= */
 @media (max-width: 900px){
 
-  body.page--madrid{ overflow-x: hidden !important; }
+  body.page--madrid{
+    overflow-x: hidden !important;
+  }
 
+  /* HERO limpio */
   body.page--madrid .hero.hero-madrid{
     display: block !important;
     padding: 0 !important;
     margin: 0 !important;
-    min-height: auto !important;
-    overflow: visible !important;
     background: none !important;
   }
 
-  /* IMAGEN full width */
+  /* Contenedor rompe el ancho del layout */
   body.page--madrid .hero.hero-madrid .hero-image{
     width: 100vw !important;
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
     border-radius: 0 !important;
     overflow: hidden !important;
+    background: #f4f1eb; /* fondo elegante por si sobra espacio */
   }
 
-  /* ALTURA JUSTA + ENCUADRE (menos cielo) */
+  /* Imagen COMPLETA sin cortes */
   body.page--madrid .hero.hero-madrid .hero-image img{
     width: 100vw !important;
-   height: clamp(380px, 50vh, 560px) !important;/* 👈 clave: lujo, no gigante */
-    object-fit: cover !important;
-  object-position: 50% 72% !important;          /* 👈 menos cielo, más palacio */
+    height: auto !important;
+    object-fit: contain !important;   /* 👈 CLAVE */
     display: block !important;
   }
 
-  /* TARJETA DEBAJO, SIEMPRE VISIBLE */
+  /* Tarjeta debajo */
   body.page--madrid .hero.hero-madrid .hero-card{
     position: relative !important;
-    inset: auto !important;
     transform: none !important;
-
     width: calc(100% - 32px) !important;
     max-width: 760px !important;
-    margin: 16px auto 0 !important;
-
-    z-index: 2 !important;
+    margin: 20px auto 0 !important;
   }
 }
