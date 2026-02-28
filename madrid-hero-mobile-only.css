@@ -1,0 +1,29 @@
+/* madrid-hero-mobile-only.css
+   Solo Madrid · Solo móvil · Solo imagen del hero
+*/
+@media (max-width: 900px){
+
+  /* Evita scroll horizontal si hacemos full-bleed */
+  body.page--madrid{ overflow-x: hidden !important; }
+
+  /* SOLO el contenedor de la imagen */
+  body.page--madrid .hero.hero-madrid .hero-image{
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  /* SOLO la imagen */
+  body.page--madrid .hero.hero-madrid .hero-image img{
+    width: 100vw !important;
+    height: clamp(560px, 78vh, 860px) !important;
+    object-fit: cover !important;
+    object-position: 50% 56% !important;
+    display: block !important;
+  }
+}
