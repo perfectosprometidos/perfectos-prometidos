@@ -1,7 +1,6 @@
 /* =========================================================
-   MADRID HERO — MÓVIL FULL WIDTH SIN RECORTE
-   Imagen completa, sin margen lateral blanco,
-   sin cortes arriba/abajo, tarjeta debajo.
+   MADRID HERO — MÓVIL SIN MÁRGENES LATERALES
+   Rompe el contenedor padre
 ========================================================= */
 @media (max-width: 900px){
 
@@ -9,29 +8,28 @@
     overflow-x: hidden !important;
   }
 
-  /* HERO limpio */
+  /* ROMPE cualquier contenedor que limite ancho */
   body.page--madrid .hero.hero-madrid{
-    display: block !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: none !important;
-  }
-
-  /* Contenedor rompe el ancho del layout */
-  body.page--madrid .hero.hero-madrid .hero-image{
     width: 100vw !important;
+    max-width: 100vw !important;
+
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
-    border-radius: 0 !important;
-    overflow: hidden !important;
-    background: #f4f1eb; /* fondo elegante por si sobra espacio */
+
+    padding: 0 !important;
+    overflow: visible !important;
   }
 
-  /* Imagen COMPLETA sin cortes */
+  /* Imagen ocupa el ancho real de pantalla */
+  body.page--madrid .hero.hero-madrid .hero-image{
+    width: 100vw !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
   body.page--madrid .hero.hero-madrid .hero-image img{
     width: 100vw !important;
     height: auto !important;
-    object-fit: contain !important;   /* 👈 CLAVE */
     display: block !important;
   }
 
@@ -39,8 +37,8 @@
   body.page--madrid .hero.hero-madrid .hero-card{
     position: relative !important;
     transform: none !important;
+
     width: calc(100% - 32px) !important;
-    max-width: 760px !important;
-    margin: 20px auto 0 !important;
+    margin: 24px auto 0 !important;
   }
 }
