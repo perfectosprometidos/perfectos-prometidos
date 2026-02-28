@@ -63,3 +63,53 @@
     z-index: 2 !important;
   }
 }
+@media (max-width: 900px){
+
+  /* Mata el “marco” del wrapper que envuelve el hero (solo Madrid) */
+  body.page--madrid .hero.hero-madrid,
+  body.page--madrid .hero--madrid,
+  body.page--madrid .hero.hero-madrid *{
+    background: transparent !important;
+  }
+
+  /* Wrapper típico que suele crear el recuadro */
+  body.page--madrid main > section,
+  body.page--madrid main .section,
+  body.page--madrid main .block,
+  body.page--madrid main .card,
+  body.page--madrid main .panel,
+  body.page--madrid main .container,
+  body.page--madrid main .wrap{
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Hero a sangre como Home */
+  body.page--madrid .hero.hero-madrid{
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-image{
+    border-radius: 0 !important;
+    overflow: visible !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  body.page--madrid .hero.hero-madrid .hero-image img{
+    width: 100vw !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important; /* imagen completa */
+  }
+
+}
