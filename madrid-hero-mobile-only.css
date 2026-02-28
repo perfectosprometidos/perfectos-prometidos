@@ -1,6 +1,13 @@
 @media (max-width: 900px){
 
   body.page--madrid{ overflow-x: hidden !important; }
+/* Quita el “padding fantasma” que está creando solo margen IZQ */
+body.page--madrid main,
+body.page--madrid .wrap,
+body.page--madrid .container{
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
 
   /* HERO: sin hacks previos */
   body.page--madrid .hero.hero-madrid{
