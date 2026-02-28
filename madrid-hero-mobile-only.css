@@ -1,58 +1,53 @@
 /* =========================================================
-   MADRID · HERO — SOLO MÓVIL
-   Imagen con ancho como el resto + alto editorial + sin solape
-   NO toca PC
+   MADRID HERO — MÓVIL FULL WIDTH PREMIUM
+   Imagen ocupa todo el ancho blanco
+   Tarjeta debajo
+   No afecta PC
 ========================================================= */
 @media (max-width: 900px){
 
-  body.page--madrid{ overflow-x: hidden !important; }
+  body.page--madrid{
+    overflow-x: hidden !important;
+  }
 
-  /* Neutraliza cualquier layout raro del hero en móvil */
+  /* HERO limpio */
   body.page--madrid .hero.hero-madrid{
     display: block !important;
     padding: 0 !important;
     margin: 0 !important;
     min-height: auto !important;
     overflow: visible !important;
-    background-image: none !important;
+    background: none !important;
   }
 
-  /* Imagen con el mismo ancho que el resto de la sección (no full-bleed) */
+  /* Imagen FULL WIDTH */
   body.page--madrid .hero.hero-madrid .hero-image{
-    width: calc(100% - 32px) !important;
-    max-width: 760px !important;
-    margin: 0 auto !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
 
-    border-radius: 26px !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
-    box-shadow: none !important;
-    background: transparent !important;
   }
 
-  /* Altura justa (más horizontal) y recorte elegante */
+  /* Altura editorial equilibrada */
   body.page--madrid .hero.hero-madrid .hero-image img{
-    width: 100% !important;
-    aspect-ratio: 3 / 4 !important;
-    height: auto !important;
-
+    width: 100vw !important;
+    height: 72vh !important;        /* altura elegante, no exagerada */
     object-fit: cover !important;
-    object-position: 50% 68% !important;
+    object-position: center 62% !important; /* menos cielo */
     display: block !important;
   }
 
-  /* Tarjeta SIEMPRE debajo (mata absolutes/transforms heredados) */
+  /* TARJETA DEBAJO SIEMPRE */
   body.page--madrid .hero.hero-madrid .hero-card{
     position: relative !important;
     inset: auto !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
     transform: none !important;
 
     width: calc(100% - 32px) !important;
     max-width: 760px !important;
-    margin: 16px auto 0 !important;
+    margin: 24px auto 0 !important;
 
     z-index: 2 !important;
   }
