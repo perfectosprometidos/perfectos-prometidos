@@ -1,79 +1,47 @@
 /* =========================================================
-   MADRID HERO — MÓVIL FULL WIDTH (SIN MÁRGENES) — DEFINITIVO
-   - Elimina margen blanco lateral aunque haya contenedor con padding/max-width
-   - No recorta arriba/abajo (imagen completa)
-   - Tarjeta debajo
-   - No toca PC
+   MADRID HERO — MÓVIL SIN MARGEN LATERAL
+   Elimina padding del contenedor padre
 ========================================================= */
 @media (max-width: 900px){
 
-  body.page--madrid{ overflow-x: hidden !important; }
-
-  /* Cubrimos ambas variantes de clase (por si en tu CSS/HTML hay hero-madrid o hero--madrid) */
-  body.page--madrid .hero.hero-madrid,
-  body.page--madrid .hero--madrid{
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: visible !important; /* evita recortes */
-    background: none !important;
+  body.page--madrid{
+    overflow-x: hidden !important;
   }
 
-  /* CONTENEDOR de imagen: lo sacamos del contenedor padre SIEMPRE */
-  body.page--madrid .hero.hero-madrid .hero-image,
-  body.page--madrid .hero--madrid .hero-image{
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+  /* 1️⃣ Quita el padding del contenedor principal SOLO en Madrid */
+  body.page--madrid main,
+  body.page--madrid .container,
+  body.page--madrid .section{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
+  /* 2️⃣ Hero ocupa ancho completo */
+  body.page--madrid .hero.hero-madrid{
     width: 100vw !important;
     max-width: 100vw !important;
-
     margin: 0 !important;
-    border-radius: 0 !important;
-    overflow: hidden !important;
-    background: transparent !important;
+    padding: 0 !important;
   }
 
-  /* IMAGEN completa (sin corte arriba/abajo) */
-body.page--madrid .hero.hero-madrid .hero-image,
-body.page--madrid .hero--madrid .hero-image{
-  position: relative !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  /* 3️⃣ Imagen full width real */
+  body.page--madrid .hero.hero-madrid .hero-image{
+    width: 100vw !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
 
-  width: 100vw !important;
-  max-width: 100vw !important;
+  body.page--madrid .hero.hero-madrid .hero-image img{
+    width: 100vw !important;
+    height: auto !important;
+    display: block !important;
+  }
 
-  margin: 0 !important;
-  padding: 0 !important;
-
-  border-radius: 0 !important;
-  overflow: hidden !important;
-
-  background: #f4f1eb !important; /* mismo tono “lino” de tu fondo */
-}
-body.page--madrid .hero.hero-madrid .hero-image img,
-body.page--madrid .hero--madrid .hero-image img{
-  width: 100vw !important;
-  height: auto !important;
-  aspect-ratio: 16 / 9 !important;   /* misma sensación panorámica sin corte */
-  display: block !important;
-
-  object-fit: contain !important;     /* ✅ cero recorte */
-  object-position: center center !important;
-}
-  /* TARJETA debajo (sin solape) */
-  body.page--madrid .hero.hero-madrid .hero-card,
-  body.page--madrid .hero--madrid .hero-card{
+  /* 4️⃣ Tarjeta debajo */
+  body.page--madrid .hero.hero-madrid .hero-card{
     position: relative !important;
-    inset: auto !important;
     transform: none !important;
-
     width: calc(100% - 32px) !important;
-    max-width: 760px !important;
-    margin: 18px auto 0 !important;
-    z-index: 2 !important;
+    margin: 20px auto 0 !important;
   }
 }
