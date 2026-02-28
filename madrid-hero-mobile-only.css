@@ -215,6 +215,24 @@
     margin: 18px auto 0 !important;
   }
 }
+@media (max-width: 900px){
 
+  /* Margen lateral premium para el texto editorial */
+  body.page--madrid main{
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* Ancho de lectura elegante (no texto a pantalla completa) */
+  body.page--madrid .chapter,
+  body.page--madrid .madrid-intro,
+  body.page--madrid .intro,
+  body.page--madrid .section-intro{
+    max-width: 680px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
 
 
