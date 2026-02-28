@@ -260,3 +260,10 @@
   }
 
 }
+@media (max-width: 900px){
+
+  body.page--madrid .hero.hero-madrid{
+    margin-top: -88px !important;
+  }
+
+}
