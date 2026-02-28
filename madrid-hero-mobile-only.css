@@ -1,16 +1,14 @@
 /* =========================================================
-   MADRID HERO — MÓVIL FULL WIDTH PREMIUM
-   Imagen ocupa todo el ancho blanco
-   Tarjeta debajo
-   No afecta PC
+   MADRID HERO — MÓVIL · FULL WIDTH LUJO (CERRADO)
+   - Imagen ocupa todo el ancho blanco
+   - Altura editorial justa (sin cielo infinito)
+   - Tarjeta visible debajo sin solapes
+   NO afecta PC
 ========================================================= */
 @media (max-width: 900px){
 
-  body.page--madrid{
-    overflow-x: hidden !important;
-  }
+  body.page--madrid{ overflow-x: hidden !important; }
 
-  /* HERO limpio */
   body.page--madrid .hero.hero-madrid{
     display: block !important;
     padding: 0 !important;
@@ -20,26 +18,25 @@
     background: none !important;
   }
 
-  /* Imagen FULL WIDTH */
+  /* IMAGEN full width */
   body.page--madrid .hero.hero-madrid .hero-image{
     width: 100vw !important;
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
-
     border-radius: 0 !important;
     overflow: hidden !important;
   }
 
-  /* Altura editorial equilibrada */
+  /* ALTURA JUSTA + ENCUADRE (menos cielo) */
   body.page--madrid .hero.hero-madrid .hero-image img{
     width: 100vw !important;
-    height: 72vh !important;        /* altura elegante, no exagerada */
+    height: clamp(420px, 56vh, 640px) !important; /* 👈 clave: lujo, no gigante */
     object-fit: cover !important;
-    object-position: center 62% !important; /* menos cielo */
+    object-position: 50% 78% !important;          /* 👈 menos cielo, más palacio */
     display: block !important;
   }
 
-  /* TARJETA DEBAJO SIEMPRE */
+  /* TARJETA DEBAJO, SIEMPRE VISIBLE */
   body.page--madrid .hero.hero-madrid .hero-card{
     position: relative !important;
     inset: auto !important;
@@ -47,7 +44,7 @@
 
     width: calc(100% - 32px) !important;
     max-width: 760px !important;
-    margin: 24px auto 0 !important;
+    margin: 16px auto 0 !important;
 
     z-index: 2 !important;
   }
