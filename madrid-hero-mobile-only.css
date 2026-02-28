@@ -1,44 +1,62 @@
 /* =========================================================
-   MADRID HERO — MÓVIL SIN MÁRGENES LATERALES
-   Rompe el contenedor padre
+   MADRID HERO — MÓVIL FULL WIDTH (SIN MÁRGENES) — DEFINITIVO
+   - Elimina margen blanco lateral aunque haya contenedor con padding/max-width
+   - No recorta arriba/abajo (imagen completa)
+   - Tarjeta debajo
+   - No toca PC
 ========================================================= */
 @media (max-width: 900px){
 
-  body.page--madrid{
-    overflow-x: hidden !important;
+  body.page--madrid{ overflow-x: hidden !important; }
+
+  /* Cubrimos ambas variantes de clase (por si en tu CSS/HTML hay hero-madrid o hero--madrid) */
+  body.page--madrid .hero.hero-madrid,
+  body.page--madrid .hero--madrid{
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important; /* evita recortes */
+    background: none !important;
   }
 
-  /* ROMPE cualquier contenedor que limite ancho */
-  body.page--madrid .hero.hero-madrid{
+  /* CONTENEDOR de imagen: lo sacamos del contenedor padre SIEMPRE */
+  body.page--madrid .hero.hero-madrid .hero-image,
+  body.page--madrid .hero--madrid .hero-image{
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
     width: 100vw !important;
     max-width: 100vw !important;
 
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-
-    padding: 0 !important;
-    overflow: visible !important;
-  }
-
-  /* Imagen ocupa el ancho real de pantalla */
-  body.page--madrid .hero.hero-madrid .hero-image{
-    width: 100vw !important;
     margin: 0 !important;
     border-radius: 0 !important;
+    overflow: hidden !important;
+    background: transparent !important;
   }
 
-  body.page--madrid .hero.hero-madrid .hero-image img{
+  /* IMAGEN completa (sin corte arriba/abajo) */
+  body.page--madrid .hero.hero-madrid .hero-image img,
+  body.page--madrid .hero--madrid .hero-image img{
     width: 100vw !important;
     height: auto !important;
     display: block !important;
+
+    object-fit: contain !important;   /* NO recorta */
+    object-position: center center !important;
   }
 
-  /* Tarjeta debajo */
-  body.page--madrid .hero.hero-madrid .hero-card{
+  /* TARJETA debajo (sin solape) */
+  body.page--madrid .hero.hero-madrid .hero-card,
+  body.page--madrid .hero--madrid .hero-card{
     position: relative !important;
+    inset: auto !important;
     transform: none !important;
 
     width: calc(100% - 32px) !important;
-    margin: 24px auto 0 !important;
+    max-width: 760px !important;
+    margin: 18px auto 0 !important;
+    z-index: 2 !important;
   }
 }
