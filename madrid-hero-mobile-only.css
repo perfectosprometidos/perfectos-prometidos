@@ -215,3 +215,48 @@
     margin: 18px auto 0 !important;
   }
 }
+@media (max-width: 900px){
+
+  /* 1) Mata el “aire” superior que NO es del hero */
+  body.page--madrid main{
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  /* 2) Sube el hero para que quede como portada (ajuste fino) */
+  body.page--madrid .hero.hero-madrid{
+    margin-top: -56px !important;   /* si aún queda blanco: -72px */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: transparent !important;
+  }
+
+  /* 3) Full-bleed real (a sangre) */
+  body.page--madrid .hero.hero-madrid .hero-image{
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    left: auto !important;
+    transform: none !important;
+  }
+
+  /* 4) Imagen completa, sin cortes feos */
+  body.page--madrid .hero.hero-madrid .hero-image img{
+    width: 100vw !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+
+  /* 5) Tarjeta debajo, elegante y alineada */
+  body.page--madrid .hero.hero-madrid .hero-card{
+    width: calc(100% - 32px) !important;
+    margin: 18px auto 0 !important;
+  }
+
+}
