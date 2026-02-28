@@ -29,13 +29,7 @@ body.page--madrid .container{
     box-sizing: border-box !important;
   }
 
-  /* Imagen completa, sin corte */
-  body.page--madrid .hero.hero-madrid .hero-image img{
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    object-fit: contain !important;
-  }
+
 
   /* Tarjeta debajo, alineada igual que la imagen */
   body.page--madrid .hero.hero-madrid .hero-card{
@@ -47,4 +41,14 @@ body.page--madrid .container{
     margin: 18px auto 0 !important;
     box-sizing: border-box !important;
   }
+/* Imagen premium editorial */
+body.page--madrid .hero.hero-madrid .hero-image img{
+    width: 100% !important;
+    height: 56vh !important;         /* llena el marco */
+    max-height: 640px !important;
+
+    display: block !important;
+
+    object-fit: cover !important;    /* look editorial */
+    object-position: 50% 72% !important;
 }
