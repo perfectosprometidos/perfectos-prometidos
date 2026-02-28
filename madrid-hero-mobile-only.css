@@ -37,18 +37,32 @@
   }
 
   /* IMAGEN completa (sin corte arriba/abajo) */
+body.page--madrid .hero.hero-madrid .hero-image,
+body.page--madrid .hero--madrid .hero-image{
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  width: 100vw !important;
+  max-width: 100vw !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 0 !important;
+  overflow: hidden !important;
+
+  background: #f4f1eb !important; /* mismo tono “lino” de tu fondo */
+}
 body.page--madrid .hero.hero-madrid .hero-image img,
 body.page--madrid .hero--madrid .hero-image img{
   width: 100vw !important;
-  height: 56vh !important;                 /* llena sin bandas */
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;   /* misma sensación panorámica sin corte */
   display: block !important;
 
-  object-fit: cover !important;            /* adiós márgenes blancos */
-  object-position: 50% 72% !important;     /* encuadre lujo (menos cielo) */
-}
-body.page--madrid .hero.hero-madrid .hero-image,
-body.page--madrid .hero--madrid .hero-image{
-  padding: 0 !important;
+  object-fit: contain !important;     /* ✅ cero recorte */
+  object-position: center center !important;
 }
   /* TARJETA debajo (sin solape) */
   body.page--madrid .hero.hero-madrid .hero-card,
