@@ -4549,3 +4549,12 @@ body.page--madrid .cta-box{
     margin: 0 auto !important;
   }
 }
+@media (max-width: 900px){
+  .page--madrid .hero--madrid .hero-card{
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    margin: 18px auto 0 !important;
+    z-index: 3 !important;
+  }
+}
