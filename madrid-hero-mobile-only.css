@@ -30,9 +30,9 @@
   /* ALTURA JUSTA + ENCUADRE (menos cielo) */
   body.page--madrid .hero.hero-madrid .hero-image img{
     width: 100vw !important;
-    height: clamp(420px, 56vh, 640px) !important; /* 👈 clave: lujo, no gigante */
+   height: clamp(380px, 50vh, 560px) !important;/* 👈 clave: lujo, no gigante */
     object-fit: cover !important;
-    object-position: 50% 100% !important;          /* 👈 menos cielo, más palacio */
+  object-position: 50% 72% !important;          /* 👈 menos cielo, más palacio */
     display: block !important;
   }
 
