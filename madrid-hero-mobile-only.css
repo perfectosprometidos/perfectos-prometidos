@@ -234,5 +234,64 @@ object-position: 50% 63% !important;
   }
 
 }
+/* ===============================
+   MADRID · HERO (MÓVIL) · LUJO
+   Marco elegante + imagen completa (sin recorte)
+   =============================== */
+@media (max-width: 900px){
 
+  body.page--madrid{ overflow-x: hidden !important; }
+
+  /* Mata paddings raros del contenedor padre en móvil */
+  body.page--madrid main,
+  body.page--madrid .wrap,
+  body.page--madrid .container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* HERO limpio */
+  body.page--madrid .hero.hero-madrid{
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Marco elegante, centrado, SIN hacks 100vw */
+  body.page--madrid .hero.hero-madrid .hero-image{
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: calc(100% - 32px) !important;  /* 16px + 16px */
+    margin: 0 auto !important;
+
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Imagen COMPLETA (sin recorte) pero grande */
+  body.page--madrid .hero.hero-madrid .hero-image img{
+    width: 100% !important;
+    height: auto !important;
+    max-height: 62vh !important;      /* grande pero controlado */
+    display: block !important;
+    object-fit: contain !important;   /* CLAVE: no recorta */
+  }
+
+  /* Tarjeta debajo alineada con el marco */
+  body.page--madrid .hero.hero-madrid .hero-card{
+    width: calc(100% - 32px) !important;
+    margin: 18px auto 0 !important;
+    position: relative !important;
+    transform: none !important;
+    inset: auto !important;
+    box-sizing: border-box !important;
+  }
+}
 
