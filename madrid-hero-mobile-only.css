@@ -32,7 +32,7 @@
     width: 100vw !important;
     height: clamp(420px, 56vh, 640px) !important; /* 👈 clave: lujo, no gigante */
     object-fit: cover !important;
-    object-position: 50% 78% !important;          /* 👈 menos cielo, más palacio */
+    object-position: 50% 84% !important;          /* 👈 menos cielo, más palacio */
     display: block !important;
   }
 
