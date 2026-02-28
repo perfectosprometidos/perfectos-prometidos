@@ -37,16 +37,19 @@
   }
 
   /* IMAGEN completa (sin corte arriba/abajo) */
-  body.page--madrid .hero.hero-madrid .hero-image img,
-  body.page--madrid .hero--madrid .hero-image img{
-    width: 100vw !important;
-    height: auto !important;
-    display: block !important;
+body.page--madrid .hero.hero-madrid .hero-image img,
+body.page--madrid .hero--madrid .hero-image img{
+  width: 100vw !important;
+  height: 56vh !important;                 /* llena sin bandas */
+  display: block !important;
 
-    object-fit: contain !important;   /* NO recorta */
-    object-position: center center !important;
-  }
-
+  object-fit: cover !important;            /* adiós márgenes blancos */
+  object-position: 50% 72% !important;     /* encuadre lujo (menos cielo) */
+}
+body.page--madrid .hero.hero-madrid .hero-image,
+body.page--madrid .hero--madrid .hero-image{
+  padding: 0 !important;
+}
   /* TARJETA debajo (sin solape) */
   body.page--madrid .hero.hero-madrid .hero-card,
   body.page--madrid .hero--madrid .hero-card{
