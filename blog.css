@@ -1758,3 +1758,59 @@ main.blog-article .post-lead{
     padding-right: 24px !important;
 
 }
+/* =========================================
+   HOTFIX · MÁRGENES UNIFICADOS (SOLO MÓVIL)
+   Pegar AL FINAL de blog.css
+   ========================================= */
+
+@media (max-width: 860px){
+
+  /* 1) Un solo “gutter” (margen lateral) para TODO el blog */
+  :root{
+    --blog-gutter: 22px;
+  }
+
+  /* 2) Quita paddings laterales duplicados de secciones */
+  .blog-hero,
+  .blog-index,
+  .blog-post,
+  main.blog-article,
+  main.post-page{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 3) El contenido real vive en un contenedor único */
+  .blog-cover,
+  .blog-index__inner,
+  .post-hero__inner,
+  .post-body .post,
+  .blog-header,
+  .blog-content{
+    padding-left: var(--blog-gutter) !important;
+    padding-right: var(--blog-gutter) !important;
+  }
+
+  /* 4) Evita que .blog-cover vuelva a crear “marco” extra */
+  .blog-cover{
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* 5) Alinea la caja de portada (imagen + texto) con el mismo gutter */
+  .blog-cover img{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 6) El “whisper” (texto bajo portada) que no meta otro margen distinto */
+  .blog-whisper{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
