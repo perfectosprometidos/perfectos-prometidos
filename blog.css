@@ -1722,3 +1722,21 @@ main.post-page .post-lead,
 main.blog-article .post-lead{
   display: none !important;
 }
+/* --- Contenedor editorial del blog --- */
+
+.blog-intro,
+.blog-hero,
+.blog-editions,
+.blog-grid,
+.blog-article {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.blog-intro p,
+.blog-article p {
+    line-height: 1.75;
+    font-size: 1.05rem;
+}
