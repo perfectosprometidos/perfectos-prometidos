@@ -1,1 +1,4 @@
-robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://perfectosprometidos.com/sitemap.xml
