@@ -1740,3 +1740,21 @@ main.blog-article .post-lead{
     line-height: 1.75;
     font-size: 1.05rem;
 }
+/* CONTENEDOR EDITORIAL UNIFICADO */
+
+.blog-intro,
+.blog-hero,
+.blog-editions,
+.blog-grid,
+.blog-post,
+.blog-card,
+.blog-article {
+
+    max-width: 760px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+
+}
