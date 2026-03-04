@@ -1819,3 +1819,9 @@ main.blog-article .post-lead{
 }
 
 }
+/* ===== FIX DESKTOP: el header tapa el inicio del blog ===== */
+@media (min-width: 861px){
+  body{
+    padding-top: 110px; /* ajusta si tu topbar es más alto */
+  }
+}
