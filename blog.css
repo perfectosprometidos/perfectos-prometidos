@@ -1825,3 +1825,9 @@ main.blog-article .post-lead{
     padding-top: 110px; /* ajusta si tu topbar es más alto */
   }
 }
+@media (min-width: 861px){
+  .blog-intro{
+    margin-top: 0 !important;
+    padding-top: 20px;
+  }
+}
