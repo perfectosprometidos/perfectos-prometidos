@@ -384,3 +384,8 @@ main.post-page{
   height: auto !important;
   border-radius: 18px !important;
 }
+/* FIX: si no queremos imagen de entrada en ningún post */
+main.post-page .post-lead,
+main.blog-article .post-lead{
+  display: none !important;
+}
