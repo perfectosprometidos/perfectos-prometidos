@@ -1831,3 +1831,10 @@ main.blog-article .post-lead{
     padding-top: 20px;
   }
 }
+.post-image{
+width:100%;
+max-width:900px;
+margin:40px auto;
+display:block;
+border-radius:8px;
+}
