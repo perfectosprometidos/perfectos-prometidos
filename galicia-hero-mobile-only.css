@@ -4,7 +4,7 @@
 
   body.page--galicia .hero.hero-galicia{
     padding: 0 !important;
-    margin: 0 0 28px !important;
+    margin: 0 0 32px !important;
     background: transparent !important;
   }
 
@@ -18,9 +18,9 @@
 
   body.page--galicia .hero.hero-galicia .hero-image img{
     width: 100vw !important;
-    height: 68vh !important;
+    height: 66vh !important;
     object-fit: cover !important;
-    object-position: 50% 56% !important;
+    object-position: 50% 57% !important;
     display: block !important;
   }
 
