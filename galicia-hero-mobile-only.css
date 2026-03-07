@@ -1,27 +1,22 @@
 /* ===== GALICIA HERO · misma lógica visual que Madrid ===== */
 
 .hero.hero-galicia {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  align-items: center;
+  position: relative;
   max-width: 1320px;
   margin: 24px auto 0;
   padding: 0 32px;
-  position: relative;
 }
 
 .hero.hero-galicia .hero-image {
-  grid-column: 1 / 2;
-  grid-row: 1;
   position: relative;
   z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .hero.hero-galicia .hero-image img {
   display: block;
   width: 100%;
-  max-width: 980px;
-  margin: 0 auto;
   aspect-ratio: 1.9 / 1;
   object-fit: cover;
   object-position: center center;
@@ -29,21 +24,21 @@
 }
 
 .hero.hero-galicia .hero-card {
-  grid-column: 1 / 2;
-  grid-row: 1;
-  align-self: center;
-  justify-self: start;
-  width: min(540px, 86%);
-  margin-left: 82px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-12%, -50%);
+  width: min(470px, 44vw);
   background: #f3efe8;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 34px;
-  padding: 34px 46px 34px;
+  padding: 28px 42px 30px;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
-  position: relative;
   z-index: 2;
 }
-
+.hero.hero-galicia .hero-card .hero-cta {
+  min-width: 286px;
+}
 .hero.hero-galicia .hero-tag {
   display: block;
   margin-bottom: 20px;
@@ -54,32 +49,32 @@
 
 .hero.hero-galicia h1 {
   margin: 0 0 18px;
-  font-size: clamp(4.2rem, 5.8vw, 6.2rem);
-  line-height: 0.88;
+  font-size: clamp(3.8rem, 5.2vw, 5.4rem);
+  line-height: 0.9;
   letter-spacing: -0.04em;
 }
 
 .hero.hero-galicia .hero-subline {
-  margin: 0 0 22px;
-  max-width: 18ch;
-  font-size: 1.08rem;
-  line-height: 1.5;
+  margin: 0 0 18px;
+  max-width: 22ch;
+  font-size: 0.96rem;
+  line-height: 1.45;
   color: rgba(0, 0, 0, 0.72);
 }
 
 .hero.hero-galicia .hero-intro {
-  margin: 0 0 22px;
-  max-width: 21ch;
-  font-size: 1.04rem;
-  line-height: 1.58;
+  margin: 0 0 18px;
+  max-width: 24ch;
+  font-size: 0.95rem;
+  line-height: 1.52;
   color: rgba(0, 0, 0, 0.72);
 }
 
 .hero.hero-galicia .hero-manifesto {
-  margin: 0 0 26px;
-  max-width: 21ch;
-  font-size: 1rem;
-  line-height: 1.6;
+  margin: 0 0 22px;
+  max-width: 24ch;
+  font-size: 0.92rem;
+  line-height: 1.5;
   color: rgba(0, 0, 0, 0.68);
 }
 
