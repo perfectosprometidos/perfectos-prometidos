@@ -23,42 +23,42 @@ body.page--galicia .hero.hero-galicia .hero-image{
 }
 
 body.page--galicia .hero.hero-galicia .hero-image img{
+
   display:block;
   width:100%;
   height:auto;
 
-  min-height:740px;
-  max-height:780px;
+  min-height:760px;
+  max-height:820px;
 
   object-fit:cover;
-  object-position:center 60%;
+  object-position:center center;
 
   border-radius:0;
 }
 
 /* tarjeta editorial bien colocada */
 body.page--galicia .hero.hero-galicia .hero-card{
-  position: absolute;
 
-  top: 120px;
+  position:absolute;
 
-  left: 50%;
-  transform: translateX(-50%);
+  top:120px;
 
-  width: min(560px, 42vw);
-  max-width: 560px;
+  left:8%;
+  transform:none;
 
-  margin: 0;
+  width:460px;
+  max-width:460px;
 
-  background: #f4efe8;
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 34px;
+  background:#f4efe8;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:34px;
 
-  padding: 40px 44px 36px;
+  padding:36px 40px 32px;
 
-  box-shadow: 0 22px 60px rgba(0,0,0,.08);
+  box-shadow:0 22px 60px rgba(0,0,0,.08);
 
-  z-index: 5;
+  z-index:5;
 }
 
 body.page--galicia .hero.hero-galicia .hero-tag{
