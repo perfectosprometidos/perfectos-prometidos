@@ -34,8 +34,8 @@ body.page--mirada-editorial .editorial-hero-image img{
 /* ---------- HERO TEXT ---------- */
 
 body.page--mirada-editorial .editorial-hero{
-  max-width: 980px;
-  margin: -56px auto 0;
+  max-width: 760px;
+margin: -90px auto 0;
   padding: 0 56px;
   box-sizing: border-box;
   position: relative;
@@ -47,11 +47,12 @@ body.page--mirada-editorial .editorial-hero-inner{
 }
 
 body.page--mirada-editorial .editorial-eyebrow{
-  margin: 0 0 16px;
-  font-size: 0.82rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,.42);
+
+margin:0 0 18px;
+font-size:.78rem;
+letter-spacing:.28em;
+text-transform:uppercase;
+color:rgba(0,0,0,.45);
 }
 
 body.page--mirada-editorial .editorial-hero h1{
