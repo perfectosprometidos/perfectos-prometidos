@@ -138,3 +138,91 @@ body.page--galicia .pp-list li{
     margin-bottom: 22px;
   }
 }
+/* ===== GALICIA · ESTRUCTURA INTERIOR ===== */
+
+body.page--galicia .galicia-manifesto .wrap.prose,
+body.page--galicia .galicia-how .wrap.prose{
+  max-width: 78ch;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+body.page--galicia .section.section--soft .wrap.prose{
+  max-width: 78ch;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+body.page--galicia .section.section--image-break .wrap{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+body.page--galicia .full-image{
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+}
+
+body.page--galicia .galicia-editorial{
+  padding: 48px 0;
+}
+
+body.page--galicia .galicia-editorial .pp-container{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+body.page--galicia .pp-intro{
+  max-width: 780px;
+  margin: 0 auto 28px;
+}
+
+body.page--galicia .pp-grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+body.page--galicia .pp-card{
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 24px;
+  background: rgba(255,255,255,.55);
+  padding: 22px 22px 20px;
+}
+
+body.page--galicia .pp-card p{
+  margin: 0 0 14px;
+  line-height: 1.72;
+  color: rgba(0,0,0,.76);
+}
+
+body.page--galicia .pp-list{
+  margin: 0;
+  padding-left: 18px;
+}
+
+body.page--galicia .pp-list li{
+  margin: 8px 0;
+  line-height: 1.62;
+}
+
+body.page--galicia .section{
+  padding: 48px 0;
+}
+
+body.page--galicia .section--image-break{
+  padding-top: 18px;
+}
+
+@media (max-width: 920px){
+  body.page--galicia .pp-grid-3{
+    grid-template-columns: 1fr;
+  }
+
+  body.page--galicia .pp-intro{
+    margin-bottom: 22px;
+  }
+}
