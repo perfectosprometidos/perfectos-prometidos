@@ -1,16 +1,20 @@
-/* ===== GALICIA HERO · misma lógica visual que Madrid ===== */
+/* =========================================================
+   GALICIA HERO · misma lógica visual que Madrid / Home
+   Quiet luxury · The Lane style
+   ========================================================= */
+
+/* ---------- DESKTOP ---------- */
 
 .hero.hero-galicia {
   position: relative;
   max-width: 1320px;
-  margin: 24px auto 0;
+  margin: 28px auto 0;
   padding: 0 32px;
 }
 
 .hero.hero-galicia .hero-image {
   position: relative;
-  z-index: 1;
-  max-width: 980px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -20,94 +24,102 @@
   aspect-ratio: 1.9 / 1;
   object-fit: cover;
   object-position: center center;
-  border-radius: 34px;
+  border-radius: 36px;
 }
 
 .hero.hero-galicia .hero-card {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-12%, -50%);
-  width: min(470px, 44vw);
-  background: #f3efe8;
+  transform: translate(-44%, -50%);
+  width: min(455px, 39vw);
+  background: #f4efe8;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 34px;
-  padding: 28px 42px 30px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+  padding: 30px 40px 30px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.07);
   z-index: 2;
 }
-.hero.hero-galicia .hero-card .hero-cta {
-  min-width: 286px;
-}
+
 .hero.hero-galicia .hero-tag {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   letter-spacing: 0.18em;
-  font-size: 0.82rem;
-  color: rgba(0, 0, 0, 0.52);
+  font-size: 0.78rem;
+  color: rgba(0, 0, 0, 0.48);
 }
 
 .hero.hero-galicia h1 {
   margin: 0 0 18px;
-  font-size: clamp(3.8rem, 5.2vw, 5.4rem);
+  font-size: clamp(3.9rem, 5vw, 5.7rem);
   line-height: 0.9;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
 }
 
 .hero.hero-galicia .hero-subline {
   margin: 0 0 18px;
-  max-width: 22ch;
-  font-size: 0.96rem;
-  line-height: 1.45;
+  max-width: 24ch;
+  font-size: 0.98rem;
+  line-height: 1.48;
   color: rgba(0, 0, 0, 0.72);
 }
 
 .hero.hero-galicia .hero-intro {
   margin: 0 0 18px;
-  max-width: 24ch;
+  max-width: 25ch;
   font-size: 0.95rem;
-  line-height: 1.52;
+  line-height: 1.55;
   color: rgba(0, 0, 0, 0.72);
 }
 
 .hero.hero-galicia .hero-manifesto {
   margin: 0 0 22px;
-  max-width: 24ch;
+  max-width: 25ch;
   font-size: 0.92rem;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.68);
+  line-height: 1.52;
+  color: rgba(0, 0, 0, 0.66);
 }
 
 .hero.hero-galicia .hero-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 290px;
   min-height: 54px;
-  padding: 0 26px;
+  padding: 0 28px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.14);
   background: transparent;
   color: #111;
   text-decoration: none;
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   letter-spacing: 0.01em;
   transition: all 0.25s ease;
 }
 
 .hero.hero-galicia .hero-cta:hover {
   background: #111;
-  color: #fff;
   border-color: #111;
+  color: #fff;
 }
 
-/* ===== CONTENIDO CENTRADO COMO MADRID ===== */
+/* ---------- BLOQUES DE TEXTO COMO MADRID ---------- */
+
+.galicia-manifesto .wrap.prose,
+.galicia-editorial .pp-container,
+.galicia-how .wrap.prose,
+.galicia-faq .wrap.prose,
+.galicia-scene .wrap.prose,
+.section.section--soft .wrap.prose {
+  max-width: 980px;
+  margin: 0 auto;
+}
 
 .galicia-manifesto .wrap.prose,
 .galicia-how .wrap.prose,
 .galicia-faq .wrap.prose,
-.galicia-scene .wrap.prose {
-  max-width: 980px;
-  margin: 0 auto;
+.galicia-scene .wrap.prose,
+.section.section--soft .wrap.prose {
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -115,7 +127,8 @@
 .galicia-manifesto .h2,
 .galicia-how .h2,
 .galicia-faq .h2,
-.galicia-scene .h2 {
+.galicia-scene .h2,
+.section.section--soft .h2 {
   max-width: 13ch;
   margin: 0 auto 26px;
   text-align: center;
@@ -124,7 +137,8 @@
 .galicia-manifesto p,
 .galicia-how p,
 .galicia-faq p,
-.galicia-scene p {
+.galicia-scene p,
+.section.section--soft .wrap.prose > p {
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
@@ -132,7 +146,8 @@
 }
 
 .galicia-how ul,
-.galicia-scene .scene-list {
+.galicia-scene .scene-list,
+.section.section--soft .wrap.prose ul {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
@@ -162,7 +177,29 @@
   object-position: center center;
 }
 
-/* ===== MÓVIL ===== */
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1100px) {
+  .hero.hero-galicia .hero-image {
+    max-width: 980px;
+  }
+
+  .hero.hero-galicia .hero-card {
+    transform: translate(-42%, -50%);
+    width: min(430px, 43vw);
+    padding: 28px 34px 28px;
+  }
+
+  .hero.hero-galicia h1 {
+    font-size: clamp(3.5rem, 5vw, 4.8rem);
+  }
+
+  .hero.hero-galicia .hero-cta {
+    min-width: 260px;
+  }
+}
+
+/* ---------- MÓVIL: MISMA LÓGICA QUE MADRID ---------- */
 
 @media (max-width: 768px) {
   .hero.hero-galicia {
@@ -175,22 +212,32 @@
 
   .hero.hero-galicia .hero-image {
     width: 100%;
+    max-width: none;
     margin: 0;
     padding: 0 24px;
   }
 
   .hero.hero-galicia .hero-image img {
     width: 100%;
-    max-width: none;
     aspect-ratio: 0.9 / 1.16;
     border-radius: 32px;
   }
 
   .hero.hero-galicia .hero-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     width: calc(100% - 48px);
-    margin: -64px auto 0;
+    margin: -66px auto 0;
     padding: 28px 22px 28px;
     border-radius: 32px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.07);
+  }
+
+  .hero.hero-galicia .hero-tag {
+    margin-bottom: 18px;
+    font-size: 0.8rem;
   }
 
   .hero.hero-galicia h1 {
@@ -213,6 +260,7 @@
 
   .hero.hero-galicia .hero-cta {
     width: 100%;
+    min-width: 0;
     min-height: 52px;
     text-align: center;
   }
@@ -221,6 +269,7 @@
   .galicia-how .wrap.prose,
   .galicia-faq .wrap.prose,
   .galicia-scene .wrap.prose,
+  .section.section--soft .wrap.prose,
   .section.section--image-break .wrap {
     padding-left: 24px;
     padding-right: 24px;
