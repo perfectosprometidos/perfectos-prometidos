@@ -137,7 +137,20 @@ body.page--mirada-editorial .editorial-quote{
   font-style: italic;
   color: rgba(0,0,0,.66);
 }
+/* ----------- EDITORIAL IMAGES ----------- */
 
+body.page--mirada-editorial .editorial-image-block{
+max-width:760px;
+margin:140px auto;
+padding:0 40px;
+}
+
+body.page--mirada-editorial .editorial-image-block img{
+width:100%;
+height:auto;
+display:block;
+border-radius:2px;
+}
 /* ---------- EDITION BLOCK ---------- */
 
 body.page--mirada-editorial .editorial-edition{
