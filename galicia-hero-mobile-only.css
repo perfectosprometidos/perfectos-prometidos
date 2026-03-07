@@ -1,282 +1,239 @@
-/* =========================================================
-   GALICIA HERO · misma lógica visual que Madrid / Home
-   Quiet luxury · The Lane style
-   ========================================================= */
+@media (max-width: 900px){
 
-/* ---------- DESKTOP ---------- */
+  body.page--galicia{ overflow-x: hidden !important; }
 
-.hero.hero-galicia {
-  position: relative;
-  max-width: 1320px;
-  margin: 28px auto 0;
-  padding: 0 32px;
-}
-
-.hero.hero-galicia .hero-image {
-  position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.hero.hero-galicia .hero-image img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1.9 / 1;
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 36px;
-}
-
-.hero.hero-galicia .hero-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-44%, -50%);
-  width: min(455px, 39vw);
-  background: #f4efe8;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 34px;
-  padding: 30px 40px 30px;
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.07);
-  z-index: 2;
-}
-
-.hero.hero-galicia .hero-tag {
-  display: block;
-  margin-bottom: 18px;
-  letter-spacing: 0.18em;
-  font-size: 0.78rem;
-  color: rgba(0, 0, 0, 0.48);
-}
-
-.hero.hero-galicia h1 {
-  margin: 0 0 18px;
-  font-size: clamp(3.9rem, 5vw, 5.7rem);
-  line-height: 0.9;
-  letter-spacing: -0.045em;
-}
-
-.hero.hero-galicia .hero-subline {
-  margin: 0 0 18px;
-  max-width: 24ch;
-  font-size: 0.98rem;
-  line-height: 1.48;
-  color: rgba(0, 0, 0, 0.72);
-}
-
-.hero.hero-galicia .hero-intro {
-  margin: 0 0 18px;
-  max-width: 25ch;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: rgba(0, 0, 0, 0.72);
-}
-
-.hero.hero-galicia .hero-manifesto {
-  margin: 0 0 22px;
-  max-width: 25ch;
-  font-size: 0.92rem;
-  line-height: 1.52;
-  color: rgba(0, 0, 0, 0.66);
-}
-
-.hero.hero-galicia .hero-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 290px;
-  min-height: 54px;
-  padding: 0 28px;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.14);
-  background: transparent;
-  color: #111;
-  text-decoration: none;
-  font-size: 0.96rem;
-  letter-spacing: 0.01em;
-  transition: all 0.25s ease;
-}
-
-.hero.hero-galicia .hero-cta:hover {
-  background: #111;
-  border-color: #111;
-  color: #fff;
-}
-
-/* ---------- BLOQUES DE TEXTO COMO MADRID ---------- */
-
-.galicia-manifesto .wrap.prose,
-.galicia-editorial .pp-container,
-.galicia-how .wrap.prose,
-.galicia-faq .wrap.prose,
-.galicia-scene .wrap.prose,
-.section.section--soft .wrap.prose {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.galicia-manifesto .wrap.prose,
-.galicia-how .wrap.prose,
-.galicia-faq .wrap.prose,
-.galicia-scene .wrap.prose,
-.section.section--soft .wrap.prose {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-.galicia-manifesto .h2,
-.galicia-how .h2,
-.galicia-faq .h2,
-.galicia-scene .h2,
-.section.section--soft .h2 {
-  max-width: 13ch;
-  margin: 0 auto 26px;
-  text-align: center;
-}
-
-.galicia-manifesto p,
-.galicia-how p,
-.galicia-faq p,
-.galicia-scene p,
-.section.section--soft .wrap.prose > p {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.galicia-how ul,
-.galicia-scene .scene-list,
-.section.section--soft .wrap.prose ul {
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.galicia-scene .scene-subtitle,
-.galicia-scene .scene-closing,
-.galicia-faq .faq-intro {
-  text-align: center;
-}
-
-.section.section--image-break .wrap {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-.section.section--image-break .full-image {
-  display: block;
-  width: 100%;
-  max-width: 980px;
-  margin: 0 auto;
-  border-radius: 34px;
-  aspect-ratio: 1.9 / 1;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* ---------- TABLET ---------- */
-
-@media (max-width: 1100px) {
-  .hero.hero-galicia .hero-image {
-    max-width: 980px;
+  /* HERO: sin padding/alturas heredadas en móvil */
+  body.page--galicia .hero.hero-galicia,
+  body.page--galicia .hero--galicia{
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
   }
 
-  .hero.hero-galicia .hero-card {
-    transform: translate(-42%, -50%);
-    width: min(430px, 43vw);
-    padding: 28px 34px 28px;
+  /* CONTENEDOR: quitamos el “marco blanco” */
+  body.page--galicia .hero.hero-galicia .hero-image,
+  body.page--galicia .hero--galicia .hero-image{
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 0 !important;     /* <- adiós tarjeta */
+    background: transparent !important;
+    overflow: visible !important;
   }
 
-  .hero.hero-galicia h1 {
-    font-size: clamp(3.5rem, 5vw, 4.8rem);
+  /* Por si hay <figure>/<picture> metiendo márgenes */
+  body.page--galicia .hero.hero-galicia .hero-image picture,
+  body.page--galicia .hero.hero-galicia .hero-image figure{
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
   }
 
-  .hero.hero-galicia .hero-cta {
-    min-width: 260px;
+  /* IMAGEN COMPLETA (sin recorte) y a pantalla completa */
+  body.page--galicia .hero.hero-galicia .hero-image img,
+  body.page--galicia .hero--galicia .hero-image img{
+    width: 100% !important;
+    height: 72vh !important;
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: 50% 63% !important;
+  }
+
+  /* TARJETA debajo */
+  body.page--galicia .hero.hero-galicia .hero-card,
+  body.page--galicia .hero--galicia .hero-card{
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+
+    width: calc(100% - 32px) !important;
+    max-width: 760px !important;
+    margin: 18px auto 0 !important;
+    z-index: 2 !important;
   }
 }
 
-/* ---------- MÓVIL: MISMA LÓGICA QUE MADRID ---------- */
+@media (max-width: 900px){
 
-@media (max-width: 768px) {
-  .hero.hero-galicia {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 12px;
-    padding: 0;
+  /* Mata el “marco” del wrapper que envuelve el hero (solo Galicia) */
+  body.page--galicia .hero.hero-galicia,
+  body.page--galicia .hero--galicia,
+  body.page--galicia .hero.hero-galicia *{
+    background: transparent !important;
   }
 
-  .hero.hero-galicia .hero-image {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0 24px;
+  /* Wrapper típico que suele crear el recuadro */
+  body.page--galicia main > section,
+  body.page--galicia main .section,
+  body.page--galicia main .block,
+  body.page--galicia main .card,
+  body.page--galicia main .panel,
+  body.page--galicia main .container,
+  body.page--galicia main .wrap{
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
-  .hero.hero-galicia .hero-image img {
-    width: 100%;
-    aspect-ratio: 0.9 / 1.16;
-    border-radius: 32px;
+  /* Hero a sangre como Home */
+  body.page--galicia .hero.hero-galicia{
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
   }
 
-  .hero.hero-galicia .hero-card {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: calc(100% - 48px);
-    margin: -66px auto 0;
-    padding: 28px 22px 28px;
-    border-radius: 32px;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.07);
+  body.page--galicia .hero.hero-galicia .hero-image{
+    border-radius: 0 !important;
+    overflow: visible !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
 
-  .hero.hero-galicia .hero-tag {
-    margin-bottom: 18px;
-    font-size: 0.8rem;
+  body.page--galicia .hero.hero-galicia .hero-image img{
+    width: 100vw !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important; /* imagen completa */
   }
 
-  .hero.hero-galicia h1 {
-    margin: 0 0 18px;
-    font-size: clamp(3.7rem, 14vw, 4.9rem);
-    line-height: 0.9;
+}
+
+@media (max-width: 900px){
+
+  /* 1) El wrapper inmediato del hero (section/article/div) NO puede tener fondo ni padding */
+  body.page--galicia .hero.hero-galicia{
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
-  .hero.hero-galicia .hero-subline,
-  .hero.hero-galicia .hero-intro,
-  .hero.hero-galicia .hero-manifesto {
-    max-width: none;
-    font-size: 0.98rem;
-    line-height: 1.58;
+  /* 2) Si el hero está dentro de un “bloque” lo neutralizamos SOLO si contiene el hero */
+  body.page--galicia section:has(.hero.hero-galicia),
+  body.page--galicia article:has(.hero.hero-galicia),
+  body.page--galicia div:has(.hero.hero-galicia){
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
-  .hero.hero-galicia .hero-manifesto {
-    margin-bottom: 22px;
+  /* 3) Imagen full width real (sin tarjeta) */
+  body.page--galicia .hero.hero-galicia .hero-image{
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: transparent !important;
   }
 
-  .hero.hero-galicia .hero-cta {
-    width: 100%;
-    min-width: 0;
-    min-height: 52px;
-    text-align: center;
+  body.page--galicia .hero.hero-galicia .hero-image img{
+    width: 100vw !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important; /* completa */
   }
 
-  .galicia-manifesto .wrap.prose,
-  .galicia-how .wrap.prose,
-  .galicia-faq .wrap.prose,
-  .galicia-scene .wrap.prose,
-  .section.section--soft .wrap.prose,
-  .section.section--image-break .wrap {
-    padding-left: 24px;
-    padding-right: 24px;
+  /* 4) Tarjeta debajo con margen elegante */
+  body.page--galicia .hero.hero-galicia .hero-card{
+    width: calc(100% - 32px) !important;
+    margin: 18px auto 0 !important;
+  }
+}
+
+@media (max-width: 900px){
+
+  /* A) Mata cualquier padding lateral que empuja SOLO en Galicia */
+  body.page--galicia main,
+  body.page--galicia .wrap,
+  body.page--galicia .container,
+  body.page--galicia section,
+  body.page--galicia .block{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  .section.section--image-break .full-image {
-    aspect-ratio: 1.22 / 1;
-    border-radius: 30px;
+  /* B) Hero wrapper sin desplazamientos */
+  body.page--galicia .hero.hero-galicia{
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
   }
+
+  /* C) FULL BLEED REAL: truco infalible con calc() */
+  body.page--galicia .hero.hero-galicia .hero-image{
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    left: auto !important;
+    transform: none !important;
+
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  body.page--galicia .hero.hero-galicia .hero-image img{
+    width: 100vw !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+
+  /* D) Tarjeta debajo con márgenes elegantes */
+  body.page--galicia .hero.hero-galicia .hero-card{
+    width: calc(100% - 32px) !important;
+    margin: 18px auto 0 !important;
+  }
+}
+
+@media (max-width: 900px){
+
+  /* Margen lateral premium para el texto editorial */
+  body.page--galicia main{
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* Ancho de lectura elegante (no texto a pantalla completa) */
+  body.page--galicia .chapter,
+  body.page--galicia .madrid-intro,
+  body.page--galicia .intro,
+  body.page--galicia .section-intro{
+    max-width: 680px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
 }
