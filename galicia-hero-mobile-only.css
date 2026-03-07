@@ -32,7 +32,7 @@ body.page--galicia .hero.hero-galicia .hero-image img{
   max-height:820px;
 
   object-fit:cover;
-  object-position:center center;
+  object-position:center 75%;
 
   border-radius:0;
 }
@@ -42,19 +42,19 @@ body.page--galicia .hero.hero-galicia .hero-card{
 
   position:absolute;
 
-  top:120px;
+  top:150px;
 
   left:8%;
   transform:none;
 
-  width:460px;
-  max-width:460px;
+  width:420px;
+  max-width:420px;
 
   background:#f4efe8;
   border:1px solid rgba(0,0,0,.08);
   border-radius:34px;
 
-  padding:36px 40px 32px;
+  padding:32px 36px 28px;
 
   box-shadow:0 22px 60px rgba(0,0,0,.08);
 
