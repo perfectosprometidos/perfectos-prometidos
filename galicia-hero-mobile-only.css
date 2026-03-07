@@ -1,9 +1,179 @@
+/* ===== GALICIA HERO + AJUSTES EDITORIALES ===== */
+
+/* Desktop / base */
+.hero.hero-galicia {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 520px);
+  align-items: center;
+  gap: clamp(40px, 5vw, 72px);
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(40px, 5vw, 72px) 32px 0;
+}
+
+.hero.hero-galicia .hero-image {
+  position: relative;
+}
+
+.hero.hero-galicia .hero-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.06 / 1;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 34px;
+}
+
+.hero.hero-galicia .hero-card {
+  background: #f3efe8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 34px;
+  padding: clamp(34px, 4vw, 48px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.hero.hero-galicia .hero-tag {
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  color: rgba(0, 0, 0, 0.52);
+}
+
+.hero.hero-galicia h1 {
+  margin: 0 0 20px;
+  font-size: clamp(4.1rem, 5.7vw, 6.25rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.hero.hero-galicia .hero-subline,
+.hero.hero-galicia .hero-intro,
+.hero.hero-galicia .hero-manifesto {
+  max-width: 34ch;
+}
+
+.hero.hero-galicia .hero-subline {
+  margin: 0 0 24px;
+  font-size: clamp(1.18rem, 1.5vw, 1.5rem);
+  line-height: 1.48;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.hero.hero-galicia .hero-intro {
+  margin: 0 0 24px;
+  font-size: clamp(1.12rem, 1.3vw, 1.36rem);
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.hero.hero-galicia .hero-manifesto {
+  margin: 0 0 28px;
+  font-size: clamp(1.06rem, 1.15vw, 1.2rem);
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.hero.hero-galicia .hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: transparent;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  transition: all 0.25s ease;
+}
+
+.hero.hero-galicia .hero-cta:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ===== TEXTOS CENTRADOS COMO MADRID ===== */
+.galicia-manifesto .wrap.prose,
+.galicia-scene .wrap.prose,
+.galicia-how .wrap.prose,
+.galicia-faq .wrap.prose {
+  max-width: 880px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.galicia-manifesto .h2,
+.galicia-scene .h2,
+.galicia-how .h2,
+.galicia-faq .h2 {
+  max-width: 16ch;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.galicia-manifesto p,
+.galicia-scene p,
+.galicia-how p,
+.galicia-faq p,
+.galicia-scene ul,
+.galicia-how ul {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.galicia-manifesto p,
+.galicia-scene p,
+.galicia-how p,
+.galicia-faq p {
+  text-align: center;
+}
+
+.galicia-scene .scene-subtitle,
+.galicia-scene .scene-closing,
+.galicia-faq .faq-intro {
+  text-align: center;
+}
+
+.galicia-scene .scene-list,
+.galicia-how ul {
+  text-align: left;
+  max-width: 640px;
+  padding-left: 1.2rem;
+}
+
+.section.section--image-break .wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.section.section--image-break .full-image {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 34px;
+  aspect-ratio: 1.9 / 1;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* ===== MOBILE: MISMA LÓGICA VISUAL QUE MADRID ===== */
 @media (max-width: 768px) {
   .hero.hero-galicia {
     display: flex;
     flex-direction: column;
-    gap: 28px;
-    padding: 32px 0 0;
+    gap: 0;
+    padding: 20px 0 0;
   }
 
   .hero.hero-galicia .hero-image {
@@ -14,36 +184,49 @@
   }
 
   .hero.hero-galicia .hero-image img {
-    display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 0.9 / 1.16;
     object-fit: cover;
-    border-radius: 0;
+    object-position: center center;
+    border-radius: 32px;
   }
 
   .hero.hero-galicia .hero-card {
     order: 2;
     width: calc(100% - 48px);
-    margin: -72px auto 0;
-    padding: 28px 22px 26px;
+    margin: -64px auto 0;
+    padding: 28px 22px 28px;
     border-radius: 32px;
-    box-sizing: border-box;
     position: relative;
     z-index: 2;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.07);
   }
 
   .hero.hero-galicia .hero-tag {
-    display: block;
     margin-bottom: 18px;
-    letter-spacing: 0.18em;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
   }
 
   .hero.hero-galicia h1 {
     margin: 0 0 18px;
-    font-size: clamp(3rem, 9.4vw, 4.4rem);
-    line-height: 0.92;
+    font-size: clamp(3.7rem, 14vw, 4.9rem);
+    line-height: 0.9;
+  }
+
+  .hero.hero-galicia .hero-subline {
+    margin-bottom: 18px;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .hero.hero-galicia .hero-intro,
+  .hero.hero-galicia .hero-manifesto {
+    font-size: 0.98rem;
+    line-height: 1.58;
+  }
+
+  .hero.hero-galicia .hero-manifesto {
+    margin-bottom: 22px;
   }
 
   .hero.hero-galicia .hero-subline,
@@ -53,8 +236,35 @@
   }
 
   .hero.hero-galicia .hero-cta {
+    display: inline-flex;
     width: 100%;
-    justify-content: center;
+    min-height: 52px;
     text-align: center;
+  }
+
+  .galicia-manifesto .wrap.prose,
+  .galicia-scene .wrap.prose,
+  .galicia-how .wrap.prose,
+  .galicia-faq .wrap.prose {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .galicia-manifesto .h2,
+  .galicia-scene .h2,
+  .galicia-how .h2,
+  .galicia-faq .h2 {
+    max-width: 12ch;
+    margin-bottom: 22px;
+  }
+
+  .section.section--image-break .wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .section.section--image-break .full-image {
+    aspect-ratio: 1.22 / 1;
+    border-radius: 30px;
   }
 }
