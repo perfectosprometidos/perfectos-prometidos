@@ -341,13 +341,28 @@ a:visited{ color: inherit; }
   min-height: 92vh;
   overflow: hidden;
 }
-
+/* OVERLAY EDITORIAL HERO — efecto The Lane */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to right,
+    rgba(247,243,236,0.78) 0%,
+    rgba(247,243,236,0.58) 22%,
+    rgba(247,243,236,0.28) 42%,
+    rgba(247,243,236,0.10) 58%,
+    rgba(247,243,236,0.00) 72%
+  );
+  pointer-events:none;
+  z-index:1;
+}
 /* Imagen: encuadre más editorial (menos “tapa”) */
 .hero-image img{
   width: 100%;
   height: 92vh;
   object-fit: cover;
-  object-position: 62% 38%; /* mueve el encuadre: más pareja visible */
+object-position: 70% center;
   display: block;
 }
 
