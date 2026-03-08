@@ -363,6 +363,7 @@ a:visited{ color: inherit; }
   height: 92vh;
   object-fit: cover;
 object-position: 70% center;
+  filter: brightness(0.96) contrast(0.95) saturate(0.96);
   display: block;
 }
 
