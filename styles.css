@@ -348,12 +348,15 @@ position:absolute;
 left:0;
 right:0;
 bottom:0;
-height:35%;
+
+height:28%;
+
 background:linear-gradient(
 to bottom,
 rgba(255,255,255,0) 0%,
-rgba(255,255,255,0.90) 85%
+rgba(255,255,255,0.88) 92%
 );
+
 pointer-events:none;
 }
 /* Imagen: encuadre más editorial (menos “tapa”) */
@@ -361,7 +364,7 @@ pointer-events:none;
   width: 100%;
  height:100%;
 object-fit:cover;
-object-position:75% center;
+object-position:78% center;
   filter: brightness(0.96) contrast(0.95) saturate(0.96);
   display: block;
 }
