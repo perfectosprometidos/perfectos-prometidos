@@ -374,8 +374,8 @@ a:visited{ color: inherit; }
   left: clamp(20px, 5vw, 70px);
   top: 52%;
   transform: translateY(-50%);
-width: min(380px, 82vw);
-padding: clamp(18px, 2vw, 24px);
+width: min(640px, 92vw);
+padding: clamp(26px, 3vw, 44px);
   border-radius: 28px;
 
   background: rgba(246, 244, 239, 0.86); /* más transparente */
@@ -388,8 +388,8 @@ padding: clamp(18px, 2vw, 24px);
 
 /* Tipos: un pelín más compactos para “respirar” */
 .hero-card h1{
-font-size: clamp(1.9rem, 2.6vw, 2.5rem);
-  line-height: 1.06;
+font-size: clamp(2.1rem, 3.2vw, 3.1rem);
+line-height: 1.06;
 }
 
 /* En móvil: tarjeta centrada abajo y más estrecha */
