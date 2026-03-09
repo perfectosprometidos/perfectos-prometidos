@@ -337,9 +337,11 @@ a:visited{ color: inherit; }
 }
 /* === HERO (ajuste lujo: tarjeta más ligera, deja ver la portada) === */
 .hero{
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
+position:relative;
+min-height:92vh;
+display:flex;
+align-items:center;
+overflow:hidden;
 }
 /* OVERLAY EDITORIAL HERO — efecto The Lane */
 .hero::after{
