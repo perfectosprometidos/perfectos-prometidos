@@ -337,9 +337,9 @@ a:visited{ color: inherit; }
 }
 /* === HERO (ajuste lujo: tarjeta más ligera, deja ver la portada) === */
 .hero{
-position:relative;
-min-height:92vh;
-overflow:hidden;
+  position: relative;
+  min-height: 92vh;
+  overflow: hidden;
 }
 /* OVERLAY EDITORIAL HERO — efecto The Lane */
 .hero::after{
@@ -361,9 +361,8 @@ overflow:hidden;
 .hero-image img{
   width: 100%;
   height: 92vh;
- object-fit:cover;
-object-position:72% 24%;
- 
+  object-fit: cover;
+object-position: 70% center;
   filter: brightness(0.96) contrast(0.95) saturate(0.96);
   display: block;
 }
@@ -372,10 +371,10 @@ object-position:72% 24%;
 .hero-card{
   position: absolute;
   left: clamp(20px, 5vw, 70px);
-  top:55%;
+  top: 52%;
   transform: translateY(-50%);
-width: min(420px, 78vw);
-padding: clamp(22px, 2.4vw, 30px);
+  width: min(640px, 92vw);
+  padding: clamp(26px, 3vw, 44px);
   border-radius: 28px;
 
   background: rgba(246, 244, 239, 0.86); /* más transparente */
@@ -385,23 +384,11 @@ padding: clamp(22px, 2.4vw, 30px);
   box-shadow: 0 28px 80px rgba(0,0,0,.22);
   z-index: 2;
 }
-/* HOME · tarjeta con comportamiento como Madrid */
-.hero-home .hero-card{
-width: min(420px, 78vw);
- padding: 20px 22px;
-  top: 60%;
-  transform: translateY(-50%);
-  border-radius: 32px;
-}
 
-.hero-home .hero-card h1{
-  font-size: clamp(2.15rem, 3vw, 3rem);
-  line-height: 1.05;
-}
 /* Tipos: un pelín más compactos para “respirar” */
 .hero-card h1{
-font-size: clamp(1.9rem, 2.6vw, 2.6rem);
-line-height: 1.06;
+  font-size: clamp(2.1rem, 3.2vw, 3.1rem);
+  line-height: 1.06;
 }
 
 /* En móvil: tarjeta centrada abajo y más estrecha */
@@ -516,7 +503,7 @@ section + section {
 
 /* Titulares: coherentes con tu look */
 .services h2, .contact h2, .world h2 {
- font-size: clamp(2.1rem, 2.6vw, 2.6rem);
+  font-size: clamp(2rem, 2.4vw, 2.4rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin: 0 0 18px;
@@ -578,7 +565,7 @@ section + section {
 /* Mundo: introducción editorial */
 .world-intro {
   max-width: 720px;
- margin-bottom: 90px;
+  margin-bottom: 64px;
 }
 
 .world-intro .world-tag {
@@ -589,15 +576,12 @@ section + section {
 .world-intro h2 {
   margin-bottom: 22px;
 }
-.world-intro h2{
-  font-size: clamp(2.2rem, 2.8vw, 2.6rem);
-  line-height: 1.15;
-}
+
 .world-intro .contact-lead{
-font-size: clamp(1.08rem, 1.15vw, 1.22rem);
+  font-size: clamp(1.08rem, 1.15vw, 1.2rem);
   line-height: 1.7;
-color: rgba(17,17,17,.78);
-max-width: 760px;
+  color: rgba(17,17,17,.82);
+  max-width: 720px;
 }
 
 /* Ritmo editorial en títulos de servicios */
@@ -651,18 +635,18 @@ padding: 40px 0 24px;
 }
 /* CTA al final de Servicios (Conversemos) — más editorial */
 .services-cta{
- margin-top: 18px;
+  margin-top: 28px;
   text-align: center;
 }
 .services-cta p{
-margin: 0 0 8px;
+  margin: 0 0 10px;
   line-height: 1.6;
   color: rgba(17,17,17,.78);
 }
 .services-cta-link{
   display: inline-block;
   font-style: italic;
- letter-spacing: .14em;
+  letter-spacing: .10em;
   text-transform: uppercase;
   font-size: .78rem;
   color: rgba(17,17,17,.82);
@@ -2051,7 +2035,8 @@ margin: 0 0 8px;
 }
 
   /* --- FIX HERO móvil: centrado real (sin tocar PC) --- */
-
+.hero{
+   }
   /* === MARGEN EDITORIAL TEXTO EN MÓVIL (Experiencia / Mundo) === */
 @media (max-width: 920px){
 
@@ -2067,8 +2052,22 @@ margin: 0 0 8px;
 
 }
 
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
 
+.hero-image,
+.hero-card{
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-self: center !important;
+}
 
+.hero-card{
+  max-width: 560px !important;
+}
 /* =========================================================
    FIX DEFINITIVO MÓVIL VERTICAL – HERO + TEXTO
    No afecta a PC ni a móvil horizontal
@@ -2186,7 +2185,11 @@ margin: 0 0 8px;
   box-sizing: border-box !important;
 }
 
-
+.hero-image img{
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
 
 /* --- FIX Servicios móvil: evitar 3+1 --- */
 .services-grid{
@@ -3954,30 +3957,30 @@ body.page--madrid .section--image-break img.full-image{
   padding: 76px 0 92px;
 }
 @media (max-width: 900px){
-.manifesto{ padding: 48px 0 56px; }
+  .manifesto{ padding: 60px 0 76px; }
 }
 /* ===== HOME · AJUSTE FINAL CTA (LUJO) ===== */
 
 .services-cta{
- margin-top: 18px;
-margin-bottom: 44px;
+  margin-top: 36px;
+  margin-bottom: 72px;
   text-align: center;
 }
 
 .services-cta p{
- font-size: 1.02rem;
- line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: rgba(17,17,17,.78);
   max-width: 620px;
- margin: 0 auto 10px;
+  margin: 0 auto 18px;
 }
 
 .services-cta-link{
-font-size: .78rem;
-letter-spacing: .14em;
+  font-size: .82rem;
+  letter-spacing: .22em;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(17,17,17,.25);
-padding-bottom: 2px;
+  padding-bottom: 4px;
   text-decoration: none;
 }
 
@@ -4610,17 +4613,4 @@ body.page--madrid .cta-box{
     margin: 18px auto 0 !important;
     z-index: 3 !important;
   }
-}
-/* HOME · BLOQUE SEO */
-
-.home-seo{
-  max-width: 760px;
-  margin: 0 auto 80px;
-}
-
-.home-seo p{
-  font-size: 1.05rem;
-  line-height: 1.75;
-  margin-bottom: 18px;
-  color: rgba(17,17,17,.82);
 }
