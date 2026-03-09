@@ -372,9 +372,9 @@ a:visited{ color: inherit; }
 .hero-card{
   position: absolute;
   left: clamp(20px, 5vw, 70px);
-  top: 58%;
+  top:32%;
   transform: translateY(-50%);
-width: min(420px, 82vw);
+width: min(440px, 84vw);
 padding: clamp(20px, 2vw, 26px);
   border-radius: 28px;
 
