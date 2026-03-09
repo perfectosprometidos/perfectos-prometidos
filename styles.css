@@ -578,10 +578,10 @@ section + section {
 }
 
 .world-intro .contact-lead{
-  font-size: clamp(1.08rem, 1.15vw, 1.2rem);
+font-size: clamp(1.1rem, 1.2vw, 1.22rem);
   line-height: 1.7;
-  color: rgba(17,17,17,.82);
-  max-width: 720px;
+ color: rgba(17,17,17,.80);
+max-width: 760px;
 }
 
 /* Ritmo editorial en títulos de servicios */
@@ -635,18 +635,18 @@ padding: 40px 0 24px;
 }
 /* CTA al final de Servicios (Conversemos) — más editorial */
 .services-cta{
-  margin-top: 28px;
+ margin-top: 18px;
   text-align: center;
 }
 .services-cta p{
-  margin: 0 0 10px;
+margin: 0 0 8px;
   line-height: 1.6;
   color: rgba(17,17,17,.78);
 }
 .services-cta-link{
   display: inline-block;
   font-style: italic;
-  letter-spacing: .10em;
+ letter-spacing: .14em;
   text-transform: uppercase;
   font-size: .78rem;
   color: rgba(17,17,17,.82);
@@ -3962,25 +3962,25 @@ body.page--madrid .section--image-break img.full-image{
 /* ===== HOME · AJUSTE FINAL CTA (LUJO) ===== */
 
 .services-cta{
-  margin-top: 36px;
-  margin-bottom: 72px;
+ margin-top: 18px;
+margin-bottom: 44px;
   text-align: center;
 }
 
 .services-cta p{
-  font-size: 1.05rem;
-  line-height: 1.8;
+ font-size: 1.02rem;
+ line-height: 1.7;
   color: rgba(17,17,17,.78);
   max-width: 620px;
-  margin: 0 auto 18px;
+ margin: 0 auto 10px;
 }
 
 .services-cta-link{
-  font-size: .82rem;
-  letter-spacing: .22em;
+font-size: .78rem;
+letter-spacing: .14em;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(17,17,17,.25);
-  padding-bottom: 4px;
+padding-bottom: 2px;
   text-decoration: none;
 }
 
