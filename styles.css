@@ -578,7 +578,8 @@ section + section {
 }
 
 .world-intro .contact-lead {
-  font-size: 1.05rem;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /* Ritmo editorial en títulos de servicios */
@@ -912,10 +913,11 @@ padding: 40px 0 24px;
 
 /* CONTACTO premium */
 .contact-lead {
-  max-width: 720px;
-  line-height: 1.7;
-  opacity: .9;
-  margin: 0 0 22px;
+  max-width: 760px;
+  font-size: clamp(1.04rem, 1.1vw, 1.14rem);
+  line-height: 1.68;
+  color: rgba(17,17,17,.78);
+  margin: 0 0 20px;
 }
 
 .contact-form {
