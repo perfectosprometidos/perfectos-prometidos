@@ -577,9 +577,11 @@ section + section {
   margin-bottom: 22px;
 }
 
-.world-intro .contact-lead {
-  font-size: inherit;
-  line-height: inherit;
+.world-intro .contact-lead{
+  font-size: clamp(1.08rem, 1.15vw, 1.2rem);
+  line-height: 1.7;
+  color: rgba(17,17,17,.82);
+  max-width: 720px;
 }
 
 /* Ritmo editorial en títulos de servicios */
