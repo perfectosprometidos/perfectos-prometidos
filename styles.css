@@ -593,7 +593,42 @@ section + section {
 .services.home-services{
   padding-bottom: 56px; /* cierra el bloque con intención */
 }
+.home-seo{
+  padding: 44px 0 28px;
+}
 
+.home-seo-inner{
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.home-seo p{
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.08rem, 1.45vw, 1.34rem);
+  line-height: 1.6;
+  color: #1f1a17;
+}
+
+.home-seo p:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px){
+  .home-seo{
+    padding: 32px 0 18px;
+  }
+
+  .home-seo-inner{
+    width: min(100%, calc(100% - 28px));
+  }
+
+  .home-seo p{
+    font-size: 1.02rem;
+    line-height: 1.58;
+    margin-bottom: 16px;
+  }
+}
 /* CTA al final de Servicios (Conversemos) — más editorial */
 .services-cta{
   margin-top: 28px;
