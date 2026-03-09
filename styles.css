@@ -385,7 +385,19 @@ padding: clamp(22px, 2.2vw, 30px);
   box-shadow: 0 28px 80px rgba(0,0,0,.22);
   z-index: 2;
 }
+/* HOME · tarjeta con comportamiento como Madrid */
+.hero-home .hero-card{
+  width: min(470px, 86vw);
+  padding: clamp(26px, 2.6vw, 34px);
+  top: 54%;
+  transform: translateY(-50%);
+  border-radius: 32px;
+}
 
+.hero-home .hero-card h1{
+  font-size: clamp(2.15rem, 3vw, 3rem);
+  line-height: 1.05;
+}
 /* Tipos: un pelín más compactos para “respirar” */
 .hero-card h1{
 font-size: clamp(2.1rem, 3.2vw, 3.1rem);
