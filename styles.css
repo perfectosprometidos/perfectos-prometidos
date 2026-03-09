@@ -363,6 +363,7 @@ a:visited{ color: inherit; }
   height: 100vh;
   object-fit: cover;
 object-position: 70% 1%;
+  transform: translateY(4%);
   filter: brightness(0.96) contrast(0.95) saturate(0.96);
   display: block;
 }
@@ -373,8 +374,8 @@ object-position: 70% 1%;
   left: clamp(20px, 5vw, 70px);
   top: 52%;
   transform: translateY(-50%);
-  width: min(640px, 92vw);
-  padding: clamp(26px, 3vw, 44px);
+ width: min(460px, 86vw);
+padding: clamp(22px, 2.2vw, 30px);
   border-radius: 28px;
 
   background: rgba(246, 244, 239, 0.86); /* más transparente */
