@@ -359,6 +359,24 @@ rgba(255,255,255,0.88) 92%
 
 pointer-events:none;
 }
+/* Viñeteado lateral suave – profundidad editorial */
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+
+background:linear-gradient(
+90deg,
+rgba(0,0,0,0.06) 0%,
+rgba(0,0,0,0.03) 18%,
+rgba(0,0,0,0) 35%,
+rgba(0,0,0,0) 65%,
+rgba(0,0,0,0.03) 82%,
+rgba(0,0,0,0.06) 100%
+);
+
+pointer-events:none;
+}
 /* Imagen: encuadre más editorial (menos “tapa”) */
 .hero-image img{
   width: 100%;
