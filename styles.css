@@ -4614,3 +4614,16 @@ body.page--madrid .cta-box{
     z-index: 3 !important;
   }
 }
+/* HOME · BLOQUE SEO */
+
+.home-seo{
+  max-width: 760px;
+  margin: 0 auto 80px;
+}
+
+.home-seo p{
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  color: rgba(17,17,17,.82);
+}
