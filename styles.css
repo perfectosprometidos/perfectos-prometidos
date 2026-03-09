@@ -387,7 +387,7 @@ padding: clamp(18px, 1.8vw, 24px);
 }
 /* HOME · tarjeta con comportamiento como Madrid */
 .hero-home .hero-card{
- width: min(300px, 68vw);
+ width: min(380px, 74vw);
  padding: clamp(18px, 1.8vw, 24px);
  padding: clamp(18px, 1.8vw, 24px);
   transform: translateY(-50%);
