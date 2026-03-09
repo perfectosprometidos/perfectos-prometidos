@@ -348,19 +348,20 @@ position:absolute;
 left:0;
 right:0;
 bottom:0;
-height:40%;
+height:35%;
 background:linear-gradient(
 to bottom,
 rgba(255,255,255,0) 0%,
-rgba(255,255,255,0.92) 90%
+rgba(255,255,255,0.90) 85%
 );
+pointer-events:none;
 }
 /* Imagen: encuadre más editorial (menos “tapa”) */
 .hero-image img{
   width: 100%;
-  height: 92vh;
-  object-fit: cover;
-object-position: 70% center;
+ height:100%;
+object-fit:cover;
+object-position:75% center;
   filter: brightness(0.96) contrast(0.95) saturate(0.96);
   display: block;
 }
@@ -378,7 +379,7 @@ object-position: 70% center;
   background: rgba(246, 244, 239, 0.86); /* más transparente */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
+box-shadow: 0 20px 60px rgba(0,0,0,0.08);
   box-shadow: 0 28px 80px rgba(0,0,0,.22);
   z-index: 2;
 }
