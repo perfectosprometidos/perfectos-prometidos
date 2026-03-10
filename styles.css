@@ -4634,3 +4634,119 @@ body.page--madrid .cta-box{
     z-index: 3 !important;
   }
 }
+/* =========================================================
+   HOME · NORMALIZACIÓN TIPOGRÁFICA FINAL
+   Pegar al final de styles.css
+========================================================= */
+
+/* 1) Hero principal */
+.hero-card h1{
+  font-size: clamp(2.2rem, 3vw, 3rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 2) Títulos de sección */
+.services h2,
+.world h2,
+.contact h2,
+.author-title,
+.home-manifesto-title{
+  font-size: clamp(1.7rem, 2.2vw, 2rem) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* 3) Subtítulos / frases de apoyo */
+.hero-subline,
+.hero-hook,
+.hero-manifesto,
+.services-claim,
+.services-note,
+.author-lead,
+.contact-lead{
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0 !important;
+}
+
+/* 4) Texto base coherente */
+.home-seo p,
+.author-body,
+.manifesto-body p,
+.contact-micro,
+.service-card p,
+.service-card li,
+.world-intro p{
+  font-size: 0.98rem !important;
+  line-height: 1.75 !important;
+}
+
+/* 5) Detalles editoriales */
+.services-tag,
+.contact-tag,
+.world-tag,
+.author-kicker,
+.hero-tag{
+  font-size: 0.74rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+}
+/* =========================================================
+   HOME · NORMALIZACIÓN TIPOGRÁFICA FINAL
+   Pegar al final de styles.css
+========================================================= */
+
+/* 1) Hero principal */
+.hero-card h1{
+  font-size: clamp(2.2rem, 3vw, 3rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 2) Títulos de sección */
+.services h2,
+.world h2,
+.contact h2,
+.author-title,
+.home-manifesto-title{
+  font-size: clamp(1.7rem, 2.2vw, 2rem) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* 3) Subtítulos / frases de apoyo */
+.hero-subline,
+.hero-hook,
+.hero-manifesto,
+.services-claim,
+.services-note,
+.author-lead,
+.contact-lead{
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0 !important;
+}
+
+/* 4) Texto base coherente */
+.home-seo p,
+.author-body,
+.manifesto-body p,
+.contact-micro,
+.service-card p,
+.service-card li,
+.world-intro p{
+  font-size: 0.98rem !important;
+  line-height: 1.75 !important;
+}
+
+/* 5) Detalles editoriales */
+.services-tag,
+.contact-tag,
+.world-tag,
+.author-kicker,
+.hero-tag{
+  font-size: 0.74rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+}
