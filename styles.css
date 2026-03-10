@@ -380,10 +380,10 @@ pointer-events:none;
 /* Imagen: encuadre más editorial (menos “tapa”) */
 .hero-image img{
   width: 100%;
- height:100%;
-object-fit:cover;
-object-position:82% center;
-  filter: brightness(0.96) contrast(0.95) saturate(0.96);
+  height: 100%;
+  object-fit: cover;
+  object-position: 78% center;
+  filter: brightness(0.95) contrast(0.94) saturate(0.93);
   display: block;
 }
 
