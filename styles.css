@@ -502,7 +502,7 @@ section + section {
 
 /* Espaciado editorial */
 .services, .contact, .world {
-  padding: 84px 0;
+  padding: 64px 0;
 }
 
 .services-inner, .contact-inner, .world-inner {
@@ -610,7 +610,7 @@ section + section {
 }
 /* Cierre editorial del bloque servicios */
 #servicios{
-  padding-bottom: 44px; /* antes 72: demasiado aire antes de la pausa */
+  padding-bottom: 24px; /* antes 72: demasiado aire antes de la pausa */
 }
 
 /* HOME — ajuste fino del final de Servicios */
@@ -655,7 +655,7 @@ padding: 40px 0 24px;
 }
 /* CTA al final de Servicios (Conversemos) — más editorial */
 .services-cta{
-  margin-top: 28px;
+  margin-top: 12px;
   text-align: center;
 }
 .services-cta p{
