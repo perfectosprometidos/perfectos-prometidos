@@ -482,9 +482,10 @@ section + section {
 /* AJUSTE IMAGEN EDITORIAL - LUJO */
 .editorial-image{
   background: var(--paper);
-  max-width: 1100px;
-  margin: 32px auto 56px auto;  /* separa elegante, sin huecos enormes */
-  padding: 0;                  /* sin padding lateral fantasma */
+  max-width: 1200px;
+  width: 100%;
+  margin: 32px auto 56px auto;
+  padding: 0;
 }
 
 .editorial-image img{
