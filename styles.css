@@ -638,7 +638,10 @@ padding: 40px 0 24px;
 .home-seo p:last-child{
   margin-bottom: 0;
 }
-
+.visually-hidden{
+  position: absolute;
+  left: -9999px;
+}
 @media (max-width: 768px){
   .home-seo{
     padding: 32px 0 18px;
