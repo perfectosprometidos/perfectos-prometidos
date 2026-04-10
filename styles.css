@@ -4777,3 +4777,72 @@ body.page--madrid .cta-box{
   letter-spacing: 0.18em !important;
   text-transform: uppercase !important;
 }
+/* =========================================================
+   GALICIA · NORMALIZACIÓN VISUAL FINAL
+   Igualar jerarquía y respiración con HOME
+========================================================= */
+
+body.page--galicia .hero-card h1{
+  font-size: clamp(2.2rem, 3vw, 3rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.02em !important;
+}
+
+body.page--galicia .galicia-manifesto .h2,
+body.page--galicia .galicia-scene .h2,
+body.page--galicia .galicia-how .h2,
+body.page--galicia .galicia-faq .h2,
+body.page--galicia .pp-title,
+body.page--galicia .pp-cta-box h2{
+  font-size: clamp(1.7rem, 2.2vw, 2rem) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.01em !important;
+}
+
+body.page--galicia .hero-subline,
+body.page--galicia .hero-intro,
+body.page--galicia .hero-manifesto,
+body.page--galicia .pp-lead,
+body.page--galicia .faq-intro{
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0 !important;
+}
+
+body.page--galicia .galicia-manifesto p,
+body.page--galicia .galicia-scene p,
+body.page--galicia .galicia-how p,
+body.page--galicia .galicia-faq p,
+body.page--galicia .pp-card p,
+body.page--galicia .pp-card li,
+body.page--galicia .pp-cta-box p{
+  font-size: 0.98rem !important;
+  line-height: 1.8 !important;
+  color: rgba(17,17,17,.78) !important;
+}
+
+body.page--galicia .hero-tag,
+body.page--galicia .pp-eyebrow,
+body.page--galicia .scene-subtitle{
+  font-size: 0.74rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+}
+
+body.page--galicia .section.section--soft{
+  padding-top: 104px !important;
+  padding-bottom: 104px !important;
+}
+
+body.page--galicia .section.section--image-break{
+  padding-top: 36px !important;
+  padding-bottom: 36px !important;
+}
+
+body.page--galicia .galicia-faq{
+  padding-top: 92px !important;
+}
+
+body.page--galicia .pp-cta{
+  padding-top: 84px !important;
+}
