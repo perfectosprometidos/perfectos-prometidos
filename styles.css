@@ -4842,7 +4842,39 @@ body.page--galicia .section.section--image-break{
 body.page--galicia .galicia-faq{
   padding-top: 92px !important;
 }
+/* =========================================================
+   GALICIA · AJUSTE MÓVIL FINAL
+========================================================= */
 
+@media (max-width: 900px){
+
+  body.page--galicia .hero-card h1{
+    font-size: 2.1rem !important;
+    line-height: 1.1 !important;
+  }
+
+  body.page--galicia .galicia-manifesto .h2,
+  body.page--galicia .galicia-scene .h2,
+  body.page--galicia .galicia-how .h2,
+  body.page--galicia .galicia-faq .h2{
+    font-size: 1.45rem !important;
+    line-height: 1.28 !important;
+  }
+
+  body.page--galicia .section.section--soft{
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+
+  body.page--galicia .galicia-faq{
+    padding-top: 64px !important;
+  }
+
+  body.page--galicia .pp-cta{
+    padding-top: 60px !important;
+  }
+
+}
 body.page--galicia .pp-cta{
   padding-top: 84px !important;
 }
