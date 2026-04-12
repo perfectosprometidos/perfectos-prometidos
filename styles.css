@@ -4878,3 +4878,7 @@ body.page--galicia .galicia-faq{
 body.page--galicia .pp-cta{
   padding-top: 84px !important;
 }
+.entry_tag {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
