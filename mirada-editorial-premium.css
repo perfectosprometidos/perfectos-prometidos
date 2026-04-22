@@ -349,3 +349,6 @@ body.page--mirada-editorial .editorial-block--primary .editorial-text h2{
 body.page--mirada-editorial .editorial-block--primary .editorial-text p{
   max-width: 620px;
 }
+body.page--mirada-editorial .editorial-block:not(.editorial-block--primary) .editorial-text h2{
+  opacity: .9;
+}
