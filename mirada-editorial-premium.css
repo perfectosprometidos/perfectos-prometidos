@@ -312,7 +312,7 @@ body.page--mirada-editorial .closing-statement{
   margin: 0 auto 18px;
   font-size: clamp(1.8rem, 7vw, 2.3rem);
   line-height: 1.06;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
   
