@@ -310,15 +310,12 @@ body.page--mirada-editorial .editorial-closing{
 
 body.page--mirada-editorial .editorial-text h2{
   max-width: 12.5ch;
-  width: fit-content;
+  width: 100%;
   margin: 0 auto 20px;
-  padding-left: 0;
-  padding-right: 0;
-  font-size: clamp(1.82rem, 6.8vw, 2.25rem);
+  font-size: clamp(1.9rem, 6.8vw, 2.3rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
-  text-align: center;
-  text-wrap: balance;
+  text-align: center !important;
 }
   
 
@@ -335,45 +332,32 @@ body.page--mirada-editorial .editorial-text p{
     gap: 12px;
   }
 
-  body.page--mirada-editorial .edition-primary,
-  body.page--mirada-editorial .edition-secondary,
-  body.page--mirada-editorial .editorial-cta{
-    width: 100%;
-  }
+ body.page--mirada-editorial .edition-primary,
+body.page--mirada-editorial .edition-secondary,
+body.page--mirada-editorial .editorial-cta{
+  width: 100%;
 }
+
 body.page--mirada-editorial .editorial-block--primary .editorial-text h2{
-  max-width: 13ch;
-  margin-bottom: 26px;
-  font-size: clamp(2.25rem, 3.3vw, 3rem);
-  line-height: 1.02;
-  letter-spacing: -0.045em;
+  max-width: 11.5ch;
+  width: 100%;
+  margin: 0 auto 22px;
+  font-size: clamp(2.05rem, 7.2vw, 2.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
   color: rgba(0,0,0,.82);
+  text-align: center !important;
 }
 
 body.page--mirada-editorial .editorial-block--primary .editorial-text p{
-  max-width: 620px;
+  max-width: 31ch;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 body.page--mirada-editorial .editorial-block:not(.editorial-block--primary) .editorial-text h2{
   opacity: .9;
 }
-@media (max-width: 900px){
-
-  body.page--mirada-editorial .editorial-text h2{
-   max-width: 12.5ch;
-    width: 100%;
-    margin: 0 auto 20px;
-    font-size: clamp(1.9rem, 6.8vw, 2.3rem);
-    line-height: 1.08;
-    letter-spacing: -0.035em;
-    text-align: center;
-  }
-body.page--mirada-editorial .editorial-text{
-  text-align: center;
 }
-  body.page--mirada-editorial .editorial-block--primary .editorial-text h2{
-  max-width: 11.5ch;
-    font-size: clamp(2.05rem, 7.2vw, 2.5rem);
-    line-height: 1.04;
-  }
 
-}
+
