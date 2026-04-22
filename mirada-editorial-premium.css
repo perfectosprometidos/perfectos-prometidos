@@ -359,17 +359,19 @@ body.page--mirada-editorial .editorial-block:not(.editorial-block--primary) .edi
 @media (max-width: 900px){
 
   body.page--mirada-editorial .editorial-text h2{
-    max-width: 12ch;
-    width: fit-content;
+   max-width: 12.5ch;
+    width: 100%;
     margin: 0 auto 20px;
     font-size: clamp(1.9rem, 6.8vw, 2.3rem);
     line-height: 1.08;
     letter-spacing: -0.035em;
     text-align: center;
   }
-
+body.page--mirada-editorial .editorial-text{
+  text-align: center;
+}
   body.page--mirada-editorial .editorial-block--primary .editorial-text h2{
-    max-width: 11ch;
+  max-width: 11.5ch;
     font-size: clamp(2.05rem, 7.2vw, 2.5rem);
     line-height: 1.04;
   }
