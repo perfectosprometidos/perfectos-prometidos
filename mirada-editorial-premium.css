@@ -318,29 +318,3 @@ body.page--mirada-editorial .closing-statement{
     width: 100%;
   }
 }
-/* =========================================
-   MIRADA EDITORIAL · FIX MOBILE VERTICAL
-   ========================================= */
-@media (max-width: 900px){
-
-  body.page--mirada-editorial .editorial-text{
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  body.page--mirada-editorial .editorial-text h2{
-    max-width: 14.5ch;
-    margin: 0 auto 18px;
-    text-align: center;
-    line-height: 1.04;
-    letter-spacing: -0.03em;
-    text-wrap: balance;
-  }
-
-  body.page--mirada-editorial .editorial-text p{
-    max-width: 30ch;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
