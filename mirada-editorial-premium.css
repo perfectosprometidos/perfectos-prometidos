@@ -327,7 +327,9 @@ body.page--mirada-editorial .editorial-text p{
   font-size: 1rem;
   line-height: 1.74;
 }
-  
+ body.page--mirada-editorial .editorial-block{
+  margin-bottom: 64px;
+} 
 
   body.page--mirada-editorial .edition-actions{
     gap: 12px;
