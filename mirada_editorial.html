@@ -132,9 +132,9 @@
     </div>
   </section>
 
-  <section class="editorial-block">
-    <div class="editorial-text">
-<h2>Cómo diseñamos cada boda</h2>
+ <section class="editorial-block editorial-block--primary">
+  <div class="editorial-text">
+    <h2>Cómo diseñamos cada boda</h2>
       <p>
         Antes de tomar decisiones, observamos. El espacio, el contexto, las personas y el ritmo real de cada boda en Galicia o Madrid.
       </p>
@@ -249,3 +249,15 @@ decoding="async">
 
 </body>
 </html>
+body.page--mirada-editorial .editorial-block--primary .editorial-text h2{
+  max-width: 13ch;
+  margin-bottom: 26px;
+  font-size: clamp(2.25rem, 3.3vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  color: rgba(0,0,0,.82);
+}
+
+body.page--mirada-editorial .editorial-block--primary .editorial-text p{
+  max-width: 620px;
+}
