@@ -126,10 +126,10 @@ body.page--mirada-editorial .editorial-text h2{
 
 body.page--mirada-editorial .editorial-text p{
   max-width: 640px;
-  margin: 0 auto 16px;
-  font-size: 1.06rem;
-  line-height: 1.82;
-  color: rgba(0,0,0,.70);
+  margin: 0 auto 18px;
+  font-size: 1.04rem;
+  line-height: 1.88;
+  color: rgba(0,0,0,.68);
 }
 
 body.page--mirada-editorial .editorial-quote{
