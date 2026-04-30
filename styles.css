@@ -4882,3 +4882,11 @@ body.page--galicia .pp-cta{
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.home-seo-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
