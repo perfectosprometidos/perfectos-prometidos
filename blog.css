@@ -1838,3 +1838,25 @@ margin:40px auto;
 display:block;
 border-radius:8px;
 }
+/* ===== Hero Image Artículos ===== */
+
+.hero-image{
+    margin: 50px 0;
+}
+
+.hero-image img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.hero-image figcaption{
+    margin-top:16px;
+    text-align:center;
+    font-size:.95rem;
+    color:#6b6b6b;
+    font-style:italic;
+    line-height:1.6;
+}
