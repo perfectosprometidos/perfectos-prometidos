@@ -117,29 +117,17 @@ a {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-
-  color: var(--pp-ivory);
+  display: block;
+  width: clamp(112px, 9vw, 148px);
   text-decoration: none;
 }
 
-.brand__monogram {
-  font-family: var(--serif);
-  font-size: clamp(27px, 3vw, 39px);
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: -0.12em;
+.brand__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
-
-.brand__name {
-  font-family: var(--serif);
-  font-size: 9px;
-  line-height: 1.35;
-  letter-spacing: 0.28em;
-}
-
 /* ---------- MENU ---------- */
 
 .menu {
