@@ -29,7 +29,7 @@ html {
 body {
   margin: 0;
   background: var(--pp-black);
-  color: var(--pp-ivory);
+ color: var(--pp-white);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -201,15 +201,12 @@ a {
   display: block;
   margin-top: 6px;
   font-style: italic;
+  color: var(--pp-olive);
 }
 
 .hero__line {
-  width: 72px;
-
-  margin:
-    clamp(28px, 5vh, 43px)
-    0
-    22px;
+  display: none;
+}
 
   border-top: 1px solid rgba(231, 221, 208, 0.72);
 }
@@ -221,26 +218,27 @@ a {
   line-height: 1.5;
 
   letter-spacing: 0.27em;
+   color: var(--pp-olive);  
 }
 
 /* ---------- CTA ---------- */
 
 .hero__cta {
-  width: 100%;
-  max-width: 410px;
+  width: fit-content;
+  max-width: 100%;
 
-  min-height: 58px;
+  min-height: 44px;
 
-  padding: 0 21px;
+  padding: 0;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 25px;
+  justify-content: flex-start;
+  gap: 22px;
 
-  border: 1px solid rgba(231, 221, 208, 0.72);
+  border: 0;
 
-  color: var(--pp-ivory);
+  color: var(--pp-white);
   text-decoration: none;
 
   font-size: 9px;
@@ -248,14 +246,13 @@ a {
   letter-spacing: 0.22em;
 
   transition:
-    background-color 180ms ease,
-    color 180ms ease;
+    color 180ms ease,
+    opacity 180ms ease;
 }
 
 .hero__cta:hover,
 .hero__cta:focus-visible {
-  background: var(--pp-ivory);
-  color: var(--pp-black);
+  color: var(--pp-olive);
 }
 
 /* =========================================================
@@ -276,6 +273,7 @@ a {
   line-height: 1;
 
   letter-spacing: 0.28em;
+   color: var(--pp-olive);
 }
 
 /* =========================================================
