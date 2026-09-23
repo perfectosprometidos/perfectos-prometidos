@@ -165,7 +165,7 @@ width: clamp(124px, 10vw, 170px);
   width: 100%;
 
   padding:
-38svh
+31svh
     var(--page-padding)
     120px;
 }
@@ -212,12 +212,12 @@ width: clamp(124px, 10vw, 170px);
 }
 
 .hero__destinations {
-margin: 13px 0 34px;
+margin: 18px 0 34px;
   font-size: 8px;
   line-height: 1.5;
 
   letter-spacing: 0.27em;
-   color: var(--pp-olive);  
+  color: var(--pp-white);
 }
 
 /* ---------- CTA ---------- */
@@ -233,7 +233,7 @@ margin: 13px 0 34px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
- gap: 30px;
+gap: 22px;
 
   border: 0;
 
