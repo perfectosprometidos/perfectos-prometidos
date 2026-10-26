@@ -529,3 +529,29 @@ gap: 22px;
     font-size: 14px;
   }
 }
+/* =========================================================
+   AJUSTES FINALES HERO · MÓVIL
+   26 OCTUBRE 2026
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  /* Oscurecer suavemente la zona del titular */
+  .hero__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(12, 12, 10, 0.30) 0%,
+        rgba(12, 12, 10, 0.52) 35%,
+        rgba(12, 12, 10, 0.58) 55%,
+        rgba(12, 12, 10, 0.76) 100%
+      );
+  }
+
+  /* Recuperar la jerarquía de los destinos */
+  .hero__destinations {
+    font-size: 9px;
+    line-height: 1.6;
+    letter-spacing: 0.22em;
+  }
+}
