@@ -6045,3 +6045,20 @@ body.editorial-page{
   }
 }
 /* ===== FIN mobile-portrait-fix.css ===== */
+
+/* Accesibilidad HOME — contrastes específicos; sin cambios de geometría */
+body#top .author .author-kicker { color: #465434; }
+body#top .footer-instagram .footer-ig { color: #555555; }
+body#top .footer-instagram .footer-ig:hover,
+body#top .footer-instagram .footer-ig:focus-visible { color: #292929; }
+/* Accesibilidad HOME - botón de cookies */
+body#top .pp-cookie-btn--primary {
+  background-color: #465434;
+  color: #FFFFFF;
+}
+
+body#top .pp-cookie-btn--primary:hover,
+body#top .pp-cookie-btn--primary:focus-visible {
+  background-color: #354127;
+  color: #FFFFFF;
+}
